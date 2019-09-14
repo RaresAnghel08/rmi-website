@@ -1,0 +1,59 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "RMI 2019"
+
+theme = "rms-theme"
+
+[menu]
+	[[menu.main]]
+	identifier = "root"
+	name = "RMI 2019"
+	title = "RMI 2019"
+	weight = 1
+
+	[[menu.main]]
+	identifier = "organization"
+	name = "RMI Organization"
+	title = "RMI Organization"
+	weight = 2
+
+	[[menu.main]]
+	identifier = "contest"
+	name = "RMI Contest"
+	title = "RMI Contest"
+	weight = 3
+
+	[[menu.main]]
+	identifier = "info"
+	name = "General Information"
+	title = "General Information"
+	weight = 4
+
+	[[menu.main]]
+	url = "http://portal.lbi.ro/"
+	name = "Organising School"
+	title = "Organising School"
+	parent = "organization"
+	weight = 1000
+
+	[[menu.main]]
+	url = "https://en.wikipedia.org/wiki/Romania"
+	name = "About Romania"
+	title = "About Romania"
+	parent = "info"
+	weight = 1
+
+	[[menu.main]]
+	url = "https://en.wikipedia.org/wiki/Bucharest"
+	name = "About Bucharest"
+	title = "About Bucharest"
+	parent = "info"
+	weight = 2
+
+	[[menu.main]]
+	url = "http://www.romaniatourism.com/"
+	name = "Tourist Guide"
+	title = "Tourist Guide"
+	parent = "info"
+	weight = 3
+
