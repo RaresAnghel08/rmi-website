@@ -1,6 +1,5 @@
 ---
 title: "Committee"
-draft: true
 menu:
   main:
     parent: "organization"
