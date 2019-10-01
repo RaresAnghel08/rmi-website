@@ -19,8 +19,4 @@ opportunities to make new friends, to visit a friendly country, and to discover
 the culture of Romania.
 
 We look forward to meeting you at RMI 2019 in Bucharest, Romania!
-
----
-
-sponsors
 {{% /section %}}
