@@ -1,9 +1,14 @@
-baseURL = "http://example.org/"
+baseURL = "http://rmi.lbi.ro/"
 languageCode = "en-us"
 title = "RMI 2019"
 enableRobotsTXT = true
 
 theme = "rms-theme"
+
+[params]
+	heading = "October 9th - October 12th, 2019"
+	author = "\"Tudor Vianu\" National High School of Computer Science"
+	author_url = "http://portal.lbi.ro/"
 
 [menu]
 	[[menu.main]]
@@ -13,9 +18,9 @@ theme = "rms-theme"
 	weight = 1
 
 	[[menu.main]]
-	identifier = "organization"
-	name = "RMI Organization"
-	title = "RMI Organization"
+	identifier = "organisation"
+	name = "RMI Organisation"
+	title = "RMI Organisation"
 	weight = 2
 
 	[[menu.main]]
@@ -34,7 +39,7 @@ theme = "rms-theme"
 	url = "http://portal.lbi.ro/"
 	name = "Organising School"
 	title = "Organising School"
-	parent = "organization"
+	parent = "organisation"
 	weight = 1000
 
 	[[menu.main]]

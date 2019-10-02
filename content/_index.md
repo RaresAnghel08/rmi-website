@@ -9,7 +9,7 @@ menu:
 
 {{% section title="Welcome!" %}}
 The **7th Romanian Master of Informatics**, **RMI 2019**, will be held in
-**Bucharest**, from **October 10th** to **October 13th**, **2019** by the
+**Bucharest**, from **October 9th** to **October 12th**, **2019** by the
 **"Tudor Vianu" National High School of Computer Science**.
 
 **RMI** provides a great opportunity for young people to demonstrate their

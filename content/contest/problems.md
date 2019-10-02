@@ -4,8 +4,7 @@ menu:
   main:
     parent: "contest"
     weight: 4
+draft: true
 ---
 
-{{% section title="Problems" %}}
-[Download problems, official solutions and tests](/problems.zip)
-{{% /section %}}
+Not yet!

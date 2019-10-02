@@ -2,11 +2,10 @@
 title: "Committee"
 menu:
   main:
-    parent: "organization"
+    parent: "organisation"
     weight: 1
+no_header: true
 ---
-
-{{% section title="Committee" %}}
 
 {{% section title="Organising Committee" %}}
 {{% committee file="organising_committee.csv" %}}
@@ -26,6 +25,4 @@ menu:
 
 {{% section title="Students' guides" %}}
 {{% guides file="guides.csv" %}}
-{{% /section %}}
-
 {{% /section %}}

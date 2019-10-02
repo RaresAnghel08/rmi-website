@@ -4,6 +4,7 @@ menu:
   main:
     parent: "contest"
     weight: 3
+draft: true
 ---
 
 {{% section title="Ranking - Individual" link="/ranking_individual.pdf" %}}
