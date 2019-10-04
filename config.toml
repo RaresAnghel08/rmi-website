@@ -1,4 +1,4 @@
-baseURL = "http://rmi.lbi.ro/"
+baseURL = "http://rmi.lbi.ro/rmi_2019/"
 languageCode = "en-us"
 title = "RMI 2019"
 enableRobotsTXT = true
