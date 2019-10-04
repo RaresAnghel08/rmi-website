@@ -44,29 +44,24 @@ Croatia,Patrick,Pavić,NU
 Croatia,Krešimir,Nežmah,NU
 Croatia,Dorijan,Lendvaj,NU
 Croatia,Pavel,Kliska,NU
-Italia,William,Di Luigi,DA
-Italia,Massimo,Cairo,DA
-Italia,Alessandro,Bortolin,NU
-Italia,Davide,Bartoli,NU
-Italia,Filippo,Casarin,NU
-Italia,Filippo,Sanzani,NU
+Hungary,László,Nikházy,DA
+Hungary,Áron,Noszály,NU
+Hungary,Bálint,Molnár,NU
+Hungary,Nándor,Nagy,NU
+Hungary,Péter,Gyimesi,NU
+Italy,William,Di Luigi,DA
+Italy,Massimo,Cairo,DA
+Italy,Alessandro,Bortolin,NU
+Italy,Davide,Bartoli,NU
+Italy,Filippo,Casarin,NU
+Italy,Filippo,Sanzani,NU
 Israel,Ofer,Wald,DA
-Israel,?,?,NU
-Israel,?,?,NU
-Israel,?,?,NU
-Israel,?,?,NU
 Moldova,Sergiu,Corlat,DA
 Moldova,Claudiu,Babin,NU
 Moldova,Mihai,Spinei,NU
 Moldova,Victor,Purice,NU
 Moldova,Madalina,Griza,NU
-Polonia,?,?,DA
-Polonia,Sebastian,Szubartowski,DA
-Polonia,?,?,NU
-Polonia,?,?,NU
-Polonia,?,?,NU
-Polonia,?,?,NU
-Romania,?,?,DA
+Poland,Sebastian,Szubartowski,DA
 Romania 1,Șerban Ion,Cercelescu,NU
 Romania 1,Maria Alexa,Tudose,NU
 Romania 1,Adrian Emanuel,Dicu,NU
@@ -75,10 +70,10 @@ Romania 2,Mircea,Donciu,NU
 Romania 2,Alexandru,Enache,NU
 Romania 2,Ioan,Popescu,NU
 Romania 2,David Nicolae,Coroian,NU
-Romania - juniori,Alexandru,Luchianov,NU
-Romania - juniori,Alexandru Raul,Todoran,NU
-Romania - juniori,Mihnea,Andreescu,NU
-Romania - juniori,Andrei,Moldovan,NU
+Romania - juniors,Alexandru,Luchianov,NU
+Romania - juniors,Alexandru Raul,Todoran,NU
+Romania - juniors,Mihnea,Andreescu,NU
+Romania - juniors,Andrei,Moldovan,NU
 Romania - București,Paul,Enache,DA
 Romania - București,Albert Antoniu,Greaca,NU
 Romania - București,Carol Luca,Gasan,NU
@@ -90,47 +85,38 @@ Romania - Craiova,Radu Mihai,Nicolae,NU
 Romania - Craiova,Ruxandra Laura,Nanu,NU
 Romania - Craiova,Alexandra Mihaela,Nicola,NU
 Romania - Ploiești,Dana,Lica,DA
-Romania - Ploiești,,,NU
-Romania - Ploiești,,,NU
-Romania - Ploiești,,,NU
-Romania - Ploiești,,,NU
-Rusia - Chelyabinsk,Valentin,Golodov,DA
-Rusia - Chelyabinsk,Ekaterina,Shilyaeva,NU
-Rusia - Chelyabinsk,Danil,Klishch,NU
-Rusia - Chelyabinsk,Mikhail,Budnikov,NU
-Rusia - Chelyabinsk,Mark,Kanafeev,NU
-Rusia - Kazan,Sergei,Mikhailin,DA
-Rusia - Kazan,Konstantin,Skobeltcyn,DA
-Rusia - Kazan,Ildar,Gainullin,NU
-Rusia - Kazan,Azat,Ismagilov,NU
-Rusia - Kazan,Valerii,Rodionov,NU
-Rusia - Kazan,Renat,Karimov,NU
-Rusia - Kazan,Elena,Mityasova,DA
-Rusia - Kazan,Tagir,Khamitov,NU
-Rusia - Kazan,Ilya,Tamyarov,NU
-Rusia - Moscova,Igor,Mamai,DA
-Rusia - Moscova,Egor,Lifar,NU
-Rusia - Moscova,Alexandar,Shekhovtsov,NU
-Rusia - Moscova,Semen,Savkin,NU
-Rusia - Moscova,Konstantin,Frolov,NU
-Rusia - NW,Andrey,Stankevich,DA
-Rusia - NW,Andrei,Efremov,NU
-Rusia - NW,Sergei,Khargelia,NU
-Rusia - NW,Ivan,Volkov,NU
-Rusia - NW,Andrei,Odintsov,NU
+Russia - Chelyabinsk,Valentin,Golodov,DA
+Russia - Chelyabinsk,Ekaterina,Shilyaeva,NU
+Russia - Chelyabinsk,Danil,Klishch,NU
+Russia - Chelyabinsk,Mikhail,Budnikov,NU
+Russia - Chelyabinsk,Mark,Kanafeev,NU
+Russia - Kazan,Sergei,Mikhailin,DA
+Russia - Kazan,Konstantin,Skobeltcyn,DA
+Russia - Kazan,Ildar,Gainullin,NU
+Russia - Kazan,Azat,Ismagilov,NU
+Russia - Kazan,Valerii,Rodionov,NU
+Russia - Kazan,Renat,Karimov,NU
+Russia - Kazan,Elena,Mityasova,DA
+Russia - Kazan,Tagir,Khamitov,NU
+Russia - Kazan,Ilya,Tamyarov,NU
+Russia - Moscova,Igor,Mamai,DA
+Russia - Moscova,Egor,Lifar,NU
+Russia - Moscova,Alexandar,Shekhovtsov,NU
+Russia - Moscova,Semen,Savkin,NU
+Russia - Moscova,Konstantin,Frolov,NU
+Russia - NW,Andrey,Stankevich,DA
+Russia - NW,Andrei,Efremov,NU
+Russia - NW,Sergei,Khargelia,NU
+Russia - NW,Ivan,Volkov,NU
+Russia - NW,Andrei,Odintsov,NU
 Serbia,Jelena,Hadzi-Puric,DA
 Serbia,Jovan,Bengin,NU
 Serbia,Mladen,Puzic,NU
 Serbia,Mateja,Vukelic,NU
 Serbia,Marko,Sisovic,NU
-Ucraina,Valentyn,Melnyk,DA
-Ucraina,Daniil,Smelskyi,DA
-Ucraina,Sofiia,Melnyk,NU
-Ucraina,Andiy,Kuts,NU
-Ucraina,Artem,Fomiuk,NU
-Ucraina,Tykhon,Hryshechkin,NU
-Ungaria,László,Nikházy,DA
-Ungaria,Áron,Noszály,NU
-Ungaria,Bálint,Molnár,NU
-Ungaria,Nándor,Nagy,NU
-Ungaria,Péter,Gyimesi,NU
+Ukraine,Valentyn,Melnyk,DA
+Ukraine,Daniil,Smelskyi,DA
+Ukraine,Sofiia,Melnyk,NU
+Ukraine,Andiy,Kuts,NU
+Ukraine,Artem,Fomiuk,NU
+Ukraine,Tykhon,Hryshechkin,NU
