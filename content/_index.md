@@ -20,4 +20,4 @@ the culture of Romania.
 
 We look forward to meeting you at RMI 2019 in Bucharest, Romania!
 
-[![roll-up](/assets/rollup.png)](/rmi_2019/assets/rollup.png)
+[![roll-up](/assets/rollup.png)](/assets/rollup.png)
