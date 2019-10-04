@@ -6,6 +6,7 @@ menu:
     weight: 1
 ---
 
+<!--
 {{% section flag="bg" title="Bulgaria" %}}
 
 1. Anton Ruskov Shikov - Leader
@@ -18,3 +19,6 @@ menu:
 4. RADOSLAV STOYANOV DIMITROV
 
 {{% /section %}}
+-->
+
+This page is going to be updated soon.
