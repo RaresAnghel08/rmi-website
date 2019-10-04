@@ -5,9 +5,12 @@ menu:
     parent: "organisation"
     weight: 3
 no_header: true
-draft: true
 ---
 
+This section is going to be updated soon.
+
+<!--
 {{< section title="Programme" link="/program.pdf" >}}
 {{% pdf file="/program.pdf" %}}
 {{< /section >}}
+-->
