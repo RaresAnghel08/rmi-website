@@ -1,6 +1,10 @@
 ---
 title: Home
 date: 2019-09-14T11:03:46.000Z
+menu:
+  main:
+    parent: "root"
+    weight: -1
 ---
 {{% section title="Welcome!" %}}
 The **7th Romanian Master of Informatics**, **RMI 2019**, will be held in
