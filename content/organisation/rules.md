@@ -10,4 +10,3 @@ draft: true
 
 {{< section title="Competition Rules" link="/rules.pdf" >}}
 {{% pdf file="/rules.pdf" %}}
-{{< /section >}}

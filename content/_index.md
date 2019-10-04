@@ -6,7 +6,8 @@ menu:
     parent: "root"
     weight: -1
 ---
-{{% section title="Welcome!" %}}
+## Welcome!
+
 The **7th Romanian Master of Informatics**, **RMI 2019**, will be held in
 **Bucharest**, from **October 9th** to **October 12th**, **2019** by the
 **"Tudor Vianu" National High School of Computer Science**.
@@ -20,5 +21,3 @@ the culture of Romania.
 We look forward to meeting you at RMI 2019 in Bucharest, Romania!
 
 ![roll-up](/assets/rollup.png)
-
-{{% /section %}}

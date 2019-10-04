@@ -12,5 +12,4 @@ This section is going to be updated soon.
 <!--
 {{< section title="Programme" link="/program.pdf" >}}
 {{% pdf file="/program.pdf" %}}
-{{< /section >}}
 -->

@@ -8,25 +8,23 @@ no_header: true
 ---
 
 <!--
-{{% section title="Organising Committee" %}}
-{{% committee file="organising_committee.csv" %}}
-{{% /section %}}
+## Organising Committee
+
+{{% committee file="csv/organising_committee.csv" %}}
 -->
 
-{{% section title="Scientific Committee" %}}
-{{% committee file="scientific_committee.csv" %}}
-{{% /section %}}
+## Scientific Committee
+
+{{% committee file="csv/scientific_committee.csv" %}}
 
 <!--
-{{% section title="Logistics Committee" %}}
-{{% committee file="logistics_committee.csv" %}}
-{{% /section %}}
+## Logistics Committee
 
-{{% section title="Technical Committee" %}}
-{{% committee file="technical_committee.csv" %}}
-{{% /section %}}
+{{% committee file="csv/logistics_committee.csv" %}}
 
-{{% section title="Students' guides" %}}
-{{% guides file="guides.csv" %}}
-{{% /section %}}
+## Technical Committee
+{{% committee file="csv/technical_committee.csv" %}}
+
+## Students' guides
+{{% guides file="csv/guides.csv" %}}
 -->

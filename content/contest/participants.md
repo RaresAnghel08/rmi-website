@@ -17,8 +17,8 @@ menu:
 2. MARTIN DANIEL KOPCHEV
 3. PETAR IVELINOV NYAGOLOV
 4. RADOSLAV STOYANOV DIMITROV
-
-{{% /section %}}
 -->
+
+{{% participants file="csv/participants.csv" %}}
 
 This page is going to be updated soon.
