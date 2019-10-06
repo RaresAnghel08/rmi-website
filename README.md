@@ -109,6 +109,36 @@ Prenume,Nume,Clasa
 
 Nici fișierul cu voluntari nu are antet.
 
+### Actualizează participanții
+
+Participanții sunt în fișierul `csv/participants.csv`. Acesta este tot un fișier
+`.csv`, fără antet, cu 4 coloane. Fiecare rând are următoarea formă:
+
+```csv
+Echipă,Prenume,Nume,Profesor
+```
+
+Echipele ar trebui să fie în ordine alfabetică. Membrii unei echipe trebuie să
+fie mereu pe rânduri adiacente, iar profesorii să fie primii. Câmpul "Profesor"
+are valoarea "DA" dacă este profesor, respectiv "NU" dacă nu este.
+
+Echipa trebuie să fie de forma "Țară", "Țară 1", "Țară - Regiune" sau "Țară -
+Regiune 1", unde "1" este numărul echipei, dacă sunt mai multe din aceeași țară
+sau aceeași regiune. În cazul în care o țară are echipă de juniori, aceasta
+poate fi exprimată ca "Țară - juniors" sau "Țară - Regiuni juniors".
+
+Exemple de nume de echipe: "Israel", "Czech Republic", "Bulgaria - Gabrovo",
+"Romania - Vianu 1", "Romania - Vianu juniors", "Poland 2", "Romania - juniors".
+
+Țara cât și regiunea trebuie să fie în engleză.
+
+De asemenea, fiecare țară trebuie să aibă un steag în folder-ul
+`themes/rms-theme/static/assets/flags`. Filename-ul este de forma `tara.svg`.
+Aceste steaguri pot fi găsite
+[aici](https://hjnilsson.github.io/country-flags/). Dacă numele țării are mai
+mult de un cuvânt, fișierul va avea spațiile dintre cuvinte in filename: `Czech
+Republic -> czech republic.svg`.
+
 ### Actualizează paginile cu documente
 
 Acestea sunt: `content/organisation/programme.md`,
