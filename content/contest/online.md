@@ -9,5 +9,5 @@ menu:
 The online contest is going to be on the 10th and 11th of October, starting at
 10:00 Romanian Time (GMT+3 EEST) / 07:00 UTC. Check back soon for more details.
 
-<span style="font-size: 2rem">[Register
-here](https://forms.gle/CCfmCZthWGgTysFH9)</span>
+<span class="big">[Register
+here&nbsp;&nbsp;→](https://forms.gle/CCfmCZthWGgTysFH9)</span>
