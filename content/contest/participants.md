@@ -6,6 +6,4 @@ menu:
     weight: 1
 ---
 
-This page is not yet complete and will change.
-
 {{% participants file="csv/participants.csv" %}}
