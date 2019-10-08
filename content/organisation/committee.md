@@ -21,10 +21,12 @@ no_header: true
 ## Logistics Committee
 
 {{% committee file="csv/logistics_committee.csv" %}}
+-->
 
 ## Technical Committee
 {{% committee file="csv/technical_committee.csv" %}}
 
+<!--
 ## Students' guides
 {{% guides file="csv/guides.csv" %}}
 -->

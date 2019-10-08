@@ -1,6 +1,5 @@
 ---
 title: Home
-date: 2019-09-14T11:03:46.000Z
 menu:
   main:
     parent: "root"
