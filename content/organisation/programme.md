@@ -7,9 +7,5 @@ menu:
 no_header: true
 ---
 
-This section is going to be updated soon.
-
-<!--
-{{< section title="Programme" link="/program.pdf" >}}
+{{< section title="Programme" link="/programme.pdf" >}}
 {{% pdf file="/programme.pdf" %}}
--->
