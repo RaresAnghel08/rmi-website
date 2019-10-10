@@ -5,6 +5,10 @@ menu:
     parent: "root"
     weight: -1
 ---
+
+<span style="font-size: 2rem"><a href="http://193.226.93.51/ranking/">Live
+Ranking</a></span>
+
 ## Welcome!
 
 The **7th Romanian Master of Informatics**, **RMI 2019**, will be held in
