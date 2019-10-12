@@ -6,11 +6,7 @@ menu:
     weight: -1
 ---
 
-<span style="font-size: 2rem"><a href="http://193.226.93.51/ranking/">Live
-Ranking</a></span>
-
-<span style="font-size: 2rem"><a href="/contest/results/">Results
-	for day one</a></span>
+<span style="font-size: 2rem"><a href="/contest/results/">Final standings</a></span>
 
 ## Welcome!
 

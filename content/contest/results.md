@@ -7,13 +7,14 @@ menu:
 draft: false
 ---
 
-{{% section title="Ranking - Day 1" link="/ranking_day1.pdf" %}}
-{{% pdf file="/ranking_day1.pdf" %}}
+### Excel tables
 
-<!--
+[Individual ranking](/ranking_individual.xlsx)
+
+[Team ranking](/ranking_teams.xlsx)
+
 {{% section title="Ranking - Individual" link="/ranking_individual.pdf" %}}
 {{% pdf file="/ranking_individual.pdf" %}}
 
-{{% section title="Ranking - Countries" link="/ranking_countries.pdf" %}}
-{{% pdf file="/ranking_countries.pdf" %}}
--->
+{{% section title="Ranking - Teams" link="/ranking_teams.pdf" %}}
+{{% pdf file="/ranking_teams.pdf" %}}
