@@ -13,8 +13,8 @@ draft: false
 
 [Team ranking](/ranking_teams.xlsx)
 
-{{% section title="Ranking - Individual" link="/ranking_individual.pdf" %}}
-{{% pdf file="/ranking_individual.pdf" %}}
+{{< section title="Ranking - Individual" link="/ranking_individual.pdf" >}}
+{{< pdf file="/ranking_individual.pdf" >}}
 
-{{% section title="Ranking - Teams" link="/ranking_teams.pdf" %}}
-{{% pdf file="/ranking_teams.pdf" %}}
+{{< section title="Ranking - Teams" link="/ranking_teams.pdf" >}}
+{{< pdf file="/ranking_teams.pdf" >}}

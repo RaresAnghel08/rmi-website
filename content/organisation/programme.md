@@ -8,4 +8,4 @@ no_header: true
 ---
 
 {{< section title="Programme" link="/programme.pdf" >}}
-{{% pdf file="/programme.pdf" %}}
+{{< pdf file="/programme.pdf" >}}

@@ -8,4 +8,4 @@ no_header: true
 ---
 
 {{< section title="Competition Rules" link="/rules.pdf" >}}
-{{% pdf file="/rules.pdf" %}}
+{{< pdf file="/rules.pdf" >}}

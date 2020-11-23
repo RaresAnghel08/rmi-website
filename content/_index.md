@@ -6,8 +6,6 @@ menu:
     weight: -1
 ---
 
-<span style="font-size: 2rem"><a href="/contest/results/">Final standings</a></span>
-
 ## Welcome!
 
 The **7th Romanian Master of Informatics**, **RMI 2019**, will be held in
@@ -21,5 +19,9 @@ opportunities to make new friends, to visit a friendly country, and to discover
 the culture of Romania.
 
 We look forward to meeting you at RMI 2019 in Bucharest, Romania!
+
+{{< raw-html >}}
+<p style="font-size: 2rem"><a href="/contest/results/">Final standings</a></p>
+{{< /raw-html >}}
 
 [![roll-up](/assets/rollup.png)](/assets/rollup.png)

@@ -10,23 +10,23 @@ no_header: true
 <!--
 ## Organising Committee
 
-{{% committee file="csv/organising_committee.csv" %}}
+{{< committee file="csv/organising_committee.csv" >}}
 -->
 
 ## Scientific Committee
 
-{{% committee file="csv/scientific_committee.csv" %}}
+{{< committee file="csv/scientific_committee.csv" >}}
 
 <!--
 ## Logistics Committee
 
-{{% committee file="csv/logistics_committee.csv" %}}
+{{< committee file="csv/logistics_committee.csv" >}}
 -->
 
 ## Technical Committee
-{{% committee file="csv/technical_committee.csv" %}}
+{{< committee file="csv/technical_committee.csv" >}}
 
 <!--
 ## Students' guides
-{{% guides file="csv/guides.csv" %}}
+{{< guides file="csv/guides.csv" >}}
 -->

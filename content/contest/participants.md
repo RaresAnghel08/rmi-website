@@ -6,4 +6,4 @@ menu:
     weight: 1
 ---
 
-{{% participants file="csv/participants.csv" %}}
+{{< participants file="csv/participants.csv" >}}
