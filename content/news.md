@@ -1,6 +1,6 @@
 ---
 title: "News"
-date: 2019-10-02T15:00:00+03:00
+date: 2012-11-22T15:00:00+03:00
 menu:
   main:
     parent: "root"

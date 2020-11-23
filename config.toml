@@ -1,21 +1,21 @@
-baseURL = "http://rmi.lbi.ro/rmi_2019/"
+baseURL = "http://rmi.lbi.ro/rmi_2020/"
 languageCode = "en-us"
-title = "RMI 2019"
+title = "RMI 2020"
 enableRobotsTXT = true
 canonifyURLs = true
 
 theme = "rms-theme"
 
 [params]
-	heading = "October 9th - October 12th, 2019"
+	heading = "December 2nd - December 4th, 2020"
 	author = "\"Tudor Vianu\" National High School of Computer Science"
 	author_url = "http://portal.lbi.ro/"
 
 [menu]
 	[[menu.main]]
 	identifier = "root"
-	name = "RMI 2019"
-	title = "RMI 2019"
+	name = "RMI 2020"
+	title = "RMI 2020"
 	weight = 1
 
 	[[menu.main]]

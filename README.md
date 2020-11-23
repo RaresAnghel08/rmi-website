@@ -148,7 +148,7 @@ Fiecare din aceste fișiere are conținut de forma:
 
 ```html
 {{< section title="Competition Rules" link="/rules.pdf" >}}
-{{% pdf file="/rules.pdf" %}}
+{{< pdf file="/rules.pdf" >}}
 ```
 
 Cred că se înțelege ce valori trebuie să modifci pentru fiecare caz.
@@ -157,7 +157,7 @@ S-ar putea ca aceste linii să fie cuprinse într-un comentariu, de forma:
 ```html
 <!--
 {{< section title="Programme" link="/program.pdf" >}}
-{{% pdf file="/programme.pdf" %}}
+{{< pdf file="/programme.pdf" >}}
 -->
 ```
 
