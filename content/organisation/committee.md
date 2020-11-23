@@ -28,5 +28,7 @@ no_header: true
 ## Technical Committee
 {{< committee file="csv/technical_committee.csv" >}}
 
+<!--
 ## Students' guides
 {{< guides file="csv/guides.csv" >}}
+-->

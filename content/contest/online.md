@@ -4,6 +4,7 @@ menu:
   main:
     parent: "contest"
     weight: 2
+draft: true
 ---
 
 The online contest is going to be on the 10th and 11th of October, starting at

@@ -19,5 +19,3 @@ opportunities to make new friends, to visit a friendly country, and to discover
 the culture of Romania.
 
 We look forward to meeting you at RMI 2020 in Bucharest, Romania!
-
-<!-- [![roll-up](/assets/rollup.png)](/assets/rollup.png) -->
