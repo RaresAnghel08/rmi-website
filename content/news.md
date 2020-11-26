@@ -7,4 +7,6 @@ menu:
     weight: 1
 ---
 
-There are no news currently.
+{{< section title="November 27th" >}}
+
+The [competition rules](/organisation/rules) and [recommended virtual machine](/contest/vm) have been published.

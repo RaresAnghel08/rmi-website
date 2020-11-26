@@ -13,9 +13,9 @@ no_header: true
 {{< committee file="csv/organising_committee.csv" >}}
 -->
 
+<!--
 ## Scientific Committee
 
-<!--
 {{< committee file="csv/scientific_committee.csv" >}}
 -->
 
@@ -25,10 +25,14 @@ no_header: true
 {{< committee file="csv/logistics_committee.csv" >}}
 -->
 
+<!--
 ## Technical Committee
 {{< committee file="csv/technical_committee.csv" >}}
+-->
 
 <!--
 ## Students' guides
 {{< guides file="csv/guides.csv" >}}
 -->
+
+To Be Announced.

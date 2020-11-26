@@ -12,4 +12,4 @@ no_header: true
 {{< pdf file="/programme.pdf" >}}
 -->
 
-TBA.
+To Be Announced.
