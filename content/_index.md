@@ -20,4 +20,8 @@ the culture of Romania.
 
 We look forward to meeting you at RMI 2020 in Bucharest, Romania!
 
+<!--
 Relevant links: [News](/news), [Competition Rules](/organisation/rules) and [recommended virtual machines](/contest/vm).
+-->
+
+You can find relevant links in the sidebar on the left (for desktops) or below (mobile devices).

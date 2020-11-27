@@ -9,4 +9,4 @@ menu:
 
 {{< section title="November 27th" >}}
 
-The [competition rules](/organisation/rules) and [recommended virtual machine](/contest/vm) have been published.
+The [competition rules](/organisation/rules), [schedule](/organisation/programme) and [recommended virtual machine](/contest/vm) have been published.
