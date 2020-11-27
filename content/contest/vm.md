@@ -44,3 +44,33 @@ Requirements for the virtual machine:
 * Click OK to import the virtual machine
 * Start the VM
 * Log in with user "RMI Contestant" and password `rmi`
+
+{{< section title="Tips for the virtual machine" >}}
+
+To change the keyboard layout:
+- Go to Applications (top-left corner) - Settings - Keyboard
+- Click the Layout tab
+- Uncheck "Use system defaults"
+- Click on "English (US)"
+- Click the "Edit" button and select your preferred layout.
+
+You can find all text editors and IDEs in the Applications menu in the top-left corner,
+in the Development section.
+
+**For users of byobu or for users who have issues with keyboard shortcuts**:
+* Open Applications -> Settings -> Window Manager
+* Click the "Keyboard" tab
+* Scroll down and find "Workspace 1" and click it
+* Press the SHIFT key and click on "Workspace 12". All rows containing the word "Workspace" should be
+highlighted
+* Click the "Clear" button.
+* Click "Close".
+
+From the aforementioned menu you can clear any other keyboard shortcuts that stay in your way.
+
+You can open Firefox either by clicking the globe icon on the dock
+in the bottom of the screen, or by finding it in the Applications menu.
+You will receive the address to the contest server from your team leader or proctor.
+
+You can find the C++ Reference in the contest interface by clicking the "Documentation" link once the
+contest starts.
