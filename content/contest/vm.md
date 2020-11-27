@@ -8,7 +8,7 @@ draft: false
 no_header: true
 ---
 
-{{< section title="Virtual Machines" link="/../vms/rmi-image-v1.zip" >}}
+{{< section title="Virtual Machines" link="/../vms/rmi-image-v1.1.zip" >}}
 
 We prepared a Linux based Virtual Machine to provide a ready-to-use contest environment for contestants, with development environments, compilers, debuggers,
 terminal multiplexers, and auto-snapshotting for fault-tolerance. The virtual machine also uses the same compiler version as the contest server.
