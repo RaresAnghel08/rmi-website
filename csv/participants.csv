@@ -1,156 +1,70 @@
-Bulgaria,Anton,Shikov,DA
-Bulgaria,Martin,Kopchev,NU
-Bulgaria,Viktor,Kozhuharov,NU
-Bulgaria,Andon,Todorov,NU
-Bulgaria,Aleksandar,Radoslavov,NU
-Bulgaria - Gabrovo,Zornitsa,Dzhenkova,DA
-Bulgaria - Gabrovo,Adriyan,Ibovski,NU
-Bulgaria - Gabrovo,Dobrin,Bashev,NU
-Bulgaria - Gabrovo,Jasen,Penchev,NU
-Bulgaria - Gabrovo,Plamen,Dinev,NU
-Bulgaria - Gabrovo,Stoyan,Malinin,NU
-Bulgaria - Shumen,Biserka,Yovcheva,DA
-Bulgaria - Shumen,Borislav,Semerdzhiev,NU
-Bulgaria - Shumen,Daniel,Koynov,NU
-Bulgaria - Shumen,Ferit,Ismailov,NU
-Bulgaria - Shumen,Ivan,Smilenov,NU
-Bulgaria - Sofia,Ivo,Dilov,DA
-Bulgaria - Sofia,Atanas,Dimitrov,NU
-Bulgaria - Sofia,Konstantin,Kamenov,NU
-Bulgaria - Sofia,Georgy,Petkov,NU
-Bulgaria - Sofia,Stanislav,Nikolov,NU
-Bulgaria - Varna 1,Julia,Dimitrova,DA
-Bulgaria - Varna 1,Elena,Dimitrova,DA
-Bulgaria - Varna 1,Ilian,Yordanov,DA
-Bulgaria - Varna 1,Ivo,Karagyozov,NU
-Bulgaria - Varna 1,Dimitar,Oparlakov,NU
-Bulgaria - Varna 1,Lachezar,Kemanov,NU
-Bulgaria - Varna 1,Tsvetoslav,Mavrodiev,NU
-Bulgaria - Varna 2,Julia,Dimitrova,DA
-Bulgaria - Varna 2,Elena,Dimitrova,DA
-Bulgaria - Varna 2,Ilian,Yordanov,DA
-Bulgaria - Varna 2,Deyan,Hadzhi-Manich,NU
-Bulgaria - Varna 2,Boris,Stoyanov,NU
-Bulgaria - Varna 2,Aleksandar,Yanev,NU
-Bulgaria - Varna 2,Stefan,Minkov,NU
-Bulgaria - Yambol,Milen,Mihov,DA
-Bulgaria - Yambol,Antani,Gospodinov,NU
-Bulgaria - Yambol,Daniel,Danailov,NU
-Bulgaria - Yambol,Rumen,Mihov,NU
-Bulgaria - Yambol,Radostin,Handarov,NU
-Croatia,Nikola,Dmitrović,DA
-Croatia,Josip,Klepec,DA
-Croatia,Patrick,Pavić,NU
-Croatia,Krešimir,Nežmah,NU
-Croatia,Dorijan,Lendvaj,NU
-Croatia,Pavel,Kliska,NU
-Hungary,László,Nikházy,DA
-Hungary,Áron,Noszály,NU
-Hungary,Bálint,Molnár,NU
-Hungary,Nándor,Nagy,NU
-Hungary,Péter,Gyimesi,NU
-Italy,William,Di Luigi,DA
-Italy,Massimo,Cairo,DA
-Italy,Alessandro,Bortolin,NU
-Italy,Davide,Bartoli,NU
-Italy,Filippo,Casarin,NU
-Italy,Filippo,Sanzani,NU
-Israel,Ofer,Wald,DA
-Israel,Nicole,Grosman,NU
-Israel,Noam,Licht,NU
-Israel,Almog,Wald,NU
-Israel,Inbar,Wald,NU
-Moldova,Sergiu,Corlat,DA
-Moldova,Claudiu,Babin,NU
-Moldova,Mihai,Spinei,NU
-Moldova,Victor,Purice,NU
-Moldova,Madalina,Griza,NU
-Poland,Bartosz,Łukasiewicz,DA
-Poland,Sebastian,Szubartowski,DA
-Poland,Kacper,Harasimowicz,NU
-Poland,Jan,Kwiatkowski,NU
-Poland,Arkadiusz,Czarkowski,NU
-Poland,Jakub,Bachurski,NU
-Poland,Marcin,Mordecki,NU
-Romania 1,Bogdan,Iordache,DA
-Romania 1,Șerban Ion,Cercelescu,NU
-Romania 1,Maria Alexa,Tudose,NU
-Romania 1,Adrian Emanuel,Dicu,NU
-Romania 1,Cezar,Trișcă-Vicol,NU
-Romania 2,Bogdan,Iordache,DA
-Romania 2,Mircea,Donciu,NU
-Romania 2,Alexandru,Enache,NU
-Romania 2,Ioan,Popescu,NU
-Romania 2,David Nicolae,Coroian,NU
-Romania - juniors,Marius,Nicoli,DA
-Romania - juniors,Alexandru,Luchianov,NU
-Romania - juniors,Alexandru Raul,Todoran,NU
-Romania - juniors,Mihnea,Andreescu,NU
-Romania - juniors,Andrei,Moldovan,NU
-Romania - București,Paul,Enache,DA
-Romania - București,Albert Antoniu,Greaca,NU
-Romania - București,Carol Luca,Gasan,NU
-Romania - București,Luca,Seritan,NU
-Romania - București,Andrei,Feodorov,NU
-Romania - Craiova,Marius,Nicoli,DA
-Romania - Craiova,Alexandra Maria,Udriștoiu,NU
-Romania - Craiova,Radu Mihai,Nicolae,NU
-Romania - Craiova,Ruxandra Laura,Nanu,NU
-Romania - Craiova,Alexandra Mihaela,Nicola,NU
-Romania - Ploiești,Dana,Lica,DA
-Romania - Ploiești,Alexandru,Dobleaga,NU
-Romania - Ploiești,Ștefan,Țaga,NU
-Romania - Ploiești,Andrei,Onuț,NU
-Romania - Ploiești,Ștefan,Săvulescu,NU
-Russia - Chelyabinsk,Valentin,Golodov,DA
-Russia - Chelyabinsk,Ekaterina,Shilyaeva,NU
-Russia - Chelyabinsk,Danil,Klishch,NU
-Russia - Chelyabinsk,Mikhail,Budnikov,NU
-Russia - Chelyabinsk,Mark,Kanafeev,NU
-Russia - Kazan 1,Sergei,Mikhailin,DA
-Russia - Kazan 1,Konstantin,Skobeltcyn,DA
-Russia - Kazan 1,Ildar,Gainullin,NU
-Russia - Kazan 1,Azat,Ismagilov,NU
-Russia - Kazan 1,Valerii,Rodionov,NU
-Russia - Kazan 1,Renat,Karimov,NU
-Russia - Kazan 2,Elena,Mityasova,DA
-Russia - Kazan 2,Tagir,Khamitov,NU
-Russia - Kazan 2,Ilya,Tamyarov,NU
-Russia - Moscova,Igor,Mamai,DA
-Russia - Moscova,Egor,Lifar,NU
-Russia - Moscova,Alexandar,Shekhovtsov,NU
-Russia - Moscova,Semen,Savkin,NU
-Russia - Moscova,Konstantin,Frolov,NU
-Russia - NW,Andrey,Stankevich,DA
-Russia - NW,Andrei,Efremov,NU
-Russia - NW,Sergei,Khargelia,NU
-Russia - NW,Ivan,Volkov,NU
-Russia - NW,Andrei,Odintsov,NU
-Serbia,Jelena,Hadzi-Puric,DA
-Serbia,Jovan,Bengin,NU
-Serbia,Mladen,Puzic,NU
-Serbia,Mateja,Vukelic,NU
-Serbia,Marko,Sisovic,NU
-Ukraine,Valentyn,Melnyk,DA
-Ukraine,Daniil,Smelskyi,DA
-Ukraine,Sofiia,Melnyk,NU
-Ukraine,Andiy,Kuts,NU
-Ukraine,Artem,Fomiuk,NU
-Ukraine,Tykhon,Hryshechkin,NU
-Vianu 1,Ana,Rogoz,DA
-Vianu 1,Robert-Adrian,Popovici,NU
-Vianu 1,Matei,Tinca,NU
-Vianu 1,Tiberiu Ioan,Mușat,NU
-Vianu 1,Tudor,Ivan,NU
-Vianu 2,Felix,Pușcașu,DA
-Vianu 2,Cella,Florescu,NU
-Vianu 2,Daniel,Apostol,NU
-Vianu 2,Mihai,Crăciun,NU
-Vianu 2,Tudor,Bazac,NU
-Vianu 2,Vlad,Ulmeanu,NU
-Vianu - juniori,George,Trifan,DA
-Vianu - juniori,Luca,Perju-Verzotti,NU
-Vianu - juniori,Flaviu-Cristian,Verde,NU
-Vianu - juniori,Iulia,Slănină,NU
-Vianu - juniori,Matei,Dorde,NU
-Vianu - juniori,Luca,Metehău,NU
+Damien Galant,Belgium,Team Leader
+Zhiyi Luo,Belgium,
+Petar Vitorac,Belgium,
+Emil Kelevejiev,Bulgaria,Team Leader
+Iliyan Yordanov,Bulgaria,Deputy Leader
+Martin Kopchev,Bulgaria,
+Andon Todorov,Bulgaria,
+Georgi Petkov,Bulgaria,
+Stoyan Malinin,Bulgaria,
+Kinka Kirilova-Lupanova,Bulgaria - Veliko Tarnovo,Team Leader
+Daniel Tropolinov,Bulgaria - Veliko Tarnovo,
+Martin Marinov,Bulgaria - Veliko Tarnovo,
+Miroslav Mihaylov,Bulgaria - Veliko Tarnovo,
+Elitsa Yotkova,Bulgaria - Veliko Tarnovo,
+Nikola Dmitrović,Croatia,Team Leader
+Patrick Pavić,Croatia,
+Dorijan Lendvaj,Croatia,
+Krešimir Nežmah,Croatia,
+Vito Anić,Croatia,
+Marius Nicoli,Romania - Craiova,Team Leader
+Radu Mihai Nicolae,Romania - Craiova,
+Ruxandra Laura Nanu,Romania - Craiova,
+George Dănuț Aldea,Romania - Craiova,
+Rareș-Teodor Popa,Romania - Craiova,
+Flavius Boian,Romania - Juniors,Team Leader
+Veronica Raluca Costineanu,Romania - Juniors,Deputy Leader
+Alexandru Raul Todoran,Romania - Juniors,
+Alexandru Dobleagă,Romania - Juniors,
+Ștefan Cătălin Savu,Romania - Juniors,
+Andrei Boacă,Romania - Juniors,
+Petru Simion Oprita,Romania 1,Team Leader
+Bogdan Sitaru,Romania 1,Deputy Leader
+Alexandru Luchianov,Romania 1,
+George Alexandru Râpeanu,Romania 1,
+Mihnea Andreescu,Romania 1,
+Ioan Popescu,Romania 1,
+Petru Simion Oprita,Romania 2,Team Leader
+Bogdan Sitaru,Romania 2,Deputy Leader
+Mircea Donciu,Romania 2,
+Matei Mihai Mirică,Romania 2,
+David Nicolae Coroian,Romania 2,
+Albert Antoniu Greaca,Romania 2,
+Sergei Mikhailin,Russia - Tatarstan 1,Team Leader
+Konstantin Skobeltcyn,Russia - Tatarstan 1,Deputy Leader
+Valerii Rodionov,Russia - Tatarstan 1,
+Renat Karmov,Russia - Tatarstan 1,
+Ruslan Vildanov,Russia - Tatarstan 1,
+Emir Ziganshin,Russia - Tatarstan 1,
+Sergei Mikhailin,Russia - Tatarstan 2,Team Leader
+Konstantin Skobeltcyn,Russia - Tatarstan 2,Deputy Leader
+Amir Gizzatulin,Russia - Tatarstan 2,
+Bulat Gaiazov,Russia - Tatarstan 2,
+Kamil Notfullin,Russia - Tatarstan 2,
+Kirill Timofeev,Russia - Tatarstan 2,
+Daniil Kuzmin,Russia - Tatarstan 3,Team Leader
+Roman Solovev,Russia - Tatarstan 3,
+Bulat Kharisov,Russia - Tatarstan 3,
+Islam Talipov,Russia - Tatarstan 3,
+Ruzil Zagirov,Russia - Tatarstan 3,
+Dina Zyangaraeva,Russia - Tatarstan 4,Team Leader
+Aidar Asadullin,Russia - Tatarstan 4,
+Ilya Tamyarov,Russia - Tatarstan 4,
+Renat Khairullin,Russia - Tatarstan 4,
+Micha Chekardov,Russia - Tatarstan 4,
+Timon Gehr,Switzerland,Team Leader
+Timon Stampfli,Switzerland,Deputy Leader
+Joël Huber,Switzerland,
+Ema Skottova,Switzerland,
+Caspar Schucan,Switzerland,
+Josia John,Switzerland,

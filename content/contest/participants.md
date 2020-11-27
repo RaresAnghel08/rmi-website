@@ -4,9 +4,9 @@ menu:
   main:
     parent: contest
     weight: 1
-draft: true
+draft: false
 ---
 
-{{< participants file="csv/participants.csv" >}}
+This list might be incomplete.
 
-TBA.
+{{< participants file="csv/participants.csv" >}}
