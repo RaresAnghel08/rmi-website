@@ -15,6 +15,10 @@ terminal multiplexers, and auto-snapshotting for fault-tolerance. The virtual ma
 
 **Contestants are not required to use the Virtual Machine!** However, we encourage you to do so.
 
+However, **contestants from countries or areas where proctoring is not possible due to disease control laws MUST use this
+virtual machine**. The virtual machine has a read-only root partition, and the contestant user does not have `sudo`
+priviledges. The VM is based on [NixOS](https://nixos.org).
+
 The virtual machine includes the following software:
 
 * XFCE Desktop Environment

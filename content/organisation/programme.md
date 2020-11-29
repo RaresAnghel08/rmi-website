@@ -18,7 +18,7 @@ More details to be announced.
 
 | Time              |                                      |
 |-------------------|--------------------------------------|
-| 12.00 - 14.00 UTC | Practice Session                     |
+| 12.00 - 20.00 UTC | Practice Session (In case of problems or questions, we offer support only until 15.30 UTC) |
 | 18.00 UTC         | Translation of the papers by leaders |
 
 {{< section title="Thursday, December 3rd (Contest Day 1)" >}}
