@@ -7,6 +7,4 @@ menu:
 draft: false
 ---
 
-This list might be incomplete.
-
 {{< participants file="csv/participants.csv" >}}
