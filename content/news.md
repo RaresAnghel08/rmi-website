@@ -7,6 +7,10 @@ menu:
     weight: 1
 ---
 
+{{< section title="December 3rd" >}}
+
+The results of the first competition day are public: [Results](/contest/results).
+
 {{< section title="November 29th" >}}
 
 The [competiton rules](/organisation/rules) have been amended with clarifications regarding the contest environment
