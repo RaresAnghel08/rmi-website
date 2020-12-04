@@ -7,10 +7,17 @@ menu:
 draft: false
 ---
 
-[Download Excel table for day 1](/ranking_day1.ods)
+{{< section title="Excel Files" >}}
 
-{{< section title="Ranking - Day 1" link="/ranking_day1.pdf" >}}
-{{< pdf file="/ranking_day1.pdf" >}}
+[Download Excel table for final standings](/results.ods)
+
+[Download Excel table for scores by team](/results_by_team.ods)
+
+{{< section title="Final Standings" link="/results.pdf" >}}
+{{< pdf file="/results.pdf" >}}
+
+{{< section title="Team Scores" link="/results_by_team.pdf" >}}
+{{< pdf file="/results_by_team.pdf" >}}
 
 <!--
 [Individual ranking](/ranking_individual.xlsx)
