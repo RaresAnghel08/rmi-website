@@ -7,6 +7,10 @@ menu:
     weight: 1
 ---
 
+{{< section title="December 4th" >}}
+
+Final results and awards have been published: [Results](/contest/results).
+
 {{< section title="December 3rd" >}}
 
 The results of the first competition day are public: [Results](/contest/results).
