@@ -1,5 +1,5 @@
 ---
-title: "Virtual Machines"
+title: "Virtual Machine"
 menu:
   main:
     parent: "contest"
@@ -8,15 +8,14 @@ draft: false
 no_header: true
 ---
 
-{{< section title="Virtual Machines" link="/../vms/rmi-image-v1.1.zip" >}}
+{{< section title="Virtual Machine" link="/../vms/rmi-image-v1.1.zip" >}}
 
 We prepared a Linux based Virtual Machine to provide a ready-to-use contest environment for contestants, with development environments, compilers, debuggers,
 terminal multiplexers, and auto-snapshotting for fault-tolerance. The virtual machine also uses the same compiler version as the contest server.
 
 **Contestants are not required to use the Virtual Machine!** However, we encourage you to do so.
 
-However, **contestants from countries or areas where proctoring is not possible due to disease control laws MUST use this
-virtual machine**. The virtual machine has a read-only root partition, and the contestant user does not have `sudo`
+The virtual machine has a read-only root partition, and the contestant user does not have `sudo`
 priviledges. The VM is based on [NixOS](https://nixos.org).
 
 The virtual machine includes the following software:

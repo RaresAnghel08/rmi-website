@@ -8,17 +8,16 @@ menu:
 
 ## Welcome!
 
-The **8th Romanian Master of Informatics**, **RMI 2020**, will be held
-~~in Bucharest~~ **Online**, from **December 2nd** to **December 4th**, **2020** by the
+The **9th Romanian Master of Informatics**, **RMI 2021**, will be held
+~~in Bucharest~~ **Online**, from **December 15th** to **December 17th**, **2021** by the
 **"Tudor Vianu" National High School of Computer Science**.
 
-**RMI** provides a great opportunity for young people to demonstrate their
-abilities in Informatics, to exchange knowledge and to enhance cross-cultural
-contacts in high-school education. Coming to RMI 2020, participants will have
-opportunities to make new friends, to visit a friendly country, and to discover
-the culture of Romania.
+Because of the still ongoing COVID-19 pandemic, RMI 2021 will again be run as an online
+competition. As such, this year’s edition largely keeps the requirements for proctoring
+and contest environments from last year's edition, being similar to other contests
+organised this year in this regard.
 
-We look forward to meeting you at RMI 2020 in Bucharest, Romania!
+The specific details are laid out in the [Competition Rules](/organisation/rules).
 
 <!--
 Relevant links: [News](/news), [Competition Rules](/organisation/rules) and [recommended virtual machines](/contest/vm).

@@ -1,5 +1,5 @@
 ---
-title: "Programme"
+title: "Schedule"
 menu:
   main:
     parent: "organisation"
@@ -14,7 +14,7 @@ no_header: false
 
 More details to be announced.
 
-{{< section title="Wednesday, December 2nd (Practice Session)" >}}
+<!-- {{< section title="Wednesday, December 2nd (Practice Session)" >}}
 
 | Time              |                                      |
 |-------------------|--------------------------------------|
@@ -32,4 +32,4 @@ More details to be announced.
 
 | Time             |                                      |
 |------------------|--------------------------------------|
-| 7.00 - 12.00 UTC | Competition                          |
+| 7.00 - 12.00 UTC | Competition                          | -->

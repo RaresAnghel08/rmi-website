@@ -7,7 +7,9 @@ menu:
 draft: false
 ---
 
-{{< section title="Excel Files" >}}
+Results will be published after the contest days.
+
+<!-- {{< section title="Excel Files" >}}
 
 [Download Excel table for final standings](/results.ods)
 
@@ -17,7 +19,7 @@ draft: false
 {{< pdf file="/results.pdf" >}}
 
 {{< section title="Team Scores" link="/results_by_team.pdf" >}}
-{{< pdf file="/results_by_team.pdf" >}}
+{{< pdf file="/results_by_team.pdf" >}} -->
 
 <!--
 [Individual ranking](/ranking_individual.xlsx)

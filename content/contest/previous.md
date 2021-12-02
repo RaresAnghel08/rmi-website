@@ -6,6 +6,8 @@ menu:
     weight: 5
 ---
 
+[![RMI 2020](/assets/previous/2020.png)](/../rmi_2020)
+
 [![RMI 2019](/assets/previous/2019.png)](/../rmi_2019)
 
 [![RMI 2018](/assets/previous/2018.png)](/../rmi_2018)
