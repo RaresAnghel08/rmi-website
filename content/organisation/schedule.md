@@ -12,24 +12,22 @@ no_header: false
 {{< pdf file="/programme.pdf" >}}
 -->
 
-More details to be announced.
-
-<!-- {{< section title="Wednesday, December 2nd (Practice Session)" >}}
+{{< section title="Wednesday, December 15th (Practice Session)" >}}
 
 | Time              |                                      |
 |-------------------|--------------------------------------|
-| 12.00 - 20.00 UTC | Practice Session (In case of problems or questions, we offer support only until 15.30 UTC) |
+| 7.00 - 15.00 UTC  | Practice Session (In case of problems or questions, we offer support during this time period) |
 | 18.00 UTC         | Translation of the papers by leaders |
 
-{{< section title="Thursday, December 3rd (Contest Day 1)" >}}
+{{< section title="Thursday, December 16th (Contest Day 1)" >}}
 
 | Time             |                                      |
 |------------------|--------------------------------------|
 | 7.00 - 12.00 UTC | Competition                          |
 | 18.00 UTC        | Translation of the papers by leaders |
 
-{{< section title="Friday, December 4th (Contest Day 2)" >}}
+{{< section title="Friday, December 17th (Contest Day 2)" >}}
 
 | Time             |                                      |
 |------------------|--------------------------------------|
-| 7.00 - 12.00 UTC | Competition                          | -->
+| 7.00 - 12.00 UTC | Competition                          |
