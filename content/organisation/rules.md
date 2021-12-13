@@ -90,7 +90,7 @@ We provide a virtual machine to offer a consistent contest environment to all pa
 
 The virtual machine is **not required**, although you may use it to get an already configured Linux machine. It can be downloaded from the RMI 2021 website.
 
-Unlike last year's edition, the virtual machine is **no longer required** in cases where proctoring is not possible due to disease control rules. The requirement for screen and room recordings **remains mandatory** in all scenarios. See **Video Recording** for details.
+The virtual machine is **no longer required** in cases where proctoring is not possible due to disease control rules. The requirement for screen and room recordings **remains mandatory** in all scenarios. See **Video Recording** for details.
 
 Because we are no longer in control of the hardware that the contestants use during the contest, the virtual machine is configured to snapshot the home directory of the contestant every 15 minutes to provide some fault tolerance. If you use the virtual machine, we advise you to be careful not to create very large files (tens of gigabytes), as those may get caught in a snapshot and use the storage even after deletion.
 
@@ -143,9 +143,7 @@ All task-dependent limits will be announced in the problem statements.
 
 ### Competition Equipment and Environment
 
-Contestants can either use the virtual machine or the system of the contest site directly. The contest server uses the following compilers:
-* gcc version 7.5.0, compilation command (for the program abc.c):
-  * `gcc -DEVAL -static -O2 -o abc abc.c -lm`
+Contestants can either use the virtual machine or the system of the contest site directly. The contest server uses the following compiler:
 * g++ version 7.5.0, compilation command (for the program abc.cpp):
   * `g++ -DEVAL -static -O2 -std=c++11 -o abc abc.cpp`
 
@@ -155,20 +153,16 @@ The contestants' submissions are evaluated by a contest system. The contest syst
 
 * Contestants submit solutions to the contest server via a web-based submission system running on that server. Each contestant will be assigned a username and a password for accessing the web application on the contest server.
 * Submissions are evaluated on the server. The software environment on the server is as close as possible to the environment on the contestant virtual machines.
-* The submission facility will accept C or C++ source files, verify that the program compiles and obeys the stated limits on program source size; the submission facility will then run the program on the task test cases (different from the ones given in the task description), enforcing the relevant run-time resource constraints, grade the solutions and report the results to the contestants.
+* The submission facility will accept C++ source files, verify that the program compiles and obeys the stated limits on program source size; the submission facility will then run the program on the task test cases (different from the ones given in the task description), enforcing the relevant run-time resource constraints, grade the solutions and report the results to the contestants.
 * For each task full feedback will be enabled.
 * For each task at most 20 submissions are allowed.
-* For each competition day at most 50 submissions are allowed, overall.
 * A wait period of one minute will be enforced between submissions from the same contestant, for the same task.
 
-The solution must terminate its execution normally in order to be graded. If the solution returns an error code different from zero, the contest system will consider that the solution had a runtime error and no points will be awarded for the corresponding test case. Therefore, solutions in C or C++ have to define the main function as ‘int main' and terminate the execution with ‘return 0' or ‘exit(0)'.
-
-**If a contestant submits more than one solution for the same task, the best submission will be graded at the end of the contest.**
+The solution must terminate its execution normally in order to be graded. If the solution returns an error code different from zero, the contest system will consider that the solution had a runtime error and no points will be awarded for the corresponding test case.
 
 It is the responsibility of the contestants to submit their solutions to the contest system before the contest is finished. We advise the contestants to reserve enough time before the end of the contest to make sure that all of their solutions are submitted.
 
-Contestants may use the test interface of the contest system to run their submitted solutions on test data of their choice. Contestants may upload at most 50 tests per contest day, and at most 20 tests per task.
-
+Contestants are allowed to use the test interface of the contest system to run their submitted solutions on test data of their choice. However, due to technical reasons, there is no guarantee that the test interface works properly.
 
 ### Scoring
 
@@ -176,10 +170,12 @@ For each task the test data will be divided into groups, with each group contain
 
 Points are awarded only for correctly solved groups of inputs. If there are partial grading rules for the problem, then the score for an input group will be the lowest among the scores for the particular test inputs contained in the group.
 
+**The score of a contestant for a task is the sum of the scores obtained for each group of this task. The score obtained for a group is the highest score obtained on this group by all contestant's submissions**
+
 
 ### Feedback
 
-For all tasks full feedback will be enabled. Every time contestants submit a solution, they receive full feedback for that submission.
+For all tasks full feedback will be enabled. Every time contestants submit a solution, they receive full feedback for that submission. Due to technical reasons, feedback is guaranteed (only) for submissions received until a time equal to `initial duration minus 30 minutes` has elapsed since the beginning of the competition. The Scientific Committee is bound to extend competition time to accommodate this rule.
 
 
 ### Clarification Requests
@@ -252,9 +248,12 @@ In the event that a mistake is discovered in the grading of a task, the mistake 
 
 ### Medal Allocation
 
-After the second Competition Day and before the RMI Awards Ceremony the medal distribution is determined by an automatic procedure, based on the number of points the contestants achieved. The medal awards are uniquely determined by the following rules:
+After the second Competition Day and before the RMI Awards Ceremony the medal distribution is determined by an automatic procedure, based on the number of points the contestants achieved. The medal allocation is decided by the Scientific Committee and satisfies the following rules:
 1. The score necessary to achieve a gold medal is the highest score such that at least one twelfth of all contestants receive a gold medal.
 2. The score necessary to achieve a silver medal is the highest score such that at least one fourth of all contestants receive a silver or a gold medal.
 3. The score necessary to achieve a bronze medal is the highest score such that at least one half of all contestants receive a medal.
 
 Each team's score will be calculated as the sum of the best three scores of its members. The final standings will be posted on the official website and the team with the highest score will be awarded the RMI Cup.
+
+Special awards may be distributed according to the will of the Scientific Committee in order to recognize outstanding performances.
+
