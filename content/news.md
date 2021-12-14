@@ -7,6 +7,17 @@ menu:
     weight: 1
 ---
 
+{{< section title="December 14th" >}}
+
+The [competition rules](/organisation/rules) have been updated. Make sure you re-read them carefully.
+
+The most important changes/additions are in:
+* Competition Equipment and Environment
+* Submitting Solutions
+* Scoring
+* Feedback
+* Medal Allocation
+
 {{< section title="December 1st" >}}
 
 The [competition rules](/organisation/rules), [schedule](/organisation/schedule) and [recommended virtual machine](/contest/vm) have been published.

@@ -29,16 +29,8 @@ Prof. Victor Manz
 
 ## Technical Committee
 
-<!--
 {{< committee file="csv/technical_committee.csv" >}}
--->
 
-| First name | Last name   |                                                                        |                                |
-|------------|-------------|------------------------------------------------------------------------|--------------------------------|
-| Tudor-Ioan | Roman       | [CMS](https://cms-dev.github.io) Cluster and Infrastructure Specialist | Vrije Universiteit Amsterdam   |
-| Mihai      | Heber       | System Administrator                                                   | Tudor Vianu National College   |
-| Ciprian    | Ionescu     | Web Designer, Website Maintainer, CMS Admin                            | Delft University of Technology |
-| Mariana    | Odubășteanu |                                                                        | Tudor Vianu National College   |
 
 <!--
 ## Students' guides
