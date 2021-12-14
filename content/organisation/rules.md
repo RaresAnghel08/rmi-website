@@ -155,8 +155,8 @@ The contestants' submissions are evaluated by a contest system. The contest syst
 * Submissions are evaluated on the server. The software environment on the server is as close as possible to the environment on the contestant virtual machines.
 * The submission facility will accept C++ source files, verify that the program compiles and obeys the stated limits on program source size; the submission facility will then run the program on the task test cases (different from the ones given in the task description), enforcing the relevant run-time resource constraints, grade the solutions and report the results to the contestants.
 * For each task full feedback will be enabled.
-* For each task at most 20 submissions are allowed.
-* A wait period of one minute will be enforced between submissions from the same contestant, for the same task.
+* For each task at most 20 submissions are allowed. This limit can be increased for certain tasks under exceptional circmustances, as decided by the Scientific Committee.
+* A waiting period may be enforced between submissions from the same contestant, for the same task. A standard waiting period is one minute.
 
 The solution must terminate its execution normally in order to be graded. If the solution returns an error code different from zero, the contest system will consider that the solution had a runtime error and no points will be awarded for the corresponding test case.
 
@@ -170,12 +170,16 @@ For each task the test data will be divided into groups, with each group contain
 
 Points are awarded only for correctly solved groups of inputs. If there are partial grading rules for the problem, then the score for an input group will be the lowest among the scores for the particular test inputs contained in the group.
 
-**The score of a contestant for a task is the sum of the scores obtained for each group of this task. The score obtained for a group is the highest score obtained on this group by all contestant's submissions**
+**The score of a contestant for a task is the sum of the scores obtained for each group of this task. The score obtained for a group is the highest score obtained on this group among all contestant's submissions for the task.**
 
 
 ### Feedback
 
 For all tasks full feedback will be enabled. Every time contestants submit a solution, they receive full feedback for that submission. Due to technical reasons, feedback is guaranteed (only) for submissions received until a time equal to `initial duration minus 30 minutes` has elapsed since the beginning of the competition. The Scientific Committee is bound to extend competition time to accommodate this rule.
+
+Example 1: Suppose the contest duration is five hours. Then, due to special circumstances, it's extended to six hours. Feedback is guaranteed only for the first four hours and 30 minutes.
+
+Example 2: Suppose the contest duration is five hours. Further, suppose some submissions received in the first four hours and 30 minutes receive no feedback during the first five hours of the competition. Then the duration will be extended for at least as much as for the feedback for such submissions to be received.
 
 
 ### Clarification Requests
@@ -248,10 +252,12 @@ In the event that a mistake is discovered in the grading of a task, the mistake 
 
 ### Medal Allocation
 
-After the second Competition Day and before the RMI Awards Ceremony the medal distribution is determined by an automatic procedure, based on the number of points the contestants achieved. The medal allocation is decided by the Scientific Committee and satisfies the following rules:
-1. The score necessary to achieve a gold medal is the highest score such that at least one twelfth of all contestants receive a gold medal.
-2. The score necessary to achieve a silver medal is the highest score such that at least one fourth of all contestants receive a silver or a gold medal.
-3. The score necessary to achieve a bronze medal is the highest score such that at least one half of all contestants receive a medal.
+After the second Competition Day and before the RMI Awards Ceremony the medal distribution is determined based on the number of points the contestants achieved. The medal allocation is decided by the Scientific Committee and satisfies the following rules:
+1. The proportion of gold, silver and bronze medals should be approximately 1:2:3.
+2. About 50% of the contestants should receive medals.
+3. The score ~~necessary~~ sufficient to achieve a gold medal is the highest score such that at least one twelfth of all contestants receive a gold medal.
+4. The score ~~necessary~~ sufficient to achieve a silver medal is the highest score such that at least one quarter of all contestants receive a silver or gold medal.
+5. The score ~~necessary~~ sufficient to achieve a bronze medal is the highest score such that at least one half of all contestants receive a medal.
 
 Each team's score will be calculated as the sum of the best three scores of its members. The final standings will be posted on the official website and the team with the highest score will be awarded the RMI Cup.
 
