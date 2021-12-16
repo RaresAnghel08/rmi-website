@@ -9,7 +9,7 @@ menu:
 
 {{< section title="December 16th" >}}
 
-The [results of the first day](/contest/results) have been published.
+The [editorial](/contest/problems) and [results of the first day](/contest/results) have been published.
 
 {{< section title="December 14th" >}}
 

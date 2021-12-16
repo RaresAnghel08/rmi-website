@@ -31,7 +31,7 @@ Solutions submitted by the participants during the contest.
 
 [Download in `.zip` format](/submissions.zip)
 
-[Download in `.tar.gz` format](/submissions.tar.gz)
+[Download in `.tar.gz` format](/submissions.tar.gz) -->
 
-{{< section title="Editorial" link="/editorial.pdf" >}}
-{{< pdf file="/editorial.pdf" >}} -->
+{{< section title="Editorial Day 1" link="/editorial_day1.pdf" >}}
+{{< pdf file="/editorial_day1.pdf" >}}
