@@ -7,6 +7,10 @@ menu:
     weight: 1
 ---
 
+{{< section title="December 16th" >}}
+
+The [results of the first day](/contest/results) have been published.
+
 {{< section title="December 14th" >}}
 
 The [competition rules](/organisation/rules) have been updated. Make sure you re-read them carefully.
