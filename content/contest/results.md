@@ -7,11 +7,11 @@ menu:
 draft: false
 ---
 
-{{< section title="Day 1 standings" link="/day1.pdf" >}}
+{{< section title="Final standings" link="/rmi_results_final.pdf" >}}
 
-[Download Excel table for day 1 standings](/day1.xlsx)
+[Download Excel table for final standings](/rmi_results_final.xlsx)
 
-{{< pdf file="/day1.pdf" >}}
+{{< pdf file="/rmi_results_final.pdf" >}}
 
 <!--
 [Individual ranking](/ranking_individual.xlsx)
