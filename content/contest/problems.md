@@ -131,4 +131,4 @@ In chronological order:
 
 [Weirdtree (EN, BG, DE, HE, HU, IT, RO, RU, UK)](/statements_weirdtree.zip)
 
-The editorial, official solutions, testcases, graders and other extras can be found in [solutions and editorial](/solutions).
+The editorial, official solutions, testcases, graders and other extras can be found in [solutions and editorial](/contest/solutions).
