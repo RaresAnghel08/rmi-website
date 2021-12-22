@@ -7,6 +7,10 @@ menu:
     weight: 1
 ---
 
+{{< section title="December 22nd" >}}
+
+The [problems](/contest/problems) and [solutions, editorial, graders and testcases](/contest/solutions) have been published.
+
 {{< section title="December 17th" >}}
 
 The [final results](/contest/results) have been published.

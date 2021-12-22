@@ -3,7 +3,7 @@ title: "Previous Editions"
 menu:
   main:
     parent: "contest"
-    weight: 5
+    weight: 6
 ---
 
 [![RMI 2020](/assets/previous/2020.png)](http://rmi.lbi.ro/rmi_2020/)
