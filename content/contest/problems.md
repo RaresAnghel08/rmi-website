@@ -84,7 +84,7 @@ In chronological order:
     * The following: "daca distanta dintre doua pietre care au acelasi numar scrie pe ele este egala cu un multiplu de M inchi" should be "daca distanta dintre doua pietre care au acelasi numar scri*s* pe ele este egala cu un multiplu de M inchi".
 
 3. NoM Clarification
-    
+
     * The phrasing "if the distance between two stones that have the same number written on them is a multiple of M inches" means "if there exist two stones with the same number written on them such that the distance between them is a multiple of M inches".
 
 4. Weirdtree Clarification
@@ -131,4 +131,4 @@ In chronological order:
 
 [Weirdtree (EN, BG, DE, HE, HU, IT, RO, RU, UK)](/statements_weirdtree.zip)
 
-The editorial, official solutions, testcases, graders and other extras can be found in [solutions and editorial](/contest/solutions).
+The editorial, official solutions, contestants' solutions, testcases, graders and other extras can be found in [solutions and editorial](/contest/solutions).

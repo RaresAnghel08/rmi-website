@@ -14,12 +14,20 @@ draft: false
 
 ### Day 1
 
-[Gardening](/extras_gardening.zip), 
-[Present](/extras_present.zip), 
+[Gardening](/extras_gardening.zip),
+[Present](/extras_present.zip),
 [Speedrun](/extras_speedrun.zip)
 
 ### Day 2
 
-[NoM](/extras_nom.zip), 
-[Paths](/extras_paths.zip), 
+[NoM](/extras_nom.zip),
+[Paths](/extras_paths.zip),
 [Weirdtree](/extras_weirdtree.zip)
+
+{{< section title="Contestants' submissions" >}}
+
+Solutions submitted by the participants during the contest.
+
+[Download in `.zip` format](/submissions.zip)
+
+[Download in `.tar.gz` format](/submissions.tar.gz)
