@@ -38,6 +38,7 @@ menu:
       "name": "Ministry of Education",
       "url": "https://edu.ro"
     }
+  ]
 }
 </script>
 {{</raw-html>}}
