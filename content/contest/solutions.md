@@ -7,7 +7,9 @@ menu:
 draft: false
 ---
 
-{{< section title="Editorial" link="/editorial.pdf" >}}
+*Solutions will be published after the contest days.*
+
+<!-- {{< section title="Editorial" link="/editorial.pdf" >}}
 {{< pdf file="/editorial.pdf" >}}
 
 {{< section title="Official Solutions, Testcases and Graders" >}}
@@ -30,4 +32,4 @@ Solutions submitted by the participants during the contest.
 
 [Download in `.zip` format](/submissions.zip)
 
-[Download in `.tar.gz` format](/submissions.tar.gz)
+[Download in `.tar.gz` format](/submissions.tar.gz) -->

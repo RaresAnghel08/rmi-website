@@ -7,4 +7,4 @@ menu:
 draft: false
 ---
 
-{{< participants file="csv/participants.csv" >}}
+*Participants will be published shortly.*

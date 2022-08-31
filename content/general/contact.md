@@ -10,9 +10,11 @@ If you have questions about the contest organization, about the problems or
 their solutions, please contact Prof. Victor Manz at
 [victor_manz@yahoo.com](mailto:victor_manz@yahoo.com).
 
-If you have any problems or suggestions for the website or the
-[CMS](https://cms-dev.github.io/) instance, email Tudor Roman at
-[tudor@tudorr.ro](mailto:tudor@tudorr.ro).
+If you have any problems or suggestions for the website, email Ciprian Ionescu
+at [me@ciprian-ionescu.com](mailto:me@ciprian-ionescu.com).
 
-This website was made by Ciprian Ionescu and Tudor Roman. Source code for the website
-and other RMI-related scripts can be found [on GitHub](https://github.com/CNITV).
+
+This website was made by Ciprian Ionescu, adapted from the template used for
+[Romanian Master of Informatics](https://rmi.lbi.ro), originally made by
+Ciprian Ionescu and Tudor Roman. Source code for the website can be found
+[on GitHub](https://github.com/CNITV).

@@ -12,22 +12,30 @@ no_header: false
 {{< pdf file="/programme.pdf" >}}
 -->
 
-{{< section title="Wednesday, December 15th (Practice Session)" >}}
+*A detailed, hourly schedule will be published shortly.*
 
-| Time              |                                      |
+{{< section title="Monday, October 3rd (Arrivals)" >}}
+
+<!-- | Time              |                                      |
 |-------------------|--------------------------------------|
 | 7.00 - 15.00 UTC  | Practice Session (In case of problems or questions, we offer support during this time period) |
-| 18.00 UTC         | Translation of the papers by leaders |
+| 18.00 UTC         | Translation of the papers by leaders | -->
 
-{{< section title="Thursday, December 16th (Contest Day 1)" >}}
+{{< section title="Tuesday, October 4th (Opening ceremony, Practice session)" >}}
 
-| Time             |                                      |
+<!-- | Time             |                                      |
 |------------------|--------------------------------------|
 | 7.00 - 12.00 UTC | Competition                          |
-| 18.00 UTC        | Translation of the papers by leaders |
+| 18.00 UTC        | Translation of the papers by leaders | -->
 
-{{< section title="Friday, December 17th (Contest Day 2)" >}}
+{{< section title="Wednesday, October 5th (Contest day 1)" >}}
 
-| Time             |                                      |
+<!-- | Time             |                                      |
 |------------------|--------------------------------------|
-| 7.00 - 12.00 UTC | Competition                          |
+| 7.00 - 12.00 UTC | Competition                          | -->
+
+{{< section title="Thursday, October 6th (Field trip)" >}}
+
+{{< section title="Friday, October 7th (Contest day 2, Closing ceremony)" >}}
+
+{{< section title="Saturday, October 8th (Departures)" >}}
