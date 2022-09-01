@@ -6,7 +6,6 @@ menu:
     weight: -1
 ---
 
-{{<raw-html>}}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -41,13 +40,13 @@ menu:
   ]
 }
 </script>
-{{</raw-html>}}
 
 ## Welcome!
 
 The **28th Balkan Olympiad in Informatics**, **BOI 2022**, will be held
 in Bucharest, Romania, from **October 3rd** to **October 8th**, **2022** by the
-**Society of Excellence and Performance in Informatics**.
+**Society of Excellence and Performance in Informatics**, together with the
+**Romanian Ministry of Education**.
 
 The Balkan Olympiad in Informatics is a programming contest for high school
 students from countries around or close to the Balkan Peninsula. Each
@@ -63,3 +62,21 @@ We want to thank our sponsors, all participating countries and our vounteers
 for making this year's contest finally possible onsite.
 
 **We will do our best to make BOI 2022 a memorable event!**
+
+## Organisers
+
+<div class="auto-scroll">
+	<div class="movable">
+		{{<images class="logo" path="assets/organisers/">}}
+		{{<images class="logo" path="assets/organisers/">}}
+	</div>
+</div>
+
+## Sponsors
+
+<div class="auto-scroll">
+	<div class="movable">
+		{{<images class="logo" path="assets/organisers/">}}
+		{{<images class="logo" path="assets/organisers/">}}
+	</div>
+</div>
