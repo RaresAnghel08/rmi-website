@@ -10,6 +10,7 @@ theme = "rms-theme"
 	heading = "October 3rd - October 8th, 2022"
 	author = "Societatea de Excelență și Performanță în Informatică"
 	author_url = "https://sepi.ro/"
+	useFlickity = true
 
 [menu]
 	[[menu.main]]
