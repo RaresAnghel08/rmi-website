@@ -4,11 +4,28 @@ menu:
   main:
     parent: "organisation"
     weight: 2
-no_header: true
 ---
 
-## Head Organiser
+#### Honorary President:
 
-Prof. Victor Manz
+*Details will be published shortly.*
 
-*More committee details will be published shortly.*
+#### Chairman:
+
+Prof. Victor Manz - *Colegiul Național "Tudor Vianu"*
+
+#### Executive President:
+
+*Details will be published shortly.*
+
+## Scientific Committee
+
+*Details will be published shortly.*
+
+## Technical Committee
+
+*Details will be published shortly.*
+
+## Organising Committee
+
+*Details will be published shortly.*
