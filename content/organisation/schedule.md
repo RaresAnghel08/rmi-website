@@ -16,10 +16,10 @@ no_header: false
 
 {{< section title="Monday, October 3rd (Arrivals)" >}}
 
-| Time              |                                      |
+<!-- | Time              |                                      |
 |-------------------|--------------------------------------|
 | 7.00 - 15.00 UTC  | Practice Session (In case of problems or questions, we offer support during this time period) |
-| 18.00 UTC         | Translation of the papers by leaders |
+| 18.00 UTC         | Translation of the papers by leaders | -->
 
 {{< section title="Tuesday, October 4th (Opening ceremony, Practice session)" >}}
 
