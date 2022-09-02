@@ -1,0 +1,63 @@
+baseURL: 'https://boi2022.labs.cip.fun/'
+title: Balkan Olympiad in Informatics Bucharest 2022
+
+languageCode: en-us
+enableRobotsTXT: true
+canonifyURLs: true
+theme: rms-theme
+staticDir:
+  - static/
+  - favicon/
+
+params:
+  logo: /assets/logo.svg
+  heading: 'October 3rd - October 8th, 2022'
+  author: Societatea de Excelență și Performanță în Informatică
+  author_url: 'https://sepi.ro/'
+  useSlider: false
+  baseColor: '#05a'
+
+menu:
+  main:
+    - identifier: root
+      name: BOI 2022
+      title: BOI 2022
+      weight: 1
+
+    - identifier: organisation
+      name: BOI Organisation
+      title: BOI Organisation
+      weight: 2
+
+    - identifier: contest
+      name: BOI Contest
+      title: BOI Contest
+      weight: 3
+
+    - identifier: info
+      name: General Information
+      title: General Information
+      weight: 4
+
+    - url: 'https://en.wikipedia.org/wiki/Romania'
+      name: About Romania
+      title: About Romania
+      parent: info
+      weight: 1
+
+    - url: 'https://en.wikipedia.org/wiki/Bucharest'
+      name: About Bucharest
+      title: About Bucharest
+      parent: info
+      weight: 2
+
+    - url: 'http://www.romaniatourism.com/'
+      name: Tourist Guide
+      title: Tourist Guide
+      parent: info
+      weight: 3
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
