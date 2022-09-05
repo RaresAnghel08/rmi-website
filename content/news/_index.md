@@ -5,4 +5,6 @@ menu:
   main:
     parent: "root"
     weight: 1
+_build:
+  render: always
 ---

@@ -8,6 +8,14 @@ theme: rms-theme
 staticDir:
   - static/
   - favicon/
+disableKinds:
+  - taxonomy
+  - taxonomyTerm
+
+minify:
+  tdewolff:
+    html:
+      keepWhitespace: false
 
 params:
   logo: /assets/logo.svg

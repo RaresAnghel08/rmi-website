@@ -7,4 +7,4 @@ menu:
     weight: 2
 ---
 
-No pictures for now.
+*No pictures for now.*
