@@ -76,7 +76,7 @@ for making this year's contest finally possible onsite.
 
 <div class="auto-scroll">
 	<div class="movable">
-		{{<images class="logo" path="/organisers/*" type="logo" size="x240" >}}
-		{{<images class="logo" path="/organisers/*" type="logo" size="x240" >}}
+		{{<images class="logo" path="/sponsors/*" type="logo" size="x240" >}}
+		{{<images class="logo" path="/sponsors/*" type="logo" size="x240" >}}
 	</div>
 </div>
