@@ -24,7 +24,7 @@ menu:
       "addressCountry": "RO"
     }
   },
-  "image": "https://boi2022.lbi.ro/assets/splash.png",
+  "image": "https://rmi.lbi.ro/assets/splash.png",
   "description": "The Romanian Master of Informatics is a programming contest for high school students organised by the Tudor Vianu National High School of Computer Science.",
   "organizer": [
     {
@@ -57,8 +57,6 @@ the culture of Romania.
 This year, the Romanian Master of Informatics will be hosted in parallel with
 the [Balkan Olympiad in Informatics](https://boi2022.lbi.ro). We look forward to
 meeting you at RMI 2022 in Bucharest, Romania!
-
-**We will do our best to make BOI 2022 a memorable event!**
 
 <!-- ## Organisers
 

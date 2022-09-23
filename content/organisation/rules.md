@@ -8,4 +8,4 @@ no_header: false
 ---
 
 
-*The BOI 2022 rules will be published shortly.*
+*Competition rules will be published shortly.*
