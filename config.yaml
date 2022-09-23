@@ -1,5 +1,5 @@
 baseURL: 'https://boi2022.labs.cip.fun/'
-title: Balkan Olympiad in Informatics Bucharest 2022
+title: Romanian Master of Informatics 2022
 
 languageCode: en-us
 enableRobotsTXT: true
@@ -23,25 +23,25 @@ params:
   author: Societatea de Excelență și Performanță în Informatică
   author_url: 'https://sepi.ro/'
   useSlider: false
-  baseColor: '#05a'
+  baseColor: '#911'
   fontFamily: '"Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
   oldHeader: false
 
 menu:
   main:
     - identifier: root
-      name: BOI 2022
-      title: BOI 2022
+      name: RMI 2022
+      title: RMI 2022
       weight: 1
 
     - identifier: organisation
-      name: BOI Organisation
-      title: BOI Organisation
+      name: RMI Organisation
+      title: RMI Organisation
       weight: 2
 
     - identifier: contest
-      name: BOI Contest
-      title: BOI Contest
+      name: RMI Contest
+      title: RMI Contest
       weight: 3
 
     - identifier: info

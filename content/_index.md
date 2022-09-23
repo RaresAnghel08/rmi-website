@@ -10,7 +10,7 @@ menu:
 {
   "@context": "https://schema.org",
   "@type": "Event",
-  "name": "Balkan Olympiad in Informatics",
+  "name": "Romanian Master of Informatics",
   "startDate": "2022-10-03",
   "endDate": "2022-10-08",
   "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
@@ -25,17 +25,17 @@ menu:
     }
   },
   "image": "https://boi2022.lbi.ro/assets/splash.png",
-  "description": "The Balkan Olympiad in Informatics is a programming contest for high school students from countries around or close to the Balkan Peninsula. Each participating country sends a team of 4 contestants, selected by their national olympiads or contests.",
+  "description": "The Romanian Master of Informatics is a programming contest for high school students organised by the Tudor Vianu National High School of Computer Science.",
   "organizer": [
+    {
+      "@type": "Organization",
+      "name": "Tudor Vianu National High School of Computer Science",
+      "url": "https://lbi.ro"
+    },
     {
       "@type": "Organization",
       "name": "Society of Excellence and Performance in Informatics",
       "url": "https://sepi.ro"
-    },
-    {
-      "@type": "Organization",
-      "name": "Ministry of Education",
-      "url": "https://edu.ro"
     }
   ]
 }
@@ -43,23 +43,20 @@ menu:
 
 ## Welcome!
 
-The **28th Balkan Olympiad in Informatics**, **BOI 2022**, will be held
+The **10th Romanian Master of Informatics**, **RMI 2022**, will be held
 in Bucharest, Romania, from **October 3rd** to **October 8th**, **2022** by the
-**Society of Excellence and Performance in Informatics**, together with the
-**Romanian Ministry of Education**.
+**Tudor Vianu National High School of Computer Science**, together with the
+**Society of Excellence and Performance in Informatics**.
 
-The Balkan Olympiad in Informatics is a programming contest for high school
-students from countries around or close to the Balkan Peninsula. Each
-participating country sends a team of 4 contestants, selected by their national
-olympiads or contests.
+RMI provides a great opportunity for young people to demonstrate their
+abilities in Informatics, to exchange knowledge and to enhance cross-cultural
+contacts in high-school education. Coming to RMI 2022, participants will have
+opportunities to make new friends, to visit a friendly country, and to discover
+the culture of Romania.
 
-This year, Romania will have the honour of hosting the excellent participants
-during the contest week. We are happy that these most gifted students from
-Balkan region of Europe will have the possibility to prove their knowledge and
-skills in Informatics and Algorithmics. We, the hosts of the Olympiad, will
-make our best efforts to provide the best conditions during the competition.
-We want to thank our sponsors, all participating countries and our vounteers
-for making this year's contest finally possible onsite.
+This year, the Romanian Master of Informatics will be hosted in parallel with
+the [Balkan Olympiad in Informatics](https://boi2022.lbi.ro). We look forward to
+meeting you at RMI 2022 in Bucharest, Romania!
 
 **We will do our best to make BOI 2022 a memorable event!**
 
@@ -74,9 +71,6 @@ for making this year's contest finally possible onsite.
 
 ## Sponsors
 
-<div class="auto-scroll">
-	<div class="movable">
-		{{<images class="logo" path="/sponsors/*" type="logo" size="x240" >}}
-		{{<images class="logo" path="/sponsors/*" type="logo" size="x240" >}}
-	</div>
+<div>
+  {{<images class="logo" path="/sponsors/*" type="logo" size="x320" >}}
 </div>

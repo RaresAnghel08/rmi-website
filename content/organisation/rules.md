@@ -1,5 +1,5 @@
 ---
-title: "BOI Rules"
+title: "Competition Rules"
 menu:
   main:
     parent: "organisation"
