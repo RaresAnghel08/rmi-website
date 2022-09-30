@@ -7,4 +7,4 @@ menu:
 draft: false
 ---
 
-*Participants will be published shortly.*
+{{<participants file="csv/teams.csv">}}
