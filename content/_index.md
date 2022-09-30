@@ -75,7 +75,7 @@ for making this year's contest finally possible onsite.
 ## Sponsors
 
 <div class="auto-scroll">
-	<div class="movable">
+	<div class="movable" style="animation-duration: 20s;">
 		{{<images class="logo" path="/sponsors/*" type="logo" size="x240" >}}
 		{{<images class="logo" path="/sponsors/*" type="logo" size="x240" >}}
 	</div>
