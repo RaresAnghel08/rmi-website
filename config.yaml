@@ -38,6 +38,11 @@ menu:
       name: BOI Organisation
       title: BOI Organisation
       weight: 2
+    
+    - identifier: schedule
+      name: BOI Schedule
+      title: BOI Schedule
+      weight: 2
 
     - identifier: contest
       name: BOI Contest
