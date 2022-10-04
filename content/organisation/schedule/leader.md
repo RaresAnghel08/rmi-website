@@ -23,7 +23,7 @@ no_header: false
 | **12:30 – 13:00** | Transfer to “Tudor Vianu” National HS |
 | **13:00 – 14:00** | Lunch *(“Tudor Vianu” National HS)*   |
 | **14:30 – 16:30** | Free time or activities               |
-| **16:30 – 18:00** | Opening ceremony                      |
+| **17:00 – 18:30** | Opening ceremony                      |
 | **18:30 – 19:00** | Transfer to Phoenicia Grand Hotel     |
 | **19:00 – 21:00** | Dinner *(Phoenicia Grand Hotel)*      |
 | **21:00 – 23:00** | Translation session                   |
@@ -89,4 +89,4 @@ no_header: false
 
 [Subscribe to iCal feed](webcals://boi2022.lbi.ro/organisation/schedule/BOI2022_leader.ics)
 
-[Add to Google Calendar](https://calendar.google.com/calendar/render?cid=webcals://boi2022.lbi.ro/organisation/schedule/BOI2022_leader.ics)
+[Add to Google Calendar](https://www.google.com/calendar/render?cid=webcal://boi2022.lbi.ro/organisation/schedule/BOI2022_leader.ics)
