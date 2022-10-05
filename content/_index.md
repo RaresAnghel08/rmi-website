@@ -41,6 +41,8 @@ menu:
 }
 </script>
 
+**[Day 1 results published!](/contest/results)**
+
 ## Welcome!
 
 The **28th Balkan Olympiad in Informatics**, **BOI 2022**, will be held
