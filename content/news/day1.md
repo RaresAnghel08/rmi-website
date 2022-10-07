@@ -1,5 +1,5 @@
 ---
-title: BOI 2022 Website Published
+title: Day 1 Results Published
 date: 2022-10-05
 ---
 

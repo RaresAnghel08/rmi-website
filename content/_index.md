@@ -41,7 +41,7 @@ menu:
 }
 </script>
 
-**[Day 1 results published!](/contest/results)**
+**[Day 2 results published!](/contest/results)**
 
 ## Welcome!
 
