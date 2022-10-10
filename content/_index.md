@@ -41,12 +41,10 @@ menu:
 }
 </script>
 
-**[Day 2 results published!](/contest/results)**
-
 ## Welcome!
 
-The **28th Balkan Olympiad in Informatics**, **BOI 2022**, will be held
-in Bucharest, Romania, from **October 3rd** to **October 8th**, **2022** by the
+The **28th Balkan Olympiad in Informatics**, **BOI 2022**, was held in
+Bucharest, Romania, from **October 3rd** to **October 8th**, **2022** by the
 **Society of Excellence and Performance in Informatics**, together with the
 **Romanian Ministry of Education**.
 
@@ -63,7 +61,7 @@ make our best efforts to provide the best conditions during the competition.
 We want to thank our sponsors, all participating countries and our vounteers
 for making this year's contest finally possible onsite.
 
-**We will do our best to make BOI 2022 a memorable event!**
+**We did our best to make BOI 2022 a memorable event!**
 
 <!-- ## Organisers
 
