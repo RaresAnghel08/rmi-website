@@ -1,5 +1,5 @@
 ---
-title: "Schedule"
+title: "Contestant Schedule"
 menu:
   main:
     parent: "organisation"
@@ -9,69 +9,46 @@ type: _default
 layout: single
 ---
 
-{{< section title="Monday, October 3rd" >}}
+{{<section title="Wednesday, October 11th" >}}
 
-|              Time |                 |
-| ----------------: | :-------------- |
-|  **8:00 – 23:00** | Arrival         |
-| **18:00 – 19:00** | Dinner *(Moxa)* |
-
-
-{{< section title="Tuesday, October 4th" >}}
-
-|              Time |                                       |
-| ----------------: | :------------------------------------ |
-|   **7:00 – 8:00** | Breakfast *(Moxa)*                    |
-| **12:30 – 13:00** | Transfer to “Tudor Vianu” National HS |
-| **13:00 – 14:00** | Lunch *(“Tudor Vianu” National HS)*   |
-| **14:30 – 16:30** | Practice session                      |
-| **17:00 – 18:30** | Opening ceremony                      |
-| **18:30 – 19:00** | Transfer to Moxa                      |
-| **19:00 – 19:30** | Dinner *(Moxa)*                       |
+|                        Time |                      |
+| --------------------------: | :------------------- |
+| **14:00&nbsp;–&nbsp;15:00** | Arrivals / Free time |
+| **15:00&nbsp;–&nbsp;16:30** | Practice session     |
+| **16:30&nbsp;–&nbsp;18:00** | Opening ceremony     |
+| **18:30&nbsp;–&nbsp;19:30** | Dinner at MOXA       |
 
 
-{{< section title="Wednesday, October 5th" >}}
+{{<section title="Thursday, October 12th" >}}
 
-|              Time |                                       |
-| ----------------: | :------------------------------------ |
-|   **7:00 – 8:00** | Breakfast *(Moxa)*                    |
-|   **8:00 – 8:30** | Transfer to “Tudor Vianu” National HS |
-|  **9:00 – 14:00** | Contest day 1                         |
-| **14:30 – 15:30** | Lunch *(“Tudor Vianu” National HS)*   |
-| **16:00 – 17:00** | Transfer to Moxa                      |
-| **17:00 – 18:00** | Free Time                             |
-| **18:00 – 19:00** | Dinner *(Moxa)*                       |
-
-
-{{< section title="Thursday, October 6th" >}}
-
-|              Time |                        |
-| ----------------: | :--------------------- |
-|   **7:00 – 8:00** | Breakfast *(Moxa)*     |
-| **11:00 – 13:00** | Visit to Antipa Museum |
-| **13:00 – 14:00** | Lunch *(Moxa)*         |
-| **14:00 – 18:00** | Free Time              |
-| **18:00 – 19:00** | Dinner *(Moxa)*        |
+|                        Time |                                 |
+| --------------------------: | :------------------------------ |
+| **07:00&nbsp;–&nbsp;07:45** | Breakfast at MOXA               |
+| **07:45&nbsp;–&nbsp;08.15** | Transportation to contest place |
+| **08.30&nbsp;–&nbsp;13.30** | Competition                     |
+| **14:00&nbsp;–&nbsp;15:00** | Lunch at MOXA                   |
+| **15:00&nbsp;–&nbsp;18.30** | Free time                       |
+| **18.30&nbsp;–&nbsp;19:30** | Dinner at MOXA                  |
 
 
-{{< section title="Friday, October 7th" >}}
 
-|              Time |                                       |
-| ----------------: | :------------------------------------ |
-|   **7:00 – 8:00** | Breakfast *(Moxa)*                    |
-|   **8:00 – 8:30** | Transfer to “Tudor Vianu” National HS |
-|  **9:00 – 14:00** | Contest day 2                         |
-| **14:30 – 15:30** | Lunch *(“Tudor Vianu” National HS)*   |
-| **15:30 – 17:30** | Free time                             |
-| **17:30 – 19:00** | Closing ceremony                      |
-| **19:00 – 20:00** | Transfer to Phoenicia Grand Hotel     |
-| **20:00 – 22:00** | Festive dinner                        |
-| **22:00 – 22:30** | Transfer to Moxa                      |
+{{<section title="Friday, October 13th" >}}
+
+|                        Time |                                                        |
+| --------------------------: | :----------------------------------------------------- |
+| **07:00&nbsp;–&nbsp;07:45** | Breakfast at MOXA                                      |
+| **07:45&nbsp;–&nbsp;08.15** | Transportation to contest place                        |
+| **08:30&nbsp;–&nbsp;13:30** | Competition                                            |
+| **13:30&nbsp;–&nbsp;15:00** | Lunch at MOXA                                          |
+| **15:00&nbsp;–&nbsp;17:00** | Free time                                              |
+| **17:00&nbsp;–&nbsp;18:30** | Closing Ceremony                                       |
+| **18:30&nbsp;–&nbsp;20:30** | Farewell banquet at "Tudor Vianu” National High School |
 
 
-{{< section title="Saturday, October 8th" >}}
 
-|            Time |                    |
-| --------------: | :----------------- |
-| **7:00 – 8:00** | Breakfast *(Moxa)* |
-|                 | Departure          |
+{{<section title="Saturday, October 14th" >}}
+
+|                        Time |                   |
+| --------------------------: | :---------------- |
+| **08:00&nbsp;–&nbsp;09:00** | Breakfast at MOXA |
+|                             | Departure         |

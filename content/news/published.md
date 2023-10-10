@@ -1,6 +1,6 @@
 ---
-title: RMI 2022 Website Published
-date: 2022-09-23
+title: RMI 2023 Website Published
+date: 2023-10-09
 ---
 
-The RMI 2022 site has been published with preliminary information. It will be updated in the upcoming weeks with further details.
+The RMI 2023 site has been published.

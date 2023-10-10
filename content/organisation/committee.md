@@ -6,7 +6,7 @@ menu:
     weight: 2
 ---
 
-|                     |                     |                                                |
+<!-- |                     |                     |                                                |
 | ------------------- | ------------------- | ---------------------------------------------- |
 | Honorary President  | **Florin Lixandru** | Ministerul Educației                           |
 | Chairman            | **Victor Manz**     | Colegiul Național de Informatică "Tudor Vianu" |
@@ -49,4 +49,4 @@ menu:
 | **Mihai Heber**                       | Colegiul Național de Informatică "Tudor Vianu" București |
 | **Ciprian Ionescu**                   | Delft University of Technology                           |
 | **Maria Odubășteanu**                 | Colegiul Național de Informatică "Tudor Vianu" București |
-| **Tudor Roman**                       | Vrije Universiteit Amsterdam                             |
+| **Tudor Roman**                       | Vrije Universiteit Amsterdam                             | -->

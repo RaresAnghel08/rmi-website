@@ -11,8 +11,8 @@ menu:
   "@context": "https://schema.org",
   "@type": "Event",
   "name": "Romanian Master of Informatics",
-  "startDate": "2022-10-03",
-  "endDate": "2022-10-08",
+  "startDate": "2023-10-11",
+  "endDate": "2023-10-14",
   "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
   "eventStatus": "https://schema.org/EventScheduled",
   "location": {
@@ -43,26 +43,25 @@ menu:
 
 ## Welcome!
 
-The **10th Romanian Master of Informatics**, **RMI 2022**, was held in
-Bucharest, Romania, from **October 3rd** to **October 8th**, **2022** by the
-**Tudor Vianu National High School of Computer Science**, together with the
-**Society of Excellence and Performance in Informatics**.
+The **11th Romanian Master of Informatics**, **RMI 2023**, is held in
+Bucharest, Romania, from **October 11th** to **October 14th**, **2023** by the
+**Tudor Vianu National High School of Computer Science**.
 
 RMI provides a great opportunity for young people to demonstrate their
 abilities in Informatics, to exchange knowledge and to enhance cross-cultural
-contacts in high-school education. Coming to RMI 2022, participants will have
+contacts in high-school education. Coming to RMI 2023, participants will have
 opportunities to make new friends, to visit a friendly country, and to discover
 the culture of Romania.
 
-This year, the Romanian Master of Informatics will be hosted in parallel with
-the [Balkan Olympiad in Informatics](https://boi2022.lbi.ro). We look forward to
-meeting you at RMI 2022 in Bucharest, Romania!
+We look forward to meeting you at RMI 2023 in Bucharest, Romania!
 
 ## Sponsors
 
-<div class="auto-scroll">
+<!-- <div class="auto-scroll">
 	<div class="movable" style="animation-duration: 20s;">
 		{{<images class="logo" path="/sponsors/*" type="logo" size="x240" >}}
 		{{<images class="logo" path="/sponsors/*" type="logo" size="x240" >}}
 	</div>
-</div>
+</div> -->
+
+{{<images class="logo" path="/sponsors/*" type="logo" size="x240" >}}
