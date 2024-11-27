@@ -1,6 +1,6 @@
 ---
-title: RMI 2023 Website Published
-date: 2023-10-09
+title: RMI 2024 Website Published
+date: 2024-11-12
 ---
 
-The RMI 2023 site has been published.
+The RMI 2024 site has been published.

@@ -9,7 +9,7 @@ type: _default
 layout: single
 ---
 
-{{<section title="Wednesday, October 11th" >}}
+<!-- {{<section title="Wednesday, October 11th" >}}
 
 |                        Time |                      |
 | --------------------------: | :------------------- |
@@ -51,4 +51,4 @@ layout: single
 |                        Time |                   |
 | --------------------------: | :---------------- |
 | **08:00&nbsp;–&nbsp;09:00** | Breakfast at MOXA |
-|                             | Departure         |
+|                             | Departure         | -->

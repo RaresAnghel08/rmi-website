@@ -7,4 +7,4 @@ menu:
 draft: false
 ---
 
-{{<participants file="csv/teams.csv">}}
+<!-- {{<participants file="csv/teams.csv">}} -->

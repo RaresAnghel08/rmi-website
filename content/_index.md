@@ -43,8 +43,8 @@ menu:
 
 ## Welcome!
 
-The **11th Romanian Master of Informatics**, **RMI 2023**, is held in
-Bucharest, Romania, from **October 11th** to **October 14th**, **2023** by the
+The **12th Romanian Master of Informatics**, **RMI 2024**, is held in
+Bucharest, Romania, from **November 27th** to **November 29th**, **2024** by the
 **Tudor Vianu National High School of Computer Science**.
 
 RMI provides a great opportunity for young people to demonstrate their
@@ -53,7 +53,7 @@ contacts in high-school education. Coming to RMI 2023, participants will have
 opportunities to make new friends, to visit a friendly country, and to discover
 the culture of Romania.
 
-We look forward to meeting you at RMI 2023 in Bucharest, Romania!
+We look forward to meeting you at RMI 2024 in Bucharest, Romania!
 
 ## Sponsors
 
