@@ -1,0 +1,19 @@
+[
+  {"path": "content/_index.md", "title": "Home"},
+  {"path": "content/gallery.md", "title": "Gallery"},
+  {"path": "content/news/_index.md", "title": "News"},
+  {"path": "content/news/published.md", "title": "Published News"},
+  {"path": "content/general/_index.md", "title": "General"},
+  {"path": "content/general/contact.md", "title": "Contact"},
+  {"path": "content/organisation/_index.md", "title": "Organisation"},
+  {"path": "content/organisation/committee.md", "title": "Committee"},
+  {"path": "content/organisation/rules.md", "title": "Rules"},
+  {"path": "content/organisation/schedule/_index.md", "title": "Schedule"},
+  {"path": "content/organisation/schedule/leaders.md", "title": "Leaders"},
+  {"path": "content/contest/_index.md", "title": "Contest"},
+  {"path": "content/contest/participants.md", "title": "Participants"},
+  {"path": "content/contest/previous.md", "title": "Previous"},
+  {"path": "content/contest/problems.md", "title": "Problems"},
+  {"path": "content/contest/results.md", "title": "Results"},
+  {"path": "content/contest/solutions.md", "title": "Solutions"}
+]

@@ -11,18 +11,32 @@ Făcătorii acestui site sunt [Tudor Roman](https://github.com/tudurom) și
 [Ciprian Ionescu](https://github.com/cirip). Faimă și recunoștință eternă pentru
 ei!
 
-## Testing and deploying
+## Static-only workflow (no Hugo)
 
-Folosește comanda `hugo serve -D` pentru a testa site-ul în dezvoltarea
-lui. Flag-ul `-D` înseamnă că Hugo va lua în considerare și paginile
-marcate ca draft. Testează apoi cu `hugo serve` ca să vezi cum va arăta de
-fapt.
+This repository was converted to a static-only frontend: Hugo source files
+and theme templates were removed. The site now serves plain HTML, CSS and
+JavaScript from the repository root. Keep the `static/` and `assets/`
+folders for images and other static resources.
 
-Pentru a genera site-ul, șterge folder-ul `public` și execută `hugo`.
-Doar atât, fără alt parametru.
+Preview locally
 
-Pentru a face modificările live, pune conținutul folder-ului `public` pe
-server.
+You can preview the site by opening `index.html` in your browser, or by
+running a simple static file server. Using Python 3 (recommended):
+
+```powershell
+# from the repository root
+python -m http.server 8000
+# then open http://localhost:8000/
+```
+
+Or with PowerShell's built-in webserver on Windows 10+ (PowerShell 7+):
+
+```powershell
+# using dotnet or other tools if available; otherwise use python
+```
+
+To deploy, upload the repository files (or the generated build output)
+to your static file host as usual.
 
 ## Instrucțiuni de operare pentru site
 
@@ -80,8 +94,7 @@ totuși.
 ### Schimbă logo-ul
 
 Logo-ul trebuie să fie un fișier `.png` în `static/assets/logo.png`. Dacă ai și
-un roll-up, cum am avut la ediția din 2019, pune-l în
-`static/assets/rollup.png`.
+un roll-up, pune-l în `static/assets/rollup.png`.
 
 ### Actualizează sponsorii
 
