@@ -1,197 +1,70 @@
-# Noul website RMI
 
-Acesta este, în primul rând, un exemplu al temei [RMS
-Theme](https://github.com/CNITV/rms-theme).
+# Romanian Masters of Informatics — Static Site
 
-Site-ul este generat static folosind [Hugo](https://gohugo.io/). El se
-instalează foarte ușor, este doar un singur fișier executabil. Se folosește la
-linia de comandă.
+# https://cnitv-rmi.netlify.app/
 
-Făcătorii acestui site sunt [Tudor Roman](https://github.com/tudurom) și
-[Ciprian Ionescu](https://github.com/cirip). Faimă și recunoștință eternă pentru
-ei!
+This repository contains a static HTML/CSS/JS version of the Romanian Masters of Informatics website. The site was converted from a Hugo-based site into a standalone static site with a small Python generator used to create the participants page from CSV source data.
 
-## Static-only workflow (no Hugo)
+This README explains how to run the site locally, regenerate the participants page, and deploy the site (example: Netlify).
 
-This repository was converted to a static-only frontend: Hugo source files
-and theme templates were removed. The site now serves plain HTML, CSS and
-JavaScript from the repository root. Keep the `static/` and `assets/`
-folders for images and other static resources.
+## Project structure (important files)
 
-Preview locally
+- `index.html` — site shell and navigation shell
+- `pages/` — static content pages (HTML). These are the files that the client-side loader fetches and injects into the shell.
+- `assets/css/style.css` — main styles (responsive, theme variables, sponsor sizing)
+- `assets/js/main.js` — client-side navigation loader, mobile nav and theme toggle
+- `assets/organisers/vianu.png` — favicon & social image used in meta tags
+- `assets/flags/` — team flag SVGs used on the participants page
+- `csv/teams.csv` — original data source for participants
+- `scripts/generate_participants.py` — small generator that converts `csv/teams.csv` into `pages/contest/participants.html`
 
-You can preview the site by opening `index.html` in your browser, or by
-running a simple static file server. Using Python 3 (recommended):
+## Local development
+
+Requirements
+- Python 3.8+ (for the generator and optionally for the simple static server)
+
+Run the site locally (quick):
 
 ```powershell
-# from the repository root
+# From the repository root
+# Start a simple static server on port 8000
 python -m http.server 8000
-# then open http://localhost:8000/
+# Then open http://localhost:8000 in a browser
 ```
 
-Or with PowerShell's built-in webserver on Windows 10+ (PowerShell 7+):
+If you prefer a single-command run that regenerates the participants page and serves the site, run:
 
 ```powershell
-# using dotnet or other tools if available; otherwise use python
+python .\scripts\generate_participants.py; python -m http.server 8000
 ```
 
-To deploy, upload the repository files (or the generated build output)
-to your static file host as usual.
+## Regenerating participants
 
-## Instrucțiuni de operare pentru site
+When `csv/teams.csv` changes, re-run the generator to update `pages/contest/participants.html`:
 
-Vine o nouă ediție a RMI / RMM, ce faci?
-
-### Modifici fișierul `config.toml`
-
-Acest fișier ține informații precum titlul site-ului, numărul ediției și
-perioada în care se desfășoară. În general, trebuie să modifici anul și data.
-
-### Modifici pagina principala în `content/_index.md`
-
-Ca și în cazul fișierului de configurare, aici ar trebui să modifici anul și
-data.
-
-### Resetează paginile
-
-Resetarea unei pagini constă în ștergerea conținutului (nu șterge fișierul!) și
-înlocuirea lui cu un mesaj ("There are no news currently." ar fi un exemplu
-pentru pagina de noutăți). După ce ai înlocuit conținutul, setează pagina ca
-draft.
-
-Fiecare pagină are un antet de forma:
-
-```yaml
----
-title: "News"
-date: 2019-10-02T15:00:00+03:00
-menu:
-  main:
-    parent: "root"
-    weight: 1
----
+```powershell
+python .\scripts\generate_participants.py
 ```
 
-Ca să marchezi pagina ca un draft, pui o linie nouă, fără indentare: `draft:
-true`:
+The script will read `csv/teams.csv` and `assets/flags/` and write an HTML file at `pages/contest/participants.html`. Generated pages include minimal markup (team blocks, flags, leaders/students lists) and already include the client loader script so they work when opened directly in a browser.
 
-```yaml
----
-title: "News"
-date: 2019-10-02T15:00:00+03:00
-menu:
-  main:
-    parent: "root"
-    weight: 1
-draft: true
----
-```
+## SEO and social previews
 
-Pagini care trebuiesc resetate sunt paginile cu noutăți, poze, programul concursului, regulament,
-rezultate și subiecte. Paginile de noutăți, poze și programul concursului _nu_ trebuie marcate ca draft
-totuși.
+Basic SEO and social meta tags were added to `index.html` and point at the deployed URL (`https://cnitv-rmi.netlify.app/`) and use `assets/organisers/vianu.png` as the image for social cards. For better SEO, consider adding per-page `title` and `description` meta tags to the pages in `pages/`.
 
-### Schimbă logo-ul
+## Deployment
 
-Logo-ul trebuie să fie un fișier `.png` în `static/assets/logo.png`. Dacă ai și
-un roll-up, pune-l în `static/assets/rollup.png`.
+This is a static site and can be hosted on any static hosting provider. Example: Netlify, GitHub Pages, Vercel.
 
-### Actualizează sponsorii
+Netlify quick deploy notes:
+- Create a new Netlify site from your repository.
+- Build & deploy settings: no build command required (static files only). Set the publish directory to the repository root or where your static files live (root in this repo).
+- Set a custom domain if you have one; Netlify will provide a default URL.
 
-Logo-urile sponsorilor sunt în `static/assets/sponsors`. Ele vor fi afișate în
-ordinea alfabetică a filename-urilor.
+The public deployed URL used for social tags is: https://cnitv-rmi.netlify.app/
 
-### Actualizează pagina cu comisiile (`csv/*_committee.csv`)
+## Contributing
 
-Fiecare fișier `.csv` are 4 coloane, fără antet. Fiecare rând are următoarea
-formă:
-
-```csv
-Titulatură,Prenume,Nume,Funcție
-```
-
-Titulatura este de obicei "Prof." sau nimic. Funcția este "PRESIDENT", "VICE
-PRESIDENT" sau nimic.
-
-Mai este și fișierul cu voluntari, în `csv/guides.csv`. El are altă
-structură:
-
-```csv
-Prenume,Nume,Clasa
-```
-
-Nici fișierul cu voluntari nu are antet.
-
-### Actualizează participanții
-
-Participanții sunt în fișierul `csv/participants.csv`. Acesta este tot un fișier
-`.csv`, fără antet, cu 4 coloane. Fiecare rând are următoarea formă:
-
-```csv
-Echipă,Prenume,Nume,Profesor
-```
-
-Echipele ar trebui să fie în ordine alfabetică. Membrii unei echipe trebuie să
-fie mereu pe rânduri adiacente, iar profesorii să fie primii. Câmpul "Profesor"
-are valoarea "DA" dacă este profesor, respectiv "NU" dacă nu este.
-
-Echipa trebuie să fie de forma "Țară", "Țară 1", "Țară - Regiune" sau "Țară -
-Regiune 1", unde "1" este numărul echipei, dacă sunt mai multe din aceeași țară
-sau aceeași regiune. În cazul în care o țară are echipă de juniori, aceasta
-poate fi exprimată ca "Țară - juniors" sau "Țară - Regiuni juniors".
-
-Exemple de nume de echipe: "Israel", "Czech Republic", "Bulgaria - Gabrovo",
-"Romania - Vianu 1", "Romania - Vianu juniors", "Poland 2", "Romania - juniors".
-
-Țara cât și regiunea trebuie să fie în engleză.
-
-De asemenea, fiecare țară trebuie să aibă un steag în folder-ul
-`themes/rms-theme/static/assets/flags`. Filename-ul este de forma `tara.svg`.
-Aceste steaguri pot fi găsite
-[aici](https://hjnilsson.github.io/country-flags/). Dacă numele țării are mai
-mult de un cuvânt, fișierul va avea spațiile dintre cuvinte in filename: `Czech
-Republic -> czech republic.svg`.
-
-### Actualizează paginile cu documente
-
-Acestea sunt: `content/organisation/programme.md`,
-`content/organisation/rules.md` și `content/contest/results.md`.
-
-Fiecare din aceste fișiere are conținut de forma:
-
-```html
-{{< section title="Competition Rules" link="/rules.pdf" >}}
-{{< pdf file="/rules.pdf" >}}
-```
-
-Cred că se înțelege ce valori trebuie să modifci pentru fiecare caz.
-S-ar putea ca aceste linii să fie cuprinse într-un comentariu, de forma:
-
-```html
-<!--
-{{< section title="Programme" link="/program.pdf" >}}
-{{< pdf file="/programme.pdf" >}}
--->
-```
-
-Când vine momentul, scoți liniile cu `<!--` și `-->`, evident.
-
-Fișierele aferente se pun in `static/`. De exemplu, fișierul din exemplul de mai
-sus cu calea `/programme.pdf` trebuie pus in `static/programme.pdf`.
-
-Pagina cu rezultate s-ar putea să aibă mai multe astfel de documente
-afișate, pentru diferite tipuri de clasamente.
-
-### Actualizează pagina cu concursul online
-
-Acesta ar trebui să fie actualizat cu perioada în care se va ține, link către
-CMS, și document `pdf` cu rezultatele la final.
-
-### Nu uita să publici draft-urile!
-
-După ce lucrezi la pagini marcate ca draft, nu uita să setezi `draft: false`
-ca să apară.
-
-### Actualizează noutățile și pozele
-
-Pe măsură ce actualizezi aceste două pagini, nu uita să schimbi și data!
+- If you want to add or edit pages, update the corresponding file under `pages/`.
+- If you need to change participants data, update `csv/teams.csv` and run the generator.
+- For sweeping Hugo shortcodes or other template artifacts, search for `{{` patterns and replace with static HTML; take care with markup that contained logic.
