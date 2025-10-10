@@ -146,3 +146,24 @@ img{max-width:100%;height:auto;display:block}
 .member-list{color:var(--muted);display:inline}
 .team-leaders strong,.team-students strong{margin-right:.4rem}
 .team-block .member-list a{color:var(--accent)}
+
+/* News page styles - modern card layout */
+.news-container{display:flex;flex-direction:column;gap:1rem}
+.news-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem}
+.news-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:1rem;border-radius:12px;border:1px solid rgba(255,255,255,0.03);box-shadow:0 8px 24px rgba(2,6,23,0.6);display:flex;flex-direction:column;gap:.6rem}
+.news-title{font-size:1.05rem;color:var(--text);font-weight:700;margin:0}
+.news-meta{font-size:.85rem;color:var(--muted);display:flex;gap:.5rem;align-items:center}
+.news-excerpt{color:var(--muted);line-height:1.5;margin:0}
+.news-actions{margin-top:auto;display:flex;justify-content:flex-end}
+.news-link{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#041126;padding:.45rem .7rem;border-radius:8px;text-decoration:none;font-weight:700}
+.news-link:hover{filter:brightness(1.05)}
+
+/* Single article tweaks */
+.article-header{margin-bottom:1rem}
+.article-header h1{margin:0 0 .25rem 0}
+.article-meta{color:var(--muted);font-size:.9rem;margin-bottom:.75rem}
+
+@media (max-width:520px){
+	.news-card{padding:.75rem}
+	.news-title{font-size:1rem}
+}

@@ -46,7 +46,6 @@
             if(nav.classList.contains('open')) toggleNav(false);
           });
         } else if(item.path){
-          a.href = 'javascript:void(0)';
           a.dataset.path = item.path;
           a.addEventListener('click', function(ev){
             ev.preventDefault();
