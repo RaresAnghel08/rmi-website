@@ -76,6 +76,10 @@ blockquote{border-left:3px solid rgba(125,211,252,0.12);padding:.4rem 1rem;color
 	body.nav-open{overflow:hidden}
 }
 
+/* Overlay shown when mobile nav is open */
+.nav-overlay{position:fixed;inset:0;background:rgba(2,6,23,0.55);opacity:0;transition:opacity .25s ease;z-index:45}
+.nav-overlay.visible{opacity:1}
+
 /* Fluid images and media responsiveness */
 img{max-width:100%;height:auto;display:block}
 .content img{border-radius:8px}

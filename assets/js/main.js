@@ -72,12 +72,33 @@
   function toggleNav(force){
     const nav = document.getElementById('site-nav');
     const expanded = typeof force === 'boolean' ? force : !nav.classList.contains('open');
+    const body = document.body;
+    const existingOverlay = document.getElementById('nav-overlay');
     if(expanded){
       nav.classList.add('open');
       toggleBtn.setAttribute('aria-expanded','true');
+      body.classList.add('nav-open');
+      if(!existingOverlay){
+        const overlay = document.createElement('div');
+        overlay.id = 'nav-overlay';
+        overlay.className = 'nav-overlay';
+        overlay.addEventListener('click', ()=> toggleNav(false));
+        document.body.appendChild(overlay);
+        // allow CSS transitions
+        requestAnimationFrame(()=> overlay.classList.add('visible'));
+      } else {
+        existingOverlay.classList.add('visible');
+      }
     } else {
       nav.classList.remove('open');
       toggleBtn.setAttribute('aria-expanded','false');
+      body.classList.remove('nav-open');
+      if(existingOverlay){
+        existingOverlay.classList.remove('visible');
+        setTimeout(()=>{
+          if(existingOverlay.parentNode) existingOverlay.parentNode.removeChild(existingOverlay);
+        }, 250);
+      }
     }
   }
   if(toggleBtn){
