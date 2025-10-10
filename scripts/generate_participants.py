@@ -10,7 +10,7 @@ import html
 ROOT = os.path.dirname(os.path.dirname(__file__))
 CSV_PATH = os.path.join(ROOT, 'csv', 'teams.csv')
 FLAGS_DIR = os.path.join(ROOT, 'assets', 'flags')
-OUT_PATH = os.path.join(ROOT, 'pages', 'contest', 'participants.html')
+OUT_PATH = os.path.join(ROOT, 'pages', 'participants.html')
 
 
 def load_flags():
@@ -47,85 +47,84 @@ def read_csv():
 
 
 def generate_html(rows, flags):
-    head = '''<!doctype html>
+        head = '''<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Participants</title>
-    <link rel="stylesheet" href="/assets/css/style.css">
-  </head>
-  <body>
-    <div class="container">
-      <header class="site-header"><h1>Participants</h1></header>
-      <main class="content">
-        <section class="participants-section">
-          <h2>Participants</h2>
-          <div class="participants-list">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Participants</title>
+        <link rel="stylesheet" href="/assets/css/style.css">
+    </head>
+    <body>
+        <div class="container">
+            <header class="site-header"><h1>Participants</h1></header>
+            <main class="content">
+                <section class="participants-section">
+                    <h2>Participants</h2>
+                    <div class="participants-list">
 '''
 
-    # group rows by team (use empty string for unspecified team)
-    teams = {}
-    for r in rows:
-        team = r['team'] or 'No team'
-        teams.setdefault(team, []).append(r)
+        # group rows by team (use 'No team' if unspecified)
+        teams = {}
+        for r in rows:
+                team = r['team'] or 'No team'
+                teams.setdefault(team, []).append(r)
 
-    rows_html = []
-    for team_name in sorted(teams.keys()):
-        members = teams[team_name]
-        # pick a representative country for the flag (first non-empty)
-        rep_country = ''
-        for m in members:
-            if m['country']:
-                rep_country = m['country']
-                break
-        key = rep_country.lower() if rep_country else ''
-        flag_html = ''
-        if key in flags:
-            flag_html = f'<img src="{flags[key]}" alt="{html.escape(rep_country)}"/>'
+        rows_html = []
+        for team_name in sorted(teams.keys()):
+                members = teams[team_name]
 
-        # Leaders and Students
-        leaders = [m for m in members if (m['role'] or '').lower().strip() in ('lider','leader')]
-        students = [m for m in members if m not in leaders]
+                # representative country for the flag (first non-empty)
+                rep_country = ''
+                for m in members:
+                        if m.get('country'):
+                                rep_country = m['country']
+                                break
+                key = rep_country.lower() if rep_country else ''
+                flag_html = ''
+                if key in flags:
+                        flag_html = f'<img src="{flags[key]}" alt="{html.escape(rep_country)}"/>'
 
-        # Team header: flag + team name
-        rows_html.append(f'            <div class="team-block">')
-        rows_html.append(f'              <div class="team-header">')
-        rows_html.append(f'                <div class="team-flag">{flag_html}</div>')
-        rows_html.append(f'                <div class="team-name">{html.escape(team_name)}</div>')
-        rows_html.append(f'              </div>')
+                # categorize leaders and students
+                leaders = [m for m in members if (m.get('role') or '').lower().strip() in ('lider', 'leader')]
+                students = [m for m in members if m not in leaders]
 
-        # Leaders (inline comma-separated)
-        rows_html.append(f'              <div class="team-leaders"><strong>Leaders:</strong> ')
-        if leaders:
-            leader_names = ', '.join(html.escape(l['name']) for l in leaders if l['name'])
-            rows_html.append('                <span class="member-list">' + leader_names + '</span>')
-        else:
-            rows_html.append('                <span class="none">—</span>')
-        rows_html.append('              </div>')
+                # build team block
+                rows_html.append('            <div class="team-block">')
+                rows_html.append('              <div class="team-header">')
+                rows_html.append(f'                <div class="team-flag">{flag_html}</div>')
+                rows_html.append(f'                <div class="team-name">{html.escape(team_name)}</div>')
+                rows_html.append('              </div>')
 
-        # Students (inline comma-separated)
-        rows_html.append(f'              <div class="team-students"><strong>Students:</strong> ')
-        if students:
-            student_names = ', '.join(html.escape(s['name']) for s in students if s['name'])
-            rows_html.append('                <span class="member-list">' + student_names + '</span>')
-        else:
-            rows_html.append('                <span class="none">—</span>')
-        rows_html.append('              </div>')
+                # leaders (inline)
+                if leaders:
+                        leader_names = ', '.join(html.escape(l['name']) for l in leaders if l.get('name'))
+                        rows_html.append(f'              <div class="team-leaders"><strong>Leaders:</strong> <span class="member-list">{leader_names}</span></div>')
+                else:
+                        rows_html.append('              <div class="team-leaders"><strong>Leaders:</strong> <span class="none">—</span></div>')
 
-        rows_html.append('            </div>')
+                # students (inline)
+                if students:
+                        student_names = ', '.join(html.escape(s['name']) for s in students if s.get('name'))
+                        rows_html.append(f'              <div class="team-students"><strong>Students:</strong> <span class="member-list">{student_names}</span></div>')
+                else:
+                        rows_html.append('              <div class="team-students"><strong>Students:</strong> <span class="none">—</span></div>')
 
-    tail = '''
-          </div>
-        </section>
-      </main>
-      <footer class="site-footer">&copy; RMI</footer>
-    </div>
-  </body>
+                rows_html.append('            </div>')
+
+        tail = '''
+                    </div>
+                </section>
+            </main>
+            <footer class="site-footer">&copy; RMI</footer>
+        </div>
+        <link rel="icon" href="/assets/organisers/vianu.png" type="image/png">
+        <script src="/assets/js/main.js"></script>
+    </body>
 </html>
 '''
 
-    return head + "\n".join(rows_html) + tail
+        return head + "\n".join(rows_html) + tail
 
 
 def main():
