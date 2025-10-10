@@ -5,7 +5,7 @@
     "weight": 1,
     "items": [
       { "title": "Home", "path": "pages/home.html" },
-      { "title": "News", "path": "pages/news/published.html" },
+      { "title": "News", "path": "pages/news.html" },
       { "title": "Gallery", "path": "pages/gallery.html" }
     ]
   },
@@ -14,10 +14,10 @@
     "name": "RMI Organization",
     "weight": 2,
     "items": [
-      { "title": "Competition Rules", "path": "pages/organisation/rules.html" },
-      { "title": "Contestant Schedule", "path": "pages/organisation/schedule/contestants.html" },
-      { "title": "Leader Schedule", "path": "pages/organisation/schedule/leaders.html" },
-      { "title": "Committee", "path": "pages/organisation/committee.html" }
+      { "title": "Competition Rules", "path": "pages/rules.html" },
+      { "title": "Contestant Schedule", "path": "pages/contestants.html" },
+      { "title": "Leader Schedule", "path": "pages/leaders.html" },
+      { "title": "Committee", "path": "pages/committee.html" }
     ]
   },
   {
@@ -25,11 +25,11 @@
     "name": "RMI Contest",
     "weight": 3,
     "items": [
-      { "title": "Participants", "path": "pages/contest/participants.html" },
-      { "title": "Results", "path": "pages/contest/results.html" },
-      { "title": "Problems", "path": "pages/contest/problems.html" },
-      { "title": "Solutions and Editorial", "path": "pages/contest/solutions.html" },
-      { "title": "Previous Editions", "path": "pages/contest/previous.html" }
+      { "title": "Participants", "path": "pages/participants.html" },
+      { "title": "Results", "path": "pages/results.html" },
+      { "title": "Problems", "path": "pages/problems.html" },
+      { "title": "Solutions and Editorial", "path": "pages/solutions.html" },
+      { "title": "Previous Editions", "path": "pages/previous.html" }
     ]
   },
   {
@@ -40,7 +40,7 @@
       { "title": "About Romania", "url": "https://en.wikipedia.org/wiki/Romania" },
       { "title": "About Bucharest", "url": "https://en.wikipedia.org/wiki/Bucharest" },
       { "title": "Tourist Guide", "url": "http://www.romaniatourism.com/" },
-      { "title": "Contact", "path": "pages/general/contact.html" }
+      { "title": "Contact", "path": "pages/contact.html" }
     ]
   }
 ]

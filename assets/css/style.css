@@ -1,21 +1,38 @@
 :root{
-	--bg:#0f1724; /* dark slate */
-	--card:#0b1220;
-	--muted:#9aa4b2;
-	--text:#e6eef6;
-	--accent:#7dd3fc; /* cyan */
-	--accent-2:#60a5fa;
-	--glass: rgba(255,255,255,0.04);
+	/* Modern light palette: clean cards, soft accents */
+	--bg: #f5f7fb; /* page background */
+	--card: #ffffff; /* card / panel background */
+	--muted: #6b7280; /* subdued text */
+	--text: #0b1220; /* main body text */
+	--accent: #ff7a59; /* warm accent (orange) */
+	--accent-2: #0b98a6; /* teal secondary accent */
+	--glass: rgba(11,18,32,0.04);
 	--radius:12px;
 	--max-width:1100px;
 }
+
+/* Dark theme overrides: applied when body has .theme-dark */
+body.theme-dark{
+	--bg: #071026;
+	--card: #0b1220;
+	--muted: #9aa4b2;
+	--text: #e6eef6;
+	--accent: #7dd3fc;
+	--accent-2: #60a5fa;
+	--glass: rgba(255,255,255,0.04);
+}
+
+/* Theme toggle button */
+.theme-toggle{position:fixed;right:4.5rem;top:1rem;z-index:61;background:var(--card);color:var(--text);border:0;padding:.45rem .6rem;border-radius:8px;box-shadow:0 6px 18px rgba(11,18,32,0.06);cursor:pointer}
+.theme-toggle:focus{outline:2px solid rgba(11,18,32,0.06);outline-offset:2px}
+.theme-toggle .icon{font-size:1rem;line-height:1}
 
 *{box-sizing:border-box}
 html,body{height:100%}
 body{
 	margin:0;
 	font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-	background: linear-gradient(180deg,#071020 0%, #0b1220 60%);
+	background: var(--bg);
 	color:var(--text);
 	-webkit-font-smoothing:antialiased;
 	-moz-osx-font-smoothing:grayscale;
@@ -32,21 +49,21 @@ body{
 .vianu-logo{height:70px;display:block}
 
 .layout{display:grid;grid-template-columns:260px 1fr;gap:1.5rem;align-items:start}
-.site-nav{background:var(--card);padding:1rem;border-radius:var(--radius);box-shadow:0 6px 18px rgba(2,6,23,0.6)}
+.site-nav{background:var(--card);padding:1rem;border-radius:var(--radius);box-shadow:0 6px 18px rgba(11,18,32,0.06)}
 .site-nav h3{margin:0 0 .5rem 0;font-size:.95rem;color:var(--muted)}
 .site-nav ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.35rem}
 .site-nav a{display:block;padding:.5rem .6rem;border-radius:8px;color:var(--text);text-decoration:none}
-.site-nav a:hover{background:linear-gradient(90deg, rgba(125,211,252,0.06), rgba(96,165,250,0.04));color:var(--accent)}
-.site-nav a.active{background:linear-gradient(90deg, rgba(125,211,252,0.08), rgba(96,165,250,0.06));color:var(--accent);font-weight:600}
+.site-nav a:hover{background:linear-gradient(90deg, rgba(11,152,166,0.06), rgba(255,122,89,0.04));color:var(--accent)}
+.site-nav a.active{background:linear-gradient(90deg, rgba(11,152,166,0.08), rgba(255,122,89,0.06));color:var(--accent);font-weight:600}
 
-.content{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:1.25rem;border-radius:var(--radius);box-shadow:0 6px 20px rgba(2,6,23,0.6)}
+.content{background:var(--card);padding:1.25rem;border-radius:var(--radius);box-shadow:0 6px 20px rgba(11,18,32,0.04)}
 
 /* Markdown content styles */
 .content h1{font-size:1.8rem;margin:.2rem 0 .6rem 0}
 .content h2{font-size:1.35rem;margin:.6rem 0 .5rem 0;color:var(--accent-2)}
 .content h3{font-size:1.15rem;margin:.45rem 0 .65rem 0;color:var(--accent-2);font-weight:700}
 .content p{line-height:1.65;color:var(--muted);margin:0 0 1rem 0}
-.content a{color:var(--accent);text-decoration:underline}
+.content a{color:var(--accent);text-decoration:none}
 
 .content ul{padding-left:1.25rem;margin:0 0 1rem 0}
 .content li{margin:.4rem 0}
@@ -54,9 +71,9 @@ body{
 .content pre{background:#07111a;padding:1rem;border-radius:8px;overflow:auto;color:#cbd5e1}
 .content code{background:rgba(255,255,255,0.03);padding:.15rem .35rem;border-radius:6px;color:#f8fafc}
 
-blockquote{border-left:3px solid rgba(125,211,252,0.12);padding:.4rem 1rem;color:var(--muted);margin:0 0 1rem 0;background:linear-gradient(90deg, rgba(125,211,252,0.02), transparent)}
+blockquote{border-left:3px solid rgba(11,152,166,0.12);padding:.4rem 1rem;color:var(--muted);margin:0 0 1rem 0;background:linear-gradient(90deg, rgba(11,152,166,0.02), transparent)}
 
-.site-footer{border-top:1px solid rgba(255,255,255,0.03);padding:1rem 0;text-align:center;color:var(--muted);margin-top:1.25rem}
+.site-footer{border-top:1px solid rgba(11,18,32,0.04);padding:1rem 0;text-align:center;color:var(--muted);margin-top:1.25rem}
 
 /* Responsive */
 @media (max-width:880px){
@@ -75,6 +92,10 @@ blockquote{border-left:3px solid rgba(125,211,252,0.12);padding:.4rem 1rem;color
 	.container.layout{padding-left:0;padding-right:0}
 	body.nav-open{overflow:hidden}
 }
+
+/* Overlay shown when mobile nav is open */
+.nav-overlay{position:fixed;inset:0;background:rgba(2,6,23,0.55);opacity:0;transition:opacity .25s ease;z-index:45}
+.nav-overlay.visible{opacity:1}
 
 /* Fluid images and media responsiveness */
 img{max-width:100%;height:auto;display:block}
@@ -146,3 +167,24 @@ img{max-width:100%;height:auto;display:block}
 .member-list{color:var(--muted);display:inline}
 .team-leaders strong,.team-students strong{margin-right:.4rem}
 .team-block .member-list a{color:var(--accent)}
+
+/* News page styles - modern card layout */
+.news-container{display:flex;flex-direction:column;gap:1rem}
+.news-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem}
+.news-card{background:var(--card);padding:1rem;border-radius:12px;border:1px solid rgba(11,18,32,0.04);box-shadow:0 8px 24px rgba(11,18,32,0.06);display:flex;flex-direction:column;gap:.6rem}
+.news-title{font-size:1.05rem;color:var(--text);font-weight:700;margin:0}
+.news-meta{font-size:.85rem;color:var(--muted);display:flex;gap:.5rem;align-items:center}
+.news-excerpt{color:var(--muted);line-height:1.5;margin:0}
+.news-actions{margin-top:auto;display:flex;justify-content:flex-end}
+.news-link{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#041126;padding:.45rem .7rem;border-radius:8px;text-decoration:none;font-weight:700}
+.news-link:hover{filter:brightness(1.05)}
+
+/* Single article tweaks */
+.article-header{margin-bottom:1rem}
+.article-header h1{margin:0 0 .25rem 0}
+.article-meta{color:var(--muted);font-size:.9rem;margin-bottom:.75rem}
+
+@media (max-width:520px){
+	.news-card{padding:.75rem}
+	.news-title{font-size:1rem}
+}
