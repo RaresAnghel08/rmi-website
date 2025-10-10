@@ -65,54 +65,85 @@
       }catch(e){
         rendered.innerHTML = htmlText;
       }
-      if(push) history.pushState({path:path},'', '#'+encodeURIComponent(path));
+  if(push) history.pushState({path:path}, '');
     }).catch(err=>{
       rendered.innerHTML = '<p class="error">Page not found: '+err.message+'</p>';
     });
   }
 
-  function buildNav(manifest){
+  function buildGroupedNav(menu, pages){
+    // menu: array of entries with identifiers and external links
+    // pages: array of {path,title}
     navList.innerHTML = '';
-    manifest.forEach(item=>{
-      const li = document.createElement('li');
-      const a = document.createElement('a');
-      // progressive links: keep href as hash for fallback but intercept clicks to load into center
-      const encoded = encodeURIComponent(item.path || '');
-      a.href = '#'+encoded;
-      a.dataset.path = item.path;
-      a.textContent = item.title || item.path.replace(/^content\//,'');
-      a.addEventListener('click', function(ev){
-        ev.preventDefault();
-        const p = this.dataset.path;
-        // load into center
-        loadPage(p, true);
-        // update active class
-        navList.querySelectorAll('a').forEach(x=>x.classList.remove('active'));
-        this.classList.add('active');
+
+    // build category map from menu identifiers
+    const categories = {};
+    menu.forEach(item=>{
+      if(item.identifier){
+        categories[item.identifier] = {meta: item, children: []};
+      }
+    });
+
+    // place pages into categories by path
+    pages.forEach(p=>{
+      let placed = false;
+      if(p.path.startsWith('content/organisation/')){ categories['organisation'] && categories['organisation'].children.push(p); placed = true; }
+      else if(p.path.startsWith('content/contest/')){ categories['contest'] && categories['contest'].children.push(p); placed = true; }
+      else { categories['root'] && categories['root'].children.push(p); }
+    });
+
+    // add external links from menu (those with url)
+    menu.forEach(item=>{
+      if(item.url && item.parent){
+        const parent = categories[item.parent];
+        if(parent){ parent.children.push({path: null, title: item.name, url: item.url}); }
+      }
+    });
+
+    // sort categories by weight
+    const ordered = Object.values(categories).sort((a,b)=> (a.meta.weight||0)-(b.meta.weight||0));
+
+    ordered.forEach(cat=>{
+      const header = document.createElement('h4');
+      header.textContent = cat.meta.name;
+      navList.appendChild(header);
+      const ul = document.createElement('ul');
+      ul.style.listStyle='none'; ul.style.padding='0 0 0 .5rem';
+      (cat.children || []).forEach(child=>{
+        const li = document.createElement('li');
+        const a = document.createElement('a');
+        if(child.url){
+          a.href = child.url; a.target='_blank'; a.rel='noopener'; a.textContent = child.title;
+          } else {
+          // a.href = 'javascript:void(0)';
+          a.dataset.path = child.path;
+          a.textContent = child.title || (child.path||'');
+          a.addEventListener('click', function(ev){ ev.preventDefault(); loadPage(this.dataset.path, true); navList.querySelectorAll('a').forEach(x=>x.classList.remove('active')); this.classList.add('active'); });
+        }
+        li.appendChild(a); ul.appendChild(li);
       });
-      li.appendChild(a);
-      navList.appendChild(li);
+      navList.appendChild(ul);
     });
   }
 
-  // fetch manifest
-  fetch('content_index.json').then(r=>r.json()).then(manifest=>{
-    buildNav(manifest);
+  // fetch both menu and content manifests
+  Promise.all([fetch('menu.json').then(r=>r.json()), fetch('content_index.json').then(r=>r.json())])
+    .then(([menu, manifest])=>{
+      buildGroupedNav(menu, manifest);
 
-    // load initial page from hash or first manifest entry
-    const hash = decodeURIComponent(location.hash.slice(1));
-    const initial = manifest.find(m=>m.path===hash) || manifest[0];
-    if(initial) loadPage(initial.path, false);
-    // mark active nav item if present
-    const activeNode = navList.querySelector('a[data-path="'+(initial && initial.path || '')+'"]');
-    if(activeNode){ navList.querySelectorAll('a').forEach(x=>x.classList.remove('active')); activeNode.classList.add('active'); }
-  }).catch(err=>{
-    contentEl.innerHTML = '<p class="error">Failed to load manifest: '+err.message+'</p>';
-  });
+      // load initial page from hash or first manifest entry
+  const initial = (history.state && history.state.path && manifest.find(m=>m.path===history.state.path)) || manifest[0];
+      if(initial) loadPage(initial.path, false);
+      // mark active nav item if present
+      const activeNode = navList.querySelector('a[data-path="'+(initial && initial.path || '')+'"]');
+      if(activeNode){ navList.querySelectorAll('a').forEach(x=>x.classList.remove('active')); activeNode.classList.add('active'); }
+    }).catch(err=>{
+      contentEl.innerHTML = '<p class="error">Failed to load manifest(s): '+err.message+'</p>';
+    });
 
   // handle back/forward
   window.addEventListener('popstate', function(e){
-    const p = (e.state && e.state.path) || decodeURIComponent(location.hash.slice(1));
+    const p = (e.state && e.state.path);
     if(p) {
       loadPage(p, false);
       // update active link if present

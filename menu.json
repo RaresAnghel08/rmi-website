@@ -1,0 +1,10 @@
+[
+  {"identifier":"root","name":"RMI 2023","title":"RMI 2023","weight":1},
+  {"identifier":"organisation","name":"RMI Organisation","title":"RMI Organisation","weight":2},
+  {"identifier":"contest","name":"RMI Contest","title":"RMI Contest","weight":3},
+  {"identifier":"info","name":"General Information","title":"General Information","weight":4},
+
+  {"url":"https://en.wikipedia.org/wiki/Romania","name":"About Romania","title":"About Romania","parent":"info","weight":1},
+  {"url":"https://en.wikipedia.org/wiki/Bucharest","name":"About Bucharest","title":"About Bucharest","parent":"info","weight":2},
+  {"url":"http://www.romaniatourism.com/","name":"Tourist Guide","title":"Tourist Guide","parent":"info","weight":3}
+]
