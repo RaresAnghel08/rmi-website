@@ -67,8 +67,19 @@
     });
   }
 
-  // Mobile nav toggle
-  const toggleBtn = document.getElementById('nav-toggle');
+  // Mobile nav toggle (create if missing so standalone pages also get it)
+  let toggleBtn = document.getElementById('nav-toggle');
+  if(!toggleBtn){
+    toggleBtn = document.createElement('button');
+    toggleBtn.id = 'nav-toggle';
+    toggleBtn.className = 'nav-toggle';
+    toggleBtn.setAttribute('aria-controls','site-nav');
+    toggleBtn.setAttribute('aria-expanded','false');
+    toggleBtn.type = 'button';
+    toggleBtn.textContent = '☰';
+    // insert near the top of the body for consistent positioning
+    document.body.appendChild(toggleBtn);
+  }
   function toggleNav(force){
     const nav = document.getElementById('site-nav');
     const expanded = typeof force === 'boolean' ? force : !nav.classList.contains('open');
@@ -104,6 +115,28 @@
   if(toggleBtn){
     toggleBtn.addEventListener('click', ()=> toggleNav());
   }
+
+  // Theme toggle: creates a small button to switch light/dark mode and persists choice
+  function createThemeToggle(){
+    const btn = document.createElement('button');
+    btn.className = 'theme-toggle';
+    btn.type = 'button';
+    btn.title = 'Toggle theme';
+    btn.innerHTML = '<span class="icon">🌙</span>';
+    btn.addEventListener('click', ()=>{
+      const isDark = document.body.classList.toggle('theme-dark');
+      localStorage.setItem('site-theme-dark', isDark ? '1' : '0');
+      btn.innerHTML = isDark ? '<span class="icon">☀️</span>' : '<span class="icon">🌙</span>';
+    });
+    document.body.appendChild(btn);
+    // initialize from preference
+    const pref = localStorage.getItem('site-theme-dark');
+    if(pref === '1'){
+      document.body.classList.add('theme-dark');
+      btn.innerHTML = '<span class="icon">☀️</span>';
+    }
+  }
+  createThemeToggle();
 
   // Load menu.json and initialize
   fetch('menu.json').then(r=>r.json()).then(menu=>{
