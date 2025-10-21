@@ -49,7 +49,7 @@ Bucharest, Romania, from **November 27th** to **November 29th**, **2024** by the
 
 RMI provides a great opportunity for young people to demonstrate their
 abilities in Informatics, to exchange knowledge and to enhance cross-cultural
-contacts in high-school education. Coming to RMI 2023, participants will have
+contacts in high-school education. Coming to RMI 2024, participants will have
 opportunities to make new friends, to visit a friendly country, and to discover
 the culture of Romania.
 
@@ -57,11 +57,4 @@ We look forward to meeting you at RMI 2024 in Bucharest, Romania!
 
 ## Sponsors
 
-<!-- <div class="auto-scroll">
-	<div class="movable" style="animation-duration: 20s;">
-		{{<images class="logo" path="/sponsors/*" type="logo" size="x240" >}}
-		{{<images class="logo" path="/sponsors/*" type="logo" size="x240" >}}
-	</div>
-</div> -->
 
-{{<images class="logo" path="/sponsors/*" type="logo" size="x240" >}}

@@ -9,26 +9,26 @@ type: _default
 layout: single
 ---
 
-<!-- {{<section title="Wednesday, October 11th" >}}
+{{<section title="Wednesday, October 11th" >}}
 
 |                        Time |                      |
 | --------------------------: | :------------------- |
-| **14:00&nbsp;–&nbsp;15:00** | Arrivals / Free time |
-| **15:00&nbsp;–&nbsp;16:30** | Practice session     |
-| **16:30&nbsp;–&nbsp;18:00** | Opening ceremony     |
-| **18:30&nbsp;–&nbsp;19:30** | Dinner at MOXA       |
+| **14:00-15:00** | Arrivals / Free time |
+| **15:00-16:30** | Practice session     |
+| **16:30-18:00** | Opening ceremony     |
+| **18:30-19:30** | Dinner at MOXA       |
 
 
 {{<section title="Thursday, October 12th" >}}
 
 |                        Time |                                 |
 | --------------------------: | :------------------------------ |
-| **07:00&nbsp;–&nbsp;07:45** | Breakfast at MOXA               |
-| **07:45&nbsp;–&nbsp;08.15** | Transportation to contest place |
-| **08.30&nbsp;–&nbsp;13.30** | Competition                     |
-| **14:00&nbsp;–&nbsp;15:00** | Lunch at MOXA                   |
-| **15:00&nbsp;–&nbsp;18.30** | Free time                       |
-| **18.30&nbsp;–&nbsp;19:30** | Dinner at MOXA                  |
+| **07:00-07:45** | Breakfast at MOXA               |
+| **07:45-08.15** | Transportation to contest place |
+| **08.30-13.30** | Competition                     |
+| **14:00-15:00** | Lunch at MOXA                   |
+| **15:00-18.30** | Free time                       |
+| **18.30-19:30** | Dinner at MOXA                  |
 
 
 
@@ -36,13 +36,13 @@ layout: single
 
 |                        Time |                                                        |
 | --------------------------: | :----------------------------------------------------- |
-| **07:00&nbsp;–&nbsp;07:45** | Breakfast at MOXA                                      |
-| **07:45&nbsp;–&nbsp;08.15** | Transportation to contest place                        |
-| **08:30&nbsp;–&nbsp;13:30** | Competition                                            |
-| **13:30&nbsp;–&nbsp;15:00** | Lunch at MOXA                                          |
-| **15:00&nbsp;–&nbsp;17:00** | Free time                                              |
-| **17:00&nbsp;–&nbsp;18:30** | Closing Ceremony                                       |
-| **18:30&nbsp;–&nbsp;20:30** | Farewell banquet at "Tudor Vianu” National High School |
+| **07:00-07:45** | Breakfast at MOXA                                      |
+| **07:45-08.15** | Transportation to contest place                        |
+| **08:30-13:30** | Competition                                            |
+| **13:30-15:00** | Lunch at MOXA                                          |
+| **15:00-17:00** | Free time                                              |
+| **17:00-18:30** | Closing Ceremony                                       |
+| **18:30-20:30** | Farewell banquet at "Tudor Vianu” National High School |
 
 
 
@@ -50,5 +50,5 @@ layout: single
 
 |                        Time |                   |
 | --------------------------: | :---------------- |
-| **08:00&nbsp;–&nbsp;09:00** | Breakfast at MOXA |
-|                             | Departure         | -->
+| **08:00-09:00** | Breakfast at MOXA |
+|                             | Departure         |
