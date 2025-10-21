@@ -7,7 +7,7 @@ menu:
 draft: false
 ---
 
-*Tasks will be published after the contest days.*
+<!-- *Tasks will be published after the contest days.* -->
 
 {{< section title="Download problems" >}}
 
