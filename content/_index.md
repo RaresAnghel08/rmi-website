@@ -57,4 +57,4 @@ We look forward to meeting you at RMI 2024 in Bucharest, Romania!
 
 ## Sponsors
 
-
+{{<images class="logo" path="/sponsors/*" type="logo" size="x240" >}}

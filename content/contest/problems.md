@@ -8,3 +8,9 @@ draft: false
 ---
 
 *Tasks will be published after the contest days.*
+
+{{< section title="Download problems" >}}
+
+Problem statements, graders, checkers and parameters.
+
+[Download in `.zip` format](/problems.zip)

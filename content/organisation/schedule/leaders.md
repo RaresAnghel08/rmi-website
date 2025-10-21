@@ -9,7 +9,7 @@ type: _default
 layout: single
 ---
 
-{{<section title="Wednesday, October 11th" >}}
+{{<section title="Wednesday, November 27th" >}}
 
 |                        Time |                                                                                       |
 | --------------------------: | :------------------------------------------------------------------------------------ |
@@ -20,7 +20,7 @@ layout: single
 | **20:00-** | Jury meeting - Translation of papers by leaders at "Tudor Vianu" National High School |
 
 
-{{<section title="Thursday, October 12th" >}}
+{{<section title="Thursday, November 28th" >}}
 
 |                        Time |                                                                                       |
 | --------------------------: | :------------------------------------------------------------------------------------ |
@@ -35,7 +35,7 @@ layout: single
 
 
 
-{{<section title="Friday, October 13th" >}}
+{{<section title="Friday, November 29th" >}}
 
 |                        Time |                                                        |
 | --------------------------: | :----------------------------------------------------- |
@@ -50,7 +50,7 @@ layout: single
 
 
 
-{{<section title="Saturday, October 14th" >}}
+{{<section title="Saturday, November 30th" >}}
 
 |                        Time |                   |
 | --------------------------: | :---------------- |

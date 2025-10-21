@@ -10,8 +10,7 @@ layout: single
 
 ---
 
-{{<section title="Wednesday, October 11th" >}}
-
+{{<section title="Wednesday, November 27th" >}}
 |                        Time |                      |
 | --------------------------: | :------------------- |
 | **14:00-15:00** | Arrivals / Free time |
@@ -20,7 +19,7 @@ layout: single
 | **18:30-19:30** | Dinner at MOXA       |
 
 
-{{<section title="Thursday, October 12th" >}}
+{{<section title="Thursday, November 28th" >}}
 
 |                        Time |                                 |
 | --------------------------: | :------------------------------ |
@@ -33,7 +32,7 @@ layout: single
 
 
 
-{{<section title="Friday, October 13th" >}}
+{{<section title="Friday, November 29th" >}}
 
 |                        Time |                                                        |
 | --------------------------: | :----------------------------------------------------- |
@@ -47,7 +46,7 @@ layout: single
 
 
 
-{{<section title="Saturday, October 14th" >}}
+{{<section title="Saturday, November 30th" >}}
 
 |                        Time |                   |
 | --------------------------: | :---------------- |
