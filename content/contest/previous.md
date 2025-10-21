@@ -6,6 +6,8 @@ menu:
     weight: 6
 ---
 
+[![RMI 2023](/assets/previous/2023.png)](http://rmi.lbi.ro/rmi_2023)
+
 [![RMI 2022](/assets/previous/2022.png)](http://rmi.lbi.ro/rmi_2022)
 
 [![RMI 2021](/assets/previous/2021.png)](http://rmi.lbi.ro/rmi_2021)
