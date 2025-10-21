@@ -7,6 +7,7 @@ menu:
 no_header: false
 type: _default
 layout: single
+
 ---
 
 {{<section title="Wednesday, October 11th" >}}
