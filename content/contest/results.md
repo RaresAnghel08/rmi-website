@@ -7,5 +7,6 @@ menu:
 draft: false
 ---
 
-*Results will be published after the contest days.*
+<!-- *Results will be published after the contest days.* -->
 
+{{<results file="csv/results.csv" header="true">}}
