@@ -276,7 +276,21 @@ function generateResultsHTML() {
     const rank = row[rankIndex] || ''; const name = row[nameIndex] || ''; const country = row[countryIndex] || ''; const choose = row[chooseIndex] || ''; const octagon = row[octagonIndex] || ''; const skittlez = row[skittlezIndex] || ''; const day1 = row[day1Index] || ''; const signals = row[signalsIndex] || ''; const ramen = row[ramenIndex] || ''; const jump = row[jumpIndex] || ''; const day2 = row[day2Index] || ''; const score = row[scoreIndex] || ''; const medal = row[medalIndex]?.toLowerCase() || '';
     let nameClass = '';
     if (medal === 'gold') nameClass = 'name-gold'; else if (medal === 'silver') nameClass = 'name-silver'; else if (medal === 'bronze') nameClass = 'name-bronze';
-    html += `<tr><td><strong>${rank}</strong></td><td><span class="${nameClass}">${name}</span></td><td>${country}</td><td>${choose}</td><td>${octagon}</td><td>${skittlez}</td><td><strong>${day1}</strong></td><td>${signals}</td><td>${ramen}</td><td>${jump}</td><td><strong>${day2}</strong></td><td><strong>${score}</strong></td></tr>`;
+    html += `
+              <tr>
+                <td><strong>${rank}</strong></td>
+                <td><span class="${nameClass}">${name}</span></td>
+                <td>${country}</td>
+                <td>${choose}</td>
+                <td>${octagon}</td>
+                <td>${skittlez}</td>
+                <td><strong>${day1}</strong></td>
+                <td>${signals}</td>
+                <td>${ramen}</td>
+                <td>${jump}</td>
+                <td><strong>${day2}</strong></td>
+                <td><strong>${score}</strong></td>
+              </tr>`;
   });
   html += `</tbody></table></div></body></html>`;
   const blob = new Blob([html], { type: 'text/html' }); const url = window.URL.createObjectURL(blob); const a = document.createElement('a'); a.href = url; a.download = 'results.html'; a.click(); window.URL.revokeObjectURL(url);
@@ -286,23 +300,109 @@ function generateResultsHTML() {
 // Generate participants.html (kept escaping for </script>)
 function generateParticipantsHTML() {
   if (teamsData.rows.length === 0) { alert('Please load teams CSV first!'); return; }
-  const teamIndex = teamsData.headers.findIndex(h => h.toLowerCase().includes('team'));
-  const countryIndex = teamsData.headers.findIndex(h => h.toLowerCase().includes('country'));
-  const leadersIndex = teamsData.headers.findIndex(h => h.toLowerCase().includes('leader'));
-  const studentsIndex = teamsData.headers.findIndex(h => h.toLowerCase().includes('student'));
-  let html = `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Participants - RMI 2024</title><link rel="stylesheet" href="/assets/css/style.css"></head><body><button id="nav-toggle" class="nav-toggle" aria-controls="site-nav" aria-expanded="false">☰</button><div class="container"><header class="site-header"><h1>Participants</h1></header><main class="content"><section class="participants-section"><h2>Teams</h2><div class="participants-list">`;
+  
+  // Find column indexes - CSV structure: Name, (empty), Team, Country, Role
+  const nameIndex = 0; // First column is name
+  const teamIndex = 2; // Third column is team
+  const countryIndex = 3; // Fourth column is country
+  const roleIndex = 4; // Fifth column is role (Lider or empty)
+  
+  // Group data by team
+  const teams = {};
   teamsData.rows.forEach(row => {
-    const team = row[teamIndex] || ''; const country = row[countryIndex] || ''; const leaders = row[leadersIndex] || ''; const students = row[studentsIndex] || '';
-    const flagFile = country.toLowerCase().replace(/\s+/g, '-') + '.svg';
-    html += `<div class="team-block"><div class="team-header"><div class="team-flag"><img src="/assets/flags/${flagFile}" alt="${country}"/></div><div class="team-name">${team}</div></div><div class="team-leaders"><strong>Leaders:</strong> `;
-    if (leaders && leaders.trim()) html += `<span class="member-list">${leaders}</span>`; else html += `<span class="none">—</span>`;
-    html += `</div><div class="team-students"><strong>Students:</strong> `;
-    if (students && students.trim()) html += `<span class="member-list">${students}</span>`; else html += `<span class="none">—</span>`;
-    html += `</div></div>`;
+    const name = (row[nameIndex] || '').trim();
+    const team = (row[teamIndex] || '').trim();
+    const country = (row[countryIndex] || '').trim();
+    const role = (row[roleIndex] || '').trim().toLowerCase();
+    
+    if (!team || !country) return; // Skip invalid rows
+    
+    if (!teams[team]) {
+      teams[team] = { country: country, leaders: [], students: [] };
+    }
+    
+    if (name) {
+      if (role === 'lider') {
+        teams[team].leaders.push(name);
+      } else {
+        teams[team].students.push(name);
+      }
+    }
   });
-  html += `</div></section></main><footer class="site-footer">&copy; RMI 2024</footer></div><link rel="icon" href="/assets/organisers/vianu.png" type="image/png"><script src="/assets/js/main.js"><\/script></body></html>`;
-  const blob = new Blob([html], { type: 'text/html' }); const url = window.URL.createObjectURL(blob); const a = document.createElement('a'); a.href = url; a.download = 'participants.html'; a.click(); window.URL.revokeObjectURL(url);
-  alert('✅ participants.html generated successfully!\n\nSave it to: pages/contest/participants.html');
+  
+  // Generate HTML
+  let html = `<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Participants - RMI 2024</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <button id="nav-toggle" class="nav-toggle" aria-controls="site-nav" aria-expanded="false">☰</button>
+    <div class="container">
+        <header class="site-header">
+            <h1>Participants</h1>
+        </header>
+        <main class="content">
+            <section class="participants-section">
+                <h2>Participants</h2>
+                <div class="participants-list">`;
+  
+  // Sort teams alphabetically and generate blocks
+  Object.keys(teams).sort().forEach(teamName => {
+    const team = teams[teamName];
+    const flagFile = team.country.toLowerCase().replace(/\s+/g, '-') + '.svg';
+    const leadersText = team.leaders.length > 0 ? team.leaders.join(', ') : '';
+    const studentsText = team.students.length > 0 ? team.students.join(', ') : '';
+    
+    html += `
+            <div class="team-block">
+              <div class="team-header">
+                <div class="team-flag"><img src="/assets/flags/${flagFile}" alt="${team.country}"/></div>
+                <div class="team-name">${teamName}</div>
+              </div>
+              <div class="team-leaders"><strong>Leaders:</strong> `;
+    
+    if (leadersText) {
+      html += `<span class="member-list">${leadersText}</span>`;
+    } else {
+      html += `<span class="none">—</span>`;
+    }
+    
+    html += `</div>
+              <div class="team-students"><strong>Students:</strong> `;
+    
+    if (studentsText) {
+      html += `<span class="member-list">${studentsText}</span>`;
+    } else {
+      html += `<span class="none">—</span>`;
+    }
+    
+    html += `</div>
+            </div>`;
+  });
+  
+  html += `
+                </div>
+            </section>
+        </main>
+        <footer class="site-footer">&copy; RMI 2024</footer>
+    </div>
+    <link rel="icon" href="/assets/organisers/vianu.png" type="image/png">
+    <script src="/assets/js/main.js"><\/script>
+</body>
+</html>`;
+  
+  const blob = new Blob([html], { type: 'text/html' }); 
+  const url = window.URL.createObjectURL(blob); 
+  const a = document.createElement('a'); 
+  a.href = url; 
+  a.download = 'participants.html'; 
+  a.click(); 
+  window.URL.revokeObjectURL(url);
+  alert('✅ participants.html generated successfully!\n\nSave it to: pages/participants.html');
 }
 
 // Drag and drop support
