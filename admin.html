@@ -1195,32 +1195,6 @@ Note: Make sure you have Python installed and the CSV files are up to date.`);
 
             alert('✅ participants.html generated successfully!\n\nSave it to: pages/contest/participants.html');
         }
-
-        // Drag and drop support
-        document.querySelectorAll('.file-input-area').forEach(area => {
-            area.addEventListener('dragover', (e) => {
-                e.preventDefault();
-                area.classList.add('active');
-            });
-            
-            area.addEventListener('dragleave', () => {
-                area.classList.remove('active');
-            });
-            
-            area.addEventListener('drop', (e) => {
-                e.preventDefault();
-                area.classList.remove('active');
-                
-                const files = e.dataTransfer.files;
-                if (files.length > 0) {
-                    const input = area.nextElementSibling;
-                    if (input && input.tagName === 'INPUT') {
-                        input.files = files;
-                        input.dispatchEvent(new Event('change'));
-                    }
-                }
-            });
-        });
-    </script>
+    <script src="assets/js/admin.js"></script>
 </body>
 </html>
