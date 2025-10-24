@@ -557,6 +557,7 @@
     </div>
 
     <script>
+        /* eslint-disable no-template-curly-in-string */
         // Global data storage
         let resultsData = { headers: [], rows: [] };
         let teamsData = { headers: [], rows: [] };
@@ -634,6 +635,7 @@
             let html = '<input type="text" class="search-box" placeholder="🔍 Search by name, country, or rank..." onkeyup="filterResults(this.value)">';
             html += '<div class="btn-group">';
             html += '<button class="btn btn-success" onclick="downloadCSV(resultsData, \'results.csv\')"><span>💾</span> Download CSV</button>';
+            html += '<button class="btn btn-primary" onclick="generateResultsHTML()"><span>📄</span> Generate results.html</button>';
             html += '<button class="btn btn-primary add-row-btn" onclick="addResultRow()"><span>➕</span> Add Row</button>';
             html += '</div>';
             
@@ -703,6 +705,7 @@
             let html = '<input type="text" class="search-box" placeholder="🔍 Search teams..." onkeyup="filterTeams(this.value)">';
             html += '<div class="btn-group">';
             html += '<button class="btn btn-success" onclick="downloadCSV(teamsData, \'teams.csv\')"><span>💾</span> Download CSV</button>';
+            html += '<button class="btn btn-primary" onclick="generateParticipantsHTML()"><span>📄</span> Generate participants.html</button>';
             html += '<button class="btn btn-primary add-row-btn" onclick="addTeamRow()"><span>➕</span> Add Row</button>';
             html += '</div>';
             
@@ -964,6 +967,233 @@
 4. The generated page will be ready to use!
 
 Note: Make sure you have Python installed and the CSV files are up to date.`);
+        }
+
+        // Generate results.html from results CSV
+        function generateResultsHTML() {
+            if (resultsData.rows.length === 0) {
+                alert('Please load results CSV first!');
+                return;
+            }
+
+            // Find all column indices
+            const rankIndex = resultsData.headers.findIndex(h => h.toLowerCase().includes('rank'));
+            const nameIndex = resultsData.headers.findIndex(h => h.toLowerCase().includes('name'));
+            const countryIndex = resultsData.headers.findIndex(h => h.toLowerCase().includes('country'));
+            const chooseIndex = resultsData.headers.findIndex(h => h.toLowerCase().includes('choose'));
+            const octagonIndex = resultsData.headers.findIndex(h => h.toLowerCase().includes('octagon'));
+            const skittlezIndex = resultsData.headers.findIndex(h => h.toLowerCase().includes('skittlez'));
+            const day1Index = resultsData.headers.findIndex(h => h.toLowerCase().includes('day 1'));
+            const signalsIndex = resultsData.headers.findIndex(h => h.toLowerCase().includes('signals'));
+            const ramenIndex = resultsData.headers.findIndex(h => h.toLowerCase().includes('ramen'));
+            const jumpIndex = resultsData.headers.findIndex(h => h.toLowerCase().includes('jump'));
+            const day2Index = resultsData.headers.findIndex(h => h.toLowerCase().includes('day 2'));
+            const scoreIndex = resultsData.headers.findIndex(h => h.toLowerCase().includes('total score'));
+            // Medal is usually the last column (index 12) - header might be empty or 'medal'
+            let medalIndex = resultsData.headers.findIndex(h => h.toLowerCase().includes('medal'));
+            if (medalIndex === -1) medalIndex = resultsData.headers.length - 1;
+
+            let html = `<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Results - RMI 2024</title>
+    <style>
+        .name-gold { color: #bb9413; font-weight: 600; }
+        .name-silver { color: #807f81; font-weight: 600; }
+        .name-bronze { color: #804A00; font-weight: 600; }
+        .results-table { 
+            font-size: 0.9rem; 
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .results-table th { 
+            white-space: nowrap; 
+            padding: 0.6rem 0.5rem;
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            border: 1px solid #34495e;
+            text-align: left;
+        }
+        .results-table td { 
+            padding: 0.5rem 0.4rem; 
+            border: 1px solid #ddd;
+        }
+        .results-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .table-container {
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <h2>Competition Results</h2>
+    <div class="table-container">
+        <table class="results-table">
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Name</th>
+                    <th>Country</th>
+                    <th>Choose Interval</th>
+                    <th>Octagon</th>
+                    <th>Skittlez</th>
+                    <th>Day 1</th>
+                    <th>Signals</th>
+                    <th>Ramen</th>
+                    <th>Jump Civilization</th>
+                    <th>Day 2</th>
+                    <th>Total Score</th>
+                </tr>
+            </thead>
+            <tbody>\n`;
+
+            resultsData.rows.forEach(row => {
+                const rank = row[rankIndex] || '';
+                const name = row[nameIndex] || '';
+                const country = row[countryIndex] || '';
+                const choose = row[chooseIndex] || '';
+                const octagon = row[octagonIndex] || '';
+                const skittlez = row[skittlezIndex] || '';
+                const day1 = row[day1Index] || '';
+                const signals = row[signalsIndex] || '';
+                const ramen = row[ramenIndex] || '';
+                const jump = row[jumpIndex] || '';
+                const day2 = row[day2Index] || '';
+                const score = row[scoreIndex] || '';
+                const medal = row[medalIndex]?.toLowerCase() || '';
+
+                // Determine name color based on medal
+                let nameClass = '';
+                if (medal === 'gold') {
+                    nameClass = 'name-gold';
+                } else if (medal === 'silver') {
+                    nameClass = 'name-silver';
+                } else if (medal === 'bronze') {
+                    nameClass = 'name-bronze';
+                }
+
+                html += `                            <tr>
+                                <td><strong>${rank}</strong></td>
+                                <td><span class="${nameClass}">${name}</span></td>
+                                <td>${country}</td>
+                                <td>${choose}</td>
+                                <td>${octagon}</td>
+                                <td>${skittlez}</td>
+                                <td><strong>${day1}</strong></td>
+                                <td>${signals}</td>
+                                <td>${ramen}</td>
+                                <td>${jump}</td>
+                                <td><strong>${day2}</strong></td>
+                                <td><strong>${score}</strong></td>
+                            </tr>\n`;
+            });
+
+            html += `            </tbody>
+        </table>
+    </div>
+</body>
+</html>`;
+
+            // Download the HTML file
+            const blob = new Blob([html], { type: 'text/html' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'results.html';
+            a.click();
+            window.URL.revokeObjectURL(url);
+
+            alert('✅ results.html generated successfully!\n\nSave it to: pages/results.html');
+        }
+
+        // Generate participants.html from teams CSV
+        function generateParticipantsHTML() {
+            if (teamsData.rows.length === 0) {
+                alert('Please load teams CSV first!');
+                return;
+            }
+
+            const teamIndex = teamsData.headers.findIndex(h => h.toLowerCase().includes('team'));
+            const countryIndex = teamsData.headers.findIndex(h => h.toLowerCase().includes('country'));
+            const leadersIndex = teamsData.headers.findIndex(h => h.toLowerCase().includes('leader'));
+            const studentsIndex = teamsData.headers.findIndex(h => h.toLowerCase().includes('student'));
+
+            let html = `<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Participants - RMI 2024</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <button id="nav-toggle" class="nav-toggle" aria-controls="site-nav" aria-expanded="false">☰</button>
+    <div class="container">
+        <header class="site-header"><h1>Participants</h1></header>
+        <main class="content">
+            <section class="participants-section">
+                <h2>Teams</h2>
+                <div class="participants-list">\n`;
+
+            // Group by teams
+            teamsData.rows.forEach(row => {
+                const team = row[teamIndex] || '';
+                const country = row[countryIndex] || '';
+                const leaders = row[leadersIndex] || '';
+                const students = row[studentsIndex] || '';
+
+                // Convert country name to flag filename
+                const flagFile = country.toLowerCase().replace(/\s+/g, '-') + '.svg';
+                
+                html += `                    <div class="team-block">
+                        <div class="team-header">
+                            <div class="team-flag"><img src="/assets/flags/${flagFile}" alt="${country}"/></div>
+                            <div class="team-name">${team}</div>
+                        </div>
+                        <div class="team-leaders"><strong>Leaders:</strong> `;
+                
+                if (leaders && leaders.trim()) {
+                    html += `<span class="member-list">${leaders}</span>`;
+                } else {
+                    html += `<span class="none">—</span>`;
+                }
+                
+                html += `</div>
+                        <div class="team-students"><strong>Students:</strong> `;
+                
+                if (students && students.trim()) {
+                    html += `<span class="member-list">${students}</span>`;
+                } else {
+                    html += `<span class="none">—</span>`;
+                }
+                
+                html += `</div>
+                    </div>\n`;
+            });
+
+            html += `                </div>
+            </section>
+        </main>
+        <footer class="site-footer">&copy; RMI 2024</footer>
+    </div>
+    <link rel="icon" href="/assets/organisers/vianu.png" type="image/png">
+    <script src="/assets/js/main.js"><\/script>
+</body>
+</html>`;
+
+            // Download the HTML file
+            const blob = new Blob([html], { type: 'text/html' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'participants.html';
+            a.click();
+            window.URL.revokeObjectURL(url);
+
+            alert('✅ participants.html generated successfully!\n\nSave it to: pages/contest/participants.html');
         }
 
         // Drag and drop support

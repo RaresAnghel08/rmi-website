@@ -48,6 +48,28 @@ python .\scripts\generate_participants.py
 
 The script will read `csv/teams.csv` and `assets/flags/` and write an HTML file at `pages/contest/participants.html`. Generated pages include minimal markup (team blocks, flags, leaders/students lists) and already include the client loader script so they work when opened directly in a browser.
 
+## Admin Dashboard
+
+The repository includes a browser-based admin dashboard (`admin.html`) that allows you to manage CSV files and automatically generate HTML pages without using Python scripts or command-line tools.
+
+### Features
+
+- **CSV Editor**: Load, edit, and download `csv/results.csv` and `csv/teams.csv`
+- **Auto-generate HTML**: One-click generation of `pages/contest/results.html` and `pages/contest/participants.html`
+- **Statistics**: View medal counts, country breakdowns, and charts
+- **Auto-assign Medals**: Automatically assign medals based on rankings (1-16 Gold, 17-48 Silver, 49-96 Bronze)
+- **100% Client-side**: No backend required, works entirely in your browser
+
+### How to use
+
+1. Open `admin.html` in any modern web browser
+2. Load your CSV files by clicking the file input areas or dragging & dropping
+3. Edit data directly in the tables (add/delete rows, modify cells)
+4. Click "Generate results.html" or "Generate participants.html" to create updated HTML pages
+5. Download the generated HTML files and save them to `pages/contest/`
+
+The admin dashboard eliminates the need for Python scripts and makes updating the site much easier!
+
 ## SEO and social previews
 
 Basic SEO and social meta tags were added to `index.html` and point at the deployed URL (`https://cnitv-rmi.netlify.app/`) and use `assets/organisers/vianu.png` as the image for social cards. For better SEO, consider adding per-page `title` and `description` meta tags to the pages in `pages/`.

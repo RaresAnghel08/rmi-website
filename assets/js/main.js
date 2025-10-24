@@ -13,7 +13,15 @@
       try{
         const doc = new DOMParser().parseFromString(text, 'text/html');
         const main = doc.querySelector('main.content') || doc.body;
-        rendered.innerHTML = main.innerHTML;
+        
+        // Extract and inject inline styles from the loaded page
+        const styles = doc.querySelectorAll('style');
+        let styleHTML = '';
+        styles.forEach(style => {
+          styleHTML += style.outerHTML;
+        });
+        
+        rendered.innerHTML = styleHTML + main.innerHTML;
       }catch(e){ rendered.innerHTML = text; }
     }).catch(err=>{
       rendered.innerHTML = '<p class="error">Error loading page: '+err.message+'</p>';

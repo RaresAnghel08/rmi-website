@@ -188,3 +188,23 @@ img{max-width:100%;height:auto;display:block}
 	.news-card{padding:.75rem}
 	.news-title{font-size:1rem}
 }
+
+/* Results page styles */
+.results-section{margin:2rem 0}
+.results-table{width:100%;border-collapse:collapse;background:var(--card);border-radius:10px;overflow:hidden}
+.results-table thead{background:var(--primary);color:#fff}
+.results-table th,.results-table td{padding:.75rem 1rem;text-align:left;border-bottom:1px solid rgba(255,255,255,0.05)}
+.results-table tbody tr:hover{background:rgba(108,68,255,0.05)}
+.results-table tbody tr:last-child td{border-bottom:none}
+
+/* Medal badges */
+.medal-badge{display:inline-block;padding:.35rem .85rem;border-radius:16px;font-size:.85rem;font-weight:600;white-space:nowrap}
+.medal-gold{background:linear-gradient(135deg,#fbbf24,#f59e0b);color:#78350f}
+.medal-silver{background:linear-gradient(135deg,#e5e7eb,#d1d5db);color:#374151}
+.medal-bronze{background:linear-gradient(135deg,#f97316,#ea580c);color:#fff}
+
+@media (max-width:768px){
+	.results-table{font-size:.9rem}
+	.results-table th,.results-table td{padding:.5rem .65rem}
+	.medal-badge{padding:.25rem .6rem;font-size:.8rem}
+}
