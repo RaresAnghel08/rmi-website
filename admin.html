@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RMI Admin Dashboard</title>
+    <link rel="icon" type="image/png" href="assets/organisers/vianu.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #261c4a;
+            --secondary: #4411ff;
+            --accent: #6c44ff;
+            --bg: #f8f8fa;
+            --surface: #ffffff;
+            --text: #171132;
+            --text-light: #676080;
+            --border: #e5e4e9;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --error: #ef4444;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .header {
+            background: var(--primary);
+            color: white;
+            padding: 1.5rem 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .header h1 {
+            font-size: 1.75rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .header p {
+            opacity: 0.9;
+            font-size: 0.95rem;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .nav-tabs {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid var(--border);
+            overflow-x: auto;
+        }
+
+        .nav-tab {
+            padding: 0.75rem 1.5rem;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            color: var(--text-light);
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s;
+            white-space: nowrap;
+        }
+
+        .nav-tab:hover {
+            color: var(--primary);
+            background: rgba(38, 28, 74, 0.05);
+        }
+
+        .nav-tab.active {
+            color: var(--primary);
+            border-bottom-color: var(--secondary);
+            font-weight: 600;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .card {
+            background: var(--surface);
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 1.5rem;
+        }
+
+        .card h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .card h3 {
+            font-size: 1.25rem;
+            margin: 1.5rem 0 1rem;
+            color: var(--primary);
+        }
+
+        .file-input-area {
+            border: 2px dashed var(--border);
+            border-radius: 8px;
+            padding: 2rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-bottom: 1rem;
+        }
+
+        .file-input-area:hover {
+            border-color: var(--secondary);
+            background: rgba(68, 17, 255, 0.02);
+        }
+
+        .file-input-area.active {
+            border-color: var(--success);
+            background: rgba(16, 185, 129, 0.05);
+        }
+
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: var(--secondary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--accent);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(68, 17, 255, 0.3);
+        }
+
+        .btn-secondary {
+            background: var(--border);
+            color: var(--text);
+        }
+
+        .btn-secondary:hover {
+            background: #d4d4d9;
+        }
+
+        .btn-success {
+            background: var(--success);
+            color: white;
+        }
+
+        .btn-success:hover {
+            background: #059669;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        .table-container {
+            overflow-x: auto;
+            margin: 1rem 0;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+        }
+
+        thead {
+            background: var(--primary);
+            color: white;
+        }
+
+        th, td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+
+        th {
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        tbody tr:hover {
+            background: var(--bg);
+        }
+
+        tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        .editable {
+            background: transparent;
+            border: 1px solid transparent;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            width: 100%;
+            font-family: inherit;
+        }
+
+        .editable:focus {
+            outline: none;
+            border-color: var(--secondary);
+            background: rgba(68, 17, 255, 0.05);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(38, 28, 74, 0.2);
+        }
+
+        .stat-card h3 {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin: 0 0 0.5rem;
+            color: white;
+        }
+
+        .stat-card .value {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .medal-badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .medal-gold {
+            background: #fbbf24;
+            color: #78350f;
+        }
+
+        .medal-silver {
+            background: #d1d5db;
+            color: #374151;
+        }
+
+        .medal-bronze {
+            background: #d97706;
+            color: #fff;
+        }
+
+        .alert {
+            padding: 1rem;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+        }
+
+        .alert-info {
+            background: #dbeafe;
+            color: #1e40af;
+            border-left: 4px solid #3b82f6;
+        }
+
+        .alert-success {
+            background: #d1fae5;
+            color: #065f46;
+            border-left: 4px solid var(--success);
+        }
+
+        .alert-warning {
+            background: #fef3c7;
+            color: #92400e;
+            border-left: 4px solid var(--warning);
+        }
+
+        .search-box {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 2px solid var(--border);
+            border-radius: 6px;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        .search-box:focus {
+            outline: none;
+            border-color: var(--secondary);
+        }
+
+        .chart-container {
+            height: 300px;
+            margin: 2rem 0;
+            position: relative;
+        }
+
+        .bar-chart {
+            display: flex;
+            align-items: flex-end;
+            height: 250px;
+            gap: 0.5rem;
+            padding: 1rem 0;
+        }
+
+        .bar {
+            flex: 1;
+            background: linear-gradient(to top, var(--secondary), var(--accent));
+            border-radius: 4px 4px 0 0;
+            position: relative;
+            min-width: 40px;
+            transition: all 0.3s;
+        }
+
+        .bar:hover {
+            opacity: 0.8;
+        }
+
+        .bar-label {
+            position: absolute;
+            bottom: -2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.85rem;
+            white-space: nowrap;
+        }
+
+        .bar-value {
+            position: absolute;
+            top: -1.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            .header {
+                padding: 1rem;
+            }
+
+            .header h1 {
+                font-size: 1.5rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .btn-group {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        .delete-btn {
+            background: var(--error);
+            color: white;
+            border: none;
+            padding: 0.4rem 0.8rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.85rem;
+        }
+
+        .delete-btn:hover {
+            background: #dc2626;
+        }
+
+        .add-row-btn {
+            margin-top: 1rem;
+        }
+
+        input[type="file"] {
+            display: none;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 3rem 1rem;
+            color: var(--text-light);
+        }
+
+        .empty-state svg {
+            width: 64px;
+            height: 64px;
+            margin-bottom: 1rem;
+            opacity: 0.3;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🏆 RMI Admin Dashboard</h1>
+        <p>Manage competition results, teams, and generate statistics</p>
+    </div>
+
+    <div class="container">
+        <nav class="nav-tabs">
+            <button class="nav-tab active" onclick="switchTab('results')">📊 Results</button>
+            <button class="nav-tab" onclick="switchTab('teams')">👥 Teams</button>
+            <button class="nav-tab" onclick="switchTab('statistics')">📈 Statistics</button>
+            <button class="nav-tab" onclick="switchTab('tools')">🔧 Tools</button>
+        </nav>
+
+        <!-- Results Tab -->
+        <div id="results-tab" class="tab-content active">
+            <div class="card">
+                <h2>Competition Results Management</h2>
+                
+                <div class="alert alert-info">
+                    💡 <strong>Tip:</strong> Load the CSV file, edit directly in the table, then download the updated file. All changes are made locally in your browser.
+                </div>
+
+                <div class="file-input-area" onclick="document.getElementById('results-file').click()">
+                    <p>📁 Click to load <strong>csv/results.csv</strong></p>
+                    <p style="font-size: 0.9rem; color: var(--text-light); margin-top: 0.5rem;">or drag and drop the file here</p>
+                </div>
+                <input type="file" id="results-file" accept=".csv" onchange="loadResultsCSV(event)">
+
+                <div id="results-content" class="empty-state">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                    </svg>
+                    <p>No file loaded. Please load a CSV file to get started.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Teams Tab -->
+        <div id="teams-tab" class="tab-content">
+            <div class="card">
+                <h2>Teams Management</h2>
+                
+                <div class="alert alert-info">
+                    💡 <strong>Tip:</strong> Manage team information and participant details here.
+                </div>
+
+                <div class="file-input-area" onclick="document.getElementById('teams-file').click()">
+                    <p>📁 Click to load <strong>csv/teams.csv</strong></p>
+                    <p style="font-size: 0.9rem; color: var(--text-light); margin-top: 0.5rem;">or drag and drop the file here</p>
+                </div>
+                <input type="file" id="teams-file" accept=".csv" onchange="loadTeamsCSV(event)">
+
+                <div id="teams-content" class="empty-state">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                    </svg>
+                    <p>No file loaded. Please load a CSV file to get started.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Statistics Tab -->
+        <div id="statistics-tab" class="tab-content">
+            <div class="card">
+                <h2>Competition Statistics</h2>
+                
+                <div class="stats-grid" id="stats-grid">
+                    <div class="stat-card">
+                        <h3>Total Participants</h3>
+                        <div class="value" id="stat-total">-</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>🥇 Gold Medals</h3>
+                        <div class="value" id="stat-gold">-</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>🥈 Silver Medals</h3>
+                        <div class="value" id="stat-silver">-</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>🥉 Bronze Medals</h3>
+                        <div class="value" id="stat-bronze">-</div>
+                    </div>
+                </div>
+
+                <h3>Medals by Country</h3>
+                <div class="chart-container">
+                    <div id="country-chart" class="bar-chart"></div>
+                </div>
+
+                <div id="country-breakdown"></div>
+            </div>
+        </div>
+
+        <!-- Tools Tab -->
+        <div id="tools-tab" class="tab-content">
+            <div class="card">
+                <h2>Utility Tools</h2>
+                
+                <h3>Auto-assign Medals</h3>
+                <p style="margin-bottom: 1rem; color: var(--text-light);">Automatically assign medals based on ranking: 1-16 Gold, 17-48 Silver, 49-96 Bronze</p>
+                <button class="btn btn-primary" onclick="autoAssignMedals()">
+                    <span>✨</span> Auto-assign Medals
+                </button>
+
+                <h3 style="margin-top: 2rem;">Merge CSV Files</h3>
+                <p style="margin-bottom: 1rem; color: var(--text-light);">Merge multiple CSV files by combining their rows</p>
+                <div class="file-input-area" onclick="document.getElementById('merge-files').click()">
+                    <p>📁 Select multiple CSV files to merge</p>
+                </div>
+                <input type="file" id="merge-files" accept=".csv" multiple onchange="mergeCSVFiles(event)">
+
+                <h3 style="margin-top: 2rem;">Generate Participants Page</h3>
+                <p style="margin-bottom: 1rem; color: var(--text-light);">Run the Python generator script to create the participants HTML page</p>
+                <div class="alert alert-warning">
+                    ⚠️ <strong>Note:</strong> This requires running the Python script <code>scripts/generate_participants.py</code> from your terminal.
+                </div>
+                <button class="btn btn-secondary" onclick="showGeneratorInstructions()">
+                    <span>📖</span> Show Instructions
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Global data storage
+        let resultsData = { headers: [], rows: [] };
+        let teamsData = { headers: [], rows: [] };
+
+        // Tab switching
+        function switchTab(tabName) {
+            document.querySelectorAll('.nav-tab').forEach(tab => tab.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+            
+            event.target.classList.add('active');
+            document.getElementById(tabName + '-tab').classList.add('active');
+        }
+
+        // CSV Parsing
+        function parseCSV(text) {
+            const lines = text.split('\n').filter(line => line.trim());
+            const headers = lines[0].split(',').map(h => h.trim());
+            const rows = [];
+            
+            for (let i = 1; i < lines.length; i++) {
+                const values = parseCSVLine(lines[i]);
+                if (values.length > 0) {
+                    rows.push(values);
+                }
+            }
+            
+            return { headers, rows };
+        }
+
+        function parseCSVLine(line) {
+            const result = [];
+            let current = '';
+            let inQuotes = false;
+            
+            for (let i = 0; i < line.length; i++) {
+                const char = line[i];
+                
+                if (char === '"') {
+                    inQuotes = !inQuotes;
+                } else if (char === ',' && !inQuotes) {
+                    result.push(current.trim());
+                    current = '';
+                } else {
+                    current += char;
+                }
+            }
+            
+            result.push(current.trim());
+            return result;
+        }
+
+        // Results CSV handling
+        function loadResultsCSV(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+            
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const text = e.target.result;
+                resultsData = parseCSV(text);
+                displayResults();
+                updateStatistics();
+            };
+            reader.readAsText(file);
+        }
+
+        function displayResults() {
+            const container = document.getElementById('results-content');
+            
+            if (resultsData.rows.length === 0) {
+                container.innerHTML = '<div class="empty-state"><p>No data to display</p></div>';
+                return;
+            }
+
+            let html = '<input type="text" class="search-box" placeholder="🔍 Search by name, country, or rank..." onkeyup="filterResults(this.value)">';
+            html += '<div class="btn-group">';
+            html += '<button class="btn btn-success" onclick="downloadCSV(resultsData, \'results.csv\')"><span>💾</span> Download CSV</button>';
+            html += '<button class="btn btn-primary add-row-btn" onclick="addResultRow()"><span>➕</span> Add Row</button>';
+            html += '</div>';
+            
+            html += '<div class="table-container"><table id="results-table"><thead><tr>';
+            resultsData.headers.forEach((header, i) => {
+                html += `<th>${header}</th>`;
+            });
+            html += '<th>Actions</th></tr></thead><tbody>';
+            
+            resultsData.rows.forEach((row, rowIndex) => {
+                html += '<tr>';
+                row.forEach((cell, cellIndex) => {
+                    const header = resultsData.headers[cellIndex];
+                    let cellContent = cell;
+                    
+                    // Add medal badge
+                    if (header.toLowerCase().includes('medal')) {
+                        const medalClass = cell.toLowerCase();
+                        if (medalClass === 'gold' || medalClass === 'silver' || medalClass === 'bronze') {
+                            cellContent = `<span class="medal-badge medal-${medalClass}">${cell}</span>`;
+                        }
+                    }
+                    
+                    html += `<td><input type="text" class="editable" value="${cell}" onchange="updateCell(${rowIndex}, ${cellIndex}, this.value, 'results')"></td>`;
+                });
+                html += `<td><button class="delete-btn" onclick="deleteRow(${rowIndex}, 'results')">🗑️ Delete</button></td>`;
+                html += '</tr>';
+            });
+            
+            html += '</tbody></table></div>';
+            container.innerHTML = html;
+        }
+
+        function filterResults(searchTerm) {
+            const table = document.getElementById('results-table');
+            const rows = table.getElementsByTagName('tbody')[0].getElementsByTagName('tr');
+            const term = searchTerm.toLowerCase();
+            
+            for (let row of rows) {
+                const text = row.textContent.toLowerCase();
+                row.style.display = text.includes(term) ? '' : 'none';
+            }
+        }
+
+        // Teams CSV handling
+        function loadTeamsCSV(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+            
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const text = e.target.result;
+                teamsData = parseCSV(text);
+                displayTeams();
+            };
+            reader.readAsText(file);
+        }
+
+        function displayTeams() {
+            const container = document.getElementById('teams-content');
+            
+            if (teamsData.rows.length === 0) {
+                container.innerHTML = '<div class="empty-state"><p>No data to display</p></div>';
+                return;
+            }
+
+            let html = '<input type="text" class="search-box" placeholder="🔍 Search teams..." onkeyup="filterTeams(this.value)">';
+            html += '<div class="btn-group">';
+            html += '<button class="btn btn-success" onclick="downloadCSV(teamsData, \'teams.csv\')"><span>💾</span> Download CSV</button>';
+            html += '<button class="btn btn-primary add-row-btn" onclick="addTeamRow()"><span>➕</span> Add Row</button>';
+            html += '</div>';
+            
+            html += '<div class="table-container"><table id="teams-table"><thead><tr>';
+            teamsData.headers.forEach(header => {
+                html += `<th>${header}</th>`;
+            });
+            html += '<th>Actions</th></tr></thead><tbody>';
+            
+            teamsData.rows.forEach((row, rowIndex) => {
+                html += '<tr>';
+                row.forEach((cell, cellIndex) => {
+                    html += `<td><input type="text" class="editable" value="${cell}" onchange="updateCell(${rowIndex}, ${cellIndex}, this.value, 'teams')"></td>`;
+                });
+                html += `<td><button class="delete-btn" onclick="deleteRow(${rowIndex}, 'teams')">🗑️ Delete</button></td>`;
+                html += '</tr>';
+            });
+            
+            html += '</tbody></table></div>';
+            container.innerHTML = html;
+        }
+
+        function filterTeams(searchTerm) {
+            const table = document.getElementById('teams-table');
+            const rows = table.getElementsByTagName('tbody')[0].getElementsByTagName('tr');
+            const term = searchTerm.toLowerCase();
+            
+            for (let row of rows) {
+                const text = row.textContent.toLowerCase();
+                row.style.display = text.includes(term) ? '' : 'none';
+            }
+        }
+
+        // Update cell value
+        function updateCell(rowIndex, cellIndex, value, dataType) {
+            if (dataType === 'results') {
+                resultsData.rows[rowIndex][cellIndex] = value;
+                updateStatistics();
+            } else if (dataType === 'teams') {
+                teamsData.rows[rowIndex][cellIndex] = value;
+            }
+        }
+
+        // Add new row
+        function addResultRow() {
+            const newRow = new Array(resultsData.headers.length).fill('');
+            resultsData.rows.push(newRow);
+            displayResults();
+        }
+
+        function addTeamRow() {
+            const newRow = new Array(teamsData.headers.length).fill('');
+            teamsData.rows.push(newRow);
+            displayTeams();
+        }
+
+        // Delete row
+        function deleteRow(rowIndex, dataType) {
+            if (!confirm('Are you sure you want to delete this row?')) return;
+            
+            if (dataType === 'results') {
+                resultsData.rows.splice(rowIndex, 1);
+                displayResults();
+                updateStatistics();
+            } else if (dataType === 'teams') {
+                teamsData.rows.splice(rowIndex, 1);
+                displayTeams();
+            }
+        }
+
+        // Download CSV
+        function downloadCSV(data, filename) {
+            let csv = data.headers.join(',') + '\n';
+            data.rows.forEach(row => {
+                csv += row.map(cell => {
+                    // Escape commas and quotes
+                    if (cell.includes(',') || cell.includes('"') || cell.includes('\n')) {
+                        return '"' + cell.replace(/"/g, '""') + '"';
+                    }
+                    return cell;
+                }).join(',') + '\n';
+            });
+            
+            const blob = new Blob([csv], { type: 'text/csv' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = filename;
+            a.click();
+            window.URL.revokeObjectURL(url);
+        }
+
+        // Statistics
+        function updateStatistics() {
+            if (resultsData.rows.length === 0) return;
+            
+            const medalIndex = resultsData.headers.findIndex(h => h.toLowerCase().includes('medal'));
+            const countryIndex = resultsData.headers.findIndex(h => h.toLowerCase().includes('country'));
+            
+            let total = resultsData.rows.length;
+            let gold = 0, silver = 0, bronze = 0;
+            const countryMedals = {};
+            
+            resultsData.rows.forEach(row => {
+                const medal = row[medalIndex]?.toLowerCase() || '';
+                const country = row[countryIndex] || 'Unknown';
+                
+                if (medal === 'gold') gold++;
+                else if (medal === 'silver') silver++;
+                else if (medal === 'bronze') bronze++;
+                
+                if (medal) {
+                    if (!countryMedals[country]) {
+                        countryMedals[country] = { gold: 0, silver: 0, bronze: 0, total: 0 };
+                    }
+                    if (medal === 'gold') countryMedals[country].gold++;
+                    else if (medal === 'silver') countryMedals[country].silver++;
+                    else if (medal === 'bronze') countryMedals[country].bronze++;
+                    countryMedals[country].total++;
+                }
+            });
+            
+            document.getElementById('stat-total').textContent = total;
+            document.getElementById('stat-gold').textContent = gold;
+            document.getElementById('stat-silver').textContent = silver;
+            document.getElementById('stat-bronze').textContent = bronze;
+            
+            // Country chart
+            displayCountryChart(countryMedals);
+        }
+
+        function displayCountryChart(countryMedals) {
+            const chartContainer = document.getElementById('country-chart');
+            const breakdownContainer = document.getElementById('country-breakdown');
+            
+            const sorted = Object.entries(countryMedals).sort((a, b) => b[1].total - a[1].total).slice(0, 10);
+            
+            if (sorted.length === 0) {
+                chartContainer.innerHTML = '<p style="text-align:center;color:var(--text-light)">No medal data available</p>';
+                return;
+            }
+            
+            const maxTotal = Math.max(...sorted.map(([_, data]) => data.total));
+            
+            let html = '';
+            sorted.forEach(([country, data]) => {
+                const height = (data.total / maxTotal) * 100;
+                html += `
+                    <div class="bar" style="height: ${height}%">
+                        <div class="bar-value">${data.total}</div>
+                        <div class="bar-label">${country}</div>
+                    </div>
+                `;
+            });
+            chartContainer.innerHTML = html;
+            
+            // Detailed breakdown
+            let breakdownHtml = '<h3>Medal Breakdown by Country</h3><div class="table-container"><table><thead><tr><th>Country</th><th>🥇 Gold</th><th>🥈 Silver</th><th>🥉 Bronze</th><th>Total</th></tr></thead><tbody>';
+            sorted.forEach(([country, data]) => {
+                breakdownHtml += `<tr><td><strong>${country}</strong></td><td>${data.gold}</td><td>${data.silver}</td><td>${data.bronze}</td><td><strong>${data.total}</strong></td></tr>`;
+            });
+            breakdownHtml += '</tbody></table></div>';
+            breakdownContainer.innerHTML = breakdownHtml;
+        }
+
+        // Auto-assign medals
+        function autoAssignMedals() {
+            if (resultsData.rows.length === 0) {
+                alert('Please load results CSV first!');
+                return;
+            }
+            
+            const rankIndex = resultsData.headers.findIndex(h => h.toLowerCase().includes('rank'));
+            let medalIndex = resultsData.headers.findIndex(h => h.toLowerCase().includes('medal'));
+            
+            if (rankIndex === -1) {
+                alert('No rank column found!');
+                return;
+            }
+            
+            // Add medal column if it doesn't exist
+            if (medalIndex === -1) {
+                resultsData.headers.push('medal');
+                medalIndex = resultsData.headers.length - 1;
+                resultsData.rows.forEach(row => {
+                    if (row.length < resultsData.headers.length) {
+                        row.push('');
+                    }
+                });
+            }
+            
+            // Assign medals based on rank
+            resultsData.rows.forEach(row => {
+                const rank = parseInt(row[rankIndex]);
+                if (isNaN(rank)) return;
+                
+                if (rank >= 1 && rank <= 16) {
+                    row[medalIndex] = 'gold';
+                } else if (rank >= 17 && rank <= 48) {
+                    row[medalIndex] = 'silver';
+                } else if (rank >= 49 && rank <= 96) {
+                    row[medalIndex] = 'bronze';
+                } else {
+                    row[medalIndex] = '';
+                }
+            });
+            
+            displayResults();
+            updateStatistics();
+            alert('✅ Medals assigned successfully!\n\n1-16: Gold\n17-48: Silver\n49-96: Bronze');
+        }
+
+        // Merge CSV files
+        function mergeCSVFiles(event) {
+            const files = Array.from(event.target.files);
+            if (files.length < 2) {
+                alert('Please select at least 2 files to merge!');
+                return;
+            }
+            
+            let mergedData = { headers: [], rows: [] };
+            let filesProcessed = 0;
+            
+            files.forEach((file, index) => {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const data = parseCSV(e.target.result);
+                    
+                    if (index === 0) {
+                        mergedData.headers = data.headers;
+                    }
+                    
+                    mergedData.rows.push(...data.rows);
+                    filesProcessed++;
+                    
+                    if (filesProcessed === files.length) {
+                        downloadCSV(mergedData, 'merged.csv');
+                        alert(`✅ ${files.length} files merged successfully! Total rows: ${mergedData.rows.length}`);
+                    }
+                };
+                reader.readAsText(file);
+            });
+        }
+
+        // Show generator instructions
+        function showGeneratorInstructions() {
+            alert(`📖 Generate Participants Page Instructions:
+
+1. Open a terminal in the project root directory
+
+2. Run the Python script:
+   python scripts/generate_participants.py
+
+3. The script will:
+   - Read csv/teams.csv
+   - Match country flags from assets/flags/
+   - Generate pages/contest/participants.html
+
+4. The generated page will be ready to use!
+
+Note: Make sure you have Python installed and the CSV files are up to date.`);
+        }
+
+        // Drag and drop support
+        document.querySelectorAll('.file-input-area').forEach(area => {
+            area.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                area.classList.add('active');
+            });
+            
+            area.addEventListener('dragleave', () => {
+                area.classList.remove('active');
+            });
+            
+            area.addEventListener('drop', (e) => {
+                e.preventDefault();
+                area.classList.remove('active');
+                
+                const files = e.dataTransfer.files;
+                if (files.length > 0) {
+                    const input = area.nextElementSibling;
+                    if (input && input.tagName === 'INPUT') {
+                        input.files = files;
+                        input.dispatchEvent(new Event('change'));
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
