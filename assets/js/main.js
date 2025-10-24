@@ -14,14 +14,79 @@
         const doc = new DOMParser().parseFromString(text, 'text/html');
         const main = doc.querySelector('main.content') || doc.body;
         
-        // Extract and inject inline styles from the loaded page
+        // Inject stylesheet links from the fetched page into the document head (avoid duplicates)
+        const links = doc.querySelectorAll('link[rel="stylesheet"]');
+        links.forEach(link => {
+          const href = link.getAttribute('href');
+          if (!href) return;
+          const exists = Array.from(document.head.querySelectorAll('link[rel="stylesheet"]')).some(l => l.getAttribute('href') === href);
+          if (!exists) {
+            const newLink = document.createElement('link');
+            newLink.rel = 'stylesheet';
+            newLink.href = href;
+            document.head.appendChild(newLink);
+          }
+        });
+
+        // Extract inline <style> blocks from the loaded page so component styles apply (they'll be inserted into the rendered container)
         const styles = doc.querySelectorAll('style');
         let styleHTML = '';
-        styles.forEach(style => {
-          styleHTML += style.outerHTML;
-        });
-        
+        styles.forEach(style => { styleHTML += style.outerHTML; });
+
+        // Put inline page styles followed by the page content into the rendered container
         rendered.innerHTML = styleHTML + main.innerHTML;
+
+        // Inject a small override stylesheet to keep the results table clean (no theme header/bg/striping),
+        // but DO NOT override medal name colors; place this AFTER the page styles so it takes precedence.
+        const overrideId = 'rmi-results-override';
+        let overrideEl = document.getElementById(overrideId);
+        const overrideCSS = `
+/* Clean results table overrides - keep medal name colors intact */
+.results-table{width:100%;border-collapse:collapse;background:transparent!important;border-radius:0!important;box-shadow:none!important}
+
+/* Header: clean design, no cell borders, subtle readable text */
+.results-table thead th{
+  background:transparent!important;
+  border:none!important;
+  border-bottom:none!important;
+  padding:.6rem .5rem!important;
+  color:rgba(0,0,0,0.85)!important;
+  font-weight:600!important;
+}
+
+/* First data row: remove top borders so the table reads as a single clean block */
+.results-table tbody tr:first-child td{
+  border-top:none!important;
+}
+
+/* Cell padding and default dividing lines (light mode) */
+.results-table th,.results-table td{padding:.5rem .65rem;text-align:left;background:transparent!important}
+.results-table tbody tr:hover{background:transparent!important}
+.results-table tbody tr:last-child td{border-bottom:none!important}
+
+/* Dark mode: unify row dividing lines and make header text light for contrast */
+.theme-dark .results-table th,
+.theme-dark .results-table td {
+  border-bottom: 1px solid rgba(255,255,255,0.06) !important;
+}
+.theme-dark .results-table thead th {
+  color: rgba(255,255,255,0.92) !important;
+}
+
+/* Re-assert medal name colors so they're not overridden by theme rules */
+.name-gold{color:#bb9413!important}
+.name-silver{color:#807f81!important}
+.name-bronze{color:#804A00!important}
+`;
+        if (!overrideEl) {
+          overrideEl = document.createElement('style');
+          overrideEl.id = overrideId;
+        }
+        // append to body so it appears after any inline page <style> and wins on equal specificity
+        overrideEl.textContent = overrideCSS;
+        // remove existing and re-append to ensure ordering
+        if (overrideEl.parentNode) overrideEl.parentNode.removeChild(overrideEl);
+        document.body.appendChild(overrideEl);
       }catch(e){ rendered.innerHTML = text; }
     }).catch(err=>{
       rendered.innerHTML = '<p class="error">Error loading page: '+err.message+'</p>';
