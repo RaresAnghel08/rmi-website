@@ -47,8 +47,9 @@
 /* Header: clean design, no cell borders, subtle readable text */
 .results-table thead th{
   background:transparent!important;
+  /* keep header visually clean but keep a single bottom rule */
   border:none!important;
-  border-bottom:none!important;
+  border-bottom: 1px solid rgba(0,0,0,0.12) !important;
   padding:.6rem .5rem!important;
   color:rgba(0,0,0,0.85)!important;
   font-weight:600!important;
@@ -64,19 +65,62 @@
 .results-table tbody tr:hover{background:transparent!important}
 .results-table tbody tr:last-child td{border-bottom:none!important}
 
-/* Dark mode: unify row dividing lines and make header text light for contrast */
-.theme-dark .results-table th,
-.theme-dark .results-table td {
-  border-bottom: 1px solid rgba(255,255,255,0.06) !important;
+/* Dark mode: cohesive, readable table appearance */
+/* Target both body and html theme-dark placements and use !important to override theme rules */
+body.theme-dark .results-table,
+html.theme-dark .results-table {
+  background: rgba(255,255,255,0.02) !important; /* slight lift so table separates from page */
 }
-.theme-dark .results-table thead th {
+body.theme-dark .results-table th,
+html.theme-dark .results-table th {
   color: rgba(255,255,255,0.92) !important;
+  background: transparent !important;
+  border: none !important;
+  border-bottom: 1px solid rgba(255,255,255,0.12) !important; /* visible separator under header */
+}
+body.theme-dark .results-table td,
+html.theme-dark .results-table td {
+  color: rgba(255,255,255,0.92) !important;
+  background: transparent !important;
+  border-bottom: 1px solid rgba(255,255,255,0.06) !important; /* uniform subtle dividing line */
+}
+/* Dark mode row hover: subtle highlight */
+body.theme-dark .results-table tbody tr:hover,
+html.theme-dark .results-table tbody tr:hover {
+  background: rgba(255,255,255,0.02) !important;
+}
+/* Ensure the first data row doesn't show a top border so header reads cleanly */
+body.theme-dark .results-table tbody tr:first-child td,
+html.theme-dark .results-table tbody tr:first-child td {
+  border-top: none !important;
+}
+/* Make all rows have the same subtle background in dark mode (not only on hover) */
+body.theme-dark .results-table tbody tr,
+html.theme-dark .results-table tbody tr {
+  background: rgba(255,255,255,0.02) !important;
+}
+/* Disable any existing even-row striping from theme in dark mode */
+body.theme-dark .results-table tr:nth-child(even),
+html.theme-dark .results-table tr:nth-child(even) {
+  background: rgba(255,255,255,0.02) !important;
 }
 
 /* Re-assert medal name colors so they're not overridden by theme rules */
-.name-gold{color:#bb9413!important}
-.name-silver{color:#807f81!important}
-.name-bronze{color:#804A00!important}
+.name-gold{color:#bb9413!important; font-weight:600!important}
+.name-silver{
+  color: #6f6f72 !important;
+  font-weight:700 !important;
+  background: rgba(128,127,129,0.08) !important;
+  padding: 0 .22rem !important;
+  border-radius: 0.28rem !important;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.03) !important;
+}
+body.theme-dark .name-silver{
+  color: #f2f2f2 !important;
+  background: rgba(128,127,129,0.14) !important;
+  text-shadow: none !important;
+}
+.name-bronze{color:#804A00!important; font-weight:600!important}
 `;
         if (!overrideEl) {
           overrideEl = document.createElement('style');
