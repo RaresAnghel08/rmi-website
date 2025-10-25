@@ -4,15 +4,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Results - RMI 2024</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
     <style>
-        .name-gold { color: #bb9413; font-weight: 600; }
-        .name-silver { color: #807f81; font-weight: 600; }
-        .name-bronze { color: #804A00; font-weight: 600; }
-        .results-table { font-size: 0.9rem; width: 100%; border-collapse: collapse; }
-        .results-table th { white-space: nowrap; padding: 0.6rem 0.5rem; background-color: #2c3e50; color: #ecf0f1; border: 1px solid #34495e; text-align: left; }
-        .results-table td { padding: 0.5rem 0.4rem; border: 1px solid #ddd; }
-        .results-table tr:nth-child(even) { background-color: #f9f9f9; }
-        .table-container { overflow-x: auto; }
+      /* Small page-specific overrides that complement rms-theme */
+      .table-container { overflow-x: auto; }
+      /* Keep medal name colours (uses theme variables where appropriate) */
+      .name-gold { color: #bb9413; font-weight: 600; }
+      .name-silver { color: #807f81; font-weight: 600; }
+      .name-bronze { color: #804A00; font-weight: 600; }
+      /* Ensure sticky header on results (theme provides base styles) */
+      .results-table thead th { position: sticky; top: 0; z-index: 2; }
     </style>
 </head>
 <body>
@@ -27,11 +28,11 @@
                     <th>Choose Interval</th>
                     <th>Octagon</th>
                     <th>Skittlez</th>
-                    <th>Day 1</th>
+                    <th>Day1</th>
                     <th>Signals</th>
                     <th>Ramen</th>
                     <th>Jump Civilization</th>
-                    <th>Day 2</th>
+                    <th>Day2</th>
                     <th>Total Score</th>
                 </tr>
             </thead>
