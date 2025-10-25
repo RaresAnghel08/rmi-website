@@ -240,15 +240,25 @@ function generateResultsHTML() {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Results - RMI 2024</title>
-    <style>
-        .name-gold { color: #bb9413; font-weight: 600; }
-        .name-silver { color: #807f81; font-weight: 600; }
-        .name-bronze { color: #804A00; font-weight: 600; }
-        .results-table { font-size: 0.9rem; width: 100%; border-collapse: collapse; }
-        .results-table th { white-space: nowrap; padding: 0.6rem 0.5rem; background-color: #2c3e50; color: #ecf0f1; border: 1px solid #34495e; text-align: left; }
-        .results-table td { padding: 0.5rem 0.4rem; border: 1px solid #ddd; }
-        .results-table tr:nth-child(even) { background-color: #f9f9f9; }
-        .table-container { overflow-x: auto; }
+      <style>
+      /* Small page-specific overrides that complement rms-theme */
+      .table-container { overflow-x: auto; }
+      /* Make page exactly viewport height on phones and let the table-area fill the remaining space.
+         This keeps the header visible and makes the table scrollable inside the viewport. */
+      @media (max-width: 760px) {
+        html,body{height:100vh;margin:0}
+        body{display:flex;flex-direction:column}
+        .results-header{flex:0 0 auto;padding:.75rem 1rem;background:var(--card);border-bottom:1px solid rgba(0,0,0,0.06)}
+        .table-container{flex:1 1 auto;overflow:auto;-webkit-overflow-scrolling:touch}
+        /* Ensure table header stays visible inside the scrollable table container */
+        .results-table thead th{position:sticky;top:0;background:var(--card);z-index:3}
+      }
+      /* Keep medal name colours (uses theme variables where appropriate) */
+      .name-gold { color: #bb9413; font-weight: 600; }
+      .name-silver { color: #807f81; font-weight: 600; }
+      .name-bronze { color: #804A00; font-weight: 600; }
+      /* Ensure sticky header on results (theme provides base styles) */
+      .results-table thead th { position: sticky; top: 0; z-index: 2; }
     </style>
 </head>
 <body>
