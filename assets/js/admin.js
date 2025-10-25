@@ -273,11 +273,11 @@ function generateResultsHTML() {
                     <th>Choose Interval</th>
                     <th>Octagon</th>
                     <th>Skittlez</th>
-                    <th>Day 1</th>
+                    <th>Day1</th>
                     <th>Signals</th>
                     <th>Ramen</th>
                     <th>Jump Civilization</th>
-                    <th>Day 2</th>
+                    <th>Day2</th>
                     <th>Total Score</th>
                 </tr>
             </thead>
