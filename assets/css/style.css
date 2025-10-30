@@ -41,7 +41,7 @@ body{
 .container{max-width:var(--max-width);margin:0 auto;padding:1.25rem}
 
 .site-header{padding:1.25rem 0;display:flex;justify-content:center}
-.site-header .logo{height:86px;flex:0 0 auto}
+.site-header .logo{height:200px;flex:0 0 auto}
 .site-title{font-size:1.75rem;margin:0;font-weight:700;color:var(--text);text-align:center;margin-top:.5rem}
 .header-inner{display:flex;flex-direction:column;align-items:center;gap:.75rem}
 .organised-by{display:flex;flex-direction:column;align-items:center;gap:.25rem;margin-top:.75rem}
@@ -91,6 +91,11 @@ blockquote{border-left:3px solid rgba(11,152,166,0.12);padding:.4rem 1rem;color:
 	.site-nav.open{transform:translateX(0)}
 	.container.layout{padding-left:0;padding-right:0}
 	body.nav-open{overflow:hidden}
+}
+
+/* Reduce header logo on small screens so it doesn't dominate the viewport */
+@media (max-width:520px){
+  .site-header .logo{height:86px}
 }
 
 /* Overlay shown when mobile nav is open */
