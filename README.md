@@ -28,7 +28,7 @@ Run the site locally (quick):
 ```powershell
 # From the repository root
 # Start a simple static server on port 8000
-python -m http.server 8000
+cd public; python -m http.server 8000
 # Then open http://localhost:8000 in a browser
 ```
 
