@@ -12,32 +12,55 @@ from tkinter import filedialog, messagebox
 class ParticipantProcessor:
     def __init__(self, root):
         self.root = root
-        self.root.title("Participant Processor")
+        self.root.title("RMI Participant Processor - Let's Process Some Participants!")
         self.root.geometry("500x300")
+        self.root.configure(bg="#E6F3FF")  # Light blue background
+
+        # Set the icon
+        try:
+            self.root.iconphoto(True, tk.PhotoImage(file='assets/organisers/vianu.png'))
+        except tk.TclError:
+            pass  # If logo not found, continue without icon
+
+        # Center the window
+        self.center_window()
 
         self.online_file = ""
         self.onsite_file = ""
 
+        # Welcome label
+        welcome_label = tk.Label(root, text="Welcome to the RMI Participant Processor!", font=("Arial", 14, "bold"), bg="#E6F3FF", fg="#004080")
+        welcome_label.grid(row=0, column=0, columnspan=3, pady=10)
+
         # Online file selection
-        tk.Label(root, text="Online CSV File:").grid(row=0, column=0, sticky="w", padx=10, pady=5)
-        self.online_label = tk.Label(root, text="Not selected", fg="red")
-        self.online_label.grid(row=0, column=1, sticky="w", padx=10, pady=5)
-        tk.Button(root, text="Browse...", command=self.select_online).grid(row=0, column=2, padx=10, pady=5)
+        tk.Label(root, text="Online CSV File:", bg="#E6F3FF", fg="#004080").grid(row=1, column=0, sticky="w", padx=10, pady=5)
+        self.online_label = tk.Label(root, text="Not selected", fg="red", bg="#E6F3FF")
+        self.online_label.grid(row=1, column=1, sticky="w", padx=10, pady=5)
+        tk.Button(root, text="Browse...", command=self.select_online, bg="#4CAF50", fg="white").grid(row=1, column=2, padx=10, pady=5)
 
         # Onsite file selection
-        tk.Label(root, text="Onsite CSV File:").grid(row=1, column=0, sticky="w", padx=10, pady=5)
-        self.onsite_label = tk.Label(root, text="Not selected", fg="red")
-        self.onsite_label.grid(row=1, column=1, sticky="w", padx=10, pady=5)
-        tk.Button(root, text="Browse...", command=self.select_onsite).grid(row=1, column=2, padx=10, pady=5)
+        tk.Label(root, text="Onsite CSV File:", bg="#E6F3FF", fg="#004080").grid(row=2, column=0, sticky="w", padx=10, pady=5)
+        self.onsite_label = tk.Label(root, text="Not selected", fg="red", bg="#E6F3FF")
+        self.onsite_label.grid(row=2, column=1, sticky="w", padx=10, pady=5)
+        tk.Button(root, text="Browse...", command=self.select_onsite, bg="#4CAF50", fg="white").grid(row=2, column=2, padx=10, pady=5)
 
         # Status
-        tk.Label(root, text="Status:").grid(row=2, column=0, sticky="w", padx=10, pady=5)
-        self.status_label = tk.Label(root, text="Ready", fg="blue")
-        self.status_label.grid(row=2, column=1, columnspan=2, sticky="w", padx=10, pady=5)
+        tk.Label(root, text="Status:", bg="#E6F3FF", fg="#004080").grid(row=3, column=0, sticky="w", padx=10, pady=5)
+        self.status_label = tk.Label(root, text="Ready", fg="blue", bg="#E6F3FF")
+        self.status_label.grid(row=3, column=1, columnspan=2, sticky="w", padx=10, pady=5)
 
         # Run button
-        self.run_button = tk.Button(root, text="Run Processing", command=self.run_processing, state="disabled")
-        self.run_button.grid(row=3, column=0, columnspan=3, pady=20)
+        self.run_button = tk.Button(root, text="Run Processing", command=self.run_processing, state="disabled", bg="#FF9800", fg="white", font=("Arial", 10, "bold"))
+        self.run_button.grid(row=4, column=0, columnspan=3, pady=20)
+
+    def center_window(self):
+        """Center the window on the screen."""
+        self.root.update_idletasks()
+        width = self.root.winfo_width()
+        height = self.root.winfo_height()
+        x = (self.root.winfo_screenwidth() // 2) - (width // 2)
+        y = (self.root.winfo_screenheight() // 2) - (height // 2)
+        self.root.geometry(f'{width}x{height}+{x}+{y}')
 
     def select_online(self):
         file = filedialog.askopenfilename(
