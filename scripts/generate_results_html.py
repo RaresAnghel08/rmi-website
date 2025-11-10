@@ -5,7 +5,7 @@
 import csv
 
 # Read CSV
-with open('csv/results.csv', 'r', encoding='utf-8-sig') as f:
+with open('public/csv/results_with_medals.csv', 'r', encoding='utf-8-sig') as f:
     reader = csv.DictReader(f)
     rows = list(reader)
 
@@ -117,10 +117,10 @@ html += """            </tbody>
 </html>"""
 
 # Write to file
-with open('pages/results.html', 'w', encoding='utf-8') as f:
+with open('public/pages/results.html', 'w', encoding='utf-8') as f:
     f.write(html)
 
-print("✅ Generated pages/results.html with medal colors!")
+print("Generated pages/results.html with medal colors!")
 print(f"   Total rows: {len(rows)}")
 print(f"   Gold medals: {sum(1 for r in rows if r.get('medal', '').strip().lower() == 'gold')}")
 print(f"   Silver medals: {sum(1 for r in rows if r.get('medal', '').strip().lower() == 'silver')}")
