@@ -20,7 +20,7 @@ def load_flags():
     for fn in os.listdir(FLAGS_DIR):
         if fn.lower().endswith('.svg'):
             name = os.path.splitext(fn)[0].lower()
-            flags[name] = '/assets/flags/' + fn
+            flags[name] = 'assets/flags/' + fn
     return flags
 
 
@@ -63,7 +63,7 @@ def generate_html(rows, flags):
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <title>Participants</title>
-        <link rel="stylesheet" href="/assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/style.css">
     </head>
     <body>
         <div class="container">
@@ -128,8 +128,8 @@ def generate_html(rows, flags):
             </main>
             <footer class="site-footer">&copy; RMI</footer>
         </div>
-        <link rel="icon" href="/assets/organisers/vianu.png" type="image/png">
-        <script src="/assets/js/main.js"></script>
+        <link rel="icon" href="assets/organisers/vianu.png" type="image/png">
+        <script src="assets/js/main.js"></script>
     </body>
 </html>
 '''
