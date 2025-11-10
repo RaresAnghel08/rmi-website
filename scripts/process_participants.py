@@ -12,8 +12,8 @@ from tkinter import filedialog, messagebox
 class ParticipantProcessor:
     def __init__(self, root):
         self.root = root
-        self.root.title("RMI Participant Processor - Let's Process Some Participants!")
-        self.root.geometry("500x300")
+        self.root.title("RMI Participant Manager")
+        self.root.geometry("500x250")
         self.root.configure(bg="#E6F3FF")  # Light blue background
 
         # Set the icon
@@ -25,33 +25,42 @@ class ParticipantProcessor:
         # Center the window
         self.center_window()
 
+        # Configure columns for centering
+        self.root.columnconfigure(0, weight=1)
+        self.root.columnconfigure(1, weight=1)
+        self.root.rowconfigure(6, weight=1)
+
         self.online_file = ""
         self.onsite_file = ""
 
         # Welcome label
-        welcome_label = tk.Label(root, text="Welcome to the RMI Participant Processor!", font=("Arial", 14, "bold"), bg="#E6F3FF", fg="#004080")
-        welcome_label.grid(row=0, column=0, columnspan=3, pady=10)
+        welcome_label = tk.Label(root, text="Welcome to the RMI Participant Manager!", font=("Arial", 14, "bold"), bg="#E6F3FF", fg="#004080", anchor='center')
+        welcome_label.grid(row=0, column=0, columnspan=3, pady=10, sticky="ew")
 
         # Online file selection
-        tk.Label(root, text="Online CSV File:", bg="#E6F3FF", fg="#004080").grid(row=1, column=0, sticky="w", padx=10, pady=5)
-        self.online_label = tk.Label(root, text="Not selected", fg="red", bg="#E6F3FF")
-        self.online_label.grid(row=1, column=1, sticky="w", padx=10, pady=5)
+        tk.Label(root, text="Online CSV File:", bg="#E6F3FF", fg="#004080", anchor='center').grid(row=1, column=0, sticky="ew", padx=10, pady=5)
+        self.online_label = tk.Label(root, text="Not selected", fg="red", bg="#E6F3FF", anchor='center')
+        self.online_label.grid(row=1, column=1, sticky="ew", padx=10, pady=5)
         tk.Button(root, text="Browse...", command=self.select_online, bg="#4CAF50", fg="white").grid(row=1, column=2, padx=10, pady=5)
 
         # Onsite file selection
-        tk.Label(root, text="Onsite CSV File:", bg="#E6F3FF", fg="#004080").grid(row=2, column=0, sticky="w", padx=10, pady=5)
-        self.onsite_label = tk.Label(root, text="Not selected", fg="red", bg="#E6F3FF")
-        self.onsite_label.grid(row=2, column=1, sticky="w", padx=10, pady=5)
+        tk.Label(root, text="Onsite CSV File:", bg="#E6F3FF", fg="#004080", anchor='center').grid(row=2, column=0, sticky="ew", padx=10, pady=5)
+        self.onsite_label = tk.Label(root, text="Not selected", fg="red", bg="#E6F3FF", anchor='center')
+        self.onsite_label.grid(row=2, column=1, sticky="ew", padx=10, pady=5)
         tk.Button(root, text="Browse...", command=self.select_onsite, bg="#4CAF50", fg="white").grid(row=2, column=2, padx=10, pady=5)
 
         # Status
-        tk.Label(root, text="Status:", bg="#E6F3FF", fg="#004080").grid(row=3, column=0, sticky="w", padx=10, pady=5)
-        self.status_label = tk.Label(root, text="Ready", fg="blue", bg="#E6F3FF")
-        self.status_label.grid(row=3, column=1, columnspan=2, sticky="w", padx=10, pady=5)
+        tk.Label(root, text="Status:", bg="#E6F3FF", fg="#004080", anchor='center').grid(row=3, column=0, sticky="ew", padx=10, pady=5)
+        self.status_label = tk.Label(root, text="Ready", fg="blue", bg="#E6F3FF", anchor='center')
+        self.status_label.grid(row=3, column=1, columnspan=2, sticky="ew", padx=10, pady=5)
 
         # Run button
-        self.run_button = tk.Button(root, text="Run Processing", command=self.run_processing, state="disabled", bg="#FF9800", fg="white", font=("Arial", 10, "bold"))
+        self.run_button = tk.Button(root, text="Run Processing", command=self.run_processing, state="disabled", bg="#FF9800", fg="white", font=("Arial", 10, "bold"), width=12)
         self.run_button.grid(row=4, column=0, columnspan=3, pady=20)
+
+        # Footer
+        footer_label = tk.Label(root, text="© Rares Anghel", font=("Arial", 8), bg="#E6F3FF", fg="#004080", anchor='center')
+        footer_label.grid(row=5, column=0, columnspan=3, sticky="sew")
 
     def center_window(self):
         """Center the window on the screen."""

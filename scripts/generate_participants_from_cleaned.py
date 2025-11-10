@@ -8,9 +8,9 @@ import os
 import html
 
 ROOT = os.path.dirname(os.path.dirname(__file__))
-CSV_PATH = os.path.join(ROOT, 'csv', '2025_cleaned_registrations.csv')
-FLAGS_DIR = os.path.join(ROOT, 'assets', 'flags')
-OUT_PATH = os.path.join(ROOT, 'pages', 'participants.html')
+CSV_PATH = os.path.join(ROOT, 'public', 'csv', '2025_cleaned_registrations.csv')
+FLAGS_DIR = os.path.join(ROOT, 'public', 'assets', 'flags')
+OUT_PATH = os.path.join(ROOT, 'public', 'pages', 'participants.html')
 
 
 def load_flags():
@@ -20,7 +20,7 @@ def load_flags():
     for fn in os.listdir(FLAGS_DIR):
         if fn.lower().endswith('.svg'):
             name = os.path.splitext(fn)[0].lower()
-            flags[name] = '/assets/flags/' + fn
+            flags[name] = 'public/assets/flags/' + fn
     return flags
 
 
