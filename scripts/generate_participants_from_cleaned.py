@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate pages/contest/participants.html from csv/teams.csv
+"""Generate pages/participants.html from csv/2025_cleaned_registrations.csv
 
 Reads available flag SVGs from assets/flags and uses them when country names match the filename.
 """
@@ -8,7 +8,7 @@ import os
 import html
 
 ROOT = os.path.dirname(os.path.dirname(__file__))
-CSV_PATH = os.path.join(ROOT, 'csv', 'teams.csv')
+CSV_PATH = os.path.join(ROOT, 'csv', '2025_cleaned_registrations.csv')
 FLAGS_DIR = os.path.join(ROOT, 'assets', 'flags')
 OUT_PATH = os.path.join(ROOT, 'pages', 'participants.html')
 
@@ -28,21 +28,31 @@ def read_csv():
     rows = []
     with open(CSV_PATH, 'r', encoding='utf-8') as fh:
         reader = csv.reader(fh)
+        header = next(reader)  # Skip header
         for r in reader:
-            # Expecting: name, ?, team, country, role
-            if not r:
+            if not r or len(r) < 14:
                 continue
-            # pad to 5
-            while len(r) < 5:
-                r.append('')
-            name = r[0].strip()
-            team = r[2].strip()
-            country = r[3].strip()
-            role = r[4].strip()
-            # skip completely empty rows
-            if not (name or team or country or role):
-                continue
-            rows.append({'name': name, 'team': team, 'country': country, 'role': role})
+            country = r[0].strip()
+            team = r[1].strip()
+            # Leader
+            first = r[2].strip()
+            last = r[3].strip()
+            if first or last:
+                name = f"{first} {last}".strip()
+                rows.append({'name': name, 'team': team, 'country': country, 'role': 'leader'})
+            # Deputy
+            first = r[4].strip()
+            last = r[5].strip()
+            if first or last:
+                name = f"{first} {last}".strip()
+                rows.append({'name': name, 'team': team, 'country': country, 'role': ''})
+            # Contestants
+            for i in range(6, 14, 2):
+                first = r[i].strip()
+                last = r[i+1].strip()
+                if first or last:
+                    name = f"{first} {last}".strip()
+                    rows.append({'name': name, 'team': team, 'country': country, 'role': ''})
     return rows
 
 
@@ -80,7 +90,7 @@ def generate_html(rows, flags):
                         if m.get('country'):
                                 rep_country = m['country']
                                 break
-                key = rep_country.lower() if rep_country else ''
+                key = rep_country.lower().split(' (')[0] if rep_country else ''
                 flag_html = ''
                 if key in flags:
                         flag_html = f'<img src="{flags[key]}" alt="{html.escape(rep_country)}"/>'
@@ -134,7 +144,7 @@ def main():
     os.makedirs(os.path.dirname(OUT_PATH), exist_ok=True)
     with open(OUT_PATH, 'w', encoding='utf-8') as fh:
         fh.write(html_out)
-    print(f'Wrote {OUT_PATH} ({len(rows)} rows, {len(flags)} flags available)')
+    print(f'Wrote {OUT_PATH} ({len(rows)} members, {len(flags)} flags available)')
 
 
 if __name__ == '__main__':
