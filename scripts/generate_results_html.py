@@ -5,7 +5,7 @@
 import csv
 
 # Read CSV
-with open('public/csv/results_with_medals.csv', 'r', encoding='utf-8-sig') as f:
+with open('rmi_2025/csv/results_with_medals.csv', 'r', encoding='utf-8-sig') as f:
     reader = csv.DictReader(f)
     rows = list(reader)
 
@@ -110,7 +110,7 @@ html += """            </tbody>
 </html>"""
 
 # Write to file
-with open('public/pages/results.html', 'w', encoding='utf-8') as f:
+with open('rmi_2025/pages/results.html', 'w', encoding='utf-8') as f:
     f.write(html)
 
 print("Generated pages/results.html with medal colors!")

@@ -1,8 +1,8 @@
 import csv
 
 # File paths
-input_file = 'public/csv/2025_merged_registrations.csv'
-output_file = 'public/csv/2025_cleaned_registrations.csv'
+input_file = 'rmi_2025/csv/2025_merged_registrations.csv'
+output_file = 'rmi_2025/csv/2025_cleaned_registrations.csv'
 
 # Columns to keep (0-based indices)
 # 1: Country name

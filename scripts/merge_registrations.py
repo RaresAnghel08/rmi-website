@@ -10,7 +10,7 @@ args = parser.parse_args()
 # File paths
 online_file = args.online
 onsite_file = args.onsite
-output_file = 'public/csv/2025_merged_registrations.csv'
+output_file = 'rmi_2025/csv/2025_merged_registrations.csv'
 
 # Read onsite file to get the full header
 with open(onsite_file, 'r', newline='', encoding='utf-8') as f:

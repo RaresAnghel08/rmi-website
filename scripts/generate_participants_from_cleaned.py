@@ -8,9 +8,9 @@ import os
 import html
 
 ROOT = os.path.dirname(os.path.dirname(__file__))
-CSV_PATH = os.path.join(ROOT, 'public', 'csv', '2025_cleaned_registrations.csv')
-FLAGS_DIR = os.path.join(ROOT, 'public', 'assets', 'flags')
-OUT_PATH = os.path.join(ROOT, 'public', 'pages', 'participants.html')
+CSV_PATH = os.path.join(ROOT, 'rmi_2025', 'csv', '2025_cleaned_registrations.csv')
+FLAGS_DIR = os.path.join(ROOT, 'rmi_2025', 'assets', 'flags')
+OUT_PATH = os.path.join(ROOT, 'rmi_2025', 'pages', 'participants.html')
 
 
 def load_flags():

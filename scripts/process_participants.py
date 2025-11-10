@@ -19,7 +19,7 @@ class ParticipantProcessor:
 
         # Set the icon
         try:
-            self.root.iconphoto(True, tk.PhotoImage(file='public/assets/organisers/vianu.png'))
+            self.root.iconphoto(True, tk.PhotoImage(file='rmi_2025/assets/organisers/vianu.png'))
         except tk.TclError:
             pass  # If logo not found, continue without icon
 
