@@ -20,7 +20,7 @@ def load_flags():
     for fn in os.listdir(FLAGS_DIR):
         if fn.lower().endswith('.svg'):
             name = os.path.splitext(fn)[0].lower()
-            flags[name] = 'public/assets/flags/' + fn
+            flags[name] = '/assets/flags/' + fn
     return flags
 
 
