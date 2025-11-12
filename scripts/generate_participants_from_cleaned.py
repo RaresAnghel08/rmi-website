@@ -45,7 +45,7 @@ def read_csv():
             last = r[5].strip()
             if first or last:
                 name = f"{first} {last}".strip()
-                rows.append({'name': name, 'team': team, 'country': country, 'role': ''})
+                rows.append({'name': name, 'team': team, 'country': country, 'role': 'leader'})
             # Contestants
             for i in range(6, 14, 2):
                 first = r[i].strip()
