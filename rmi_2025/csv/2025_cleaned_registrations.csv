@@ -1,6 +1,7 @@
 Country name,"Team name (city, region, ""national team"") - for countries with more than one registered team",First name of the team leader,Last name of the team leader,First name of the deputy leader,Last name of the deputy leader,First name of contestant 1,Last name of contestant 1,First name of contestant 2,Last name of contestant 2,First name of contestant 3,Last name of contestant 3,First name of contestant 4,Last name of contestant 4
 Ukraine,ALGO1,Andrii,Popyk,,,Matvii,Grytsyna,Vladyslav,Zabolotnyi,Tetiana,Zadniprovska,Yurii,Koss
 Ukraine,ALGO2,Andrii,Popyk,,,Mykhailo,Symoni,Illia,Denysiuk,Yaroslav,Savyshyn,Andrii,Ryzhanskyi
+Ukraine,Attempt,Oksana,Bodryk,,,Mykola,Zaiets,Artem,Lytvyn,Jaroslav,Pihol,,
 Moldova (Republic of),Bit Masters,Sergiu,Corlat,Alim ,Yamac,Alexei,Baca,Alexandra,Kirillov,Anastasia,Corsac,Andreea,Sandrean
 Bulgaria,Bulgaria National,Iliyan,Yordanov,,,Andrey,Stefanov,Denislav,Manev,Daniel,Getov,Nermin,Idiriz
 Moldova (Republic of),Code Warriors,Sergiu,Corlat,Hasan,Baris,Alin ,Popescu,Robert,Barbuta,Octavian,Harcel,Dan,Sandu
@@ -25,7 +26,6 @@ Bulgaria,Shkola A&B - Gameloft 3,Biserka,Yovcheva,,,Zdravko ,Nikolov,Feyza-Nur  
 Slovenia,Slovenia,Simon,Weiss,Jakob,Žorž,Gabriel,Pagliaruzzi,Vid,Furlan,Mitja,Ševerkar,Luka,Heric
 Bulgaria,Sofia,Desislava,Ratcheva,,,Boris,Angelov,Yordan,Tsokanov,Elitsa,Stoyanova,Viktor,Slavchev
 Bulgaria,Sofia Junior,Desislava,Ratcheva,,,Kiril,Zulyamski,Martin,Chavdarov,Boyan,Boyadzhiev,Daniel,Todorov
-Attempt,Ukraine,Oksana,Bodryk,,,Mykola,Zaiets,Artem,Lytvyn,Jaroslav,Pihol,,
 Ukraine,Ukraine 1,Yevhenii,Kozolup,Maryna,Nadtochii,Olesia,Denha,Mykhailo,Isak,Oleksii,Kupranets,Andrii,Kuzma
 Ukraine,Ukraine 2,Yevhenii,Kozolup,Maryna,Nadtochii,Roman,Sadovnikov,Maksym,Fedorchuk,Vsevolod,Fatieiev,Marian,Shyika
 Ukraine,Ukraine 3,Yevhenii,Kozolup,Maryna,Nadtochii,Anton,Perebyinis,Andrii,Tatarinov,Mariia,Rapina,Dmytro,Strakhal
