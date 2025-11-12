@@ -243,11 +243,28 @@ blockquote {
 }
 
 .site-footer {
-	border-top: 1px solid rgba(11, 18, 32, 0.04);
-	padding: 1rem 0;
+	border-top: 2px solid rgba(11, 152, 166, 0.15);
+	padding: 2rem 0;
 	text-align: center;
 	color: var(--muted);
-	margin-top: 1.25rem
+	margin-top: 2rem;
+	background: linear-gradient(135deg, rgba(11, 152, 166, 0.04), rgba(255, 122, 89, 0.03));
+	border-radius: var(--radius);
+	font-size: 0.85rem;
+	font-weight: 500;
+	letter-spacing: 0.02em;
+	box-shadow: 0 4px 12px rgba(11, 18, 32, 0.08);
+}
+
+.site-footer a {
+	color: #0066cc;
+	text-decoration: none;
+	font-weight: 600;
+}
+
+.site-footer a:hover {
+	color: #004499;
+	text-decoration: underline;
 }
 
 /* Responsive */
