@@ -126,7 +126,7 @@ def generate_html(rows, flags):
                     </div>
                 </section>
             </main>
-            <footer class="site-footer">&copy; RMI</footer>
+            <footer class="site-footer">&copy; 2025 Tudor Vianu National High School of Computer Science - Built by <a href="https://linkedin.com/in/raresanghel" target="_blank" rel="noopener" title="Visit Rares Anghel's LinkedIn profile">Rares Anghel</a></footer>
         </div>
         <link rel="icon" href="assets/organisers/vianu.png" type="image/png">
         <script src="assets/js/main.js"></script>
