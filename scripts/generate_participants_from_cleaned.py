@@ -106,18 +106,30 @@ def generate_html(rows, flags):
                 rows_html.append('              <div class="team-info">')
 
                 # leaders (each on separate line)
+                rows_html.append('                <div class="team-leaders">')
+                rows_html.append('                  <span class="label">Leaders:</span>')
                 if leaders:
-                        leader_names = ', '.join(html.escape(l['name']) for l in leaders if l.get('name'))
-                        rows_html.append(f'                <div class="team-leaders"><span class="label">Leaders:</span> <span class="member-list">{leader_names}</span></div>')
+                        rows_html.append('                  <div class="member-list">')
+                        for leader in leaders:
+                                if leader.get('name'):
+                                        rows_html.append(f'                    <div class="member-item">{html.escape(leader["name"])}</div>')
+                        rows_html.append('                  </div>')
                 else:
-                        rows_html.append('                <div class="team-leaders"><span class="label">Leaders:</span> <span class="none">—</span></div>')
+                        rows_html.append('                  <span class="none">—</span>')
+                rows_html.append('                </div>')
 
                 # students (each on separate line)
+                rows_html.append('                <div class="team-students">')
+                rows_html.append('                  <span class="label">Students:</span>')
                 if students:
-                        student_names = ', '.join(html.escape(s['name']) for s in students if s.get('name'))
-                        rows_html.append(f'                <div class="team-students"><span class="label">Students:</span> <span class="member-list">{student_names}</span></div>')
+                        rows_html.append('                  <div class="member-list">')
+                        for student in students:
+                                if student.get('name'):
+                                        rows_html.append(f'                    <div class="member-item">{html.escape(student["name"])}</div>')
+                        rows_html.append('                  </div>')
                 else:
-                        rows_html.append('                <div class="team-students"><span class="label">Students:</span> <span class="none">—</span></div>')
+                        rows_html.append('                  <span class="none">—</span>')
+                rows_html.append('                </div>')
 
                 rows_html.append('              </div>')
                 rows_html.append('            </div>')

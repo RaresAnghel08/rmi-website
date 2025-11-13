@@ -567,7 +567,7 @@ img {
 	line-height: 1.6;
 	display: flex;
 	flex-direction: column;
-	gap: 0.35rem;
+	gap: 0.5rem;
 }
 
 .team-leaders .label,
@@ -580,10 +580,17 @@ img {
 }
 
 .member-list {
+	display: flex;
+	flex-direction: column;
+	gap: 0.35rem;
+	padding-left: 0.5rem;
+}
+
+.member-item {
 	color: var(--muted);
 	font-size: 0.95rem;
-	padding-left: 0.5rem;
 	line-height: 1.5;
+	padding: 0.25rem 0;
 }
 
 @media (max-width: 768px) {
