@@ -71,7 +71,7 @@ def generate_html(rows, flags):
             <main class="content">
                 <section class="participants-section">
                     <h2>Participants</h2>
-                    <div class="participants-list">
+                    <div class="participants-grid">
 '''
 
         # group rows by team (use 'No team' if unspecified)
@@ -93,33 +93,33 @@ def generate_html(rows, flags):
                 key = rep_country.lower().split(' (')[0] if rep_country else ''
                 flag_html = ''
                 if key in flags:
-                        flag_html = f'<img src="{flags[key]}" alt="{html.escape(rep_country)}"/>'
+                        flag_html = f'<img src="{flags[key]}" alt="{html.escape(rep_country)}" class="flag-img"/>'
 
                 # categorize leaders and students
                 leaders = [m for m in members if (m.get('role') or '').lower().strip() in ('lider', 'leader')]
                 students = [m for m in members if m not in leaders]
 
-                # build team block
-                rows_html.append('            <div class="team-block">')
-                rows_html.append('              <div class="team-header">')
-                rows_html.append(f'                <div class="team-flag">{flag_html}</div>')
-                rows_html.append(f'                <div class="team-name">{html.escape(team_name)}</div>')
-                rows_html.append('              </div>')
+                # build team card
+                rows_html.append('            <div class="team-card">')
+                rows_html.append(f'              <div class="team-flag-header">{flag_html}</div>')
+                rows_html.append(f'              <div class="team-name">{html.escape(team_name)}</div>')
+                rows_html.append('              <div class="team-info">')
 
-                # leaders (inline)
+                # leaders (each on separate line)
                 if leaders:
                         leader_names = ', '.join(html.escape(l['name']) for l in leaders if l.get('name'))
-                        rows_html.append(f'              <div class="team-leaders"><strong>Leaders:</strong> <span class="member-list">{leader_names}</span></div>')
+                        rows_html.append(f'                <div class="team-leaders"><span class="label">Leaders:</span> <span class="member-list">{leader_names}</span></div>')
                 else:
-                        rows_html.append('              <div class="team-leaders"><strong>Leaders:</strong> <span class="none">—</span></div>')
+                        rows_html.append('                <div class="team-leaders"><span class="label">Leaders:</span> <span class="none">—</span></div>')
 
-                # students (inline)
+                # students (each on separate line)
                 if students:
                         student_names = ', '.join(html.escape(s['name']) for s in students if s.get('name'))
-                        rows_html.append(f'              <div class="team-students"><strong>Students:</strong> <span class="member-list">{student_names}</span></div>')
+                        rows_html.append(f'                <div class="team-students"><span class="label">Students:</span> <span class="member-list">{student_names}</span></div>')
                 else:
-                        rows_html.append('              <div class="team-students"><strong>Students:</strong> <span class="none">—</span></div>')
+                        rows_html.append('                <div class="team-students"><span class="label">Students:</span> <span class="none">—</span></div>')
 
+                rows_html.append('              </div>')
                 rows_html.append('            </div>')
 
         tail = '''

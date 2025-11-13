@@ -503,84 +503,121 @@ img {
 	}
 }
 
-/* Team block layout for grouped participants */
-.participants-list {
+/* Team card layout - flashcard/postcard style */
+.participants-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+	gap: 1.5rem;
+	margin-top: 1rem
+}
+
+.team-card {
+	background: var(--card);
+	border-radius: 16px;
+	overflow: hidden;
+	box-shadow: 0 8px 24px rgba(11, 18, 32, 0.08);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	border: 2px solid rgba(11, 152, 166, 0.1);
 	display: flex;
 	flex-direction: column;
-	gap: 1rem
 }
 
-.team-block {
-	background: var(--card);
-	padding: 1rem;
-	border-radius: 10px;
-	border: 1px solid rgba(255, 255, 255, 0.02)
+.team-card:hover {
+	transform: translateY(-8px);
+	box-shadow: 0 12px 32px rgba(11, 18, 32, 0.15);
+	border-color: rgba(11, 152, 166, 0.3);
 }
 
-.team-header {
+.team-flag-header {
+	background: linear-gradient(135deg, rgba(11, 152, 166, 0.08), rgba(255, 122, 89, 0.08));
+	padding: 1.5rem;
 	display: flex;
+	justify-content: center;
 	align-items: center;
-	gap: .75rem;
-	margin-bottom: .5rem
+	min-height: 120px;
+	border-bottom: 2px solid rgba(11, 152, 166, 0.15);
 }
 
-.team-flag img {
-	width: 48px;
+.flag-img {
+	width: 100px;
 	height: auto;
-	display: block
+	display: block;
+	filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
 }
 
 .team-name {
 	font-weight: 700;
 	color: var(--accent);
-	font-size: 1.05rem
+	font-size: 1.25rem;
+	padding: 1rem 1.25rem 0.75rem;
+	text-align: center;
+	border-bottom: 1px solid rgba(11, 152, 166, 0.1);
+}
+
+.team-info {
+	padding: 1rem 1.25rem 1.25rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.75rem;
+	flex-grow: 1;
 }
 
 .team-leaders,
 .team-students {
-	margin: 0.25rem 0
+	line-height: 1.6;
+	display: flex;
+	flex-direction: column;
+	gap: 0.35rem;
 }
 
-.team-leaders ul,
-.team-students ul {
-	margin: .35rem 0 0 1rem;
-	padding: 0
+.team-leaders .label,
+.team-students .label {
+	font-weight: 700;
+	color: var(--accent-2);
+	font-size: 0.95rem;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
 }
 
-.team-leaders li,
-.team-students li {
-	margin: .25rem 0;
-	color: var(--muted)
-}
-
-.team-block .none {
-	color: var(--muted)
-}
-
-@media (max-width:520px) {
-	.team-header {
-		gap: .5rem
-	}
-
-	.team-flag img {
-		width: 36px
-	}
-}
-
-/* Inline member list styling */
 .member-list {
 	color: var(--muted);
-	display: inline
+	font-size: 0.95rem;
+	padding-left: 0.5rem;
+	line-height: 1.5;
 }
 
-.team-leaders strong,
-.team-students strong {
-	margin-right: .4rem
+@media (max-width: 768px) {
+	.participants-grid {
+		grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+		gap: 1.25rem;
+	}
+
+	.flag-img {
+		width: 80px;
+	}
+
+	.team-flag-header {
+		min-height: 100px;
+		padding: 1.25rem;
+	}
 }
 
-.team-block .member-list a {
-	color: var(--accent)
+@media (max-width: 520px) {
+	.participants-grid {
+		grid-template-columns: 1fr;
+		gap: 1rem;
+	}
+
+	.flag-img {
+		width: 70px;
+	}
+
+	.team-name {
+		font-size: 1.15rem;
+	}
 }
+
+/* Inline member list styling - removed as not used with new card design */
 
 /* News page styles - modern card layout */
 .news-container {
