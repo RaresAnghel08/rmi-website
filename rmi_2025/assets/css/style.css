@@ -516,10 +516,21 @@ img {
 	border-radius: 16px;
 	overflow: hidden;
 	box-shadow: 0 8px 24px rgba(11, 18, 32, 0.08);
-	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.6s ease, transform 0.6s ease;
 	border: 2px solid rgba(11, 152, 166, 0.1);
 	display: flex;
 	flex-direction: column;
+}
+
+/* Scroll fade-in animation */
+.team-card.fade-in {
+	opacity: 0;
+	transform: translateY(30px);
+}
+
+.team-card.fade-in-visible {
+	opacity: 1;
+	transform: translateY(0);
 }
 
 .team-card:hover {

@@ -208,4 +208,42 @@
     rendered.innerHTML = '<p class="error">Failed to load menu.json: '+err.message+'</p>';
   });
 
+  // Scroll fade-in animation for team cards
+  function initScrollAnimation() {
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fade-in-visible');
+        }
+      });
+    }, observerOptions);
+
+    // Observe all team cards
+    const teamCards = document.querySelectorAll('.team-card');
+    teamCards.forEach(card => {
+      card.classList.add('fade-in');
+      observer.observe(card);
+    });
+  }
+
+  // Re-initialize scroll animation whenever content changes
+  const originalFetchAndRender = fetchAndRender;
+  fetchAndRender = function(path) {
+    originalFetchAndRender(path);
+    // Wait for content to load, then init animations
+    setTimeout(() => {
+      initScrollAnimation();
+    }, 100);
+  };
+
+  // Initialize on page load
+  window.addEventListener('load', () => {
+    setTimeout(initScrollAnimation, 100);
+  });
+
 })();
