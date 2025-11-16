@@ -869,10 +869,10 @@ img {
 	}
 
 	.edition-card img {
-		max-width: 120px;
+		max-width: 200px;
 	}
 
 	.edition-year {
-		font-size: 1.1rem;
+		font-size: 1.3rem;
 	}
 }
