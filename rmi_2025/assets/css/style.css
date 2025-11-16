@@ -418,7 +418,9 @@ img {
 .schedule-table th,
 .schedule-table td {
 	padding: .45rem .6rem;
-	border-bottom: 1px solid rgba(255, 255, 255, 0.03)
+	border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+	word-wrap: break-word;
+	overflow-wrap: break-word;
 }
 
 .schedule-table th.time,
@@ -492,14 +494,9 @@ img {
 	display: block
 }
 
-@media (max-width:520px) {
-	.participants-table {
-		min-width: 420px
-	}
-
-	.participants-table th:nth-child(3),
-	.participants-table td:nth-child(3) {
-		display: none
+@media (max-width: 520px) {
+	.schedule-table {
+		min-width: auto;
 	}
 }
 
