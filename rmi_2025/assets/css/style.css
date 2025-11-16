@@ -457,6 +457,52 @@ img {
 	object-fit: contain
 }
 
+/* Auto-scroll sponsors gallery */
+.auto-scroll {
+	position: relative;
+	overflow: hidden;
+	height: 6rem;
+	width: 100%;
+	margin: 2rem 0;
+}
+
+.auto-scroll .movable {
+	height: 6rem;
+	width: max-content;
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	animation: slide 10s linear infinite;
+}
+
+.sponsors-movable {
+	animation-duration: 20s;
+}
+
+.auto-scroll .movable:hover {
+	animation-play-state: paused;
+}
+
+@keyframes slide {
+	100% {
+		transform: translateX(-50%);
+	}
+}
+
+.auto-scroll img {
+	display: inline-block;
+	height: 100%;
+	width: auto;
+	margin: 0 1rem;
+	transform: scale(90%);
+	transition: .25s transform;
+}
+
+.auto-scroll img:hover {
+	transform: scale(100%);
+}
+
 /* Participants table */
 .participants-table-wrap {
 	overflow: auto;
