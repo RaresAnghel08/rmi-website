@@ -355,7 +355,9 @@ img {
 .committee-table td {
 	border: 1px solid rgba(255, 255, 255, 0.04);
 	padding: .5rem .75rem;
-	text-align: left
+	text-align: left;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
 }
 
 .committee-table thead th {
@@ -496,6 +498,10 @@ img {
 
 @media (max-width: 520px) {
 	.schedule-table {
+		min-width: auto;
+	}
+
+	.committee-table {
 		min-width: auto;
 	}
 }
