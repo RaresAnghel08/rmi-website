@@ -28,6 +28,47 @@
     <link rel="alternate" type="application/rss+xml" href="index.xml" title="Romanian Master of Informatics 2025">
 
     <!-- Open Graph / Facebook -->
+    <!-- Helpful SEO additions: keywords, hreflang and structured data for Event & Organization -->
+    <meta name="keywords" content="RMI, Romanian Master of Informatics, RMI 2025, informatics competition, Bucharest, Tudor Vianu">
+    <link rel="alternate" hreflang="en" href="https://rmi.lbi.ro/rmi_2025/">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "name": "Tudor Vianu National High School of Computer Science",
+          "url": "https://portal.lbi.ro",
+          "logo": "https://rmi.lbi.ro/rmi_2025/assets/organisers/vianu.png"
+        },
+        {
+          "@type": "Event",
+          "name": "Romanian Master of Informatics 2025",
+          "startDate": "2025-11-26",
+          "endDate": "2025-11-29",
+          "eventStatus": "https://schema.org/EventScheduled",
+          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+          "location": {
+            "@type": "Place",
+            "name": "Tudor Vianu National High School of Computer Science",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Bucharest",
+              "addressCountry": "RO"
+            }
+          },
+          "description": "The 13th Romanian Master of Informatics (RMI 2025) in Bucharest, Romania.",
+          "url": "https://rmi.lbi.ro/rmi_2025/",
+          "organizer": {
+            "@type": "Organization",
+            "name": "Tudor Vianu National High School of Computer Science",
+            "url": "https://portal.lbi.ro"
+          }
+        }
+      ]
+    }
+    </script>
     <meta property="og:type" content="website">
     <meta property="og:title" content="Romanian Master of Informatics 2025">
     <meta property="og:description" content="Official site for the Romanian Master of Informatics 2025 — news, contest pages, participants, and results.">

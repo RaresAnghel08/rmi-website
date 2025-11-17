@@ -1,0 +1,8 @@
+# robots.txt for RMI 2025 site (placed in /rmi_2025/)
+# Note: crawlers read robots.txt from the site root. To be most effective,
+# place the following lines in the site's root robots.txt at https://rmi.lbi.ro/robots.txt
+
+User-agent: *
+Disallow:
+
+Sitemap: https://rmi.lbi.ro/rmi_2025/sitemap.xml
