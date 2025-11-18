@@ -239,7 +239,7 @@ function generateResultsHTML() {
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Results - RMI 2024</title>
+    <title>Results - RMI 2025</title>
       <style>
       /* Small page-specific overrides that complement rms-theme */
       .table-container { overflow-x: auto; }
@@ -346,7 +346,7 @@ function generateParticipantsHTML() {
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Participants - RMI 2024</title>
+    <title>Participants - RMI 2025</title>
     <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
@@ -398,7 +398,7 @@ function generateParticipantsHTML() {
                 </div>
             </section>
         </main>
-        <footer class="site-footer">&copy; RMI 2024</footer>
+        <footer class="site-footer">&copy; RMI 2025</footer>
     </div>
     <link rel="icon" href="/assets/organisers/vianu.png" type="image/png">
     <script src="/assets/js/main.js"><\/script>
