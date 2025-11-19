@@ -437,6 +437,21 @@ img {
 	color: var(--muted)
 }
 
+/* Powered-by inline block to keep sponsor text and logo on one line on desktop only */
+@media (min-width: 521px) {
+	.powered-by {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		white-space: nowrap;
+	}
+	.powered-by img {
+		height: 32px;
+		width: auto;
+		display: inline-block;
+	}
+}
+
 .schedule-table tbody tr:hover td {
 	background: rgba(125, 211, 252, 0.02)
 }
