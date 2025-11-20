@@ -2,15 +2,17 @@ Country name,"Team name (city, region, ""national team"") - for countries with m
 Ukraine,ALGO1,Andrii,Popyk,,,Matvii,Grytsyna,Vladyslav,Zabolotnyi,Tetiana,Zadniprovska,Yurii,Koss
 Ukraine,ALGO2,Andrii,Popyk,,,Mykhailo,Symoni,Illia,Denysiuk,Yaroslav,Savyshyn,Andrii,Ryzhanskyi
 Ukraine,Attempt,Oksana,Bodryk,,,Mykola,Zaiets,Artem,Lytvyn,Jaroslav,Pihol,,
-Moldova (Republic of),Bit Masters,Sergiu,Corlat,Alim ,Yamac,Alexei,Baca,Alexandra,Kirillov,Anastasia,Corsac,Andreea,Sandrean
+Moldova (Republic of),Bit Masters,Sergiu,Corlat,Alim,Yamac,Alexei,Baca,Alexandra,Kirillov,Anastasia,Corsac,Andreea,Sandrean
+Romania,București 1,Adrian,Miclăuș,,,Vlad-Mihai,Tutunaru,David-Constantin,Țurcanu,Paul,Ion,Cezar-Luca,Mironov
+Romania,București 2,Adrian,Miclăuș,,,Andrei,Șună,Mihnea-Teodor,Stoica,Alexandru,Țigău,Mihai,Ariton
 Bulgaria,Bulgaria,Iliyan,Yordanov,,,Andrey,Stefanov,Denislav,Manev,Daniel,Getov,Nermin,Idiriz
-Moldova (Republic of),Code Warriors,Sergiu,Corlat,Hasan,Baris,Alin ,Popescu,Robert,Barbuta,Octavian,Harcel,Dan,Sandu
+Moldova (Republic of),Code Warriors,Sergiu,Corlat,Hasan,Baris,Alin,Popescu,Robert,Barbuta,Octavian,Harcel,Dan,Sandu
 Romania,Craiova,Mihaela,Grindeanu,,,Diana Ștefania,Costea,Fabian-Ștefan,Despa,Marian Nicolae,Pîrlog,Alexandru,Șerban
 Georgia,Georgia 1,George,Mandaria,Bakari,Gamezardashvili,Saba,Peradze,Nikoloz,Melikishvili,Davit,Dzadzamia,Vladimeri,Prangishvili
 Georgia,Georgia 2,George,Mandaria,Bakari,Gamezardashvili,Andria,Vasadze,Nikoloz,Tavkhelidze,Giorgi,Bulauri,Otar,Tsibadze
 Georgia,Georgia 3,George ,Mandaria,Bakari,Gamezardashvili,Mate,Rekhviashvili,Saba,Goduadze,Giorgi,Maisuradze,Gvantsa,Khvedelidze
 Greece,Greece,Markos,Radaios,Panagiotis,Paskalis,Lazaros,Karageorgiou,Spyridon,Alivizatos,Theodoros,Sarras,Gerasimos,Vandoros
-Bulgaria,Haskovo,Georgi,Manolov,,,Dimitar ,Shapatov,Tihomir ,Ivanov,Nikola,Manolov,Martin,Nedev
+Bulgaria,Haskovo,Georgi,Manolov,,,Dimitar,Shapatov,Tihomir,Ivanov,Nikola,Manolov,Martin,Nedev
 Vietnam,HSGS,Phuong,Ho Dac,,,Tuan,Nguyen Huu,Dung,Nguyen Bui Duc,Khoa,Le Pham Duy,Thanh,Nguyen Xuan Chi
 Hungary,Hungary,Zoltán,Molnár-Sáska,Zsombor,Bata,Gergely,Lehotai,Vince,Ungár,Horka,Fajszi,Bendegúz Péter,Vámosi
 Romania,Iasi,Paul,Diac,Razvan,Rotaru,Tudor,Maftei,Sorin,Gabără,Matei,Tomiță,Rareș,Buruiană
@@ -24,15 +26,16 @@ Romania,Romania 1,Casian,Pătrășcanu,Claudiu-Cristian,Gorea-Zamfir,Rareș-Andr
 Romania,Romania 2,Casian,Pătrășcanu,Claudiu-Cristian,Gorea-Zamfir,Alexandru,Dima,Andrei Paul,Iorgulescu,Luca Valentin,Mureșan,Matei,Neacșu
 Romania,Romania 3,Casian,Pătrășcanu,Claudiu-Cristian,Gorea-Zamfir,Alex-Ioan,Mihai,Radu,Mocănaşu,Ştefan-Cătălin,Savu,Chenglin,Shang
 Romania,Romania 4,Casian,Pătrășcanu,Claudiu-Cristian,Gorea-Zamfir,Tiberiu Mihai,Enache,Ștefan Constantin,Neagu,Samuel,Șoimaru,Flaviu,Dimitriu
-Romania,Romania 5,Daniela,Lica,,,Alexandru,Dumitru ,Andrei Călin,Vasile,,,,
+Romania,Romania 5,Adrian,Miclăuș,,,Ianis,Belu,Rareș,Drăgușanu,Alexandru,Mateescu,David-Ioan,Curcă
+Romania,Romania 6,Daniela,Lica,,,Alexandru,Dumitru ,Andrei Călin,Vasile,,,,
 Romania,Romania G,Costachevici,Elena,Sanda,Bogdan,Ema-Nicole,Gheorghe,Laura,Moldovan,Ilinca-Rucsandra,Radu,Iulia,Morariu
 Romania,Romania J1,Costachevici,Elena,Sanda,Bogdan,Horia-Andrei,Boeriu,Traian,Danciu,Matei Ştefan,Iordache,Andrei,Nemțișor
 Romania,Romania J2,Costachevici,Elena,Sanda,Bogdan,Mihnea Petru,Apostol,Mihai Cosmin,Boac,Rareș,Hanganu,Iustin,Mircea
-Bulgaria,Ruse-Pleven BGR,Plamenka,Hristova,,,Preslav,Toshev,Kaloyan,Varbanov,Viktor, Vanev,Valentin,Filipov
+Bulgaria,Ruse-Pleven BGR,Plamenka,Hristova,,,Preslav,Toshev,Kaloyan,Varbanov,Viktor,Vanev,Valentin,Filipov
 Serbia,Serbia,Filip,Bojković,Bogdan,Petrović,Stefan,Šebez,Petar,Banović,Filip,Repman,Dimitrije,Atanasković
 Bulgaria,Shkola A&B - Gameloft 1,Biserka,Yovcheva,,,Yavor,Vasilev,Simona,Hristova,Serkan,Rashid,Nikolay,Valchanov
 Bulgaria,Shkola A&B - Gameloft 2,Biserka,Yovcheva,Atanas,Yovchev,Vladislav,Kostov,Bozhan,Ivanov,Radoslav,Dimitrov,Alexander,Vulchev
-Bulgaria,Shkola A&B - Gameloft 3,Biserka,Yovcheva,,,Zdravko ,Nikolov,Feyza-Nur  ,Ibrahimova,Bogdan ,Varbanov,Damyan,Boyadzhiev
+Bulgaria,Shkola A&B - Gameloft 3,Biserka,Yovcheva,,,Zdravko,Nikolov,Feyza-Nur,Ibrahimova,Bogdan,Varbanov,Damyan,Boyadzhiev
 Slovenia,Slovenia,Simon,Weiss,Jakob,Žorž,Gabriel,Pagliaruzzi,Vid,Furlan,Mitja,Ševerkar,Luka,Heric
 Bulgaria,Sofia,Desislava,Ratcheva,,,Boris,Angelov,Yordan,Tsokanov,Elitsa,Stoyanova,Viktor,Slavchev
 Bulgaria,Sofia Junior,Desislava,Ratcheva,,,Kiril,Zulyamski,Martin,Chavdarov,Boyan,Boyadzhiev,Daniel,Todorov
@@ -46,3 +49,9 @@ Ukraine,UPML_HAPPY!,Oksana,Bodryk,,,Olesia,Ilyuk,Fedir,Barabas,Savelii,Hryshchen
 Bulgaria,Varna-A,Julia,Dimitrova,,,Ivan,Kolev,Yoan,Dimitrov,Maya,Banalieva,,
 Bulgaria,Varna-BC,Julia,Dimitrova,,,Alexander,Vladimirov,Damyan,Nakev,Kaloyan,Keratsov,,
 Romania,Vaslui,Vlad-Laurentiu,Nicu,,,Emilian,Cârnu,Tudor,Cocu,Matei-Theodor,Grosu,Rares Florin,Anea
+Romania,Vianu 1,Anca,Leuciuc,,,Ioan-Ștefan,Petrescu,Teodor-Mihai,Stupariu,Horia Mihai,Haivas,Teodor,Vrânceanu
+Romania,Vianu 2,Elena,Drăgan,,,Dominic,Mohanu,Alexandra-Iulia,Guiman,Tudor Andrei,Horobeanu,Vlad Andrei,Dobromir
+Romania,Vianu 3,Alina Gabriela,Boca,,,Rareș,Stan,Radu Stefan,Arghira,Alexandru,Ungureanu,Robert-Alexandru,Peter
+Romania,Vianu 4,Anca,Leuciuc,,,Vlad Mihai,Neguț,Dimitrie Matei,Andronache,Andrei,Icriverzi,,
+Romania,Vianu J1,Isabela Patricia,Coman,,,Radu,Vasile,Radu,Pipernea,Andrei,Mateescu,Matei,Lupu
+Romania,Vianu J2,Alina Gabriela,Boca,,,Andrei,Pana,David-Matei,Popa,Maria,Bertolon,,
