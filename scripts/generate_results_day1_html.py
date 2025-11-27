@@ -28,7 +28,7 @@ with open(csv_path, 'r', encoding='utf-8-sig') as f:
             guess = float(row[5])
             squir = float(row[7])
             day1 = float(row[9])
-            total = eng + guess + squir + day1
+            total = day1
         except ValueError:
             continue  # Skip invalid rows
         rows.append({
