@@ -16,7 +16,8 @@
     "items": [
       { "title": "Competition Rules", "path": "pages/rules.html" },
       { "title": "Contestant Schedule", "path": "pages/contestants.html" },
-      { "title": "Leader Schedule", "path": "pages/leaders.html" }
+      { "title": "Leader Schedule", "path": "pages/leaders.html" },
+      { "title": "Committee", "path": "pages/committee.html" }
     ]
   },
   {
