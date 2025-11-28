@@ -25,7 +25,7 @@
     "weight": 3,
     "items": [
       { "title": "Participants", "path": "pages/participants.html" },
-      { "title": "Results", "path": "pages/results1.html" },
+      { "title": "Results", "path": "pages/results.html" },
       { "title": "Problems", "path": "pages/problems.html" },
       { "title": "Solutions and Editorial", "path": "pages/solutions.html" },
       { "title": "Previous Editions", "path": "pages/previous.html" }
