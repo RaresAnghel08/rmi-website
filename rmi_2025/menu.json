@@ -5,8 +5,7 @@
     "weight": 1,
     "items": [
       { "title": "Home", "path": "pages/home.html" },
-      { "title": "News", "path": "pages/news.html" },
-      { "title": "Gallery", "path": "pages/gallery.html" }
+      { "title": "News", "path": "pages/news.html" }
     ]
   },
   {
