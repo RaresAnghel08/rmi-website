@@ -940,3 +940,87 @@ img {
 		font-size: 1.3rem;
 	}
 }
+
+/* Problems page styles - postcard design */
+.day-section {
+	margin-bottom: 2rem;
+}
+
+.problems-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	gap: 1.5rem;
+	margin-top: 1rem;
+}
+
+.problem-card {
+	background: var(--card);
+	border-radius: 16px;
+	overflow: hidden;
+	box-shadow: 0 8px 24px rgba(11, 18, 32, 0.08);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	border: 2px solid rgba(11, 152, 166, 0.1);
+	padding: 1.5rem;
+	text-align: center;
+}
+
+.problem-card:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 12px 32px rgba(11, 18, 32, 0.15);
+	border-color: rgba(11, 152, 166, 0.3);
+}
+
+.problem-card h3 {
+	margin: 0 0 1rem 0;
+	color: var(--text);
+}
+
+.problem-card .download-btn {
+	display: inline-block;
+	background: var(--accent);
+	color: white;
+	padding: 0.5rem 1rem;
+	border-radius: 8px;
+	text-decoration: none;
+	transition: background 0.3s ease;
+}
+
+.problem-card .download-btn:hover {
+	background: var(--accent-2);
+}
+
+.problem-card.coming-soon {
+	opacity: 0.7;
+}
+
+.problem-card.coming-soon .coming-soon-text {
+	color: var(--muted);
+	font-style: italic;
+}
+
+/* Download all button */
+.download-all-section {
+	text-align: center;
+	margin-bottom: 2rem;
+}
+
+.download-all-btn {
+	display: inline-block;
+	background: white;
+	color: var(--accent); /* Orange text on white background */
+	padding: 1rem 2rem;
+	border-radius: 12px;
+	text-decoration: none;
+	font-size: 1.2rem;
+	font-weight: 600;
+	transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+	border: 2px solid var(--accent);
+}
+
+.download-all-btn:hover {
+	background: var(--accent);
+	color: white; /* White text on orange background */
+	transform: translateY(-2px);
+	box-shadow: 0 6px 16px rgba(255, 122, 89, 0.4);
+}
