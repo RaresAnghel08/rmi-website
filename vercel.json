@@ -1,5 +1,13 @@
 {
+  "outputDirectory": "rmi_2026",
+  "cleanUrls": true,
+  "trailingSlash": false,
   "redirects": [
-    { "source": "/", "destination": "/rmi_2026/", "permanent": false }
+    { "source": "/rmi_2026", "destination": "/", "permanent": true },
+    { "source": "/rmi_2026/index.html", "destination": "/", "permanent": true },
+    { "source": "/rmi_2026/home.html", "destination": "/", "permanent": true },
+    { "source": "/rmi_2026/pages/home.html", "destination": "/", "permanent": true },
+    { "source": "/rmi_2026/pages/:page", "destination": "/:page", "permanent": true },
+    { "source": "/rmi_2026/:path*", "destination": "/:path*", "permanent": true }
   ]
 }
