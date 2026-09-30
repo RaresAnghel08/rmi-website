@@ -1,7 +1,7 @@
 import re
 
 # Read the file
-with open('d:/GITHUB/update_rmi_2024/rmi-website/rmi_2025/pages/participants.html', 'r', encoding='utf-8') as f:
+with open('d:/GITHUB/update_rmi_2024/rmi-website/rmi_2026/pages/participants.html', 'r', encoding='utf-8') as f:
     content = f.read()
 
 # Replace team-block with team-card
@@ -31,7 +31,7 @@ content = content.replace('</div>\n            </div>\n                    </div
 content = content.replace('participants-list', 'participants-grid')
 
 # Write back
-with open('d:/GITHUB/update_rmi_2024/rmi-website/rmi_2025/pages/participants.html', 'w', encoding='utf-8') as f:
+with open('d:/GITHUB/update_rmi_2024/rmi-website/rmi_2026/pages/participants.html', 'w', encoding='utf-8') as f:
     f.write(content)
 
 print("Transformation complete!")

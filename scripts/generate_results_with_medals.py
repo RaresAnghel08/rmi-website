@@ -6,9 +6,9 @@ import csv
 import os
 
 # Define input and output paths
-csv_day1_path = 'rmi_2025/csv/results_day1.csv'
-csv_day2_path = 'rmi_2025/csv/results_day2.csv'
-output_path = 'rmi_2025/csv/results_with_medals.csv'
+csv_day1_path = 'rmi_2026/csv/results_day1.csv'
+csv_day2_path = 'rmi_2026/csv/results_day2.csv'
+output_path = 'rmi_2026/csv/results_with_medals.csv'
 
 # Mapping of team name -> country based on registration CSVs
 TEAM_TO_COUNTRY = {

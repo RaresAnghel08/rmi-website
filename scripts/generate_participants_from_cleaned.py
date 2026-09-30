@@ -8,9 +8,9 @@ import os
 import html
 
 ROOT = os.path.dirname(os.path.dirname(__file__))
-CSV_PATH = os.path.join(ROOT, 'rmi_2025', 'csv', '2025_cleaned_registrations.csv')
-FLAGS_DIR = os.path.join(ROOT, 'rmi_2025', 'assets', 'flags')
-OUT_PATH = os.path.join(ROOT, 'rmi_2025', 'pages', 'participants.html')
+CSV_PATH = os.path.join(ROOT, 'rmi_2026', 'csv', '2026_cleaned_registrations.csv')
+FLAGS_DIR = os.path.join(ROOT, 'rmi_2026', 'assets', 'flags')
+OUT_PATH = os.path.join(ROOT, 'rmi_2026', 'pages', 'participants.html')
 
 
 def load_flags():
@@ -138,7 +138,7 @@ def generate_html(rows, flags):
                     </div>
                 </section>
             </main>
-            <footer class="site-footer">&copy; 2025 Tudor Vianu National High School of Computer Science - Built by <a href="https://linkedin.com/in/raresanghel" target="_blank" rel="noopener" title="Visit Rares Anghel's LinkedIn profile">Rares Anghel</a></footer>
+            <footer class="site-footer">&copy; 2026 Tudor Vianu National High School of Computer Science - Built by <a href="https://linkedin.com/in/raresanghel" target="_blank" rel="noopener" title="Visit Rares Anghel's LinkedIn profile">Rares Anghel</a></footer>
         </div>
         <link rel="icon" href="assets/organisers/vianu.png" type="image/png">
         <script src="assets/js/main.js"></script>

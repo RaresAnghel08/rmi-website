@@ -4,7 +4,7 @@
 Usage: run from repository root or directly:
   python scripts/count_tshirts.py
 
-The script searches for CSV files in `rmi_2025/csv` and aggregates:
+The script searches for CSV files in `rmi_2026/csv` and aggregates:
 - leaders: team leader + deputy leader sizes
 - participants: all contestant sizes
 
@@ -19,7 +19,7 @@ import re
 
 def find_csv_dir():
     repo_root = Path(__file__).resolve().parents[1]
-    csv_dir = repo_root / 'rmi_2025' / 'csv'
+    csv_dir = repo_root / 'rmi_2026' / 'csv'
     return csv_dir
 
 
@@ -126,7 +126,7 @@ def main():
         process_file(p, leader_ctr, participant_ctr, seen_leaders, seen_participants)
     else:
         csv_dir = find_csv_dir()
-        default_file = csv_dir / '2025_onsite_3.csv'
+        default_file = csv_dir / '2026_onsite_3.csv'
         if not default_file.exists():
             print(f"Default CSV not found: {default_file}")
             return 1

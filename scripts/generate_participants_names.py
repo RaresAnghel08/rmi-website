@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Generate a CSV with participant names and their coordinator (team leader).
 
-Scans CSV files in `rmi_2025/csv/` that contain registration rows and extracts
+Scans CSV files in `rmi_2026/csv/` that contain registration rows and extracts
 contestant names paired with their team leader. Writes `participants_names.csv`.
 """
 import csv
@@ -20,8 +20,8 @@ def find_key(keys, *substrings):
 
 def main():
     repo_root = os.path.dirname(os.path.dirname(__file__))
-    csv_dir = os.path.join(repo_root, 'rmi_2025', 'csv')
-    pattern = os.path.join(csv_dir, '2025_online_4.csv')
+    csv_dir = os.path.join(repo_root, 'rmi_2026', 'csv')
+    pattern = os.path.join(csv_dir, '2026_online_4.csv')
     files = sorted(glob.glob(pattern))
     out_path = os.path.join(csv_dir, 'participants_names.csv')
 
