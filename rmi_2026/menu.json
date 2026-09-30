@@ -4,8 +4,22 @@
     "name": "RMI",
     "weight": 1,
     "items": [
-      { "title": "Home", "path": "pages/home.html" },
-      { "title": "News", "path": "pages/news.html" }
+      {
+        "title": "Home",
+        "path": "pages/home.html",
+        "slug": "",
+        "description": "Official site of the 14th Romanian Master of Informatics (RMI 2026), held in Bucharest, Romania, from November 16th to 20th, 2026.",
+        "changefreq": "weekly",
+        "priority": "1.0"
+      },
+      {
+        "title": "News",
+        "path": "pages/news.html",
+        "slug": "news",
+        "description": "Latest announcements and news about the Romanian Master of Informatics 2026.",
+        "changefreq": "daily",
+        "priority": "0.8"
+      }
     ]
   },
   {
@@ -13,10 +27,38 @@
     "name": "RMI Organization",
     "weight": 2,
     "items": [
-      { "title": "Competition Rules", "path": "pages/rules.html" },
-      { "title": "Contestant Schedule", "path": "pages/contestants.html" },
-      { "title": "Leader Schedule", "path": "pages/leaders.html" },
-      { "title": "Committee", "path": "pages/committee.html" }
+      {
+        "title": "Competition Rules",
+        "path": "pages/rules.html",
+        "slug": "rules",
+        "description": "Competition rules of the Romanian Master of Informatics 2026.",
+        "changefreq": "monthly",
+        "priority": "0.5"
+      },
+      {
+        "title": "Contestant Schedule",
+        "path": "pages/contestants.html",
+        "slug": "contestants",
+        "description": "Day-by-day schedule for RMI 2026 contestants, November 16th-20th, 2026, Bucharest.",
+        "changefreq": "weekly",
+        "priority": "0.7"
+      },
+      {
+        "title": "Leader Schedule",
+        "path": "pages/leaders.html",
+        "slug": "leaders",
+        "description": "Day-by-day schedule for RMI 2026 team leaders, November 16th-20th, 2026, Bucharest.",
+        "changefreq": "weekly",
+        "priority": "0.7"
+      },
+      {
+        "title": "Committee",
+        "path": "pages/committee.html",
+        "slug": "committee",
+        "description": "The organizing and scientific committee of the Romanian Master of Informatics 2026.",
+        "changefreq": "monthly",
+        "priority": "0.4"
+      }
     ]
   },
   {
@@ -24,11 +66,46 @@
     "name": "RMI Contest",
     "weight": 3,
     "items": [
-      { "title": "Participants", "path": "pages/participants.html" },
-      { "title": "Results", "path": "pages/results.html" },
-      { "title": "Problems", "path": "pages/problems.html" },
-      { "title": "Solutions and Editorial", "path": "pages/solutions.html" },
-      { "title": "Previous Editions", "path": "pages/previous.html" }
+      {
+        "title": "Participants",
+        "path": "pages/participants.html",
+        "slug": "participants",
+        "description": "Countries, teams and participants of the Romanian Master of Informatics 2026.",
+        "changefreq": "monthly",
+        "priority": "0.6"
+      },
+      {
+        "title": "Results",
+        "path": "pages/results.html",
+        "slug": "results",
+        "description": "Official results and medals of the Romanian Master of Informatics 2026.",
+        "changefreq": "weekly",
+        "priority": "0.6"
+      },
+      {
+        "title": "Problems",
+        "path": "pages/problems.html",
+        "slug": "problems",
+        "description": "Contest problems of the Romanian Master of Informatics 2026.",
+        "changefreq": "monthly",
+        "priority": "0.5"
+      },
+      {
+        "title": "Solutions and Editorial",
+        "path": "pages/solutions.html",
+        "slug": "solutions",
+        "description": "Solutions and editorial for the Romanian Master of Informatics 2026 problems.",
+        "changefreq": "monthly",
+        "priority": "0.5"
+      },
+      {
+        "title": "Previous Editions",
+        "path": "pages/previous.html",
+        "slug": "previous",
+        "description": "Archive of previous editions of the Romanian Master of Informatics, from 2014 to 2025.",
+        "changefreq": "monthly",
+        "priority": "0.4"
+      }
     ]
   },
   {
@@ -39,7 +116,14 @@
       { "title": "About Romania", "url": "https://en.wikipedia.org/wiki/Romania" },
       { "title": "About Bucharest", "url": "https://en.wikipedia.org/wiki/Bucharest" },
       { "title": "Tourist Guide", "url": "http://www.romaniatourism.com/" },
-      { "title": "Contact", "path": "pages/contact.html" }
+      {
+        "title": "Contact",
+        "path": "pages/contact.html",
+        "slug": "contact",
+        "description": "Contact the organizers of the Romanian Master of Informatics 2026.",
+        "changefreq": "monthly",
+        "priority": "0.5"
+      }
     ]
   }
 ]

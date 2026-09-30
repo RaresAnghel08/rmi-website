@@ -1030,3 +1030,13 @@ img {
 	transform: translateY(-2px);
 	box-shadow: 0 6px 16px rgba(255, 122, 89, 0.4);
 }
+/* Static navigation groups (rendered into every page by scripts/build_site.py) */
+.nav-groups {
+	display: flex;
+	flex-direction: column;
+	gap: .35rem
+}
+
+.nav-group {
+	padding: 0 0 0 .5rem
+}
