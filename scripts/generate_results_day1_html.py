@@ -6,8 +6,8 @@ import csv
 import os
 
 # Define input and output paths
-csv_path = 'rmi_2025/csv/results_day1.csv'
-output_path = 'rmi_2025/pages/results1.html'
+csv_path = 'rmi_2026/csv/results_day1.csv'
+output_path = 'rmi_2026/pages/results1.html'
 
 # Read CSV
 if not os.path.exists(csv_path):
@@ -54,7 +54,7 @@ html = """<!doctype html>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Results Day 1 - RMI 2025</title>
+    <title>Results Day 1 - RMI 2026</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <style>
         /* Small page-specific overrides that complement rms-theme */

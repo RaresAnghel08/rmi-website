@@ -1,7 +1,7 @@
 import re
 
 # Read the original file to extract team data
-with open('d:/GITHUB/update_rmi_2024/rmi-website/rmi_2025/pages/participants.html', 'r', encoding='utf-8') as f:
+with open('d:/GITHUB/update_rmi_2024/rmi-website/rmi_2026/pages/participants.html', 'r', encoding='utf-8') as f:
     original_content = f.read()
 
 # Extract teams data using regex
@@ -39,7 +39,7 @@ html_head = '''<!doctype html>
 html_foot = '''                    </div>
                 </section>
             </main>
-            <footer class="site-footer">&copy; 2025 Tudor Vianu National High School of Computer Science - Built by <a href="https://linkedin.com/in/raresanghel" target="_blank" rel="noopener" title="Visit Rares Anghel's LinkedIn profile">Rares Anghel</a></footer>
+            <footer class="site-footer">&copy; 2026 Tudor Vianu National High School of Computer Science - Built by <a href="https://linkedin.com/in/raresanghel" target="_blank" rel="noopener" title="Visit Rares Anghel's LinkedIn profile">Rares Anghel</a></footer>
         </div>
         <link rel="icon" href="assets/organisers/vianu.png" type="image/png">
         <script src="assets/js/main.js"></script>
@@ -64,7 +64,7 @@ for team in teams:
 new_html = html_head + '\n'.join(team_cards) + '\n' + html_foot
 
 # Write the new file
-with open('d:/GITHUB/update_rmi_2024/rmi-website/rmi_2025/pages/participants.html', 'w', encoding='utf-8') as f:
+with open('d:/GITHUB/update_rmi_2024/rmi-website/rmi_2026/pages/participants.html', 'w', encoding='utf-8') as f:
     f.write(new_html)
 
 print(f"Successfully created {len(teams)} team cards!")

@@ -5,7 +5,7 @@
 import csv
 
 # Read CSV
-with open('rmi_2025/csv/results_with_medals.csv', 'r', encoding='utf-8-sig') as f:
+with open('rmi_2026/csv/results_with_medals.csv', 'r', encoding='utf-8-sig') as f:
     reader = csv.DictReader(f)
     rows = list(reader)
 
@@ -15,7 +15,7 @@ html = """<!doctype html>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Results - RMI 2025</title>
+    <title>Results - RMI 2026</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <style>
         /* Small page-specific overrides that complement rms-theme */
@@ -110,7 +110,7 @@ html += """            </tbody>
 </html>"""
 
 # Write to file
-with open('rmi_2025/pages/results.html', 'w', encoding='utf-8') as f:
+with open('rmi_2026/pages/results.html', 'w', encoding='utf-8') as f:
     f.write(html)
 
 print("Generated pages/results.html with medal colors!")
