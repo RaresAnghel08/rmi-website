@@ -157,6 +157,15 @@ body {
 	color: var(--accent-2)
 }
 
+.content h2.heading-red {
+	color: #F20A0A
+}
+
+.content .coming-soon-note {
+	font-style: italic;
+	font-size: 1.15rem
+}
+
 .content h3 {
 	font-size: 1.15rem;
 	margin: .45rem 0 .65rem 0;
