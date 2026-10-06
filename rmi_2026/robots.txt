@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://rmi.lbi.ro/sitemap.xml
+Sitemap: https://rmi.lbi.ro/rmi_2026/sitemap.xml

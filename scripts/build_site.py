@@ -2,13 +2,19 @@
 """Build the static site: one real HTML file per route, plus sitemap.xml.
 
 Routes are declared in rmi_2026/menu.json (`slug` per page; the empty slug is
-the home page and is served at `/`). Content is read from the fragments in
-rmi_2026/pages/ (the files the results/participants generators and the admin
-dashboard write), wrapped in the shared site shell and written to:
+the home page and is served at /rmi_2026/). Content is read from the fragments
+in rmi_2026/pages/ (the files the results/participants generators and the
+admin dashboard write), wrapped in the shared site shell and written to:
 
-    rmi_2026/index.html        ->  /
-    rmi_2026/<slug>.html       ->  /<slug>   (Vercel `cleanUrls`)
-    rmi_2026/sitemap.xml       ->  /sitemap.xml
+    rmi_2026/index.html        ->  /rmi_2026/
+    rmi_2026/<slug>.html       ->  /rmi_2026/<slug>.html
+    rmi_2026/sitemap.xml       ->  /rmi_2026/sitemap.xml
+
+The site is deployed by uploading rmi_2026/ as a subfolder (rmi.lbi.ro/rmi_2026/)
+on the legacy Apache host, same as every previous edition (rmi_2025/, rmi_2024/,
+...). Asset and nav links are page-relative (no leading "/") so the pages work
+unchanged regardless of the mount point; only fully-qualified URLs (canonical,
+Open Graph, JSON-LD, sitemap) need the real BASE_PATH prefix.
 
 Usage:
     python scripts/build_site.py           # regenerate pages + sitemap
@@ -25,9 +31,10 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 SITE_DIR = ROOT / 'rmi_2026'
 SITE_URL = 'https://rmi.lbi.ro'
+BASE_PATH = '/rmi_2026'  # real, reachable mount point on the Apache host
 SITE_NAME = 'Romanian Master of Informatics 2026'
 ORG_NAME = 'Tudor Vianu National High School of Computer Science'
-SOCIAL_IMAGE = f'{SITE_URL}/assets/organisers/vianu.png'
+SOCIAL_IMAGE = f'{SITE_URL}{BASE_PATH}/assets/organisers/vianu.png'
 
 
 def load_pages():
@@ -44,11 +51,13 @@ def load_pages():
 
 
 def page_url(item):
-    return f"{SITE_URL}/{item['slug']}" if item['slug'] else f'{SITE_URL}/'
+    """Fully-qualified URL, for canonical/Open Graph/JSON-LD/sitemap only."""
+    return f"{SITE_URL}{BASE_PATH}/{item['slug']}.html" if item['slug'] else f'{SITE_URL}{BASE_PATH}/'
 
 
 def page_href(item):
-    return f"/{item['slug']}"
+    """Page-relative link: every generated page lives flat in rmi_2026/."""
+    return f"{item['slug']}.html" if item['slug'] else 'index.html'
 
 
 def output_file(item):
@@ -65,8 +74,6 @@ def extract_content(fragment_path):
         body = text[m.end():end if end > m.end() else len(text)]
     else:
         body = text
-    # make asset references root-relative so they work on every route
-    body = re.sub(r'((?:src|href)=")(assets|static)/', r'\1/\2/', body)
     return styles, body.strip()
 
 
@@ -109,7 +116,7 @@ def json_ld(item, is_home):
         graph = [{
             '@type': 'BreadcrumbList',
             'itemListElement': [
-                {'@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': f'{SITE_URL}/'},
+                {'@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': f'{SITE_URL}{BASE_PATH}/'},
                 {'@type': 'ListItem', 'position': 2, 'name': item['title'], 'item': page_url(item)},
             ],
         }]
@@ -150,11 +157,11 @@ def render_page(item, menu):
     <link rel="canonical" href="{url}">
     <link rel="alternate" hreflang="en" href="{url}">
 
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" href="/assets/organisers/vianu.png" type="image/png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" href="assets/organisers/vianu.png" type="image/png">
+    <link rel="manifest" href="site.webmanifest">
     <meta name="msapplication-TileColor" content="#261C4A">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -180,12 +187,12 @@ def render_page(item, menu):
   <body>
     <header class="site-header">
       <div class="container header-inner">
-        <a href="/"><img src="/static/assets/logo.svg" alt="RMI 2026 logo" class="logo"></a>
+        <a href="index.html"><img src="static/assets/logo.svg" alt="RMI 2026 logo" class="logo"></a>
         <{site_title_tag} class="site-title">Romanian Master of Informatics</{site_title_tag}>
         <div class="organised-by">
           <div class="by-label">Organized By</div>
           <a href="https://portal.lbi.ro" target="_blank" rel="noopener">
-            <img src="/assets/organisers/vianu.png" alt="Tudor Vianu" class="vianu-logo">
+            <img src="assets/organisers/vianu.png" alt="Tudor Vianu" class="vianu-logo">
           </a>
         </div>
       </div>
@@ -208,7 +215,7 @@ def render_page(item, menu):
 
     <footer class="site-footer">&copy; 2026 {ORG_NAME} - Built by <a href="https://linkedin.com/in/raresanghel" target="_blank" rel="noopener" title="Visit Rares Anghel's LinkedIn profile">Rares Anghel</a></footer>
 
-    <script src="/assets/js/main.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
   </body>
 </html>
 '''

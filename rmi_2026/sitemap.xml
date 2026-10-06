@@ -1,73 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://rmi.lbi.ro/</loc>
+    <loc>https://rmi.lbi.ro/rmi_2026/</loc>
     <lastmod>2026-09-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://rmi.lbi.ro/news</loc>
+    <loc>https://rmi.lbi.ro/rmi_2026/news.html</loc>
     <lastmod>2026-09-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://rmi.lbi.ro/rules</loc>
+    <loc>https://rmi.lbi.ro/rmi_2026/rules.html</loc>
     <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://rmi.lbi.ro/contestants</loc>
+    <loc>https://rmi.lbi.ro/rmi_2026/contestants.html</loc>
     <lastmod>2026-09-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://rmi.lbi.ro/leaders</loc>
+    <loc>https://rmi.lbi.ro/rmi_2026/leaders.html</loc>
     <lastmod>2026-09-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://rmi.lbi.ro/committee</loc>
+    <loc>https://rmi.lbi.ro/rmi_2026/committee.html</loc>
     <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://rmi.lbi.ro/participants</loc>
+    <loc>https://rmi.lbi.ro/rmi_2026/participants.html</loc>
     <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://rmi.lbi.ro/results</loc>
+    <loc>https://rmi.lbi.ro/rmi_2026/results.html</loc>
     <lastmod>2026-09-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://rmi.lbi.ro/problems</loc>
+    <loc>https://rmi.lbi.ro/rmi_2026/problems.html</loc>
     <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://rmi.lbi.ro/solutions</loc>
+    <loc>https://rmi.lbi.ro/rmi_2026/solutions.html</loc>
     <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://rmi.lbi.ro/previous</loc>
+    <loc>https://rmi.lbi.ro/rmi_2026/previous.html</loc>
     <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://rmi.lbi.ro/contact</loc>
+    <loc>https://rmi.lbi.ro/rmi_2026/contact.html</loc>
     <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
