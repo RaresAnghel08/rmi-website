@@ -101,7 +101,7 @@ def json_ld(item, is_home):
         graph = [org, {
             '@type': 'Event',
             'name': SITE_NAME,
-            'startDate': '2026-11-16',
+            'startDate': '2026-11-18',
             'endDate': '2026-11-20',
             'eventStatus': 'https://schema.org/EventScheduled',
             'eventAttendanceMode': 'https://schema.org/OfflineEventAttendanceMode',
@@ -130,7 +130,7 @@ def render_page(item, menu):
     url = page_url(item)
     desc = html.escape(item['description'], quote=True)
     if is_home:
-        title = f'{SITE_NAME} (RMI 2026) | Bucharest, November 16-20'
+        title = f'{SITE_NAME} (RMI 2026) | Bucharest, November 18-20'
         social_title = SITE_NAME
     else:
         title = f"{item['title']} | RMI 2026"

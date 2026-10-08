@@ -8,7 +8,7 @@
         "title": "Home",
         "path": "pages/home.html",
         "slug": "",
-        "description": "Official site of the 14th Romanian Master of Informatics (RMI 2026), held in Bucharest, Romania, from November 16th to 20th, 2026.",
+        "description": "Official site of the 14th Romanian Master of Informatics (RMI 2026), held in Bucharest, Romania, from November 18th to 20th, 2026.",
         "changefreq": "weekly",
         "priority": "1.0"
       },
@@ -39,7 +39,7 @@
         "title": "Contestant Schedule",
         "path": "pages/contestants.html",
         "slug": "contestants",
-        "description": "Day-by-day schedule for RMI 2026 contestants, November 16th-20th, 2026, Bucharest.",
+        "description": "Day-by-day schedule for RMI 2026 contestants, November 18th-20th, 2026, Bucharest.",
         "changefreq": "weekly",
         "priority": "0.7"
       },
@@ -47,7 +47,7 @@
         "title": "Leader Schedule",
         "path": "pages/leaders.html",
         "slug": "leaders",
-        "description": "Day-by-day schedule for RMI 2026 team leaders, November 16th-20th, 2026, Bucharest.",
+        "description": "Day-by-day schedule for RMI 2026 team leaders, November 18th-20th, 2026, Bucharest.",
         "changefreq": "weekly",
         "priority": "0.7"
       },
