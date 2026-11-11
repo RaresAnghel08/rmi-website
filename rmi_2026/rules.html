@@ -113,7 +113,104 @@
       <main id="content" class="content">
         <section id="rendered" class="rendered">
         <h1>Competition Rules</h1>
-        <p><em>The competition rules for RMI 2026 will be published shortly.</em></p>
+        <p class="rules-download"><a class="btn-download" href="assets/docs/RMI_2026_Competition_Rules.pdf" download>Download the rules (PDF)</a></p>
+
+        <h2>Foreword</h2>
+        <p>The Romanian Master of Informatics (RMI) 2026 will be held between 18 and 21 November 2026. This edition follows a hybrid format, allowing both on-site and online participation, ensuring fair and standardized conditions for all contestants.</p>
+
+        <h2>Contest Sites</h2>
+        <p>Participants may compete either on-site at official RMI venues or remotely from approved contest sites (schools, universities, or homes). Each contest site must provide a reliable internet connection, one computer per participant, and at least two proctors for each contest room. All contests must be video-recorded showing contestants, their screens, and a proctor.</p>
+
+        <h3>Proctoring</h3>
+        <p>Each contest room must have at least two approved proctors who ensure contestants comply with all rules. Proctors must not be relatives (up to the third degree) of contestants and are responsible for preventing unauthorized communication or system access.</p>
+
+        <h3>Video Recording</h3>
+        <p>Each contest room must record video footage for the entire duration of the contest. Recordings must include all contestants, and at least one proctor at all times. Moreover, each contestant must record their computer screen for the entire duration of the contest.</p>
+        <p>Screen recordings should be at least 640 × 360 resolution and 5 fps. Footage must be retained for 30 days. Each contest site will make all room and screen recordings available to the organizers at most 11 hours after the contest starts.</p>
+
+        <h3>Computer Setup</h3>
+        <h4>On-site Setup</h4>
+        <p><strong>Installed software environment will include:</strong></p>
+        <ul>
+          <li>OS: Ubuntu 20.04 LTS or later, Gnome graphical shell</li>
+          <li>IDEs and text editors: CLion, VS Code, Vim, Emacs, Geany</li>
+          <li>Browsers: Firefox or Google Chrome</li>
+          <li>Utilities: GDB, Valgrind, Python3</li>
+          <li>Documentation: CppReference for C++17 and C++20</li>
+          <li>Compiler: g++ (ISO C++17 or later)</li>
+        </ul>
+
+        <h4>Online Setup</h4>
+        <p>All other contest sites will provide computers with the following software:</p>
+        <ul>
+          <li>OS: a Unix-like OS</li>
+          <li>IDEs and text editors: CLion, VS Code, Vim, Emacs, Geany</li>
+          <li>Browsers: Firefox or Google Chrome</li>
+          <li>Utilities: GDB, Valgrind, Python3, OBS</li>
+          <li>Documentation: CppReference for C++17 and C++20</li>
+          <li>Compiler: g++ (ISO C++17 or later)</li>
+        </ul>
+        <p>All contest sites will ensure that internet access for participants is limited to the contest management system.</p>
+
+        <h2>Contest Management System (Corvin Judge)</h2>
+        <p>Solutions are submitted through the official contest server using a web interface. Each contestant receives login credentials. The system compiles and evaluates programs on test data under the same environment as contestant machines.</p>
+
+        <h3>Task Types</h3>
+        <p>The following types of tasks are used at RMI 2026:</p>
+        <ol>
+          <li><strong>Batch tasks:</strong> Programs that read input from standard input and write output to standard output.</li>
+          <li><strong>Output-only tasks:</strong> Programs that only have to write output to standard output.</li>
+          <li><strong>Manager tasks:</strong> Programs implementing specified functions called by a provided manager program.</li>
+          <li><strong>Communication tasks:</strong> Programs that communicate with a manager using the standard input and output.</li>
+        </ol>
+
+        <h3>CMS Compilers</h3>
+        <p><strong>Compile command:</strong></p>
+        <p>If the name of the task is <code>${problem}</code>, then the command is</p>
+        <pre><code>g++13.2.0: g++ -DEVAL -static -O2 -std=c++20 -o ${problem} grader.cpp ${problem}.cpp</code></pre>
+
+        <h3>Limits</h3>
+        <p>For every task, the following limits apply:</p>
+        <ul>
+          <li><strong>Time limit:</strong> maximum processor time allowed per test case.</li>
+          <li><strong>Memory limit:</strong> total memory used (including code, stack, globals).</li>
+          <li><strong>Source size limit:</strong> 50 KB.</li>
+          <li><strong>Max submission limit:</strong> maximum number of submissions for a task.</li>
+        </ul>
+        <p>The time, memory, and submission limits for each task will be specified on the contest interface. The committee can also impose a maximum limit for the number of submissions per contest day, as well as a minimum interval between submissions for the same task, which will be specified on the contest interface.</p>
+
+        <h3>Scoring</h3>
+        <p>Each task’s tests are divided into groups. The final score for a group is the maximum score achieved for that group over all submissions. For a particular submission, the score for the group is awarded only if all tests within the group are passed. For problems with partial scoring, the score for the group is the lowest score among tests in the group.</p>
+
+        <h3>Clarification Requests</h3>
+        <p>During the contest, contestants may submit questions via the web interface. Questions must be phrased so that a 'yes' or 'no' answer is meaningful. Possible answers include: <em>yes</em>, <em>no</em>, <em>answered in task description</em>, <em>invalid question</em>, or <em>no comment</em>.</p>
+        <p>The committee will guarantee answers to all questions submitted at least half an hour before the end of the contest.</p>
+
+        <h2>Conduct of Contest</h2>
+        <p>Contestants and programs must not:</p>
+        <ul>
+          <li>Behave in a disrespectful, dishonest or inappropriate manner.</li>
+          <li>Use external libraries or access the network.</li>
+          <li>Execute or fork other programs.</li>
+          <li>Modify system files or permissions.</li>
+          <li>Communicate with anyone other than RMI staff.</li>
+          <li>Bring unauthorized devices or materials into the contest room.</li>
+          <li>Attempt to gain an advantage by plagiarism or using AI.</li>
+          <li>Attempt to attack the contest environment.</li>
+        </ul>
+
+        <h3>Appeal Process</h3>
+        <p>Team leaders may submit appeals regarding grading before 14:00 UTC on the same contest day. If an error is found, all relevant submissions will be re-evaluated, and scores adjusted accordingly.</p>
+
+        <h2>Medal Allocation</h2>
+        <p>The medal cutoff scores will be computed based on the on-site participants’ scoreboard. Online participants will receive digital medal certificates in accordance with the cutoff scores.</p>
+        <p>Medals are awarded automatically based on scores:</p>
+        <ul>
+          <li>The score necessary to achieve a gold medal is the largest score such that at least one twelfth of all contestants receive a gold medal.</li>
+          <li>The score necessary to achieve a silver medal is the largest score such that at least one quarter of all contestants receive a gold or silver medal.</li>
+          <li>The score necessary to achieve a bronze medal is the smallest score such that at most one half of all contestants receive a medal.</li>
+        </ul>
+        <p><strong>Team score</strong> = sum of the best three individual scores. The top on-site team wins the RMI Cup.</p>
         </section>
       </main>
     </div>
