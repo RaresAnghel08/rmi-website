@@ -103,9 +103,30 @@
     });
   }
 
+  // Participants page: collapse/expand every country at once
+  function initCountryToggle(){
+    const btn = document.getElementById('toggle-all');
+    const sections = Array.from(document.querySelectorAll('details.country-section'));
+    if(!btn || !sections.length) return;
+    const sync = () => {
+      const anyOpen = sections.some(d => d.open);
+      btn.textContent = anyOpen ? 'Collapse all' : 'Expand all';
+      btn.setAttribute('aria-expanded', anyOpen ? 'true' : 'false');
+    };
+    btn.addEventListener('click', () => {
+      const open = !sections.some(d => d.open);
+      sections.forEach(d => { d.open = open; });
+      sync();
+    });
+    sections.forEach(d => d.addEventListener('toggle', sync));
+    btn.hidden = false;
+    sync();
+  }
+
   function init(){
     applyResultsOverrides();
     initScrollAnimation();
+    initCountryToggle();
   }
   if(document.readyState === 'loading'){
     document.addEventListener('DOMContentLoaded', init);
