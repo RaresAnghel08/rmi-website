@@ -258,17 +258,21 @@ def render_page(teams):
           <ul class="participants-stats" aria-label="Summary">''']
     parts += [f'            <li><strong>{n}</strong> {label}</li>' for n, label in stats]
     parts.append('          </ul>')
+    # shown by assets/js/main.js (needs JS; without it every country simply stays expanded)
+    parts.append('          <button type="button" class="toggle-all" id="toggle-all" hidden>Collapse all</button>')
 
     for country, items in countries.items():
         flag = flag_for(country)
         flag_html = f'<img src="{flag}" alt="" class="country-flag" loading="lazy">' if flag else ''
         count = f'{len(items)} team' + ('s' if len(items) != 1 else '')
         parts.append(f'''
-          <section class="country-section" aria-labelledby="c-{esc(country.lower().replace(" ", "-"))}">
-            <h2 class="country-heading" id="c-{esc(country.lower().replace(" ", "-"))}">{flag_html}<span>{esc(country)}</span> <small>{count}</small></h2>
+          <details class="country-section" open>
+            <summary class="country-summary">
+              <h2 class="country-heading" id="c-{esc(country.lower().replace(" ", "-"))}">{flag_html}<span>{esc(country)}</span><small>{count}</small></h2>
+            </summary>
             <div class="participants-grid">''')
         parts.extend(render_team(t) for t in items)
-        parts.append('            </div>\n          </section>')
+        parts.append('            </div>\n          </details>')
 
     parts.append('''        </section>
       </main>
