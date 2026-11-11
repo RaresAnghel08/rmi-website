@@ -53,7 +53,7 @@ COUNTRY_ALIASES = {
 FLAG_FILES = {'Türkiye': 'turkey'}
 
 # Romanian regional centres have no "team name" in their form: name them after the city.
-RO_CENTRE_TEAM = {'Dolj': 'Craiova', 'Suceava': 'Suceava'}
+RO_CENTRE_TEAM = {'Dolj': 'Craiova', 'Suceava': 'Suceava', 'Prahova': 'Ploiești - CNMV'}
 
 
 # --------------------------------------------------------------------------- import
