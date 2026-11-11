@@ -9,6 +9,10 @@ Two steps, both done by this script:
            --registrations path/to/international_form.csv \
            --ro-regional   path/to/romanian_regional_form.csv
 
+   Either option can be used alone: each one replaces only the teams that came
+   from that form (column `source`) and keeps the teams from the other form.
+   Pass the *complete* export each time (not just the new rows).
+
    Reads the raw Google-Form exports, repairs them (mojibake, typos in country
    names, duplicate submissions, ...) and writes data/participants_2026.csv.
    Only public information is kept (names, team, country, type, participation);
@@ -36,7 +40,7 @@ FLAGS_DIR = ROOT / 'rmi_2026' / 'assets' / 'flags'
 OUT_PATH = ROOT / 'rmi_2026' / 'pages' / 'participants.html'
 
 FIELDS = ['country', 'type', 'participation', 'team', 'leader', 'deputy',
-          'contestant1', 'contestant2', 'contestant3', 'contestant4']
+          'contestant1', 'contestant2', 'contestant3', 'contestant4', 'source']
 
 # Spellings found in the registration forms -> display name.
 COUNTRY_ALIASES = {
@@ -129,6 +133,7 @@ def import_international(path):
         }
         for i in range(1, 5):
             team[f'contestant{i}'] = clean_name(row.get(f'Participant {i} (name)', ''))
+        team['source'] = 'international'
         team['_ts'] = parse_timestamp(row['Timestamp'])
         key = (country.lower(), team['team'].lower())
         if key in teams:
@@ -154,6 +159,7 @@ def import_ro_regional(path):
             'team': RO_CENTRE_TEAM.get(county, county),
             'leader': clean_name(row.get('Team leader', '')),
             'deputy': clean_name(row.get('Deputy leader', '')),
+            'source': 'ro-regional',
         }
         for i in range(1, 5):
             team[f'contestant{i}'] = clean_name(row.get(f'Participant {i}', ''))
@@ -161,8 +167,11 @@ def import_ro_regional(path):
     return teams
 
 
-def run_import(international, ro_regional):
-    teams = import_international(international) + import_ro_regional(ro_regional)
+def run_import(international=None, ro_regional=None):
+    existing = load_teams() if DATA_CSV.exists() else []
+    keep = lambda source: [t for t in existing if t.get('source') == source]
+    teams = (import_international(international) if international else keep('international')) \
+        + (import_ro_regional(ro_regional) if ro_regional else keep('ro-regional'))
     DATA_CSV.parent.mkdir(exist_ok=True)
     with DATA_CSV.open('w', encoding='utf-8', newline='') as fh:
         writer = csv.DictWriter(fh, fieldnames=FIELDS, extrasaction='ignore')
@@ -292,8 +301,6 @@ def main():
     args = ap.parse_args()
 
     if args.registrations or args.ro_regional:
-        if not (args.registrations and args.ro_regional):
-            ap.error('--registrations and --ro-regional must be given together')
         run_import(args.registrations, args.ro_regional)
 
     page, n_countries, n_teams, n_contestants, kinds = render_page(load_teams())
