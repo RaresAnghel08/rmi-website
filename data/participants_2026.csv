@@ -1,45 +1,45 @@
-country,type,participation,team,leader,deputy,contestant1,contestant2,contestant3,contestant4
-Bulgaria,National,On-site,Bulgarian National Team,Iliyan Yordanov,,Sava Aleksandrov Delev,Kiril Ivanov Zulyamski,Aleksandar Petrov Pendov,Boyan Angelov Boyadzhiev
-Bulgaria,Regional,On-site,Varna-1,Julia Dimitrova,,Damyan Rumenov Svobodnikov,Alexander Atanasov Vladimirov,Ivan Martinov Kolev,Yoan Dimitrov Dimitrov
-Bulgaria,Regional,On-site,Varna-2,Milen Mavrodiev,,Stefan Krasimirov Balushev,Boyan Nikolaev Belyashki,Ventsislav Deyanov Ivanov,
-Bulgaria,Regional,Online,Varna-On,Julia Dimitrova,,Yavor Svilenov Petrakiev,Kaloyan Hristov Keratsov,,
-Bulgaria,Regional,On-site,Sofia 1,Desislava Ratcheva,,Boris Angelov,Elitsa Stoyanova,Viktor Slavchev,Martin Chavdarov
-Bulgaria,Regional,On-site,Sofia 2,Desislava Ratcheva,,Daniel Todorov,Martin Zlatarev,Alexander Stefanov,Siyana Bandrova
-Bulgaria,Regional,On-site,GPS,Galya Nedelcheva,,Denislav Manev,Angel Raev,Georgi Georgiev,Daniel Getov
-Cyprus,National,On-site,Cyprus-Island,Aleksey Krasnoselskiy,,Nikita Pimenov,Danis Ueldanov,Alexandros Koniotis,Viacheslav Maiorov
-Greece,National,Online,Team Greece,Markos Radaios,Natalia Mallosi,Anna Kotoula,Lampros Kateris,Nikolaos Papadakis,Gerasimos Vandoros
-Hungary,National,On-site,Hungary,Péter Szente,Júlia Éles,Dániel Czanik,Katalin Szabó M.,Benedek Szaszkó,Mirkó Juhász-Molnár
-Italy,National,Online,Italy,Matteo Arcari,Francesco Vercellesi,Marco Gambaro,Francesco Fuson,Giovanni Maiellaro,Nicholas Bamber
-Moldova,National,On-site,MDA Orizont 01,Sergiu Corlat,,Cristian Pleșca,Alexandr Ivancicichin,Alexandra Kirillov,Dan Sandu
-Moldova,Regional,Online,Online Orizont MDA 03,Timur Degteari,,Daniel Kirillov,Purice Daniel,Untilă Robert,Andreea Șandrean
-Moldova,Regional,Online,Online Orizont 02,Nartea Nichita,,Plăcintă Chiril,Alexei Baca,Roșca Victor,Corsac Anastasia
-Romania,Regional,On-site,Iași,Gorea-Zamfir Claudiu-Cristian,Ciobanu Andrei,Dimitriu Flaviu,Gabără Sorin-Gabriel,Chelaru Tudor,Constantiniu Matei
-Romania,Regional,On-site,infO(1) Ploiesti,Daniela Lica,,Briana Maria Bucur,Luca Georgescu,Radu Gabriel Biclineru,Mihnea Gabriel Bazacliu
-Romania,National,On-site,Romania 1 - juniori,Cheșcă Ciprian,Antonie Aureliu Valentin,Nemțișor Andrei,Danciu Traian,Boac Mihai Cosmin,Pipernea Radu
-Romania,National,On-site,Romania 2 - juniori,Cheșcă Ciprian,Antonie Aureliu Valentin,Pîslă Andrei-Daniel,Bondoc Vlad,Drăgușanu Iustin,Zoescu Cristian
-Romania,National,On-site,Romania - Girls Senior,Vlad-Alexandru Gavrila-Ionescu,Mihaela Cismaru,Iulia Ela Morariu,Alexandra-Iulia Guiman,Ilinca-Rucsandra Radu,Ema Nicole Gheorghe
-Türkiye,National,Online,Türkiye 1,Ahmet Kaan Avcı,,Ahmet Alp Orakçı,Ahmet Emre Gürdal,Yunus Emre Artal,Noyan Cantürk
-Türkiye,National,Online,Türkiye 2,Ahmet Kaan Avcı,,Nehir Karatopcu,Ramazan Fıstıkcı,Kerem Bozkaya,Mustafa Selim Özekinci
-Ukraine,National,Online,Ukraine 1,Anton Tsypko,Maryna Nadtochii,Vladyslav Khalin,Andrii Kuzma,Rostyslav Yabchenko,Benedykt Kvasnytsya
-Ukraine,National,Online,Ukraine 2,Anton Tsypko,Maryna Nadtochii,Roman Sadovnikov,Vladyslav Martynenko,Mariia Rapina,Yurii Koss
-Ukraine,National,Online,Ukraine 3,Anton Tsypko,Maryna Nadtochii,Oleksii Syvak,Maksym Bondarenko,Illia Denysiuk,Andrii Tatarinov
-Ukraine,Regional,Online,ALGO1,Andrii Popyk,,Tetiana Zadniprovska,Vladyslav Zabolotnyi,Mykhailo Symoni,Matvii Grytsyna
-Ukraine,Regional,Online,ALGO2,Andrii Popyk,,Andrii Lisevych,Ivan Shneider,Viktoriia Slavhorodska,Ivanna Zadniprovska
-Ukraine,Regional,Online,UPML_NTF,Valentyna Potienko,,Andrii Novikov,Tuz Leonid,Fedyk Maksym,
-Romania,National,On-site,Romania - Girls Junior,Vlad-Alexandru Gavrila-Ionescu,Mihaela Cismaru,Mihaela Teodora Craciun,Mara Ioana Paun,Alexandra Sofia Prodan,Clara Maria Mocanu
-Serbia,Regional,On-site,Baky Tylla,Kemal Kochekov,,Kasym Kochekov,,,
-Serbia,National,On-site,Serbia,Filip Bojković,,Pavle Damjanović,Petar Banović,Nikola Šami,Dimitrije Atanasković
-Romania,Regional,On-site,InfO(1) - CNILC,Daniela Lica,Predescu Sebastian,Urlețeanu Alexandru-Octavian,Sanalp Karan Stefan,Petre Cristian,Petre Ionuț
-Georgia,National,Online,Georgia Team 1,George Mandaria,Saba Peradze,Vladimer Prangishvili,Andria Vasadze,Mate Rekhviashvili,Saba Goduadze
-Georgia,National,Online,Georgia Team 2,George Mandaria,Nikoloz Melikishvili,Nikoloz Kochashvili,Ilia Shinjiashvili,Lasha Mosidze,Dimitri Shengelia
-Georgia,National,Online,Georgia Team 3,George Mandaria,Tarash Dolaberidze,Nikoloz Tchavchavadze,Otar Tsibadze,Giorgi Maisuradze,Tako Shanava
-Azerbaijan,National,Online,Azerbaijan Team 1,Rashad Mammadov,Ruslan Mehdiyev,Vagif Abdullayev,Akbar Ahmadov,Omar Alimammadzada,Mahmud Isali
-Azerbaijan,National,Online,Azerbaijan Team 2,Rashad Mammadov,Ruslan Mehdiyev,Bakhtiyar Najafzade,Elay Verdiyev,Aykhan Asadzada,Osman Ahmadzada
-Azerbaijan,National,Online,Azerbaijan Team Juniors,Rashad Mammadov,Ruslan Mehdiyev,Azim Hajiyev,Saleh Hasanli,Asma Badalova,Fatima Aslanli
-Romania,National,On-site,Romania,Casian Patrascanu,Sebastian Predescu,Andrei-Paul Iorgulescu,Victor-Ioan Dobra,Matei Neacsu,Cezar-Luca Mironov
-Romania,National,On-site,Romania 2,Casian Patrascanu,Sebastian Predescu,Luca-Valentin Muresan,Roland Petrean,David-Constantin Turcanu,Vlad-Mihai Tutunaru
-Romania,National,On-site,Romania 3,Casian Patrascanu,Sebastian Predescu,Rares Hanganu,Alexandru Thury-Burileanu,Horia-Andrei Boeriu,Ianis Belu
-Romania,National,On-site,Romania 4,Casian Patrascanu,Sebastian Predescu,Cezar Bolba,Andrei Suna,,
-Romania,Regional,Online,Craiova,Grindeanu Mihaela Raluca,Coravu Laura Maria,Curcă David-Ioan,Pîrlog Marian Nicolae,Șerban Alexandru Nicolae,Mîrșolea Luca Andrei
-Romania,Regional,Online,Suceava,Costineanu Veronica-Raluca,Nenec Gabriela,Sfichi Andrei,Tomiță Mircea-Ștefan,Holotă Tudor-Matei,Gavrilescu Răzvan-Cristian
-Romania,Regional,Online,Ploiești - CNMV,Lincan Iulia-Monica,Rîpeanu Luminița,Tănase Victor Andrei,Pătrașcu Vlad George,Dumitrescu Iustin Lucian,Luca Radu
+country,type,participation,team,leader,deputy,contestant1,contestant2,contestant3,contestant4,source
+Azerbaijan,National,Online,Azerbaijan Team 1,Rashad Mammadov,Ruslan Mehdiyev,Vagif Abdullayev,Akbar Ahmadov,Omar Alimammadzada,Mahmud Isali,international
+Azerbaijan,National,Online,Azerbaijan Team 2,Rashad Mammadov,Ruslan Mehdiyev,Bakhtiyar Najafzade,Elay Verdiyev,Aykhan Asadzada,Osman Ahmadzada,international
+Azerbaijan,National,Online,Azerbaijan Team Juniors,Rashad Mammadov,Ruslan Mehdiyev,Azim Hajiyev,Saleh Hasanli,Asma Badalova,Fatima Aslanli,international
+Bulgaria,National,On-site,Bulgarian National Team,Iliyan Yordanov,,Sava Aleksandrov Delev,Kiril Ivanov Zulyamski,Aleksandar Petrov Pendov,Boyan Angelov Boyadzhiev,international
+Bulgaria,Regional,On-site,Sofia 1,Desislava Ratcheva,,Boris Angelov,Elitsa Stoyanova,Viktor Slavchev,Martin Chavdarov,international
+Bulgaria,Regional,On-site,Sofia 2,Desislava Ratcheva,,Daniel Todorov,Martin Zlatarev,Alexander Stefanov,Siyana Bandrova,international
+Bulgaria,Regional,On-site,GPS,Galya Nedelcheva,,Denislav Manev,Angel Raev,Georgi Georgiev,Daniel Getov,international
+Bulgaria,Regional,On-site,Varna-1,Julia Dimitrova,,Damyan Rumenov Svobodnikov,Alexander Atanasov Vladimirov,Ivan Martinov Kolev,Yoan Dimitrov Dimitrov,international
+Bulgaria,Regional,Online,Varna-On,Julia Dimitrova,,Yavor Svilenov Petrakiev,Kaloyan Hristov Keratsov,,,international
+Bulgaria,Regional,On-site,Varna-2,Milen Mavrodiev,,Stefan Krasimirov Balushev,Boyan Nikolaev Belyashki,Ventsislav Deyanov Ivanov,,international
+Cyprus,National,On-site,Cyprus-Island,Aleksey Krasnoselskiy,,Nikita Pimenov,Danis Ueldanov,Alexandros Koniotis,Viacheslav Maiorov,international
+Georgia,National,Online,Georgia Team 1,George Mandaria,Saba Peradze,Vladimer Prangishvili,Andria Vasadze,Mate Rekhviashvili,Saba Goduadze,international
+Georgia,National,Online,Georgia Team 2,George Mandaria,Nikoloz Melikishvili,Nikoloz Kochashvili,Ilia Shinjiashvili,Lasha Mosidze,Dimitri Shengelia,international
+Georgia,National,Online,Georgia Team 3,George Mandaria,Tarash Dolaberidze,Nikoloz Tchavchavadze,Otar Tsibadze,Giorgi Maisuradze,Tako Shanava,international
+Greece,National,Online,Team Greece,Markos Radaios,Natalia Mallosi,Anna Kotoula,Lampros Kateris,Nikolaos Papadakis,Gerasimos Vandoros,international
+Hungary,National,On-site,Hungary,Péter Szente,Júlia Éles,Dániel Czanik,Katalin Szabó M.,Benedek Szaszkó,Mirkó Juhász-Molnár,international
+Italy,National,Online,Italy,Matteo Arcari,Francesco Vercellesi,Marco Gambaro,Francesco Fuson,Giovanni Maiellaro,Nicholas Bamber,international
+Moldova,National,On-site,MDA Orizont 01,Sergiu Corlat,,Cristian Pleșca,Alexandr Ivancicichin,Alexandra Kirillov,Dan Sandu,international
+Moldova,Regional,Online,Online Orizont MDA 03,Timur Degteari,,Daniel Kirillov,Purice Daniel,Untilă Robert,Andreea Șandrean,international
+Moldova,Regional,Online,Online Orizont 02,Nartea Nichita,,Plăcintă Chiril,Alexei Baca,Roșca Victor,Corsac Anastasia,international
+Romania,National,On-site,Romania 1,Casian Patrascanu,,Andrei-Paul Iorgulescu,Victor-Ioan Dobra,Matei Neacsu,Cezar-Luca Mironov,international
+Romania,National,On-site,Romania 2,Casian Patrascanu,,Luca-Valentin Muresan,Roland Petrean,David-Constantin Turcanu,Vlad-Mihai Tutunaru,international
+Romania,National,On-site,Romania 3,Casian Patrascanu,,Rares Hanganu,Alexandru Thury-Burileanu,Horia-Andrei Boeriu,Ianis Belu,international
+Romania,National,On-site,Romania 4,Casian Patrascanu,,Cezar Bolba,Andrei Suna,,,international
+Romania,National,On-site,Romania Juniors 1,Cheșcă Ciprian,Antonie Aureliu Valentin,Nemțișor Andrei,Danciu Traian,Boac Mihai Cosmin,Pipernea Radu,international
+Romania,National,On-site,Romania Juniors 2,Cheșcă Ciprian,Antonie Aureliu Valentin,Pîslă Andrei-Daniel,Bondoc Vlad,Drăgușanu Iustin,Zoescu Cristian,international
+Romania,National,On-site,Romania - Girls Senior,Vlad-Alexandru Gavrila-Ionescu,Mihaela Cismaru,Iulia Ela Morariu,Alexandra-Iulia Guiman,Ilinca-Rucsandra Radu,Ema Nicole Gheorghe,international
+Romania,National,On-site,Romania - Girls Junior,Vlad-Alexandru Gavrila-Ionescu,Mihaela Cismaru,Mihaela Teodora Craciun,Mara Ioana Paun,Alexandra Sofia Prodan,Clara Maria Mocanu,international
+Romania,Regional,On-site,Iași,Gorea-Zamfir Claudiu-Cristian,Ciobanu Andrei,Dimitriu Flaviu,Gabără Sorin-Gabriel,Chelaru Tudor,Constantiniu Matei,international
+Romania,Regional,On-site,infO(1) Ploiesti,Daniela Lica,,Briana Maria Bucur,Luca Georgescu,Radu Gabriel Biclineru,Mihnea Gabriel Bazacliu,international
+Romania,Regional,On-site,InfO(1) - CNILC,Daniela Lica,Predescu Sebastian,Urlețeanu Alexandru-Octavian,Sanalp Karan Stefan,Petre Cristian,Petre Ionuț,international
+Serbia,National,On-site,Serbia,Filip Bojković,,Pavle Damjanović,Petar Banović,Nikola Šami,Dimitrije Atanasković,international
+Serbia,Regional,On-site,Baky Tylla,Kemal Kochekov,,Kasym Kochekov,,,,international
+Türkiye,National,Online,Türkiye 1,Ahmet Kaan Avcı,,Ahmet Alp Orakçı,Ahmet Emre Gürdal,Yunus Emre Artal,Noyan Cantürk,international
+Türkiye,National,Online,Türkiye 2,Ahmet Kaan Avcı,,Nehir Karatopcu,Ramazan Fıstıkcı,Kerem Bozkaya,Mustafa Selim Özekinci,international
+Ukraine,Regional,Online,ALGO1,Andrii Popyk,,Tetiana Zadniprovska,Vladyslav Zabolotnyi,Mykhailo Symoni,Matvii Grytsyna,international
+Ukraine,Regional,Online,ALGO2,Andrii Popyk,,Andrii Lisevych,Ivan Shneider,Viktoriia Slavhorodska,Ivanna Zadniprovska,international
+Ukraine,National,Online,Ukraine 1,Anton Tsypko,Maryna Nadtochii,Vladyslav Khalin,Andrii Kuzma,Rostyslav Yabchenko,Benedykt Kvasnytsya,international
+Ukraine,National,Online,Ukraine 2,Anton Tsypko,Maryna Nadtochii,Roman Sadovnikov,Vladyslav Martynenko,Mariia Rapina,Yurii Koss,international
+Ukraine,National,Online,Ukraine 3,Anton Tsypko,Maryna Nadtochii,Oleksii Syvak,Maksym Bondarenko,Illia Denysiuk,Andrii Tatarinov,international
+Ukraine,Regional,Online,UPML_NTF,Valentyna Potienko,,Andrii Novikov,Tuz Leonid,Fedyk Maksym,,international
+Romania,Regional,Online,Craiova,Grindeanu Mihaela Raluca,Coravu Laura Maria,Curcă David-Ioan,Pîrlog Marian Nicolae,Șerban Alexandru Nicolae,Mîrșolea Luca Andrei,ro-regional
+Romania,Regional,Online,Suceava,Costineanu Veronica-Raluca,Nenec Gabriela,Sfichi Andrei,Tomiță Mircea-Ștefan,Holotă Tudor-Matei,Gavrilescu Răzvan-Cristian,ro-regional
+Romania,Regional,Online,Ploiești - CNMV,Lincan Iulia-Monica,Rîpeanu Luminița,Tănase Victor Andrei,Pătrașcu Vlad George,Dumitrescu Iustin Lucian,Luca Radu,ro-regional
