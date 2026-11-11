@@ -113,9 +113,14 @@
     "name": "General Information",
     "weight": 4,
     "items": [
-      { "title": "About Romania", "url": "https://en.wikipedia.org/wiki/Romania" },
-      { "title": "About Bucharest", "url": "https://en.wikipedia.org/wiki/Bucharest" },
-      { "title": "Tourist Guide", "url": "http://www.romaniatourism.com/" },
+      {
+        "title": "Useful Information",
+        "path": "pages/useful-information.html",
+        "slug": "useful-information",
+        "description": "Useful locations for RMI 2026 participants in Bucharest: contest venue, accommodation, train station and airports, with addresses and maps.",
+        "changefreq": "monthly",
+        "priority": "0.5"
+      },
       {
         "title": "Contact",
         "path": "pages/contact.html",
