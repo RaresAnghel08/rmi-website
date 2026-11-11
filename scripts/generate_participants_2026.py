@@ -57,6 +57,14 @@ COUNTRY_ALIASES = {
 FLAG_FILES = {'Türkiye': 'turkey'}
 
 # Romanian regional centres have no "team name" in their form: name them after the city.
+# Explicit order of the national teams inside a country (listed teams come first, in this
+# order; everything else follows: remaining national teams, then regional ones, alphabetically).
+TEAM_ORDER = {
+    'Romania': ['Romania 1', 'Romania 2', 'Romania 3', 'Romania 4',
+                'Romania - Girls Senior', 'Romania Juniors 1', 'Romania Juniors 2',
+                'Romania - Girls Junior'],
+}
+
 RO_CENTRE_TEAM = {'Dolj': 'Craiova', 'Suceava': 'Suceava', 'Prahova': 'Ploiești - CNMV'}
 
 
@@ -230,9 +238,15 @@ def render_team(team):
     return '\n'.join(out)
 
 
+def team_sort_key(t):
+    order = TEAM_ORDER.get(t['country'], [])
+    rank = order.index(t['team']) if t['team'] in order else len(order)
+    return (t['country'].lower(), rank, t['type'] != 'National', t['team'].lower())
+
+
 def render_page(teams):
     countries = OrderedDict()
-    for t in sorted(teams, key=lambda t: (t['country'].lower(), t['type'] != 'National', t['team'].lower())):
+    for t in sorted(teams, key=team_sort_key):
         countries.setdefault(t['country'], []).append(t)
 
     n_contestants = sum(1 for t in teams for i in range(1, 5) if t[f'contestant{i}'])
