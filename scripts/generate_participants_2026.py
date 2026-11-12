@@ -65,7 +65,8 @@ TEAM_ORDER = {
                 'Romania - Girls Junior'],
 }
 
-RO_CENTRE_TEAM = {'Dolj': 'Craiova', 'Suceava': 'Suceava', 'Prahova': 'Ploiești - CNMV'}
+RO_CENTRE_TEAM = {'Dolj': 'Craiova', 'Suceava': 'Suceava', 'Prahova': 'Ploiești - CNMV',
+                  'Gorj': 'Târgu Jiu', 'Neamț': 'Piatra Neamț', 'Hunedoara': 'Orăștie'}
 
 
 # --------------------------------------------------------------------------- import
@@ -159,18 +160,22 @@ def import_ro_regional(path):
         county = row.get('Județ', '')
         if not county:
             continue
+        contestants = [clean_name(row.get(f'Participant {i}', '')) for i in range(1, 5)]
+        leader = clean_name(row.get('Team leader', ''))
+        if leader in contestants:  # a student was entered as team leader: use the contact person (the teacher)
+            leader = clean_name(row.get('Nume complet', ''))
         team = {
             'country': 'Romania',
             'type': 'Regional',
             # These counties host a contest centre and compete from it.
             'participation': 'Online',
             'team': RO_CENTRE_TEAM.get(county, county),
-            'leader': clean_name(row.get('Team leader', '')),
+            'leader': leader,
             'deputy': clean_name(row.get('Deputy leader', '')),
             'source': 'ro-regional',
         }
-        for i in range(1, 5):
-            team[f'contestant{i}'] = clean_name(row.get(f'Participant {i}', ''))
+        for i, name in enumerate(contestants, 1):
+            team[f'contestant{i}'] = name
         teams.append(team)
     return teams
 
