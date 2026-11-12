@@ -45,6 +45,7 @@ FIELDS = ['country', 'type', 'participation', 'team', 'leader', 'deputy',
 # Spellings found in the registration forms -> display name.
 COUNTRY_ALIASES = {
     'bulgaira': 'Bulgaria',
+    'hrvatska': 'Croatia',
     'moldova, republic of': 'Moldova',
     'republica moldova': 'Moldova',
     'romania': 'Romania',
@@ -114,19 +115,25 @@ def clean_country(name):
 
 
 def clean_team(name, country):
-    name = name.strip()
+    name = ' '.join(name.split()).translate(str.maketrans('şŞţŢ', 'șȘțȚ'))
     prefix = country + '_'
     return name.replace('_', ' ', 1) if name.startswith(prefix) else name  # Georgia_Team 1 -> Georgia Team 1
 
 
 def parse_timestamp(ts):
     from datetime import datetime
-    for fmt in ('%d/%m/%Y %H:%M:%S', '%m/%d/%Y %H:%M:%S'):
+    for fmt in ('%d/%m/%Y %H:%M:%S', '%m/%d/%Y %H:%M:%S', '%m-%d-%Y %H:%M:%S'):
         try:
             return datetime.strptime(ts, fmt)
         except ValueError:
             pass
     return datetime.min
+
+
+def default_type(row, country):
+    # The form sometimes leaves "Type" empty; such teams (e.g. Bucharest 1/2) are regional.
+    print(f"  '{row['Team name']}' ({country}) has no Type in the form: using Regional", file=sys.stderr)
+    return 'Regional'
 
 
 def import_international(path):
@@ -140,7 +147,7 @@ def import_international(path):
             leader = clean_name(row.get('Contact person (name)', ''))
         team = {
             'country': country,
-            'type': row['Type'].strip().title(),
+            'type': row['Type'].strip().title() or default_type(row, country),
             'participation': row['Participation'].strip(),
             'team': clean_team(row['Team name'], country),
             'leader': leader,
