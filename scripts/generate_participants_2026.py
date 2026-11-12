@@ -40,7 +40,7 @@ FLAGS_DIR = ROOT / 'rmi_2026' / 'assets' / 'flags'
 OUT_PATH = ROOT / 'rmi_2026' / 'pages' / 'participants.html'
 
 FIELDS = ['country', 'type', 'participation', 'team', 'leader', 'deputy',
-          'contestant1', 'contestant2', 'contestant3', 'contestant4', 'source']
+          'contestant1', 'contestant2', 'contestant3', 'contestant4', 'contestant5', 'source']
 
 # Spellings found in the registration forms -> display name.
 COUNTRY_ALIASES = {
@@ -65,7 +65,14 @@ TEAM_ORDER = {
                 'Romania - Girls Junior'],
 }
 
-RO_CENTRE_TEAM = {'Dolj': 'Craiova', 'Suceava': 'Suceava', 'Prahova': 'Ploiești - CNMV'}
+# Contestants that are not in the participant fields of the Romanian regional form
+# (e.g. only mentioned in the free-text notes), keyed by county. Added after the form's contestants.
+RO_EXTRA_CONTESTANTS = {
+    'Dolj': ['Grigorie Radu-Ștefan'],
+}
+
+RO_CENTRE_TEAM = {'Dolj': 'Craiova', 'Suceava': 'Suceava', 'Prahova': 'Ploiești - CNMV',
+                  'Gorj': 'Târgu Jiu', 'Neamț': 'Piatra Neamț', 'Hunedoara': 'Orăștie'}
 
 
 # --------------------------------------------------------------------------- import
@@ -159,18 +166,24 @@ def import_ro_regional(path):
         county = row.get('Județ', '')
         if not county:
             continue
+        contestants = [clean_name(row.get(f'Participant {i}', '')) for i in range(1, 5)]
+        contestants = [c for c in contestants if c] + RO_EXTRA_CONTESTANTS.get(county, [])
+        contestants += [''] * (5 - len(contestants))
+        leader = clean_name(row.get('Team leader', ''))
+        if leader in contestants:  # a student was entered as team leader: use the contact person (the teacher)
+            leader = clean_name(row.get('Nume complet', ''))
         team = {
             'country': 'Romania',
             'type': 'Regional',
             # These counties host a contest centre and compete from it.
             'participation': 'Online',
             'team': RO_CENTRE_TEAM.get(county, county),
-            'leader': clean_name(row.get('Team leader', '')),
+            'leader': leader,
             'deputy': clean_name(row.get('Deputy leader', '')),
             'source': 'ro-regional',
         }
-        for i in range(1, 5):
-            team[f'contestant{i}'] = clean_name(row.get(f'Participant {i}', ''))
+        for i, name in enumerate(contestants, 1):
+            team[f'contestant{i}'] = name
         teams.append(team)
     return teams
 
@@ -208,7 +221,7 @@ def esc(s):
 def render_team(team):
     kind = team['type'].lower()
     mode = team['participation'].lower().replace('-', '')
-    contestants = [team[f'contestant{i}'] for i in range(1, 5) if team[f'contestant{i}']]
+    contestants = [team.get(f'contestant{i}', '') for i in range(1, 6) if team.get(f'contestant{i}', '')]
 
     out = ['            <article class="team-card team-card--compact">',
            f'              <div class="team-name">{esc(team["team"])}</div>',
@@ -249,7 +262,7 @@ def render_page(teams):
     for t in sorted(teams, key=team_sort_key):
         countries.setdefault(t['country'], []).append(t)
 
-    n_contestants = sum(1 for t in teams for i in range(1, 5) if t[f'contestant{i}'])
+    n_contestants = sum(1 for t in teams for i in range(1, 6) if t.get(f'contestant{i}'))
     modes = Counter(t['participation'] for t in teams)
     kinds = Counter(t['type'] for t in teams)
 
