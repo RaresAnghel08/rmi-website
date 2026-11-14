@@ -57,7 +57,6 @@ COUNTRY_ALIASES = {
 # Display name -> flag file (without .svg) when it differs from the lower-cased name.
 FLAG_FILES = {'Türkiye': 'turkey'}
 
-# Romanian regional centres have no "team name" in their form: name them after the city.
 # Explicit order of the national teams inside a country (listed teams come first, in this
 # order; everything else follows: remaining national teams, then regional ones, alphabetically).
 TEAM_ORDER = {
@@ -71,9 +70,6 @@ TEAM_ORDER = {
 RO_EXTRA_CONTESTANTS = {
     'Dolj': ['Grigorie Radu-Ștefan'],
 }
-
-RO_CENTRE_TEAM = {'Dolj': 'Craiova', 'Suceava': 'Suceava', 'Prahova': 'Ploiești - CNMV',
-                  'Gorj': 'Târgu Jiu', 'Neamț': 'Piatra Neamț', 'Hunedoara': 'Hunedoara'}
 
 
 # --------------------------------------------------------------------------- import
@@ -184,7 +180,7 @@ def import_ro_regional(path):
             'type': 'Regional',
             # These counties host a contest centre and compete from it.
             'participation': 'Online',
-            'team': RO_CENTRE_TEAM.get(county, county),
+            'team': county,  # the form has no team name: regional centres are named after the county
             'leader': leader,
             'deputy': clean_name(row.get('Deputy leader', '')),
             'source': 'ro-regional',
