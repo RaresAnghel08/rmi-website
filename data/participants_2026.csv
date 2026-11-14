@@ -1,7 +1,7 @@
 country,type,participation,team,leader,deputy,contestant1,contestant2,contestant3,contestant4,contestant5,source
 Azerbaijan,National,Online,Azerbaijan Team 1,Rashad Mammadov,Ruslan Mehdiyev,Vagif Abdullayev,Akbar Ahmadov,Omar Alimammadzada,Mahmud Isali,,international
 Azerbaijan,National,Online,Azerbaijan Team 2,Rashad Mammadov,Ruslan Mehdiyev,Bakhtiyar Najafzade,Elay Verdiyev,Aykhan Asadzada,Osman Ahmadzada,,international
-Azerbaijan,National,Online,Azerbaijan Team Juniors,Rashad Mammadov,Ruslan Mehdiyev,Azim Hajiyev,Saleh Hasanli,Asma Badalova,Fatima Aslanli,,international
+Azerbaijan,National,Online,Azerbaijan Team Juniors,Rashad Mammadov,Ruslan Mehdiyev,Azim Hajiyev,Saleh Hasanli,Asim Huseynzada,Hasan Suleymanov,,international
 Bulgaria,National,On-site,Bulgarian National Team,Iliyan Yordanov,,Sava Aleksandrov Delev,Kiril Ivanov Zulyamski,Aleksandar Petrov Pendov,Boyan Angelov Boyadzhiev,,international
 Bulgaria,Regional,On-site,Sofia 1,Desislava Ratcheva,,Boris Angelov,Elitsa Stoyanova,Viktor Slavchev,Martin Chavdarov,,international
 Bulgaria,Regional,On-site,Sofia 2,Desislava Ratcheva,,Daniel Todorov,Martin Zlatarev,Alexander Stefanov,Siyana Bandrova,,international
@@ -40,9 +40,17 @@ Ukraine,National,Online,Ukraine 1,Anton Tsypko,Maryna Nadtochii,Vladyslav Khalin
 Ukraine,National,Online,Ukraine 2,Anton Tsypko,Maryna Nadtochii,Roman Sadovnikov,Vladyslav Martynenko,Mariia Rapina,Yurii Koss,,international
 Ukraine,National,Online,Ukraine 3,Anton Tsypko,Maryna Nadtochii,Oleksii Syvak,Maksym Bondarenko,Illia Denysiuk,Andrii Tatarinov,,international
 Ukraine,Regional,Online,UPML_NTF,Valentyna Potienko,,Andrii Novikov,Tuz Leonid,Fedyk Maksym,,,international
-Romania,Regional,On-site,București 1,Laura Ungureanu,,Arghira Radu Ștefan,Mateiș David Andrei,Popa David Matei,Ungureanu Alexandru,,international
-Romania,Regional,On-site,București 2,Laura Ungureanu,,Apostol Mihnea Petru,Avram Popa Cristian Horațiu,Pană Andrei Mihai,,,international
+Romania,Regional,On-site,CEX București 1,Laura Ungureanu,,Arghira Radu Ștefan,Mateiș David Andrei,Popa David Matei,Ungureanu Alexandru,,international
+Romania,Regional,On-site,CEX București 2,Laura Ungureanu,,Apostol Mihnea Petru,Avram Popa Cristian Horațiu,Pană Andrei Mihai,,,international
 Croatia,National,Online,MIOC,Jakov Celin,Nikola Dmitrović,Dino Hadžić,Ivo Pavičić,Gabrijel Kos,Ozren Vili Paunović,,international
+Ukraine,Regional,On-site,UPML_SSPO,Valentyna Potienko,,Stepaniuk Yaroslav,Shenderchuk Rostyslav,Illa Otkidach,Serhii Petryshyn,,international
+Azerbaijan,National,Online,Azerbaijan Team Girls,Rashad Mammadov,Ruslan Mehdiyev,Fatima Aslanli,Asma Badalova,Khadija Maharli,Daniz Hajisoy,,international
+Azerbaijan,National,Online,Azerbaijan Team 3,Rashad Mammadov,Ruslan Mehdiyev,Umid Guliyev,Rashid Hashimzade,Fateh Ahmadzada,Tunjay Pashayev,,international
+Romania,Regional,On-site,Vianu 4,Lupașcu Oana Maria,,Marin Perianu Vlad,Mătăsaru Tudor Mihai,Ciurea Ștefan,Bărbulescu Luca Traian,,international
+Romania,Regional,On-site,București Juniors,Pudak Nurberdiyev,,Acatrini Rareș Andrei,Țapu Tudor-Cristian,Andrei Geantă,Becleanu Tudor Andrei,,international
+Romania,Regional,On-site,ICHB Seniors,Miclaus Adrian,Peticaru Alexandru,Dragusanu Rares,Alecu Izsak Andrei,Sandea Iancu Ioan,Radulescu Stefan,,international
+Romania,Regional,On-site,Bucuresti 3,Miclaus Adrian,Peticaru Alexandru,Iordache Matei Stefan,Vilcescu Stefan,Mircea Iustin,Burloi Emil Andrei,,international
+Romania,Regional,On-site,Bucuresti 4,Peticaru Alexandru,Miclaus Adrian,Neagu Vlad Cristian,Maican-Barbu Iustin Cristian,Preda Andrei,Stoica Mihnea Teodor,,international
 Romania,Regional,Online,Craiova,Grindeanu Mihaela Raluca,Coravu Laura Maria,Curcă David-Ioan,Pîrlog Marian Nicolae,Șerban Alexandru Nicolae,Mîrșolea Luca Andrei,Grigorie Radu-Ștefan,ro-regional
 Romania,Regional,Online,Suceava,Costineanu Veronica-Raluca,Nenec Gabriela,Sfichi Andrei,Tomiță Mircea-Ștefan,Holotă Tudor-Matei,Gavrilescu Răzvan-Cristian,,ro-regional
 Romania,Regional,Online,Ploiești - CNMV,Lincan Iulia-Monica,Rîpeanu Luminița,Tănase Victor Andrei,Pătrașcu Vlad George,Dumitrescu Iustin Lucian,Luca Radu,,ro-regional
