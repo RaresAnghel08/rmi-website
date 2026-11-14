@@ -73,7 +73,7 @@ RO_EXTRA_CONTESTANTS = {
 }
 
 RO_CENTRE_TEAM = {'Dolj': 'Craiova', 'Suceava': 'Suceava', 'Prahova': 'Ploiești - CNMV',
-                  'Gorj': 'Târgu Jiu', 'Neamț': 'Piatra Neamț', 'Hunedoara': 'Orăștie'}
+                  'Gorj': 'Târgu Jiu', 'Neamț': 'Piatra Neamț', 'Hunedoara': 'Hunedoara'}
 
 
 # --------------------------------------------------------------------------- import
