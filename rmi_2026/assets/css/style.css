@@ -458,6 +458,12 @@ img {
 	}
 }
 
+.powered-by img {
+	height: 28px;
+	width: auto;
+	vertical-align: middle;
+}
+
 .schedule-table tbody tr:hover td {
 	background: rgba(125, 211, 252, 0.02)
 }
