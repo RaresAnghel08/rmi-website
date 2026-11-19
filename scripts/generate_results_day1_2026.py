@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 """Generate rmi_2026/pages/results.html (Day 1 ranking) from data/results_day1_2026.csv.
 
+The place is computed here (equal totals share the same place); the CSV Rank column is not used.
 The CSV is the standings export of contest 1 (Rank, Username, First name, Last name,
 Country, Team, <3 problem columns>, Total). Usernames are not published.
 
@@ -39,6 +40,15 @@ def main():
         fixed = {'Rank', 'Username', 'First name', 'Last name', 'Country', 'Team', 'Total'}
         problems = [c for c in reader.fieldnames if c not in fixed]
         rows = [r for r in reader if r['Rank'].strip()]
+    # Highest total first (stable, keeps the export order among equal totals)
+    rows.sort(key=lambda r: -float(r['Total']))
+    # Equal totals share the same place (1, 2, 2, 4, ...); the page script recomputes this for each filter
+    place = {}
+    prev = None
+    for i, r in enumerate(rows, 1):
+        if r['Total'] != prev:
+            place[r['Total']] = i
+            prev = r['Total']
 
     head = ''.join(f'<th>{e(p)}</th>' for p in problems)
     body = []
@@ -57,7 +67,7 @@ def main():
         counts[mode] += 1
         scores = ''.join(f'<td>{num(r[p])}</td>' for p in problems)
         body.append(
-            f'              <tr data-mode="{mode}"><td><strong>{e(r["Rank"].strip())}</strong></td><td>{e(name)}</td>'
+            f'              <tr data-mode="{mode}" data-total="{e(r["Total"].strip())}"><td class="rank-cell"><strong>{place[r["Total"]]}</strong></td><td>{e(name)}</td>'
             f'<td class="country-cell">{country}</td><td>{e(r["Team"].strip())}</td>{scores}'
             f'<td><strong>{num(r["Total"])}</strong></td></tr>'
         )

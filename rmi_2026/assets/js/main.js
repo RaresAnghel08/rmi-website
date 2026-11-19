@@ -131,11 +131,16 @@
     const count = document.getElementById('results-count');
     const buttons = Array.from(group.querySelectorAll('.filter-btn'));
     const apply = (mode) => {
-      let shown = 0;
+      let shown = 0, place = 0, prevTotal = null;
       rows.forEach(tr => {
         const show = mode === 'all' || tr.dataset.mode === mode;
         tr.hidden = !show;
-        if(show) shown++;
+        if(!show) return;
+        shown++;
+        // Equal totals share the same place within the visible list (1, 2, 2, 4, ...)
+        if(tr.dataset.total !== prevTotal){ place = shown; prevTotal = tr.dataset.total; }
+        const cell = tr.querySelector('.rank-cell strong');
+        if(cell) cell.textContent = place;
       });
       buttons.forEach(b => {
         const on = b.dataset.filter === mode;
