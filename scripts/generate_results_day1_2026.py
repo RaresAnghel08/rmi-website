@@ -42,6 +42,7 @@ def main():
 
     head = ''.join(f'<th>{e(p)}</th>' for p in problems)
     body = []
+    counts = {'onsite': 0, 'online': 0}
     for r in rows:
         code = r['Country'].strip().upper()
         flag = FLAG_NAMES.get(code)
@@ -51,9 +52,12 @@ def main():
         else:
             country = e(code)
         name = f"{r['First name'].strip()} {r['Last name'].strip()}".strip()
+        # Username prefix tells how the contestant took part (RMI_ = on-site, ONLINE_ = online); the username itself is not published
+        mode = 'online' if r['Username'].strip().upper().startswith('ONLINE') else 'onsite'
+        counts[mode] += 1
         scores = ''.join(f'<td>{num(r[p])}</td>' for p in problems)
         body.append(
-            f'              <tr><td><strong>{e(r["Rank"].strip())}</strong></td><td>{e(name)}</td>'
+            f'              <tr data-mode="{mode}"><td><strong>{e(r["Rank"].strip())}</strong></td><td>{e(name)}</td>'
             f'<td class="country-cell">{country}</td><td>{e(r["Team"].strip())}</td>{scores}'
             f'<td><strong>{num(r["Total"])}</strong></td></tr>'
         )
@@ -81,6 +85,12 @@ def main():
         <section class="results-section">
           <h2>Day 1 ranking</h2>
           <p>Standings after the first contest day (Thursday, November 19th, 2026): {len(rows)} contestants, {len(problems)} problems. Day 2 and the final results will be published after the contest days.</p>
+          <div class="results-filter" id="results-filter" role="group" aria-label="Filter by participation" hidden>
+            <button type="button" class="filter-btn is-active" data-filter="all" aria-pressed="true">All ({len(rows)})</button>
+            <button type="button" class="filter-btn" data-filter="onsite" aria-pressed="false">On-site ({counts['onsite']})</button>
+            <button type="button" class="filter-btn" data-filter="online" aria-pressed="false">Online ({counts['online']})</button>
+          </div>
+          <p class="results-count" id="results-count" aria-live="polite"></p>
           <div class="table-container">
             <table class="results-table">
               <thead><tr><th>Rank</th><th>Name</th><th>Country</th><th>Team</th>{head}<th>Day 1</th></tr></thead>

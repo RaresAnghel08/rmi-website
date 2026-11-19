@@ -123,8 +123,35 @@
     sync();
   }
 
+  // Results page: filter the ranking by on-site / online participation
+  function initResultsFilter(){
+    const group = document.getElementById('results-filter');
+    const rows = Array.from(document.querySelectorAll('.results-table tbody tr[data-mode]'));
+    if(!group || !rows.length) return;
+    const count = document.getElementById('results-count');
+    const buttons = Array.from(group.querySelectorAll('.filter-btn'));
+    const apply = (mode) => {
+      let shown = 0;
+      rows.forEach(tr => {
+        const show = mode === 'all' || tr.dataset.mode === mode;
+        tr.hidden = !show;
+        if(show) shown++;
+      });
+      buttons.forEach(b => {
+        const on = b.dataset.filter === mode;
+        b.classList.toggle('is-active', on);
+        b.setAttribute('aria-pressed', on ? 'true' : 'false');
+      });
+      if(count) count.textContent = 'Showing ' + shown + ' of ' + rows.length + ' contestants';
+    };
+    buttons.forEach(b => b.addEventListener('click', () => apply(b.dataset.filter)));
+    group.hidden = false;
+    apply('all');
+  }
+
   function init(){
     applyResultsOverrides();
+    initResultsFilter();
     initScrollAnimation();
     initCountryToggle();
   }

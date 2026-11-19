@@ -1357,3 +1357,36 @@ img {
 	margin: 0.5rem 0 0;
 	font-size: 0.9rem;
 }
+
+/* Results page: on-site / online filter */
+.results-filter {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	margin: 1rem 0 0.5rem;
+}
+
+.filter-btn {
+	font: inherit;
+	font-weight: 600;
+	font-size: 0.9rem;
+	color: var(--accent-2);
+	background: var(--card);
+	border: 1px solid rgba(242, 10, 10, 0.3);
+	border-radius: 999px;
+	padding: 0.45rem 1.1rem;
+	cursor: pointer;
+	transition: background 0.2s ease, color 0.2s ease;
+}
+
+.filter-btn:hover,
+.filter-btn:focus-visible,
+.filter-btn.is-active {
+	background: var(--accent-2);
+	color: #fff;
+}
+
+.results-count {
+	margin: 0 0 0.75rem;
+	font-size: 0.9rem;
+}
