@@ -1,0 +1,272 @@
+﻿Rank,Username,First name,Last name,Day 2,Day 1,Aggregate
+1,ONLINE_96,Vladyslav,Khalin,131.3,200,331.3
+2,ONLINE_80,Yunus Emre,Artal,122.3,147,269.3
+3,RMI_147,Petar,Banović,65.6,203,268.6
+4,ONLINE_21,João Davi,Lima Cavalcante,116,150,266
+5,RMI_111,Andrei,Nemtisor,106.3,153,259.3
+6,ONLINE_118,Viet Trung Nhan,Nguyen,46,204,250
+7,ONLINE_24,Dino,Hadžić,46,200,246
+8,RMI_16,Kiril Ivanov,Zulyamski,39.1,203,242.1
+9,RMI_96,Andrei-Paul,Iorgulescu,128.9,113,241.9
+10,ONLINE_27,Ivo,Pavičić,45,177,222
+11,RMI_100,Roland,Petrean,78.1,139,217.1
+12,ONLINE_83,Ahmet Alp,Orakçı,66.3,142,208.3
+13,ONLINE_82,Ahmet Emre,Gürdal,110.6,86,196.6
+14,ONLINE_116,Thành Kiên,Mai,95.9,99,194.9
+15,RMI_110,Traian,Danciu,56,103,159
+16,ONLINE_37,Giorgi,Maisuradze,33.3,124,157.3
+17,RMI_99,Luca-Valentin,Muresan,44,110,154
+18,RMI_102,Vlad-Mihai,Tutunaru,64,89,153
+19,ONLINE_46,Marco,Gambaro,64.9,81,145.9
+20,RMI_98,Matei,Neacsu,37.6,103,140.6
+21,RMI_19,Denislav,Manev,59.2,81,140.2
+22,RMI_101,David-Constantin,Turcanu,61,78,139
+23,RMI_43,Benedek,Szaszkó,61,77,138
+24,ONLINE_125,Sỹ Khôi Anh,Nguyễn,56,81,137
+25,ONLINE_101,Vladyslav,Martynenko,109,24,133
+26,ONLINE_103,Roman,Sadovnikov,18,113,131
+27,ONLINE_31,Andria,Vasadze,49,81,130
+28,RMI_14,Sava Aleksandrov,Delev,22,103,125
+29,RMI_97,Cezar-Luca,Mironov,68.6,56,124.6
+30,RMI_107,Cezar,Bolba,71,53,124
+31,RMI_50,Iustin,Mircea,50,71,121
+32,ONLINE_126,Hoàng Lâm,Trần,39,81,120
+33,RMI_105,Rares,Hanganu,52.6,63,115.6
+34,ONLINE_97,Andrii,Kuzma,59,53,112
+35,RMI_149,Nikola,Šami,40.4,71,111.4
+36,RMI_104,Horia-Andrei,Boeriu,52.5,57,109.5
+37,RMI_103,Ianis,Belu,25,81,106
+38,RMI_40,Dániel,Czanik,48,57,105
+39,ONLINE_124,Văn Anh Thái,Đoàn,48,55,103
+40,RMI_64,Radu Ștefan,Arghira,45,57,102
+41,RMI_51,Stefan,Vilcescu,39,63,102
+42,RMI_15,Aleksandar Petrov,Pendov,45,53,98
+43,RMI_54,Andrei,Preda,45,53,98
+44,ONLINE_115,Minh Đức,Lê,39,59,98
+45,RMI_35,Damyan Rumenov,Svobodnikov,37.4,59,96.4
+46,RMI_42,Katalin,Szabó M.,65,31,96
+47,ONLINE_105,Illia,Denysiuk,45,51,96
+48,ONLINE_99,Rostyslav,Yabchenko,46.6,49,95.6
+49,RMI_9,Boris Hrisimirov,Bobev,30.6,65,95.6
+50,RMI_148,Pavle,Damjanović,45.4,50,95.4
+51,RMI_18,Daniel,Getov,42.4,53,95.4
+52,ONLINE_86,Nehir,Karatopcu,38,57,95
+53,ONLINE_29,Vladimer,Prangishvili,33,60,93
+54,ONLINE_8,Elay,Verdiyev,47.6,45,92.6
+55,ONLINE_44,Nicholas,Bamber,38.8,53,91.8
+56,ONLINE_7,Bakhtiyar,Najafzade,40,50,90
+57,RMI_75,Izsak Andrei,Alecu,31,59,90
+58,ONLINE_100,Yurii,Koss,52,37,89
+59,RMI_106,Alexandru,Thury-Burileanu,57.3,31,88.3
+60,ONLINE_65,Alexandru Marian,Simina,28,59,87
+61,ONLINE_2,Akbar,Ahmadov,41,45,86
+62,RMI_53,Vlad Cristian,Neagu,22,63,85
+63,RMI_73,Flaviu,Dimitriu,31,53,84
+64,ONLINE_98,Benedykt,Kvasnytsya,42.4,41,83.4
+65,ONLINE_64,Eric,Meștereagă,37,45,82
+66,ONLINE_84,Kerem,Bozkaya,3,79,82
+67,RMI_25,Boris,Angelov,36,45,81
+68,RMI_23,Dimitar Aleksandrov,Shapatov,28,53,81
+69,RMI_93,Iulia Ela,Morariu,53,27,80
+70,ONLINE_60,Alexandru Nicolae,Șerban,43,37,80
+71,RMI_109,Mihai Cosmin,Boac,52,27,79
+72,RMI_68,Mihnea Petru,Apostol,52,27,79
+73,ONLINE_104,Maksym,Bondarenko,26,53,79
+74,RMI_108,Andrei,Suna,26,53,79
+75,RMI_56,Calin,Cernat,25,53,78
+76,RMI_85,Briana Maria,Bucur,19,59,78
+77,RMI_91,Ema Nicole,Gheorghe,24.6,53,77.6
+78,RMI_10,Nikolay Venelinov,Valchanov,36,41,77
+79,ONLINE_45,Francesco,Fuson,14,63,77
+80,RMI_76,Rares,Dragusanu,22,53,75
+81,RMI_74,Sorin-Gabriel,Gabără,47,27,74
+82,ONLINE_88,Matvii,Grytsyna,49,24,73
+83,ONLINE_62,Ioan-David,Sbora,36,37,73
+84,ONLINE_127,Hải Sơn,Đặng,36,37,73
+85,ONLINE_25,Gabrijel,Kos,19,53,72
+86,ONLINE_5,Osman,Ahmadzada,42.4,27,69.4
+87,RMI_113,Vlad,Bondoc,19,50,69
+88,ONLINE_30,Mate,Rekhviashvili,36.0,33,69.0
+89,ONLINE_3,Omar,Alimammadzada,43,24,67
+90,ONLINE_9,Fateh,Ahmadzada,39,27,66
+91,RMI_95,Victor-Ioan,Dobra,6.2,59,65.2
+92,ONLINE_61,Marius-Cristian,Floroiu,28,37,65
+93,ONLINE_1,Vagif,Abdullayev,40,24,64
+94,ONLINE_93,Ivan,Shneider,37,27,64
+95,ONLINE_41,Anna,Kotoula,36.6,27,63.6
+96,ONLINE_39,Otar,Tsibadze,36,27,63
+97,RMI_89,Mara Ioana,Paun,36,27,63
+98,RMI_112,Radu,Pipernea,9.9,53,62.9
+99,ONLINE_117,Nhat Minh,Nguyen,35,27,62
+100,RMI_46,Cristian,Pleșca,31,31,62
+101,RMI_77,Stefan,Radulescu,9,53,62
+102,RMI_28,Elitsa,Stoyanova,9,53,62
+103,RMI_78,Iancu Ioan,Sandea,28,33,61
+104,ONLINE_59,Marian Nicolae,Pîrlog,2,59,61
+105,RMI_58,Andrei Bogdan,Dumitrache,33,27,60
+106,RMI_69,Cristian Horațiu,Avram Popa,33,27,60
+107,RMI_92,Alexandra-Iulia,Guiman,33,27,60
+108,ONLINE_129,Thái Minh Vũ,Nguyễn,12.8,47,59.8
+109,RMI_11,Aleksandar Yordanov,Valchev,32.6,27,59.6
+110,ONLINE_120,Gia Huy,Hoang,22.6,37,59.6
+111,ONLINE_92,Andrii,Lisevych,32.4,27,59.4
+112,RMI_61,Tudor Andrei,Becleanu,32,27,59
+113,RMI_121,Mihai Alexandru,Dragnea,9,50,59
+114,RMI_137,Andrei,Iacob,31.6,27,58.6
+115,RMI_83,Mihnea Gabriel,Bazacliu,55,3,58
+116,RMI_145,Kasym,Kochekov,31,27,58
+117,ONLINE_4,Mahmud,Isali,31,27,58
+118,ONLINE_76,David,Georgescu,31,27,58
+119,ONLINE_78,Vlad-Ioan,Muntoiu,25,33,58
+120,RMI_48,Emil Andrei,Burloi,25,33,58
+121,RMI_115,Andrei-Daniel,Pisla,30.5,27,57.5
+122,ONLINE_32,Nikoloz,Kochashvili,14.4,43,57.4
+123,ONLINE_6,Aykhan,Asadzada,30,27,57
+124,ONLINE_130,Thai Son,Nguyen,26,31,57
+125,ONLINE_70,Victor Andrei,Tănase,25,31,56
+126,RMI_20,Angel,Raev,37,18,55
+127,ONLINE_17,Azim,Hajiyev,27,27,54
+128,RMI_7,Serkan Sadretin,Rashid,21,33,54
+129,RMI_13,Boyan Angelov,Boyadzhiev,9,45,54
+130,ONLINE_91,Tetiana,Zadniprovska,26,27,53
+131,RMI_129,Luca Traian,Bărbulescu,3,50,53
+132,ONLINE_47,Giovanni,Maiellaro,0,53,53
+133,RMI_12,Yavor Toshkov,Vasilev,25.8,27,52.8
+134,RMI_128,Andrei,Simion,19.8,33,52.8
+135,RMI_139,Radu,Paun-Trif,28,24,52
+136,ONLINE_69,Vlad George,Pătrașcu,25,27,52
+137,ONLINE_34,Dimitri,Shengelia,27,24,51
+138,RMI_33,Yoan Dimitrov,Dimitrov,0.6,50,50.6
+139,ONLINE_57,David-Ioan,Curcă,19,31,50
+140,RMI_2,Bozhan Radoslavov,Ivanov,8,42,50
+141,RMI_136,Teodor,Vrânceanu,12.1,37,49.1
+142,ONLINE_12,Tunjay,Pashayev,25,24,49
+143,RMI_44,Alexandr,Ivancicichin,22,27,49
+144,RMI_130,Ștefan,Ciurea,22,27,49
+145,ONLINE_43,Gerasimos,Vandoros,22,27,49
+146,RMI_55,Mihnea Teodor,Stoica,12,37,49
+147,RMI_123,Mihai Vladimir,Gavriș,12,37,49
+148,ONLINE_74,Mircea-Ștefan,Tomiță,21,27,48
+149,RMI_6,Simona Nedyalkova,Ivanova,20.4,27,47.4
+150,ONLINE_87,Mustafa Selim,Özekinci,0,47,47
+151,ONLINE_71,Răzvan-Cristian,Gavrilescu,13.6,33,46.6
+152,RMI_60,Rareș Andrei,Acatrini,22,24,46
+153,ONLINE_79,Emilian,Cârnu,19,27,46
+154,RMI_62,Andrei,Geantă,19,27,46
+155,RMI_120,Radu,Vasile,13,33,46
+156,ONLINE_40,Lampros,Kateris,42.9,3,45.9
+157,ONLINE_128,Hữu Anh Sơn,Nguyễn,18.4,27,45.4
+158,RMI_140,David Alexandru,Radavoi,40,3,43
+159,RMI_24,Kiril Krasimirov,Zashev,19,24,43
+160,RMI_70,Andrei Mihai,Pană,19,24,43
+161,RMI_87,Mihaela Teodora,Craciun,16,27,43
+162,RMI_65,David Andrei,Mateiș,18.6,24,42.6
+163,RMI_122,Andrei,Gagea,39,3,42
+164,ONLINE_19,Asim,Huseynzada,18,24,42
+165,RMI_94,Ilinca-Rucsandra,Radu,15,27,42
+166,RMI_84,Radu Gabriel,Biclineru,15,27,42
+167,ONLINE_56,Mihai,Balinga,15,27,42
+168,ONLINE_110,Leonid,Tuz,15,27,42
+169,ONLINE_107,Andrii,Tatarinov,5,37,42
+170,RMI_8,Zhivko Stiliyanov,Stoyanov,14.4,27,41.4
+171,ONLINE_16,Khadija,Maharli,14,27,41
+172,RMI_90,Alexandra Sofia,Prodan,14,27,41
+173,ONLINE_131,Radu-Ștefan,Grigorie,14,27,41
+174,RMI_21,Tihomir Todorov,Ivanov,13.4,27,40.4
+175,RMI_126,Tudor Andrei,Horobeanu,18,21,39
+176,RMI_80,Ionuț,Petre,15,24,39
+177,RMI_138,Matei,Lupu,12,27,39
+178,ONLINE_67,Iustin Lucian,Dumitrescu,12,27,39
+179,RMI_114,Iustin,Drăgușanu,12,27,39
+180,RMI_1,Feyza-Nur,Ibrahimova,11.4,27,38.4
+181,RMI_116,Cristian,Zoescu,11,27,38
+182,RMI_4,Bogdan Georgiev,Varbanov,11,27,38
+183,RMI_36,Alexander Atanasov,Vladimirov,10.6,27,37.6
+184,RMI_32,Martin,Zlatarev,9.9,27,36.9
+185,RMI_52,Iustin Cristian,Maican-Barbu,12,24,36
+186,RMI_150,Adelina Violeta,Petre,9,27,36
+187,RMI_124,Horia Mihai,Haivas,11.2,24,35.2
+188,RMI_144,Vincențiu Dorian,Savu,11,24,35
+189,RMI_79,Cristian,Petre,11,24,35
+190,ONLINE_72,Tudor-Matei,Holotă,7.4,27,34.4
+191,ONLINE_73,Andrei,Sfichi,7,27,34
+192,ONLINE_18,Saleh,Hasanli,6.6,27,33.6
+193,RMI_142,Alexandru Matei,Mocanu,9,24,33
+194,RMI_72,Matei,Constantiniu,9,24,33
+195,ONLINE_14,Asma,Badalova,9,24,33
+196,RMI_30,Alexander,Stefanov,9,24,33
+197,RMI_131,Vlad,Marin Perianu,14,18,32
+198,RMI_81,Karan Stefan,Sanalp,8,24,32
+199,RMI_39,Ventsislav Deyanov,Ivanov,8,24,32
+200,RMI_143,Rareș Teodor,Panu,5,27,32
+201,ONLINE_20,Hasan,Suleymanov,18,12,30
+202,ONLINE_94,Viktoriia,Slavhorodska,18,12,30
+203,ONLINE_58,Luca Andrei,Mîrșolea,12,18,30
+204,ONLINE_13,Fatima,Aslanli,6,24,30
+205,ONLINE_28,Saba,Goduadze,3,27,30
+206,RMI_71,Tudor,Chelaru,3,27,30
+207,RMI_134,Tudor Iosif,Cotenescu,5,24,29
+208,ONLINE_36,Nikoloz,Chavchavadze,4,24,28
+209,ONLINE_26,Ozren Vili,Paunović,3.6,24,27.6
+210,ONLINE_11,Rashid,Hashimzade,3,24,27
+211,RMI_45,Alexandra,Kirillov,3,24,27
+212,RMI_66,David Matei,Popa,0,27,27
+213,ONLINE_75,Alexandru,Dogaru,0,27,27
+214,RMI_86,Luca,Georgescu,0,27,27
+215,ONLINE_90,Vladyslav,Zabolotnyi,0,27,27
+216,ONLINE_48,Alexei,Baca,23.1,3,26.1
+217,ONLINE_68,Radu,Luca,2,24,26
+218,RMI_22,Nikola Georgiev,Manolov,22,3,25
+219,ONLINE_112,Serhii,Petryshyn,18,7,25
+220,ONLINE_77,Mihail,Ionescu,0,24,24
+221,RMI_133,Radu Andrei,Balaș,0,24,24
+222,ONLINE_15,Daniz,Hajisoy,14.4,9,23.4
+223,ONLINE_63,Ianis Alexandru,Chis,13.4,9,22.4
+224,RMI_57,Tudor,Diaconu,10,12,22
+225,ONLINE_102,Mariia,Rapina,18.6,3,21.6
+226,RMI_59,Stefan Constantin,Neagu,21,0,21
+227,ONLINE_10,Umid,Guliyev,12,9,21
+228,ONLINE_51,Victor,Roșca,8,12,20
+229,ONLINE_22,Kaloyan Hristov,Keratsov,19,0,19
+230,RMI_146,Dimitrije,Atanasković,18.4,0,18.4
+231,RMI_26,Martin,Chavdarov,18,0,18
+232,RMI_3,Antonio Valeriev,Rahchev,9,9,18
+233,ONLINE_33,Lasha,Mosidze,0,18,18
+234,ONLINE_85,Ramazan,Fıstıkcı,0,18,18
+235,RMI_27,Viktor,Slavchev,5,12,17
+236,ONLINE_123,Trí Dũng,Đỗ,5,12,17
+237,RMI_17,Georgi,Georgiev,13,3,16
+238,RMI_47,Dan,Sandu,4,12,16
+239,ONLINE_42,Nikolaos,Papadakis,12.7,3,15.7
+240,RMI_41,Mirkó,Juhász-Molnár,12,3,15
+241,RMI_119,Ștefan Vlad,Păunescu,5.4,9,14.4
+242,RMI_67,Alexandru,Ungureanu,10,3,13
+243,ONLINE_23,Yavor Svilenov,Petrakiev,9,3,12
+244,ONLINE_66,Andrei,Țifui,0,12,12
+245,ONLINE_54,Andreea,Șandrean,11.4,0,11.4
+246,RMI_132,Tudor Mihai,Mătăsaru,2,9,11
+247,RMI_38,Boyan Nikolaev,Belyashki,6,3,9
+248,ONLINE_49,Anastasia,Corsac,6,3,9
+249,RMI_5,Teodor Kaloyanov,Bonev,6,3,9
+250,ONLINE_38,Tako,Shanava,0,9,9
+251,ONLINE_52,Daniel,Kirillov,0,9,9
+252,RMI_135,Tudor,Iatagan,5,3,8
+253,RMI_29,Siyana,Bandrova,7.4,0,7.4
+254,ONLINE_114,Yaroslav,Stepaniuk,6.6,0,6.6
+255,RMI_118,Tiberiu Mihai,Enache,6,0,6
+256,ONLINE_109,Andrii,Novikov,3,3,6
+257,RMI_125,Dimitrie Matei,Andronache,5,0,5
+258,RMI_88,Clara Maria,Mocanu,5,0,5
+259,RMI_127,Andrei,Icrivezi,4.6,0,4.6
+260,ONLINE_106,Oleksii,Syvak,0,3,3
+261,RMI_37,Stefan Krasimirov,Balushev,0,3,3
+262,RMI_34,Ivan Martinov,Kolev,0,3,3
+263,ONLINE_121,Hoang Hai,Le,0,3,3
+264,ONLINE_35,Ilia,Shinjiashvili,0,3,3
+265,RMI_31,Daniel,Todorov,0,3,3
+266,ONLINE_113,Rostyslav,Shenderchuk,0,0,0
+267,ONLINE_95,Ivanna,Zadniprovska,0,0,0
+268,RMI_82,Alexandru-Octavian,Urlețeanu,0,0,0
+269,RMI_141,Andrei,Ciurea,0,0,0
+270,ONLINE_50,Chiril,Plăcintă,0,0,0
+271,ONLINE_89,Mykhailo,Symoni,0,0,0

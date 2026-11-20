@@ -1,0 +1,270 @@
+﻿Rank,Username,First name,Last name,Country,Team,Two Sort,Compressible,Waiter,Total
+1,ONLINE_96,Vladyslav,Khalin,UA,Ukraine 1,100,9,22.3,131.3
+2,RMI_96,Andrei-Paul,Iorgulescu,RO,Romania 1,52,9,67.9,128.9
+3,ONLINE_80,Yunus Emre,Artal,TR,Türkiye 1,100,19,3.3,122.3
+4,ONLINE_21,João Davi,Lima Cavalcante,BR,Colégio Objetivo Ipiranga,16,100,0,116
+5,ONLINE_82,Ahmet Emre,Gürdal,TR,Türkiye 1,0,19,91.6,110.6
+6,ONLINE_101,Vladyslav,Martynenko,UA,Ukraine 2,9,100,0,109
+7,RMI_111,Andrei,Nemtisor,RO,Romania Juniors 1,6,43,57.3,106.3
+8,ONLINE_116,Thành Kiên,Mai,VN,Monday Team,18,49,28.9,95.9
+9,RMI_100,Roland,Petrean,RO,Romania 2,15,37,26.1,78.1
+10,RMI_107,Cezar,Bolba,RO,Romania 4,9,62,0,71
+11,RMI_97,Cezar-Luca,Mironov,RO,Romania 1,9,37,22.6,68.6
+12,ONLINE_83,Ahmet Alp,Orakçı,TR,Türkiye 1,12,27,27.3,66.3
+13,RMI_147,Petar,Banović,RS,Serbia,7,19,39.6,65.6
+14,RMI_42,Katalin,Szabó M.,HU,Hungary,25,40,0,65
+15,ONLINE_46,Marco,Gambaro,IT,Italy,9,27,28.9,64.9
+16,RMI_102,Vlad-Mihai,Tutunaru,RO,Romania 2,45,19,0,64
+17,RMI_101,David-Constantin,Turcanu,RO,Romania 2,52,9,0,61
+18,RMI_43,Benedek,Szaszkó,HU,Hungary,52,9,0,61
+19,RMI_19,Denislav,Manev,BG,GPS,30.6,19,9.6,59.2
+20,ONLINE_97,Andrii,Kuzma,UA,Ukraine 1,19,40,0,59
+21,RMI_106,Alexandru,Thury-Burileanu,RO,Romania 3,6,27,24.3,57.3
+22,ONLINE_125,Sỹ Khôi Anh,Nguyễn,VN,Tuesday Team,0,56,0,56
+23,RMI_110,Traian,Danciu,RO,Romania Juniors 1,9,47,0,56
+24,RMI_83,Mihnea Gabriel,Bazacliu,RO,infO(1) Ploiesti,6,49,0,55
+25,RMI_93,Iulia Ela,Morariu,RO,Romania - Girls Senior,13,40,0,53
+26,RMI_105,Rares,Hanganu,RO,Romania 3,21,9,22.6,52.6
+27,RMI_104,Horia-Andrei,Boeriu,RO,Romania 3,6,27,19.5,52.5
+28,RMI_109,Mihai Cosmin,Boac,RO,Romania Juniors 1,3,49,0,52
+29,ONLINE_100,Yurii,Koss,UA,Ukraine 2,22,30,0,52
+30,RMI_68,Mihnea Petru,Apostol,RO,CEX București 2,12,40,0,52
+31,RMI_50,Iustin,Mircea,RO,Bucuresti 1,21,19,10,50
+32,ONLINE_88,Matvii,Grytsyna,UA,ALGO1,9,40,0,49
+33,ONLINE_31,Andria,Vasadze,GE,Georgia_Team 1,9,40,0,49
+34,RMI_40,Dániel,Czanik,HU,Hungary,18,30,0,48
+35,ONLINE_124,Văn Anh Thái,Đoàn,VN,Tuesday Team,21,27,0,48
+36,ONLINE_8,Elay,Verdiyev,AZ,Azerbaijan Team 2,7.6,40,0,47.6
+37,RMI_74,Sorin-Gabriel,Gabără,RO,Iași,28,19,0,47
+38,ONLINE_99,Rostyslav,Yabchenko,UA,Ukraine 1,18,17,11.6,46.6
+39,ONLINE_118,Viet Trung Nhan,Nguyen,VN,Monday Team,3,43,0,46
+40,ONLINE_24,Dino,Hadžić,HR,MIOC,6,30,10,46
+41,RMI_148,Pavle,Damjanović,RS,Serbia,0,30,15.4,45.4
+42,RMI_15,Aleksandar Petrov,Pendov,BG,Bulgarian National Team,18,27,0,45
+43,ONLINE_27,Ivo,Pavičić,HR,MIOC,18,27,0,45
+44,ONLINE_105,Illia,Denysiuk,UA,Ukraine 3,18,27,0,45
+45,RMI_54,Andrei,Preda,RO,Bucuresti 2,18,27,0,45
+46,RMI_64,Radu Ștefan,Arghira,RO,CEX București 1,18,27,0,45
+47,RMI_99,Luca-Valentin,Muresan,RO,Romania 2,12,22,10,44
+48,ONLINE_60,Alexandru Nicolae,Șerban,RO,Dolj,16,27,0,43
+49,ONLINE_3,Omar,Alimammadzada,AZ,Azerbaijan Team 1,16,27,0,43
+50,ONLINE_40,Lampros,Kateris,GR,Team Greece,9,5,28.9,42.9
+51,ONLINE_98,Benedykt,Kvasnytsya,UA,Ukraine 1,6,30,6.4,42.4
+52,RMI_18,Daniel,Getov,BG,GPS,9,19,14.4,42.4
+53,ONLINE_5,Osman,Ahmadzada,AZ,Azerbaijan Team 2,2.4,40,0,42.4
+54,ONLINE_2,Akbar,Ahmadov,AZ,Azerbaijan Team 1,12,19,10,41
+55,RMI_149,Nikola,Šami,RS,Serbia,6,19,15.4,40.4
+56,ONLINE_1,Vagif,Abdullayev,AZ,Azerbaijan Team 1,21,19,0,40
+57,ONLINE_7,Bakhtiyar,Najafzade,AZ,Azerbaijan Team 2,21,19,0,40
+58,RMI_140,David Alexandru,Radavoi,RO,VIANU 6,21,19,0,40
+59,RMI_16,Kiril Ivanov,Zulyamski,BG,Bulgarian National Team,0,0,39.1,39.1
+60,RMI_51,Stefan,Vilcescu,RO,Bucuresti 1,12,27,0,39
+61,ONLINE_115,Minh Đức,Lê,VN,Monday Team,12,27,0,39
+62,ONLINE_126,Hoàng Lâm,Trần,VN,Tuesday Team,9,30,0,39
+63,ONLINE_9,Fateh,Ahmadzada,AZ,Azerbaijan Team 3,12,27,0,39
+64,RMI_122,Andrei,Gagea,RO,Vianu 2,30,9,0,39
+65,ONLINE_44,Nicholas,Bamber,IT,Italy,5.4,19,14.4,38.8
+66,ONLINE_86,Nehir,Karatopcu,TR,Türkiye 2,21,17,0,38
+67,RMI_98,Matei,Neacsu,RO,Romania 1,6,9,22.6,37.6
+68,RMI_35,Damyan Rumenov,Svobodnikov,BG,Varna-1,9,13,15.4,37.4
+69,ONLINE_64,Eric,Meștereagă,RO,Hunedoara,0,37,0,37
+70,ONLINE_93,Ivan,Shneider,UA,ALGO2,18,19,0,37
+71,RMI_20,Angel,Raev,BG,GPS,18,19,0,37
+72,ONLINE_41,Anna,Kotoula,GR,Team Greece,19.6,17,0,36.6
+73,ONLINE_62,Ioan-David,Sbora,RO,Gorj,9,27,0,36
+74,RMI_25,Boris,Angelov,BG,Sofia 1,9,27,0,36
+75,ONLINE_127,Hải Sơn,Đặng,VN,Wednesday Team,9,27,0,36
+76,ONLINE_39,Otar,Tsibadze,GE,Georgia_Team 3,9,27,0,36
+77,RMI_89,Mara Ioana,Paun,RO,Romania - Girls Junior,9,27,0,36
+78,RMI_10,Nikolay Venelinov,Valchanov,BG,A&B School - Gameloft-1,9,27,0,36
+79,ONLINE_30,Mate,Rekhviashvili,GE,Georgia_Team 1,6,9,21.0,36.0
+80,ONLINE_117,Nhat Minh,Nguyen,VN,Monday Team,16,19,0,35
+81,ONLINE_37,Giorgi,Maisuradze,GE,Georgia_Team 3,0,9,24.3,33.3
+82,RMI_58,Andrei Bogdan,Dumitrache,RO,Bucuresti 3,6,27,0,33
+83,ONLINE_29,Vladimer,Prangishvili,GE,Georgia_Team 1,6,27,0,33
+84,RMI_69,Cristian Horațiu,Avram Popa,RO,CEX București 2,6,27,0,33
+85,RMI_92,Alexandra-Iulia,Guiman,RO,Romania - Girls Senior,6,27,0,33
+86,RMI_11,Aleksandar Yordanov,Valchev,BG,A&B School - Gameloft-1,13.6,9,10,32.6
+87,ONLINE_92,Andrii,Lisevych,UA,ALGO2,5.4,27,0,32.4
+88,RMI_61,Tudor Andrei,Becleanu,RO,București Juniors,13,19,0,32
+89,RMI_137,Andrei,Iacob,RO,VIANU 6,3,19,9.6,31.6
+90,RMI_145,Kasym,Kochekov,RS,Baky Tylla,12,19,0,31
+91,ONLINE_4,Mahmud,Isali,AZ,Azerbaijan Team 1,29,2,0,31
+92,ONLINE_76,David,Georgescu,RO,Timiș,9,22,0,31
+93,RMI_73,Flaviu,Dimitriu,RO,Iași,12,19,0,31
+94,RMI_46,Cristian,Pleșca,MD,MDA Orizont 01,18,13,0,31
+95,RMI_75,Izsak Andrei,Alecu,RO,ICHB Seniors,10.6,19,1.4,31
+96,RMI_9,Boris Hrisimirov,Bobev,BG,A&B School - Gameloft-1,12,9,9.6,30.6
+97,RMI_115,Andrei-Daniel,Pisla,RO,Romania Juniors 2,3,19,8.5,30.5
+98,ONLINE_6,Aykhan,Asadzada,AZ,Azerbaijan Team 2,25,5,0,30
+99,RMI_23,Dimitar Aleksandrov,Shapatov,BG,HaskovoBG,9,19,0,28
+100,ONLINE_65,Alexandru Marian,Simina,RO,Hunedoara,9,19,0,28
+101,RMI_139,Radu,Paun-Trif,RO,VIANU 6,9,19,0,28
+102,ONLINE_61,Marius-Cristian,Floroiu,RO,Gorj,9,19,0,28
+103,RMI_78,Iancu Ioan,Sandea,RO,ICHB Seniors,18,0,10,28
+104,ONLINE_34,Dimitri,Shengelia,GE,Georgia_Team 2,0,27,0,27
+105,ONLINE_17,Azim,Hajiyev,AZ,Azerbaijan Team Juniors,18,9,0,27
+106,ONLINE_104,Maksym,Bondarenko,UA,Ukraine 3,9,17,0,26
+107,ONLINE_130,Thai Son,Nguyen,VN,Wednesday Team,9,17,0,26
+108,ONLINE_91,Tetiana,Zadniprovska,UA,ALGO1,21,5,0,26
+109,RMI_108,Andrei,Suna,RO,Romania 4,9,17,0,26
+110,RMI_12,Yavor Toshkov,Vasilev,BG,A&B School - Gameloft-1,5.4,5,15.4,25.8
+111,RMI_56,Calin,Cernat,RO,Bucuresti 3,6,19,0,25
+112,ONLINE_78,Vlad-Ioan,Muntoiu,RO,Timiș,6,9,10,25
+113,RMI_103,Ianis,Belu,RO,Romania 3,6,19,0,25
+114,RMI_48,Emil Andrei,Burloi,RO,Bucuresti 1,6,19,0,25
+115,ONLINE_69,Vlad George,Pătrașcu,RO,Prahova,6,19,0,25
+116,ONLINE_12,Tunjay,Pashayev,AZ,Azerbaijan Team 3,6,19,0,25
+117,ONLINE_70,Victor Andrei,Tănase,RO,Prahova,6,19,0,25
+118,RMI_91,Ema Nicole,Gheorghe,RO,Romania - Girls Senior,6,9,9.6,24.6
+119,ONLINE_48,Alexei,Baca,MD,Online Orizont 02,3,17,3.1,23.1
+120,ONLINE_120,Gia Huy,Hoang,VN,NGS.NPC,13.6,9,0,22.6
+121,RMI_44,Alexandr,Ivancicichin,MD,MDA Orizont 01,3,19,0,22
+122,RMI_60,Rareș Andrei,Acatrini,RO,București Juniors,3,19,0,22
+123,RMI_130,Ștefan,Ciurea,RO,Vianu 4,13,9,0,22
+124,ONLINE_43,Gerasimos,Vandoros,GR,Team Greece,3,19,0,22
+125,RMI_14,Sava Aleksandrov,Delev,BG,Bulgarian National Team,3,19,0,22
+126,RMI_22,Nikola Georgiev,Manolov,BG,HaskovoBG,13,9,0,22
+127,RMI_76,Rares,Dragusanu,RO,ICHB Seniors,3,9,10,22
+128,RMI_53,Vlad Cristian,Neagu,RO,Bucuresti 2,13,9,0,22
+129,ONLINE_74,Mircea-Ștefan,Tomiță,RO,Suceava,12,9,0,21
+130,RMI_59,Stefan Constantin,Neagu,RO,Bucuresti 3,12,9,0,21
+131,RMI_7,Serkan Sadretin,Rashid,BG,A&B School - Gameloft - 3,12,9,0,21
+132,RMI_6,Simona Nedyalkova,Ivanova,BG,A&B School - Gameloft - 3,6,9,5.4,20.4
+133,RMI_128,Andrei,Simion,RO,Vianu 3,3,13,3.8,19.8
+134,ONLINE_57,David-Ioan,Curcă,RO,Dolj,0,19,0,19
+135,RMI_24,Kiril Krasimirov,Zashev,BG,HaskovoBG,0,19,0,19
+136,ONLINE_22,Kaloyan Hristov,Keratsov,BG,Varna-On,0,19,0,19
+137,RMI_70,Andrei Mihai,Pană,RO,CEX București 2,0,19,0,19
+138,RMI_85,Briana Maria,Bucur,RO,infO(1) Ploiesti,0,19,0,19
+139,RMI_113,Vlad,Bondoc,RO,Romania Juniors 2,0,19,0,19
+140,ONLINE_25,Gabrijel,Kos,HR,MIOC,0,9,10,19
+141,ONLINE_79,Emilian,Cârnu,RO,Vaslui,0,9,10,19
+142,RMI_62,Andrei,Geantă,RO,București Juniors,6,13,0,19
+143,ONLINE_102,Mariia,Rapina,UA,Ukraine 2,0,0,18.6,18.6
+144,RMI_65,David Andrei,Mateiș,RO,CEX București 1,0,17,1.6,18.6
+145,ONLINE_128,Hữu Anh Sơn,Nguyễn,VN,Wednesday Team,5.4,13,0,18.4
+146,RMI_146,Dimitrije,Atanasković,RS,Serbia,1.2,0,17.2,18.4
+147,ONLINE_19,Asim,Huseynzada,AZ,Azerbaijan Team Juniors,16,2,0,18
+148,ONLINE_20,Hasan,Suleymanov,AZ,Azerbaijan Team Juniors,9,9,0,18
+149,ONLINE_94,Viktoriia,Slavhorodska,UA,ALGO2,9,9,0,18
+150,RMI_26,Martin,Chavdarov,BG,Sofia 1,18,0,0,18
+151,ONLINE_103,Roman,Sadovnikov,UA,Ukraine 2,9,9,0,18
+152,RMI_126,Tudor Andrei,Horobeanu,RO,Vianu 3,9,9,0,18
+153,ONLINE_112,Serhii,Petryshyn,UA,UPML_SSPO,9,9,0,18
+154,RMI_87,Mihaela Teodora,Craciun,RO,Romania - Girls Junior,3,13,0,16
+155,RMI_94,Ilinca-Rucsandra,Radu,RO,Romania - Girls Senior,6,9,0,15
+156,RMI_84,Radu Gabriel,Biclineru,RO,infO(1) Ploiesti,6,9,0,15
+157,RMI_80,Ionuț,Petre,RO,InfO(1) - CNILC,10,5,0,15
+158,ONLINE_56,Mihai,Balinga,RO,Argeș,6,9,0,15
+159,ONLINE_110,Leonid,Tuz,UA,UPML_NTF,6,9,0,15
+160,ONLINE_32,Nikoloz,Kochashvili,GE,Georgia_Team 2,5.4,9,0,14.4
+161,ONLINE_15,Daniz,Hajisoy,AZ,Azerbaijan Team Girls,5.4,9,0,14.4
+162,RMI_8,Zhivko Stiliyanov,Stoyanov,BG,A&B School - Gameloft - 3,9,0,5.4,14.4
+163,ONLINE_45,Francesco,Fuson,IT,Italy,9,5,0,14
+164,ONLINE_16,Khadija,Maharli,AZ,Azerbaijan Team Girls,9,5,0,14
+165,RMI_90,Alexandra Sofia,Prodan,RO,Romania - Girls Junior,6,8,0,14
+166,ONLINE_131,Radu-Ștefan,Grigorie,RO,Dolj,9,5,0,14
+167,RMI_131,Vlad,Marin Perianu,RO,Vianu 4,9,5,0,14
+168,ONLINE_71,Răzvan-Cristian,Gavrilescu,RO,Suceava,13.6,0,0,13.6
+169,ONLINE_63,Ianis Alexandru,Chis,RO,Hunedoara,5.4,8,0,13.4
+170,RMI_21,Tihomir Todorov,Ivanov,BG,HaskovoBG,8.4,5,0,13.4
+171,RMI_17,Georgi,Georgiev,BG,GPS,0,13,0,13
+172,RMI_120,Radu,Vasile,RO,Vianu 1,13,0,0,13
+173,ONLINE_129,Thái Minh Vũ,Nguyễn,VN,Wednesday Team,0,8,4.8,12.8
+174,ONLINE_42,Nikolaos,Papadakis,GR,Team Greece,4.6,0,8.1,12.7
+175,RMI_136,Teodor,Vrânceanu,RO,Vianu 5,0,9,3.1,12.1
+176,RMI_138,Matei,Lupu,RO,VIANU 6,3,9,0,12
+177,ONLINE_67,Iustin Lucian,Dumitrescu,RO,Prahova,3,9,0,12
+178,RMI_114,Iustin,Drăgușanu,RO,Romania Juniors 2,3,9,0,12
+179,RMI_41,Mirkó,Juhász-Molnár,HU,Hungary,12,0,0,12
+180,RMI_55,Mihnea Teodor,Stoica,RO,Bucuresti 2,12,0,0,12
+181,RMI_52,Iustin Cristian,Maican-Barbu,RO,Bucuresti 2,3,9,0,12
+182,ONLINE_58,Luca Andrei,Mîrșolea,RO,Dolj,12,0,0,12
+183,ONLINE_10,Umid,Guliyev,AZ,Azerbaijan Team 3,7,5,0,12
+184,RMI_123,Mihai Vladimir,Gavriș,RO,Vianu 2,10,2,0,12
+185,RMI_1,Feyza-Nur,Ibrahimova,BG,A&B School - Gameloft - 2,2.4,9,0,11.4
+186,ONLINE_54,Andreea,Șandrean,MD,Online Orizont MDA 03,2.4,9,0,11.4
+187,RMI_124,Horia Mihai,Haivas,RO,Vianu 2,0,9,2.2,11.2
+188,RMI_116,Cristian,Zoescu,RO,Romania Juniors 2,6,5,0,11
+189,RMI_4,Bogdan Georgiev,Varbanov,BG,A&B School - Gameloft - 2,9,2,0,11
+190,RMI_144,Vincențiu Dorian,Savu,RO,Vianu 7,3,8,0,11
+191,RMI_79,Cristian,Petre,RO,InfO(1) - CNILC,6,5,0,11
+192,RMI_36,Alexander Atanasov,Vladimirov,BG,Varna-1,1.6,9,0,10.6
+193,RMI_67,Alexandru,Ungureanu,RO,CEX București 1,0,10,0,10
+194,RMI_57,Tudor,Diaconu,RO,Bucuresti 3,0,0,10,10
+195,RMI_32,Martin,Zlatarev,BG,Sofia 2,0,9,0.9,9.9
+196,RMI_112,Radu,Pipernea,RO,Romania Juniors 1,0,9,0.9,9.9
+197,RMI_77,Stefan,Radulescu,RO,ICHB Seniors,0,9,0,9
+198,ONLINE_23,Yavor Svilenov,Petrakiev,BG,Varna-On,9,0,0,9
+199,RMI_150,Adelina Violeta,Petre,RO,Bucuresti,0,9,0,9
+200,RMI_142,Alexandru Matei,Mocanu,RO,Vianu 7,0,9,0,9
+201,RMI_121,Mihai Alexandru,Dragnea,RO,Vianu 2,0,9,0,9
+202,RMI_72,Matei,Constantiniu,RO,Iași,0,9,0,9
+203,ONLINE_14,Asma,Badalova,AZ,Azerbaijan Team Girls,7,2,0,9
+204,RMI_3,Antonio Valeriev,Rahchev,BG,A&B School - Gameloft - 2,0,9,0,9
+205,RMI_13,Boyan Angelov,Boyadzhiev,BG,Bulgarian National Team,9,0,0,9
+206,RMI_28,Elitsa,Stoyanova,BG,Sofia 1,0,9,0,9
+207,RMI_30,Alexander,Stefanov,BG,Sofia 2,0,9,0,9
+208,ONLINE_51,Victor,Roșca,MD,Online Orizont 02,3,5,0,8
+209,RMI_81,Karan Stefan,Sanalp,RO,InfO(1) - CNILC,3,5,0,8
+210,RMI_2,Bozhan Radoslavov,Ivanov,BG,A&B School - Gameloft - 2,6,2,0,8
+211,RMI_39,Ventsislav Deyanov,Ivanov,BG,Varna-2,6,2,0,8
+212,RMI_29,Siyana,Bandrova,BG,Sofia 2,5.4,2,0,7.4
+213,ONLINE_72,Tudor-Matei,Holotă,RO,Suceava,2.4,5,0,7.4
+214,ONLINE_73,Andrei,Sfichi,RO,Suceava,7,0,0,7
+215,ONLINE_18,Saleh,Hasanli,AZ,Azerbaijan Team Juniors,4.6,2,0,6.6
+216,ONLINE_114,Yaroslav,Stepaniuk,UA,UPML_SSPO,1.6,5,0,6.6
+217,RMI_95,Victor-Ioan,Dobra,RO,Romania 1,1.2,5,0,6.2
+218,ONLINE_13,Fatima,Aslanli,AZ,Azerbaijan Team Girls,6,0,0,6
+219,RMI_38,Boyan Nikolaev,Belyashki,BG,Varna-2,6,0,0,6
+220,ONLINE_49,Anastasia,Corsac,MD,Online Orizont 02,6,0,0,6
+221,RMI_5,Teodor Kaloyanov,Bonev,BG,A&B School - Gameloft - 3,6,0,0,6
+222,RMI_118,Tiberiu Mihai,Enache,RO,Vianu 1,6,0,0,6
+223,RMI_119,Ștefan Vlad,Păunescu,RO,Vianu 1,0,0,5.4,5.4
+224,RMI_27,Viktor,Slavchev,BG,Sofia 1,0,5,0,5
+225,RMI_143,Rareș Teodor,Panu,RO,Vianu 7,0,5,0,5
+226,RMI_125,Dimitrie Matei,Andronache,RO,Vianu 3,0,5,0,5
+227,RMI_88,Clara Maria,Mocanu,RO,Romania - Girls Junior,0,5,0,5
+228,ONLINE_107,Andrii,Tatarinov,UA,Ukraine 3,0,5,0,5
+229,RMI_134,Tudor Iosif,Cotenescu,RO,Vianu 5,0,5,0,5
+230,ONLINE_123,Trí Dũng,Đỗ,VN,Tuesday Team,3,2,0,5
+231,RMI_135,Tudor,Iatagan,RO,Vianu 5,3,2,0,5
+232,RMI_127,Andrei,Icrivezi,RO,Vianu 3,4.6,0,0,4.6
+233,RMI_47,Dan,Sandu,MD,MDA Orizont 01,4,0,0,4
+234,ONLINE_36,Nikoloz,Chavchavadze,GE,Georgia_Team 3,4,0,0,4
+235,ONLINE_26,Ozren Vili,Paunović,HR,MIOC,1.6,2,0,3.6
+236,ONLINE_11,Rashid,Hashimzade,AZ,Azerbaijan Team 3,3,0,0,3
+237,ONLINE_109,Andrii,Novikov,UA,UPML_NTF,3,0,0,3
+238,RMI_45,Alexandra,Kirillov,MD,MDA Orizont 01,3,0,0,3
+239,ONLINE_28,Saba,Goduadze,GE,Georgia_Team 1,3,0,0,3
+240,RMI_129,Luca Traian,Bărbulescu,RO,Vianu 4,3,0,0,3
+241,RMI_71,Tudor,Chelaru,RO,Iași,3,0,0,3
+242,ONLINE_84,Kerem,Bozkaya,TR,Türkiye 2,3,0,0,3
+243,ONLINE_68,Radu,Luca,RO,Prahova,0,2,0,2
+244,ONLINE_59,Marian Nicolae,Pîrlog,RO,Dolj,0,2,0,2
+245,RMI_132,Tudor Mihai,Mătăsaru,RO,Vianu 4,0,2,0,2
+246,RMI_33,Yoan Dimitrov,Dimitrov,BG,Varna-1,0,0,0.6,0.6
+247,RMI_66,David Matei,Popa,RO,CEX București 1,0,0,0,0
+248,ONLINE_113,Rostyslav,Shenderchuk,UA,UPML_SSPO,0,0,0,0
+249,ONLINE_106,Oleksii,Syvak,UA,Ukraine 3,0,0,0,0
+250,ONLINE_77,Mihail,Ionescu,RO,Timiș,0,0,0,0
+251,ONLINE_95,Ivanna,Zadniprovska,UA,ALGO2,0,0,0,0
+252,RMI_82,Alexandru-Octavian,Urlețeanu,RO,InfO(1) - CNILC,0,0,0,0
+253,ONLINE_75,Alexandru,Dogaru,RO,Timiș,0,0,0,0
+254,RMI_37,Stefan Krasimirov,Balushev,BG,Varna-2,0,0,0,0
+255,RMI_34,Ivan Martinov,Kolev,BG,Varna-1,0,0,0,0
+256,ONLINE_66,Andrei,Țifui,RO,Neamț,0,0,0,0
+257,RMI_86,Luca,Georgescu,RO,infO(1) Ploiesti,0,0,0,0
+258,ONLINE_33,Lasha,Mosidze,GE,Georgia_Team 2,0,0,0,0
+259,RMI_133,Radu Andrei,Balaș,RO,Vianu 5,0,0,0,0
+260,ONLINE_38,Tako,Shanava,GE,Georgia_Team 3,0,0,0,0
+261,ONLINE_121,Hoang Hai,Le,VN,NGS.NPC,0,0,0,0
+262,ONLINE_87,Mustafa Selim,Özekinci,TR,Türkiye 2,0,0,0,0
+263,ONLINE_52,Daniel,Kirillov,MD,Online Orizont MDA 03,0,0,0,0
+264,RMI_141,Andrei,Ciurea,RO,Vianu 7,0,0,0,0
+265,ONLINE_90,Vladyslav,Zabolotnyi,UA,ALGO1,0,0,0,0
+266,ONLINE_47,Giovanni,Maiellaro,IT,Italy,0,0,0,0
+267,ONLINE_50,Chiril,Plăcintă,MD,Online Orizont 02,0,0,0,0
+268,ONLINE_35,Ilia,Shinjiashvili,GE,Georgia_Team 2,0,0,0,0
+269,RMI_31,Daniel,Todorov,BG,Sofia 2,0,0,0,0
