@@ -167,7 +167,6 @@ def main():
       <main class="content">
         <section class="results-section">
           <h2>Final ranking</h2>
-          <p>Final standings of RMI 2026 (Day 1 + Day 2): {n} contestants, {len(p1) + len(p2)} problems. Medals are awarded to on-site contestants only: gold from {num(gold_cut)} points ({medals['gold']} medals), silver from {num(silver_cut)} ({medals['silver']}), bronze from {num(bronze_cut)} ({medals['bronze']}).</p>
           <div class="results-filter" id="results-filter" role="group" aria-label="Filter by participation" hidden>
             <button type="button" class="filter-btn is-active" data-filter="all" aria-pressed="true">All ({n})</button>
             <button type="button" class="filter-btn" data-filter="onsite" aria-pressed="false">On-site ({counts['onsite']})</button>
