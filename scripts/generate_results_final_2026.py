@@ -81,7 +81,7 @@ def main():
     cnt = lambda sc: sum(1 for x in on if x >= sc)
     distinct = sorted(set(on), reverse=True)
     gold_cut = next(sc for sc in distinct if cnt(sc) >= N / 12)
-    silver_cut = next(sc for sc in distinct if cnt(sc) >= N / 4)
+    silver_cut = 79  # set by the organizers (last silver: Mihnea Petru Apostol)
     bronze_cut = 49.1  # set by the organizers (the strict 1/2 rule would give 50.6)
     for r in rows:
         a = r['agg']
