@@ -17,7 +17,8 @@ unchanged regardless of the mount point; only fully-qualified URLs (canonical,
 Open Graph, JSON-LD, sitemap) need the real BASE_PATH prefix.
 
 Usage:
-    python scripts/build_site.py           # regenerate pages + sitemap
+    python scripts/build_site.py           # rebuild only participants.html and results.html
+    python scripts/build_site.py --all     # rebuild every page + sitemap.xml
     python scripts/build_site.py --serve   # ...then preview on :8000 with clean URLs
 """
 import html
@@ -249,13 +250,22 @@ def render_sitemap(pages):
             + '\n'.join(rows) + '\n</urlset>\n')
 
 
-def build():
-    menu, pages = load_pages()
-    for it in pages:
+# By default only these pages are rebuilt (the ones fed by the data generators); the other
+# pages (committee, problems, ...) and sitemap.xml stay untouched unless --all is given.
+DEFAULT_SLUGS = {'participants', 'results'}
+
+
+def build(everything=False):
+    menu, pages = load_pages()  # the nav of every page still lists all routes
+    todo = pages if everything else [it for it in pages if it['slug'] in DEFAULT_SLUGS]
+    for it in todo:
         output_file(it).write_text(render_page(it, menu), encoding='utf-8', newline='\n')
         print(f"  {page_href(it) if it['slug'] else '/':<14} <- {it['path']}")
-    (SITE_DIR / 'sitemap.xml').write_text(render_sitemap(pages), encoding='utf-8', newline='\n')
-    print(f'Built {len(pages)} pages + sitemap.xml')
+    if everything:
+        (SITE_DIR / 'sitemap.xml').write_text(render_sitemap(pages), encoding='utf-8', newline='\n')
+        print(f'Built {len(todo)} pages + sitemap.xml')
+    else:
+        print(f'Built {len(todo)} pages (participants, results); use --all for every page and sitemap.xml')
 
 
 def serve(port=8000):
@@ -278,6 +288,6 @@ def serve(port=8000):
 
 
 if __name__ == '__main__':
-    build()
+    build(everything='--all' in sys.argv)
     if '--serve' in sys.argv:
         serve()
