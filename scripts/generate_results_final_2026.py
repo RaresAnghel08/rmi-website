@@ -4,11 +4,11 @@
 data/results_aggregate_2026.csv (Rank, Username, names, Day 2, Day 1, Aggregate),
 data/results_day1_2026.csv and data/results_day2_2026.csv (per-problem scores, country, team).
 
-Equal aggregates share the same place. Medals follow the Competition Rules and go to on-site
-contestants only (cutoffs computed on the on-site scoreboard):
-  gold   = largest score with at least 1/12 of on-site contestants at or above it
-  silver = largest score with at least 1/4 of on-site contestants at or above it
-  bronze = smallest score with at most 1/2 of on-site contestants at or above it
+Equal aggregates share the same place. Medals go to every contestant, on-site and online,
+by total score (cutoffs set by the organizers):
+  gold   = total >= 125
+  silver = total >= 79
+  bronze = total >= 49.1
 The RMI Cup (team ranking) = sum of the best three on-site scores of a team; also written to RMI_Cup_2026.md.
 Usernames are not published.
 
@@ -75,17 +75,13 @@ def main():
         r['place'] = place
         r['onsite'] = r['u'].upper().startswith('RMI')
 
-    # Medal cutoffs from the on-site scoreboard
-    on = [r['agg'] for r in rows if r['onsite']]
-    N = len(on)
-    cnt = lambda sc: sum(1 for x in on if x >= sc)
-    distinct = sorted(set(on), reverse=True)
-    gold_cut = next(sc for sc in distinct if cnt(sc) >= N / 12)
-    silver_cut = 79  # set by the organizers (last silver: Mihnea Petru Apostol)
-    bronze_cut = 49.1  # set by the organizers (the strict 1/2 rule would give 50.6)
+    # Medal cutoffs set by the organizers; they apply to everyone, on-site and online
+    gold_cut = 125
+    silver_cut = 79
+    bronze_cut = 49.1
     for r in rows:
         a = r['agg']
-        r['medal'] = '' if not r['onsite'] else 'gold' if a >= gold_cut else 'silver' if a >= silver_cut else 'bronze' if a >= bronze_cut else ''
+        r['medal'] = 'gold' if a >= gold_cut else 'silver' if a >= silver_cut else 'bronze' if a >= bronze_cut else ''
     medals = {m: sum(1 for r in rows if r['medal'] == m) for m in ('gold', 'silver', 'bronze')}
 
     # RMI Cup: team score = sum of best three on-site scores
