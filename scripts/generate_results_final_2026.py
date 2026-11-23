@@ -108,7 +108,9 @@ def main():
     # The team sits under the name (no separate column) so Total, Day 1 and Day 2 fit without scrolling,
     # on laptops (content area is ~736px wide) and on phones (country is a flag only there);
     # the per-problem scores are to the right.
-    head = ('<th>Total</th><th>Day 1</th><th>Day 2</th>'
+    # An empty spacer column after Day 2 (width set by main.js) pushes the problem columns out of view,
+    # so a problem score never shows up half-visible: either you scroll and see them, or you see none.
+    head = ('<th>Total</th><th>Day 1</th><th class="col-day2">Day 2</th><th class="col-spacer"><div class="spacer-box"></div></th>'
             + ''.join(f'<th>{e(p)}</th>' for p in p1) + ''.join(f'<th>{e(p)}</th>' for p in p2))
     body, counts = [], {'onsite': 0, 'online': 0}
     for r in rows:
@@ -124,7 +126,7 @@ def main():
         counts[mode] += 1
         cls = f' class="name-{r["medal"]}"' if r['medal'] else ''
         scores = (f'<td><strong>{num(r["agg"])}</strong></td><td><strong>{num(r["day1"])}</strong></td>'
-                  f'<td><strong>{num(r["day2"])}</strong></td>'
+                  f'<td><strong>{num(r["day2"])}</strong></td><td class="col-spacer"></td>'
                   + ''.join(f'<td>{num(v)}</td>' for v in r['s1']) + ''.join(f'<td>{num(v)}</td>' for v in r['s2']))
         team = e(info['Team'].strip())
         body.append(
@@ -166,6 +168,7 @@ def main():
       /* Rank and Name stay visible while the table is scrolled sideways (opaque background so cells slide under them) */
       .results-main th.col-rank, .results-main td.col-rank {{ position: sticky; left: 0; z-index: 2; width: 3.25rem; min-width: 3.25rem; box-sizing: border-box; background: #fff !important; }}
       .results-main th.col-name, .results-main td.col-name {{ position: sticky; left: 3.25rem; z-index: 2; background: #fff !important; box-shadow: 1px 0 0 rgba(0,0,0,.08); }}
+      .results-table.results-main .col-spacer {{ padding: 0 !important; border: 0 !important; min-width: 0; }}
       .results-main td.col-name {{ white-space: normal; }}
       .results-main .team-sub {{ display: block; font-size: .78rem; line-height: 1.25; color: #6b7280; margin-top: .1rem; }}
       /* Phones: Rank, Name, Country (flag only), Total, Day 1 and Day 2 fit without scrolling */

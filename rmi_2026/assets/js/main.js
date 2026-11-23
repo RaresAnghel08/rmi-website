@@ -123,6 +123,20 @@
     sync();
   }
 
+  // Results page: size the empty spacer column after "Day 2" so that the per-problem columns start
+  // exactly at the right edge of the visible table area (no half-visible problem scores before scrolling).
+  function fitProblemSpacer(){
+    const box = document.querySelector('.table-container');
+    const table = box && box.querySelector('.results-main');
+    const spacer = table && table.querySelector('th.col-spacer .spacer-box'); // a box: its width is the column's minimum width
+    const day2 = table && table.querySelector('th.col-day2');
+    if(!spacer || !day2) return;
+    spacer.style.width = '0px';
+    const end = day2.getBoundingClientRect().right - box.getBoundingClientRect().left + box.scrollLeft;
+    const gap = Math.max(0, Math.ceil(box.clientWidth - end));
+    spacer.style.width = gap + 'px';
+  }
+
   // Results page: filter the ranking by on-site / online participation
   function initResultsFilter(){
     const group = document.getElementById('results-filter');
@@ -147,6 +161,7 @@
         b.classList.toggle('is-active', on);
         b.setAttribute('aria-pressed', on ? 'true' : 'false');
       });
+      fitProblemSpacer();
       if(count) count.textContent = 'Showing ' + shown + ' of ' + rows.length + ' contestants';
     };
     buttons.forEach(b => b.addEventListener('click', () => apply(b.dataset.filter)));
@@ -157,6 +172,13 @@
   function init(){
     applyResultsOverrides();
     initResultsFilter();
+    fitProblemSpacer();
+    window.addEventListener('resize', fitProblemSpacer);
+    window.addEventListener('load', fitProblemSpacer);
+    if(window.ResizeObserver){
+      const t = document.querySelector('.results-main');
+      if(t){ let last = 0; new ResizeObserver(() => { const w = t.offsetWidth; if(w !== last){ last = w; fitProblemSpacer(); } }).observe(t); }
+    }
     initScrollAnimation();
     initCountryToggle();
   }
