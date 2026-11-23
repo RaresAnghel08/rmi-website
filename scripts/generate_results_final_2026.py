@@ -108,10 +108,11 @@ def main():
     # The team sits under the name (no separate column) so Total, Day 1 and Day 2 fit without scrolling,
     # on laptops (content area is ~736px wide) and on phones (country is a flag only there);
     # the per-problem scores are to the right.
-    # An empty spacer column after Day 2 (width set by main.js) pushes the problem columns out of view,
-    # so a problem score never shows up half-visible: either you scroll and see them, or you see none.
+    # main.js stretches Country, Total, Day 1 and Day 2 to fill the visible width, so the problem columns start
+    # exactly at the right edge (a problem score never shows up half-visible: scroll to see them, or see none).
+    # The empty spacer column only absorbs rounding leftovers.
     head = ('<th>Total</th><th>Day 1</th><th class="col-day2">Day 2</th><th class="col-spacer"><div class="spacer-box"></div></th>'
-            + ''.join(f'<th>{e(p)}</th>' for p in p1) + ''.join(f'<th>{e(p)}</th>' for p in p2))
+            + ''.join(f'<th class="prob">{e(p)}</th>' for p in p1) + ''.join(f'<th class="prob">{e(p)}</th>' for p in p2))
     body, counts = [], {'onsite': 0, 'online': 0}
     for r in rows:
         info = r['info']

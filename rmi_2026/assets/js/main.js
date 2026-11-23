@@ -123,18 +123,27 @@
     sync();
   }
 
-  // Results page: size the empty spacer column after "Day 2" so that the per-problem columns start
-  // exactly at the right edge of the visible table area (no half-visible problem scores before scrolling).
+  // Results page: stretch the columns between Name and the per-problem scores (Country, Total, Day 1, Day 2)
+  // so they fill the visible width and the problem columns start exactly at the right edge of the visible
+  // table area: no half-visible problem scores and no empty gap before scrolling.
   function fitProblemSpacer(){
     const box = document.querySelector('.table-container');
     const table = box && box.querySelector('.results-main');
-    const spacer = table && table.querySelector('th.col-spacer .spacer-box'); // a box: its width is the column's minimum width
+    const spacer = table && table.querySelector('th.col-spacer .spacer-box');
     const day2 = table && table.querySelector('th.col-day2');
-    if(!spacer || !day2) return;
+    const nameTh = table && table.querySelector('th.col-name');
+    if(!spacer || !day2 || !nameTh) return;
+    const ths = Array.from(table.querySelectorAll('thead th'));
+    const cols = ths.slice(ths.indexOf(nameTh) + 1, ths.indexOf(day2) + 1);
+    cols.forEach(th => { th.style.minWidth = ''; th.style.boxSizing = ''; });
     spacer.style.width = '0px';
+    const natural = cols.map(th => th.getBoundingClientRect().width);
     const end = day2.getBoundingClientRect().right - box.getBoundingClientRect().left + box.scrollLeft;
-    const gap = Math.max(0, Math.ceil(box.clientWidth - end));
-    spacer.style.width = gap + 'px';
+    const gap = Math.max(0, Math.floor(box.clientWidth - end));
+    const extra = Math.floor(gap / cols.length);
+    cols.forEach((th, i) => { th.style.boxSizing = 'border-box'; th.style.minWidth = (natural[i] + extra) + 'px'; });
+    const left = Math.max(0, Math.floor(box.clientWidth - (day2.getBoundingClientRect().right - box.getBoundingClientRect().left + box.scrollLeft)));
+    spacer.style.width = left + 'px';
   }
 
   // Results page: filter the ranking by on-site / online participation
