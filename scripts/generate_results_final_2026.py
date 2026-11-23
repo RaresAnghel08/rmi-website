@@ -4,7 +4,7 @@
 data/results_aggregate_2026.csv (Rank, Username, names, Day 2, Day 1, Aggregate),
 data/results_day1_2026.csv and data/results_day2_2026.csv (per-problem scores, country, team).
 
-Columns: Rank, Name, Country, Team, Total, Day 1, Day 1 problems, Day 2, Day 2 problems; Rank and Name
+Columns: Rank, Name, Total, Day 1, Day 2, Country, Team, Day 1 problems, Day 2 problems; Rank and Name
 stay fixed on the left when the table is scrolled sideways.
 Equal aggregates share the same place. Medals go to every contestant, on-site and online,
 by total score (cutoffs set by the organizers):
@@ -104,9 +104,10 @@ def main():
             tplace, tprev = i, tr[0]
         team_places.append(tplace)
 
-    # Column order: Total, Day 1 total, Day 1 problems, Day 2 total, Day 2 problems
-    head = ('<th>Total</th><th>Day 1</th>' + ''.join(f'<th>{e(p)}</th>' for p in p1)
-            + '<th>Day 2</th>' + ''.join(f'<th>{e(p)}</th>' for p in p2))
+    # Column order: Rank, Name, Total, Day 1, Day 2 (all visible without scrolling), then Country, Team,
+    # Day 1 problems, Day 2 problems (scroll sideways for the per-problem details)
+    head = ('<th>Total</th><th>Day 1</th><th>Day 2</th><th>Country</th><th>Team</th>'
+            + ''.join(f'<th>{e(p)}</th>' for p in p1) + ''.join(f'<th>{e(p)}</th>' for p in p2))
     body, counts = [], {'onsite': 0, 'online': 0}
     for r in rows:
         info = r['info']
@@ -120,12 +121,13 @@ def main():
         mode = 'online' if r['u'].upper().startswith('ONLINE') else 'onsite'
         counts[mode] += 1
         cls = f' class="name-{r["medal"]}"' if r['medal'] else ''
-        scores = (f'<td><strong>{num(r["agg"])}</strong></td>'
-                  + f'<td><strong>{num(r["day1"])}</strong></td>' + ''.join(f'<td>{num(v)}</td>' for v in r['s1'])
-                  + f'<td><strong>{num(r["day2"])}</strong></td>' + ''.join(f'<td>{num(v)}</td>' for v in r['s2']))
+        scores = (f'<td><strong>{num(r["agg"])}</strong></td><td><strong>{num(r["day1"])}</strong></td>'
+                  f'<td><strong>{num(r["day2"])}</strong></td>'
+                  f'<td class="country-cell">{country}</td><td>{e(info["Team"].strip())}</td>'
+                  + ''.join(f'<td>{num(v)}</td>' for v in r['s1']) + ''.join(f'<td>{num(v)}</td>' for v in r['s2']))
         body.append(
             f'              <tr data-mode="{mode}" data-total="{r["agg"]}"><td class="rank-cell col-rank"><strong>{r["place"]}</strong></td>'
-            f'<td class="col-name"><span{cls}>{e(name)}</span></td><td class="country-cell">{country}</td><td>{e(info["Team"].strip())}</td>'
+            f'<td class="col-name"><span{cls}>{e(name)}</span></td>'
             f'{scores}</tr>')
 
     team_body = []
@@ -162,8 +164,12 @@ def main():
       /* Rank and Name stay visible while the table is scrolled sideways (opaque background so cells slide under them) */
       .results-main th.col-rank, .results-main td.col-rank {{ position: sticky; left: 0; z-index: 2; width: 3.25rem; min-width: 3.25rem; box-sizing: border-box; background: #fff !important; }}
       .results-main th.col-name, .results-main td.col-name {{ position: sticky; left: 3.25rem; z-index: 2; background: #fff !important; box-shadow: 1px 0 0 rgba(0,0,0,.08); }}
+      /* Phones: Rank, Name, Total, Day 1 and Day 2 fit without scrolling */
       @media (max-width: 600px) {{
-        .results-main td.col-name {{ white-space: normal; max-width: 8.5rem; min-width: 7rem; }}
+        .results-table.results-main th, .results-table.results-main td {{ padding: .5rem .3rem !important; font-size: .9rem; }}
+        .results-main th.col-rank, .results-main td.col-rank {{ width: 2.4rem; min-width: 2.4rem; }}
+        .results-main th.col-name, .results-main td.col-name {{ left: 2.4rem; }}
+        .results-main td.col-name {{ white-space: normal; width: 6.2rem; min-width: 6.2rem; max-width: 6.2rem; }}
       }}
     </style>
   </head>
@@ -182,7 +188,7 @@ def main():
           <p class="results-count" id="results-count" aria-live="polite"></p>
           <div class="table-container">
             <table class="results-table results-main">
-              <thead><tr><th class="col-rank">Rank</th><th class="col-name">Name</th><th>Country</th><th>Team</th>{head}</tr></thead>
+              <thead><tr><th class="col-rank">Rank</th><th class="col-name">Name</th>{head}</tr></thead>
               <tbody>
 {chr(10).join(body)}
               </tbody>
