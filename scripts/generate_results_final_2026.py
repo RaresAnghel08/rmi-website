@@ -4,6 +4,8 @@
 data/results_aggregate_2026.csv (Rank, Username, names, Day 2, Day 1, Aggregate),
 data/results_day1_2026.csv and data/results_day2_2026.csv (per-problem scores, country, team).
 
+Columns: Rank, Name, Country, Team, Total, Day 1, Day 1 problems, Day 2, Day 2 problems; Rank and Name
+stay fixed on the left when the table is scrolled sideways.
 Equal aggregates share the same place. Medals go to every contestant, on-site and online,
 by total score (cutoffs set by the organizers):
   gold   = total >= 125
@@ -102,8 +104,9 @@ def main():
             tplace, tprev = i, tr[0]
         team_places.append(tplace)
 
-    head = (''.join(f'<th>{e(p)}</th>' for p in p1) + '<th>Day 1</th>'
-            + ''.join(f'<th>{e(p)}</th>' for p in p2) + '<th>Day 2</th>')
+    # Column order: Total, Day 1 total, Day 1 problems, Day 2 total, Day 2 problems
+    head = ('<th>Total</th><th>Day 1</th>' + ''.join(f'<th>{e(p)}</th>' for p in p1)
+            + '<th>Day 2</th>' + ''.join(f'<th>{e(p)}</th>' for p in p2))
     body, counts = [], {'onsite': 0, 'online': 0}
     for r in rows:
         info = r['info']
@@ -117,12 +120,13 @@ def main():
         mode = 'online' if r['u'].upper().startswith('ONLINE') else 'onsite'
         counts[mode] += 1
         cls = f' class="name-{r["medal"]}"' if r['medal'] else ''
-        scores = (''.join(f'<td>{num(v)}</td>' for v in r['s1']) + f'<td><strong>{num(r["day1"])}</strong></td>'
-                  + ''.join(f'<td>{num(v)}</td>' for v in r['s2']) + f'<td><strong>{num(r["day2"])}</strong></td>')
+        scores = (f'<td><strong>{num(r["agg"])}</strong></td>'
+                  + f'<td><strong>{num(r["day1"])}</strong></td>' + ''.join(f'<td>{num(v)}</td>' for v in r['s1'])
+                  + f'<td><strong>{num(r["day2"])}</strong></td>' + ''.join(f'<td>{num(v)}</td>' for v in r['s2']))
         body.append(
-            f'              <tr data-mode="{mode}" data-total="{r["agg"]}"><td class="rank-cell"><strong>{r["place"]}</strong></td>'
-            f'<td><span{cls}>{e(name)}</span></td><td class="country-cell">{country}</td><td>{e(info["Team"].strip())}</td>'
-            f'{scores}<td><strong>{num(r["agg"])}</strong></td></tr>')
+            f'              <tr data-mode="{mode}" data-total="{r["agg"]}"><td class="rank-cell col-rank"><strong>{r["place"]}</strong></td>'
+            f'<td class="col-name"><span{cls}>{e(name)}</span></td><td class="country-cell">{country}</td><td>{e(info["Team"].strip())}</td>'
+            f'{scores}</tr>')
 
     team_body = []
     for tp, (sc, t, c, m, size) in zip(team_places, team_rows):
@@ -154,6 +158,13 @@ def main():
       .results-table td.country-cell {{ white-space: nowrap; }}
       .results-table .country-flag {{ display: inline-block; height: 14px; width: auto; vertical-align: middle; margin-right: .25rem; }}
       .results-table td, .results-table th {{ white-space: nowrap; }}
+      .results-main {{ overflow: visible !important; }} /* the theme's overflow:hidden would make the table its own scroll box and break sticky */
+      /* Rank and Name stay visible while the table is scrolled sideways (opaque background so cells slide under them) */
+      .results-main th.col-rank, .results-main td.col-rank {{ position: sticky; left: 0; z-index: 2; width: 3.25rem; min-width: 3.25rem; box-sizing: border-box; background: #fff !important; }}
+      .results-main th.col-name, .results-main td.col-name {{ position: sticky; left: 3.25rem; z-index: 2; background: #fff !important; box-shadow: 1px 0 0 rgba(0,0,0,.08); }}
+      @media (max-width: 600px) {{
+        .results-main td.col-name {{ white-space: normal; max-width: 8.5rem; min-width: 7rem; }}
+      }}
     </style>
   </head>
   <body>
@@ -170,8 +181,8 @@ def main():
           </div>
           <p class="results-count" id="results-count" aria-live="polite"></p>
           <div class="table-container">
-            <table class="results-table">
-              <thead><tr><th>Rank</th><th>Name</th><th>Country</th><th>Team</th>{head}<th>Total</th></tr></thead>
+            <table class="results-table results-main">
+              <thead><tr><th class="col-rank">Rank</th><th class="col-name">Name</th><th>Country</th><th>Team</th>{head}</tr></thead>
               <tbody>
 {chr(10).join(body)}
               </tbody>
